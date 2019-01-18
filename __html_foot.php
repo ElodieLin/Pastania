@@ -201,6 +201,9 @@
 
 
         @media (max-width: 575.98px) {
+            footer{
+                padding-bottom: 90px;
+            }
             .e_footer_container {
                 max-width: 100%;
             }
