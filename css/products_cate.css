@@ -1,0 +1,396 @@
+  body {
+            overflow-x: hidden;
+        }
+
+        .container-fluid {
+            /* display: flex; */
+            /* align-items: center; */
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .w_product_bigbox {
+            width: 100vw;
+        }
+
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .en_font {
+            font-family: 'Lao MN', 'Arya';
+            font-size: 2rem;
+            color: #5C7880;
+        }
+
+        .noto_regular {
+            font-family: 'Noto Sans TC';
+            letter-spacing: 2px;
+            font-size: 2rem;
+            color: #5C7880;
+        }
+
+
+        /* ----------以下為紅色字體設定---------- */
+        .en_font_red {
+            font-family: 'Lao MN', 'Arya';
+            font-size: 2rem;
+            color: #D3554A;
+        }
+
+        .noto_regular_red {
+            font-family: 'Noto Sans TC';
+            letter-spacing: 2px;
+            font-size: 2rem;
+            color: #D3554A;
+        }
+
+        /* ----------以上為紅色字體設定---------- */
+
+
+
+        /* ----------以下為cover大圖設定---------- */
+        .w_product_cover {
+            width: 100%;
+            height: 30vh;
+            background: url(../img/pages/others/product_cover.jpg) center 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            margin-top: -3px;/* fixed top margin */
+        }
+
+        /* ----------以上為cover大圖設定---------- */
+
+
+
+
+        /* ----------以下為大標文字設定---------- */
+        .w_product_title {
+            margin: auto;
+            text-align: center;
+            width: 25%;
+            padding: 40px 0px;
+        }
+
+        .w_product_title_line {
+            border-bottom: #5C7880 1px solid;
+            padding: 20px 0px;
+        }
+
+        /* Title update adjust */
+        p{
+            margin-bottom: 1rem !important;
+        }
+
+        /* ----------以上為大標文字設定---------- */
+
+
+
+        /* ----------以下為長麵設定---------- */
+        .w_product_long_img {
+            width: 80%;
+            height: 80%;
+            margin: 0px;
+            padding: 0px 0px 25px 0px;
+            position: relative;
+        }
+
+        .w_product_longbox {
+            margin: auto;
+            text-align: center;
+            width: 40%;
+            position: absolute;
+            margin-top: 5%;
+            margin-left: 55%;
+        }
+
+        .w_product_red_line {
+            border-bottom: #D3554A 1px solid;
+            padding: 20px 0px;
+        }
+
+        .w_product_longbox a {
+            text-decoration: none;
+        }
+
+        .w_product_longbox a:hover p {
+            color: rgba(230, 114, 72, 0.6);
+        }
+
+        /* ----------以上為長麵設定---------- */
+
+
+        /* ----------以下為短麵設定---------- */
+
+        .w_product_short_img {
+            width: 80%;
+            height: 80%;
+            margin: 0px;
+            padding: 0px 0px 25px 0px;
+            position: relative;
+
+        }
+
+        .w_product_shortbox {
+            margin: auto;
+            text-align: center;
+            width: 40%;
+            position: absolute;
+            margin-top: 5%;
+            margin-left: -55%;
+        }
+
+        .w_product_red_line {
+            border-bottom: #D3554A 1px solid;
+            padding: 20px 0px;
+        }
+
+        .w_product_shortbox a {
+            text-decoration: none;
+        }
+
+        .w_product_shortbox a:hover p {
+            color: rgba(230, 114, 72, 0.6);
+        }
+
+        /* ----------以上為短麵設定---------- */
+
+
+        /* ----------以下為粒狀麵設定---------- */
+        .w_product_minute_img {
+            width: 80%;
+            height: 80%;
+            margin: 0px;
+            padding: 0px 0px 25px 0px;
+            position: relative;
+
+        }
+
+        .w_product_minutebox {
+            margin: auto;
+            text-align: center;
+            width: 40%;
+            position: absolute;
+            margin-top: 5%;
+            margin-left: 55%;
+        }
+
+        .w_product_red_line {
+            border-bottom: #D3554A 1px solid;
+            padding: 20px 0px;
+        }
+
+        .w_product_minutebox a {
+            text-decoration: none;
+        }
+
+        .w_product_minutebox a:hover p {
+            color: rgba(230, 114, 72, 0.6);
+        }
+
+        /* ----------以上為粒狀麵設定---------- */
+
+
+        /* ----------以下為夾餡款設定---------- */
+        .w_product_stuffed_img {
+            width: 80%;
+            height: 80%;
+            margin: 0px;
+            padding: 0px 0px 25px 0px;
+            position: relative;
+
+        }
+
+        .w_product_stuffedbox {
+            margin: auto;
+            text-align: center;
+            width: 40%;
+            position: absolute;
+            margin-top: 5%;
+            margin-left: -55%;
+        }
+
+        .w_product_red_line {
+            border-bottom: #D3554A 1px solid;
+            padding: 20px 0px;
+        }
+
+        .w_product_stuffedbox a {
+            text-decoration: none;
+        }
+
+        .w_product_stuffedbox a:hover p {
+            color: rgba(230, 114, 72, 0.6);
+        }
+
+        /* ----------以上為夾餡款設定---------- */
+
+
+        /* ----------以下特別款設定---------- */
+        .w_product_specialty_img {
+            width: 80%;
+            height: 80%;
+            margin: 0px;
+            padding: 0px 0px 25px 0px;
+            position: relative;
+
+        }
+
+        .w_product_specialtybox {
+            margin: auto;
+            text-align: center;
+            width: 40%;
+            position: absolute;
+            margin-top: 4%;
+            margin-left: 55%;
+        }
+
+        .w_product_red_line {
+            border-bottom: #D3554A 1px solid;
+            padding: 20px 0px;
+        }
+
+        .w_product_specialtybox a {
+            text-decoration: none;
+        }
+
+        .w_product_specialtybox a:hover p {
+            color: rgba(230, 114, 72, 0.6);
+        }
+
+        /* ----------以上為特別款設定---------- */
+
+
+        /* ----------以下義大利麵醬料設定---------- */
+        .w_product_sauce_img {
+            width: 80%;
+            height: 80%;
+            margin: 0px;
+            padding: 0px 0px 25px 0px;
+            position: relative;
+
+        }
+
+        .w_product_saucebox {
+            margin: auto;
+            text-align: center;
+            width: 40%;
+            position: absolute;
+            margin-top: 5%;
+            margin-left: -55%;
+        }
+
+        .w_product_red_line {
+            border-bottom: #D3554A 1px solid;
+            padding: 20px 0px;
+        }
+
+        .w_product_saucebox a {
+            text-decoration: none;
+        }
+
+        .w_product_saucebox a:hover p {
+            color: rgba(230, 114, 72, 0.6);
+        }
+
+        /* ----------以上為義大利麵醬設定---------- */
+
+
+        /* ----------以下組合包設定---------- */
+        .w_product_giftSet_img {
+            width: 80%;
+            height: 80%;
+            margin: 0px;
+            padding: 0px 0px 25px 0px;
+            position: relative;
+
+        }
+
+        .w_product_giftSetbox {
+            margin: auto;
+            text-align: center;
+            width: 40%;
+            position: absolute;
+            margin-top: 5%;
+            margin-left: 55%;
+        }
+
+        .w_product_red_line {
+            border-bottom: #D3554A 1px solid;
+            padding: 20px 0px;
+        }
+
+        .w_product_giftSetbox a {
+            text-decoration: none;
+        }
+
+        .w_product_giftSetbox a:hover p {
+            color: rgba(230, 114, 72, 0.6);
+        }
+
+        /* ----------以上為組合包設定---------- */
+
+        @media screen and (max-width:1500px) {
+            .w_product_longbox {
+                margin-top: 3%;
+            }
+
+            .w_product_shortbox {
+                margin-top: 3%;
+            }
+
+            .w_product_minutebox {
+                margin-top: 3%;
+            }
+
+            .w_product_stuffedbox {
+                margin-top: 3%;
+            }
+
+            .w_product_saucebox {
+                margin-top: 3%;
+            }
+
+            .w_product_giftSetbox {
+                margin-top: 3%;
+            }
+        }
+
+
+        @media screen and (max-width:1200px) {
+
+            /* ----------以下為紅色字體設定---------- */
+            .en_font_red {
+                font-size: 1.3rem;
+            }
+
+            .noto_regular_red {
+                font-size: 1.3rem;
+            }
+
+            /* ----------以上為紅色字體設定---------- */
+            .w_product_longbox {
+                margin-top: 3%;
+            }
+
+            .w_product_shortbox {
+                margin-top: 3%;
+            }
+
+            .w_product_minutebox {
+                margin-top: 3%;
+            }
+
+            .w_product_stuffedbox {
+                margin-top: 3%;
+            }
+
+            .w_product_saucebox {
+                margin-top: 3%;
+            }
+
+            .w_product_giftSetbox {
+                margin-top: 1%;
+            }
+        }

@@ -25,6 +25,7 @@
 
         footer {
             background: #F6D169;
+            margin-top: 75px;
             padding-top: 100px;
             padding-bottom: 20px;
         }
@@ -89,7 +90,7 @@
         .subscribe input[type="text"]{
             font-family: 'Lao MN';
             letter-spacing: 1px;
-            color:#D3554A;
+            color:#D3554A !important;
             width: 100%;
             box-sizing: border-box;
         }
@@ -102,9 +103,11 @@
             font-size: 1rem;
         }
 
+
         input:focus::-webkit-input-placeholder {
-            color: #EB8C68;
+            color: #EB8C68 !important;
         }
+
 
         .subscribe_effect{
             border: 0; 
@@ -127,6 +130,10 @@
             width: 100%; 
             transition: 0.4s;
             
+        }
+
+        input::placeholder {
+           color: #D3554A !important;
         }
 
 /* ---------------以下是文字連結部分------------------- */

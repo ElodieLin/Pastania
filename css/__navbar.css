@@ -1,0 +1,648 @@
+  .w_nav_en_font {
+    font-family: 'Lao MN', 'Arya';
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #5C7880;
+  }
+
+  .w_nav_noto_regular {
+    font-family: 'Noto Sans TC';
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: #5C7880;
+  }
+
+  .w_nav_en_font_sub {
+    font-family: 'Lao MN', 'Arya';
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #5C7880;
+  }
+
+  .w_nav_noto_regular_sub {
+    font-family: 'Noto Sans TC';
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: #5C7880;
+  }
+
+  /*--------- 以下為內容物大盒子 ---------*/
+  .w_nav_wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .w_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0px;
+    width: 70%;
+  }
+
+  @media screen and (max-width: 900px) {
+    .w_nav li{
+      transform: scale(.8);
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .w_nav li{
+      transform: scale(.6);
+    }
+  }
+
+  /*--------- 以下上為內容物大盒子 ---------*/
+
+  /*--------- 以下為白色背景 ---------*/
+  .w_menubar {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.788);
+    box-shadow: 0 3px 6px rgba(88, 88, 88, 0.329);
+  }
+
+  /*--------- 以上為白色背景 ---------*/
+
+  /*--------- 以下為logo區域 ---------*/
+  .w_nav_logo_box {
+    width: 11%;
+    margin-right: 8%;
+    margin-bottom: 5px;
+  }
+
+  .w_nav_logo_box img {
+    width: 140px;
+  }
+
+
+  @media screen and (max-width: 900px) {
+    .w_nav_logo_box img {
+      width: 100px;
+    }
+  }
+
+  /*@media screen and (max-width: 650px) {*/
+    /*.w_nav_logo_box img*/
+      /*width: 150px;*/
+    /*}*/
+  /*}*/
+
+  /*--------- 以上為logo區域 ---------*/
+
+  /* -------以下為按鈕區域------- */
+  .transition {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+  }
+
+  a {
+    list-style-type: none;
+    text-decoration: none !important;
+    color: #5C7880;
+    display: block;
+  }
+
+  .w_nav > .w_nav_word > a .w_nav_translate_ch {
+    display: flex;
+    opacity: 0;
+  }
+
+  .w_nav > .w_nav_word > a:hover .w_nav_translate_ch {
+    opacity: 10;
+  }
+
+  .w_nav > .w_nav_word > a .w_nav_translate_en {
+    margin-top: -21px;
+    display: flex;
+  }
+
+  .w_nav > .w_nav_word > a:hover .w_nav_translate_en {
+    opacity: 0;
+  }
+
+  /* -------以上為按鈕區域------- */
+
+  /* -------以下為下拉選單區域------- */
+  .w_nav_sub > li:hover {
+    background-color: #F6D169;
+  }
+
+  /*.w_nav_sub {*/
+  /*position: relative;*/
+  /*}*/
+  /*這段被後面的abs蓋掉了喔*/
+
+  li:hover .w_nav_sub {
+    max-height: 400px;
+  }
+
+  .w_nav_sub {
+    position: absolute;
+    background-color: #DCDCDC;
+    top: 25px;
+    width: 200px;
+    max-height: 0;
+    margin-top: 35px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .w_nav_sub a {
+    padding: 8px 18px;
+    display: block;
+  }
+
+  .w_nav_sub > li > a:hover {
+    color: #E67348;
+  }
+
+  /* -------以上為下拉選單區域------- */
+
+  /*--------- 以下為icon區域 ---------*/
+  .w_nav_icon_box {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .w_nav_icon_boxin {
+    margin-left: 30px;
+    position: relative;
+  }
+
+  .w_nav_icon_boxin img {
+    width: 20px;
+  }
+
+  .w_nav_icon_boxin > a .w_nav_icon_after {
+    display: none;
+  }
+
+  .w_nav_icon_boxin > a:hover .w_nav_icon_after {
+    display: block;
+  }
+
+  .w_nav_icon_boxin > a .w_nav_icon_before {
+    margin-right: -24px;
+  }
+
+  .w_nav_icon_boxin > a:hover .w_nav_icon_before {
+    display: none;
+  }
+
+  @media screen and (max-width: 900px) {
+    .w_nav_icon_box {
+      transform: scale(.8);
+    }
+  }
+
+  /*--------- 以上為icon區域 ---------*/
+
+  /*---------- search_bar -----------*/
+  .r_search_box {
+    display: flex;
+  }
+
+  .r_search {
+    border: none;
+    border-bottom: 1px solid #5C7880;
+    max-width: 0;
+    background: transparent;
+  }
+
+  .r_btn_s {
+    cursor: pointer;
+  }
+
+  .r_s_hide {
+    max-width: 100px;
+  }
+
+  input[type=search]:focus {
+    outline: none;
+  }
+
+  /*移除search的x*/
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  /*------------icon列下拉通用功能----------------*/
+  .r_iocnbox {
+    left: 50%;
+    top: 100%;
+    max-height: none !important;
+    background-color: transparent;
+    margin-top: 0;
+    padding-top: 10px;
+    transform: translate(-50%);
+    overflow: visible;
+    display: none;
+  }
+
+  .r_iocnbox::before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-width: 0 10px 10px;
+    transform: translate(-50%, 0);
+    border-color: transparent transparent #DCDCDC transparent;
+    border-style: solid;
+    content: '';
+  }
+
+  .r_iocnbox li {
+    background-color: #DCDCDC;
+    border: #DCDCDC 1px solid;
+  }
+
+  .r_iocnbox li:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .r_flex {
+    display: flex;
+  }
+
+  .r_f_center {
+    align-items: center;
+  }
+
+  .r_just_a {
+    justify-content: space-around;
+  }
+
+  .r_btn {
+    text-align: center;
+  }
+
+  .r_btn a {
+    background-color: #E67348;
+    color: #ffffff !important;
+  }
+
+  .r_btn:hover {
+    background-color: #DCDCDC !important;
+  }
+
+  .r_btn a:hover {
+    background-color: #d3554a;
+    color: #ffffff !important;
+  }
+
+  /*------------icon列下拉通用功能----------------*/
+
+  /*--------- 以下為會員選單---------*/
+
+  .r_login li:first-child:hover, .r_login li:last-child:hover {
+    background-color: #DCDCDC;
+  }
+
+  .r_login li:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .r_login li:last-child a {
+    border-radius: 5px;
+  }
+
+  .r_login li:first-child, .r_login li:last-child {
+    padding: 15px 18px;
+  }
+
+  .r_login li p::before {
+    content: "您好: ";
+  }
+
+  .nav-link {
+    padding: 0 !important;
+    /*蓋掉bs*/
+  }
+
+  /*--------- 以上為會員選單---------*/
+
+  /*--------- 以下為最愛選單---------*/
+
+  .r_wish_list {
+    width: 400px;
+    transform: translate(-80%);
+  }
+
+  .r_wish_list::before {
+    transform: translate(550%, 0);
+  }
+
+  .r_wish_list p:hover, .r_wish_list li:hover {
+    background-color: #DCDCDC;
+  }
+
+  .r_wish_list li:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .r_wish_tittle {
+    padding: 15px 18px 0;
+    text-align: center;
+  }
+
+  .r_wish_u_line {
+    border-bottom: 1px solid #5C7880;
+  }
+
+  .r_wish_p {
+    width: 100px !important;
+  }
+
+  .r_wish_ml {
+    margin-left: 20px;
+  }
+
+  .r_wish_delet_p {
+    padding: 0 !important;
+  }
+
+  /*--------- 以上為最愛選單---------*/
+  /*--------- 以下為購物車選單---------*/
+  .r_cart_list {
+    width: 400px;
+    transform: translate(-90%);
+  }
+
+  .r_cart_list li:hover {
+    background-color: #DCDCDC;
+  }
+
+  .r_cart_list::before {
+    transform: translate(750%, 0);
+  }
+
+  .r_cart_flex {
+    justify-content: flex-end;
+  }
+
+  .r_cart_flex p {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .r_cart_list li:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .r_cart_btn {
+    margin: 0 20px 15px;
+    border-radius: 5px;
+  }
+
+  .r_cart_y {
+    transform: translateY(-5%);
+  }
+
+  /*--------- 以上為購物車選單---------*/
+
+
+
+
+
+
+
+
+  /* ～～～～～～～以下漢堡選單區域～～～～～～～ */
+
+
+  .ham-wrapper {
+    display: none;
+    /* 在電腦時，版手機版關閉 */
+  }
+
+  @media screen and (max-width: 575.98px) {
+
+    .w_nav_wrapper {
+      display: none;
+    }
+
+    .ham-wrapper {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      border-bottom: #5C7880 1px solid;
+      background-color: rgba(255, 255, 255, 0.788);
+      box-shadow: 0 3px 6px rgba(88, 88, 88, 0.329);
+    }
+    .ham-wrapper-a {
+      width: 80%;
+      justify-content: center;
+    }
+
+
+    .ham-wrapper img {
+      width: 50%;
+      transform: translate(20%);
+      padding: 8px 0;
+    }
+
+
+    .menu-btn {
+      display: flex;
+      cursor: pointer;
+      width: 20%;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+
+    .menu-btn ul {
+      background: #ffffff;
+      width: 150px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      background-color: antiquewhite;
+    }
+
+    .menu-btn > ul {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      transition: opacity .4s;
+    }
+
+    .menu-btn.active ul {
+      opacity: 1;
+      max-height: 800px;
+      width: 100vw;
+      background-color: #DCDCDC;
+    }
+
+    .menu-btn ul li a {
+      font-size: 20px;
+      display: flex;
+      padding: 10px 22px;
+      color: #5C7880 !important;
+    }
+
+
+
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      display: block;
+    }
+
+    .bar-box {
+      width: 45px;
+      background: transparent;
+      border-radius: 3px;
+    }
+
+    .bar {
+      width: 26px;
+      height: 2px;
+      background: #5C7880;
+      margin: 6px auto;
+      border-radius: 2px;
+      transition: .2s;
+    }
+
+    .active .bar1 {
+      transform: rotate(-45deg) translate(-9px, 9px);
+    }
+
+    .active .bar2 {
+      opacity: 0;
+    }
+
+    .active .bar3 {
+      transform: rotate(45deg) translate(-2px, -2px);
+    }
+
+    .sub-menu {
+      display: none;
+      opacity: 1;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    .r_arrow_icon {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  /* ～～～～～～～以上漢堡選單區域～～～～～～～ */
+
+
+  /* ～～～～～～～以下手機選單區域～～～～～～～ */
+  @media screen and (min-width: 576px) {
+    .r_phone_button {
+      display: none;
+    }
+  }
+
+  .r_phone_button {
+    background-color: #C8D8D8;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    bottom: 0;
+  }
+
+  .r_phone_button ul li {
+    padding: 20px;
+  }
+
+  .r_phone_button ul li a img {
+    width: 40px;
+  }
+
+
+  /* ～～～～～～～以上手機選單區域～～～～～～～ */
+  /* bootstrap modal size */
+  .modal-lg {
+    /* max-width: 40% !important; */
+  }
+
+  .modal-title {
+    /* max-width:30%; */
+    /* height:30px; */
+  }
+
+  .logo_img {
+    max-width: 100%;
+    height: 50px;
+  }
+
+  .close {
+    position: absolute;
+    right: 1rem;
+  }
+
+  h3, h5, h6, .form-check-label, .label_text {
+    color: #5C7880;
+  }
+
+  span.red, small {
+    color: red;
+  }
+
+  .btn.btn-primary {
+    background-color: #E67348;
+    border: 0;
+  }
+
+  .forgot {
+    color: #5C7880;
+    text-decoration: underline;
+  }
+
+  .forgot:hover {
+    color: #D3554A;
+    text-decoration: none;
+  }
+
+  input::placeholder {
+    color: #C9C9C9 !important;
+  }
+
+  /* 地址城市selector 字形顏色 */
+
+  /* .form-control.pre_option {
+      color: #C9C9C9;
+  } */
+  .form-control option {
+    color: #5C7880;
+  }
+
+  input, select {
+    color: #5C7880 !important;
+  }
+
+  .agree_underline {
+    text-decoration: underline !important;
+    color: #5C7880;
+    display: inline-block !important;
+  }
+
+  .navbar {
+    padding: 0.1rem;
+  }
+
+  .fixed-nav-bar, .ham-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+  }
