@@ -45,6 +45,18 @@
     width: 70%;
   }
 
+  @media screen and (max-width: 900px) {
+    .w_nav li{
+      transform: scale(.8);
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .w_nav li{
+      transform: scale(.6);
+    }
+  }
+
   /*--------- 以下上為內容物大盒子 ---------*/
 
   /*--------- 以下為白色背景 ---------*/
@@ -53,7 +65,7 @@
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.788);
     box-shadow: 0 3px 6px rgba(88, 88, 88, 0.329);
-    
+
   }
 
   /*--------- 以上為白色背景 ---------*/
@@ -68,6 +80,23 @@
   .w_nav_logo_box img {
     width: 140px;
   }
+
+
+  @media screen and (max-width: 900px) {
+    .w_nav_logo_box img {
+      width: 100px;
+    }
+  }
+
+  /*@media screen and (max-width: 650px) {*/
+    /*.w_nav_logo_box img*/
+      /*width: 150px;*/
+    /*}*/
+  /*}*/
+
+
+
+
 
   /*--------- 以上為logo區域 ---------*/
 
@@ -175,6 +204,12 @@
     display: none;
   }
 
+  @media screen and (max-width: 900px) {
+    .w_nav_icon_box {
+      transform: scale(.8);
+    }
+  }
+
   /*--------- 以上為icon區域 ---------*/
 
   /*---------- search_bar -----------*/
@@ -186,6 +221,7 @@
     border: none;
     border-bottom: 1px solid #5C7880;
     max-width: 0;
+    background: transparent;
   }
 
   .r_btn_s {
@@ -249,7 +285,7 @@
     align-items: center;
   }
 
-  .r_just_a{
+  .r_just_a {
     justify-content: space-around;
   }
 
@@ -295,7 +331,7 @@
     content: "您好: ";
   }
 
-  .nav-link{
+  .nav-link {
     padding: 0 !important;
     /*蓋掉bs*/
   }
@@ -381,25 +417,27 @@
 
   /*--------- 以上為購物車選單---------*/
 
+
+
+
+
+
+
+
+  /* ～～～～～～～以下漢堡選單區域～～～～～～～ */
+
+
   .ham-wrapper {
     display: none;
     /* 在電腦時，版手機版關閉 */
   }
 
-
-  a {
-    text-decoration: none;
-    color: #5C7880;
-  }
-
-
   @media screen and (max-width: 575.98px) {
 
-    .w_nav_wrapper{
+    .w_nav_wrapper {
       display: none;
     }
 
-    /* ～～～～～～～以下漢堡選單區域～～～～～～～ */
     .ham-wrapper {
       display: flex;
       justify-content: center;
@@ -409,20 +447,25 @@
       background-color: rgba(255, 255, 255, 0.788);
       box-shadow: 0 3px 6px rgba(88, 88, 88, 0.329);
     }
+    .ham-wrapper-a {
+      width: 80%;
+      justify-content: center;
+    }
+
 
     .ham-wrapper img {
-      width: 35%;
-      margin: 0 auto;
-
+      width: 50%;
+      transform: translate(20%);
+      padding: 8px 0;
     }
+
 
     .menu-btn {
       display: flex;
-      /* display: inline-block; */
       cursor: pointer;
-      position: relative;
-      /* background-color: antiquewhite; */
-      padding-top: 8px;
+      width: 20%;
+      align-items: center;
+      justify-content: center;
       z-index: 3;
     }
 
@@ -438,7 +481,7 @@
     .menu-btn > ul {
       position: absolute;
       right: 0;
-      top: 90px;
+      top: 100%;
       transition: opacity .4s;
     }
 
@@ -446,6 +489,7 @@
       opacity: 1;
       max-height: 800px;
       width: 100vw;
+      background-color: #DCDCDC;
 
     }
 
@@ -453,12 +497,10 @@
       font-size: 20px;
       display: flex;
       padding: 10px 22px;
-
+      color: #5C7880 !important;
     }
 
-    .menu-btn ul li a:hover {
-      background: #DCDCDC;
-    }
+
 
     ul,
     li {
@@ -473,9 +515,8 @@
 
     .bar-box {
       width: 45px;
-      padding: 50% 0;
       background: transparent;
-      border-radius: 3px;  
+      border-radius: 3px;
 
     }
 
@@ -518,27 +559,26 @@
 
   /* ～～～～～～～以下手機選單區域～～～～～～～ */
   @media screen and (min-width: 576px) {
-    .r_phone_button{
+    .r_phone_button {
       display: none;
     }
   }
 
-  .r_phone_button{
+  .r_phone_button {
     background-color: #C8D8D8;
     position: fixed;
     width: 100%;
-    top: 656px; /* i6 plus 736-80*/
     z-index: 99;
+    bottom: 0;
   }
 
-  .r_phone_button ul li{
+  .r_phone_button ul li {
     padding: 20px;
   }
 
-  .r_phone_button ul li a img{
+  .r_phone_button ul li a img {
     width: 40px;
   }
-
 
 
   /* ～～～～～～～以上手機選單區域～～～～～～～ */
@@ -608,22 +648,24 @@
     color: #5C7880;
     display: inline-block !important;
   }
-  .navbar{
-          padding: 0.1rem ;
-         
+
+  .navbar {
+    padding: 0.1rem;
+
   }
-.fixed-nav-bar, .ham-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  
-}
+
+  .fixed-nav-bar, .ham-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+
+  }
 
 </style>
 <nav>
-  <div class="w_menubar fixed-nav-bar" >
+  <div class="w_menubar fixed-nav-bar">
     <div class="w_nav_wrapper">
       <ul class="w_nav en_font">
         <!-- 以下為logo區域 -->
@@ -639,6 +681,13 @@
             <span class="w_nav_translate_ch  w_nav_noto_regular">關於我們</span>
             <span class="w_nav_translate_en  w_nav_en_font">About Us</span>
           </a>
+          <!-- 以下為下拉選單區域 -->
+          <ul class="w_nav_sub noto_regular transition">
+            <li class="w_nav_noto_regular_sub"><a href="#">品牌介紹</a></li>
+            <li class="w_nav_noto_regular_sub"><a href="#">義麵地圖</a></li>
+          </ul>
+          <!-- 以上為下拉選單區域 -->
+
         </li>
         <!-- 活動 -->
         <li class="w_nav_word">
@@ -802,7 +851,9 @@
   </div>
   <!-- /* ～～～～～～～以下漢堡選單區域～～～～～～～ */ -->
   <div class="ham-wrapper">
-    <img src="img/icon/pastania_logo.svg" alt="">
+    <a class="r_flex ham-wrapper-a" href="./">
+    <img src="img/icon/pastania_logo.svg"  alt="">
+    </a>
     <div class="menu-btn ">
       <div class="bar-box">
         <div class="bar bar1 "></div>
@@ -810,16 +861,16 @@
         <div class="bar bar3 "></div>
       </div>
       <ul>
-        <li><a href="">About Us</a></li>
+        <li class=""><a href="">About Us</a></li>
         <li>
-          <a class="r_arrow_icon">Events<i class="fas fa-angle-right r_arrow_icon"></i></a>
+          <a class="r_arrow_icon ">Events<i class="fas fa-angle-right r_arrow_icon"></i></a>
           <ul class="sub-menu ">
             <li><a>親子同樂玩pasta</a></li>
             <li><a>白色情人節特輯</a></li>
           </ul>
         </li>
         <li>
-          <a class="r_arrow_icon">Products<i class="fas fa-angle-right r_arrow_icon"></i></a>
+          <a class="r_arrow_icon ">Products<i class="fas fa-angle-right r_arrow_icon"></i></a>
           <ul class="sub-menu">
             <li><a href="product_list_long.php">Long 長麵</a></li>
             <li><a href="product_short_cut.php">Short cut 短麵</a></li>
@@ -831,7 +882,7 @@
           </ul>
         </li>
         <li>
-          <a class="r_arrow_icon">Recipes<i class="fas fa-angle-right r_arrow_icon"></i></a>
+          <a class="r_arrow_icon ">Recipes<i class="fas fa-angle-right r_arrow_icon"></i></a>
           <ul class="sub-menu">
             <li><a>Party 週末派對</a></li>
             <li><a>Occasion 特殊節慶</a></li>
@@ -1039,8 +1090,6 @@
 
 
   <script>
-   
-
 
 
     // icon下拉選單
