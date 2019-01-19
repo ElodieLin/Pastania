@@ -129,10 +129,7 @@
     background-color: #F6D169;
   }
 
-  /*.w_nav_sub {*/
-  /*position: relative;*/
-  /*}*/
-  /*這段被後面的abs蓋掉了喔*/
+
 
   li:hover .w_nav_sub {
     max-height: 400px;
@@ -423,6 +420,7 @@
 
   @media screen and (max-width: 575.98px) {
 
+
     .w_nav_wrapper {
       display: none;
     }
@@ -461,7 +459,6 @@
     .menu-btn ul {
       background: #ffffff;
       width: 150px;
-      opacity: 0;
       max-height: 0;
       overflow: hidden;
       background-color: antiquewhite;
@@ -471,11 +468,10 @@
       position: absolute;
       right: 0;
       top: 100%;
-      transition: opacity .4s;
+      width: 100vw;
     }
 
     .menu-btn.active ul {
-      opacity: 1;
       max-height: 800px;
       width: 100vw;
       background-color: #DCDCDC;
