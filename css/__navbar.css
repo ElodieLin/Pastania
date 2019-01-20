@@ -563,6 +563,10 @@
     width: 40px;
   }
 
+  #basic-serach img{
+    width: 20px;
+  }
+
 
   /* ～～～～～～～以上手機選單區域～～～～～～～ */
   /* bootstrap modal size */
@@ -585,7 +589,7 @@
     right: 1rem;
   }
 
-  h3, h5, h6, .form-check-label, .label_text {
+  h3,h4, h5, h6, .form-check-label, .label_text {
     color: #5C7880;
   }
 

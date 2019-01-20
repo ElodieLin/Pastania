@@ -238,7 +238,7 @@
     <div class="r_phone_button">
         <ul class="r_flex r_just_a">
             <li>
-                <a href="">
+                <a href="" class="" data-toggle="modal" data-target="#searchModalCenter">
                     <img src="img/icon/search.svg" alt="">
                 </a>
             </li>
@@ -260,6 +260,38 @@
         </ul>
     </div>
     <!-- /* ～～～～～～～以上為手機版icon選單區域～～～～～～～ */ -->
+    <!-- /* ～～～～～～～以下為手機版search model～～～～～～～ */ -->
+    <!-- Modal -->
+    <div class="modal fade" id="searchModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="srarchModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="col-12 modal-title mx-auto text-center">
+                        <img src="img/icon/pastania_logo.svg" class="logo_img" alt="">
+                    </a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="card-title text-center pt-4 pb-2">未找到 餛飩 相關產品</h4>
+                    <h6 class="card-title text-center pb-2">請輸入關鍵字搜尋</h6>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-serach"><img src="img/icon/search.svg" alt="" style="width: 20px"></span>
+                        </div>
+                        <input type="search" class="form-control"  id="search-bar" name="search-bar" placeholder="請輸入關鍵字搜尋" aria-label="search" aria-describedby="basic-serach">
+                    </div>
+                </div>
+                <div class="modal-footer pt-0 border-top-0">
+                    <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3">前往搜尋</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /* ～～～～～～～以上為手機版search model～～～～～～～ */ -->
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -463,7 +495,7 @@
             $(".menu-btn").toggleClass('active');
             $(".r_arrow_icon").find('i').removeClass("ar_turn");
             $(".sub-menu ").slideUp(300);
-            });
+        });
 
 
         $(".menu-btn a").click(function () {
