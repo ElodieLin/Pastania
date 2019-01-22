@@ -203,7 +203,7 @@
 
         .footer_wrapper {
             flex-direction: column;
-            max-width: 90 ％;
+            max-width: 90％;
 
         }
 
