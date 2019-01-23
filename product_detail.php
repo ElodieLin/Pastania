@@ -1,3 +1,30 @@
+<?php
+
+require __DIR__. '/__connect_db.php';
+
+$productID = $_GET['product'];
+
+$p_sql = sprintf("SELECT * FROM product_info WHERE sid = $productID LIMIT 1");
+$p_stmt = $pdo->query($p_sql);
+
+while($row = $p_stmt->fetch(PDO::FETCH_ASSOC))
+{
+    $product = $row;
+}
+
+
+?>
+
+<!-- try assoc product_list & product_info DB -->
+<!-- <?php
+$typeID = $_GET['type'];
+$t_sql = sprintf("SELECT * FROM product_list WHERE parent_sid LIMIT 1");
+$t_stmt = $pdo->query($t_sql);
+
+
+?> -->
+
+
 <?php include __DIR__. '/__html_head.php' ?>
 <?php include __DIR__. '/__navbar.php' ?>
 
@@ -9,10 +36,13 @@
 <body>
     <div class="w_container">
         <div class="w_product_detail_wrapper_one">
+
+        <?php  ?>
+
             <div class="w_product_detail_bg">
                 <div class="w_product_detail_img_box">
-                    <img class="w_product_detail_small_pasta_img" src="img/product/s/P1_Farfalle_Tricolore_s.png" alt="">
-                    <img class="w_product_detail_img" src="img/product/l/P3_Ballerine.png">
+                    <img class="w_product_detail_small_pasta_img" src="img/product/s/<?= $product['Image_small']; ?>.png" alt="">
+                    <img class="w_product_detail_img" src="img/product/l/<?= $product['Image_large']; ?>.png">
                 </div>
             </div>
 
@@ -21,21 +51,25 @@
                         w_product_detail_word">
                 <!-- 以下為麵包屑區域 -->
                 <div class="w_product_detail_breadcrumbs_box   product_detail_small_noto_thin_b">
-                    <a href="">
+                    <a href="products_cate.php">
                         <span class="w_product_detail_breadcrumbs_ch">產品種類</span>
                         <span class="w_product_detail_breadcrumbs_en">Products</span>
                     </a>
                     <span>></span>
 
-                    <a href="">
-                        <span class="w_product_detail_breadcrumbs_ch">特別款</span>
-                        <span class="w_product_detail_breadcrumbs_en">Specialty</span>
+                <!-- try assoc product_list & product_info DB -->
+                <!-- <?php while($row = $t_stmt->fetch(PDO::FETCH_ASSOC)):?> -->
+                    <a href="product_list_specialty.php"><!-- direct to the correspond categories -->
+                        <span class="w_product_detail_breadcrumbs_ch"><?= $row['pasta_type_ch']?>特別款</span>
+                        <span class="w_product_detail_breadcrumbs_en"><?= $row['pasta_type']?>Specialty</span>
                     </a>
+                <!-- <?php endwhile; ?> -->
+
                     <span>></span>
 
-                    <a href="">
-                        <span class="w_product_detail_breadcrumbs_ch">蝴蝶麵</span>
-                        <span class="w_product_detail_breadcrumbs_en">Farfalle</span>
+                    <a href="#"><!-- stay on same page -->
+                        <span class="w_product_detail_breadcrumbs_ch"><?= $product['Name_Ch']; ?></span>
+                        <span class="w_product_detail_breadcrumbs_en"><?= $product['Name_En']; ?></span>
                     </a>
                 </div>
                 <!-- 以上為麵包屑區域 -->
@@ -46,8 +80,12 @@
                 <!-- 以下為品名區域 -->
                 <div class="w_product_detail_bigtitle">
                     <div class="en_font">
-                        <p>Farfalle nº 87<img src="img/icon/like.svg" alt=""></p>
-                        <p class="noto_thin">蝴蝶麵</p>
+                        <p class="pro_name">
+                            <?php echo $product['Name_En']; ?> <?= $product['product_no']; ?>
+                            <span class="heart_p"><i class="far fa-heart"></i> </span> 
+                        <!-- <img src="img/icon/like.svg" alt=""> -->
+                    </p>
+                        <p class="noto_thin"><?= $product['Name_Ch']; ?></p>
                     </div>
                 </div>
                 <!-- 以上為品名區域 -->
@@ -67,7 +105,7 @@
                     </div>
                     <br>
                     <div class="w_product_detail_star_box_in_money">
-                        <p class="product_detail_big_en_font_b2">NT＄ 109</p>
+                        <p class="product_detail_big_en_font_b2">NT＄ <?= $product['Price']; ?></p>
                         <p class="product_detail_small_noto_thin">全站購物滿千免運</p>
                     </div>
                 </div>
@@ -76,7 +114,7 @@
 
                 <div class="w_product_detail_word_box_in">
                     <br>
-                    <p class="product_detail_small_noto_thin_b">500g (7人份)</p>
+                    <p class="product_detail_small_noto_thin_b">500g (<?= $product['Serve'] ?>人份)</p>
                     <!-- <span class="w_product_detail_number"></span> -->
                     <div class="w_product_detail_number">
                         <!-- 在這裡插入加減數字欄位 -->
@@ -109,9 +147,8 @@
         <!------- 以下為介紹文字、三個icon設定 ------->
         <div class="row">
             <div class="col-md-6 w_product_detail_word_box">
-                <p class="noto_thin">Farfalle蝴蝶麵產於倫巴底大區和艾米利亞區，其名字來源於典型的蝴蝶形狀，中間微微凸起。
-                    最早是由手工製法所創造，中間較厚，而兩邊較薄的麵身，可以一次體驗二種不同口感。最受青睞的，搭配蝴蝶面的醬料是口感細膩的滷汁：牛油加豌豆和火腿製作的醬汁；鮭魚加奶油制作的口味較淡的醬汁；用口感柔軟的乳酪，加入藏紅花或咖哩粉製作的醬汁。
-                    這種意麵也可以用來配製五彩繽紛的義麵沙拉。
+                <p class="noto_thin">
+                    <?= $product['Description']; ?>
                 </p>
             </div>
         </div>
@@ -120,15 +157,15 @@
         <div class="row w_product_detail_icon">
             <div class="col-md-4 col-4">
                 <img src="img/icon/time.svg" alt="">
-                <p class="noto_light">12 mins</p>
+                <p class="noto_light"><?= $product['Cook_time']; ?> mins</p>
             </div>
             <div class="col-md-4 col-4">
                 <img src="img/icon/ruler.svg" alt="">
-                <p class="noto_light">34mm</p>
+                <p class="noto_light"><?= $product['Length']; ?></p>
             </div>
             <div class="col-md-4 col-4">
                 <img src="img/icon/width.svg" alt="">
-                <p class="noto_light">1.2mm</p>
+                <p class="noto_light"><?= $product['Diameter']; ?></p>
             </div>
         </div>
     </div>
@@ -147,7 +184,8 @@
 
 
             <div class="w_product_detail_recipe_title_btn">
-                <a class="w_product_detail_transition" href="">了解更多</a>
+                <a class="w_product_detail_transition" href="recipe_detail.php">了解更多</a>
+                <!-- direct to recipe detail page via mapping db -->
             </div>
         </div>
     </div>
@@ -343,7 +381,7 @@
 
         </div>
         <div class="w_writing_review_box">
-            <textarea name="" id="" cols="30" rows="5" class="noto_light">顧客寫評價區</textarea>
+            <textarea cols="30" rows="5" class="noto_light" id="commentText" placeholder="顧客寫評價區"></textarea>
         </div>
 
 
@@ -507,6 +545,16 @@
 
             })
         }
+
+
+    // add to wish list
+
+    $('.far').click(function() {
+    $(this).toggleClass('fas');
+    // $('.far').toggleClass('fas');
+    });
+ 
+
 
 
     </script>
