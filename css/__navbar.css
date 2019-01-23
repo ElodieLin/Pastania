@@ -420,7 +420,6 @@
 
   @media screen and (max-width: 575.98px) {
 
-
     .w_nav_wrapper {
       display: none;
     }
@@ -459,6 +458,7 @@
     .menu-btn ul {
       background: #ffffff;
       width: 150px;
+
       max-height: 0;
       overflow: hidden;
       background-color: antiquewhite;
@@ -468,10 +468,11 @@
       position: absolute;
       right: 0;
       top: 100%;
-      width: 100vw;
+
     }
 
     .menu-btn.active ul {
+
       max-height: 800px;
       width: 100vw;
       background-color: #DCDCDC;
@@ -535,10 +536,6 @@
       justify-content: space-between;
       align-items: center;
     }
-    .r_wish_p{
-      width: 80px !important;
-    }
-
   }
 
   /* ～～～～～～～以上漢堡選單區域～～～～～～～ */
@@ -567,14 +564,6 @@
     width: 40px;
   }
 
-  #basic-serach img{
-    width: 20px;
-  }
-
-  .r_icon_w{
-    width: 20px;
-  }
-
 
   /* ～～～～～～～以上手機選單區域～～～～～～～ */
   /* bootstrap modal size */
@@ -597,7 +586,7 @@
     right: 1rem;
   }
 
-  h3,h4, h5, h6, .form-check-label, .label_text {
+  h3, h4, h5, h6, .form-check-label, .label_text {
     color: #5C7880;
   }
 
@@ -622,6 +611,7 @@
 
   input::placeholder {
     color: #C9C9C9 !important;
+    font-size: 0.94rem !important;
   }
 
   /* 地址城市selector 字形顏色 */
@@ -654,3 +644,30 @@
     z-index: 5;
     width: 100%;
   }
+
+
+
+
+  /* badge position start*/
+  .cart_icon_position {
+    position: relative;
+  }
+
+
+  .badge.badge_position {
+    position: absolute;
+    top: 12px;
+    max-width: 18px;
+    left: 6.5px;
+    background-color: #5C7880;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  /* badge position end */
+
+
+
+
+
+

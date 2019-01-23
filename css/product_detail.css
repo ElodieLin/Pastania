@@ -1,4 +1,4 @@
-  .noto_thin {
+  p.noto_thin {
             font-family: 'Noto Sans TC';
             font-weight: 100;
             /* 這是最細的(thin) */
@@ -112,6 +112,7 @@
             font-size: 1.3rem;
             letter-spacing: 2px;
             color: #5C7880;
+            margin-top: -15px;  /*  */
         }
 
         .product_detail_small_two_en_font_r {
@@ -128,7 +129,7 @@
             letter-spacing: 2px;
             font-size: 1.6rem;
             color: #5C7880;
-            padding-top:15px;/*  */
+            /* padding-top:15px; */
         }
 
         /* ----------以上為非模組字體設定---------- */
@@ -206,6 +207,12 @@
         .w_product_detail_img_box {
             width: 60vw;
             margin: auto;
+            height: 100%; /*  */
+            /*  */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*  */
         }
 
         .w_product_detail_img {
@@ -221,13 +228,18 @@
         }
 
         .w_product_detail_small_pasta_img {
-            width: 60vw;
+            /* width: 60vw; */
+            /*  */
+            max-width: 1000px;
+            max-height: 1000px;
             margin: auto;
             display: none;
         }
 
         .w_product_detail_img_box:hover .w_product_detail_small_pasta_img {
             display: block;
+            padding-top: 100px; /*  */
+
         }
 
         /* ----------以上為商品照片---------- */
@@ -287,10 +299,21 @@
             align-items: center;
         }
 
-        .w_product_detail_bigtitle img {
+        /* .w_product_detail_bigtitle img {
             width: 6%;
             margin-left: 15%;
+        } */
+        /* new adjust fontawesome */
+        .w_product_detail_bigtitle .en_font{
+            width:100%;
         }
+        .heart_p .far{
+            font-size: 1.3rem;
+             margin-left: 16%;
+             cursor: pointer;
+        }
+        /*  */
+
 
         .w_product_detail_bigtitle p {
             margin-bottom: -4px;
@@ -721,7 +744,8 @@
             padding: 30px;
             width: 100%;
             margin-bottom: 30px;
-            color: #DBDBDB;
+            /* color: #DBDBDB; */
+            
         }
 
         /* ----------以上為顧客寫評價區域---------- */
@@ -944,15 +968,20 @@
 
 
             /*--------- 以下為大標、愛心設定--------- */
-            .w_product_detail_bigtitle img {
+            /* .w_product_detail_bigtitle img {
                 width: 7%;
                 margin-left: 100%;
                 margin-top: -20%;
-            }
+            } */
         
 
             .w_product_detail_bigtitle p {
-                margin-bottom: -30px;
+                /* margin-bottom: -30px; */
+            }
+       
+            .heart_p{
+                margin-left:21%;
+                
             }
 
             /*--------- 以上為大標、愛心設定--------- */
@@ -1288,3 +1317,10 @@
             margin-left: -16px !important;
             margin-top: -20px;
         }
+
+
+          /* comment text placeholder */
+        #commentText input::placeholder {
+             color:red !important;
+        }
+     
