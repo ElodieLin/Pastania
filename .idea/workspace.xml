@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f0238076-6605-4e59-8ba7-7ce48e97650f" name="Default Changelist" comment="0123 - files move to Public">
+      <change afterPath="$PROJECT_DIR$/Public/Pastania.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/__html_foot.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/__html_head.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/__navbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/__navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/product_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/product_list_gift_set.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/product_list_long.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/product_list_minute.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/product_list_sauce.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/product_list_specialty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/product_list_stuffed.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/product_short_cut.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/products_cate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/recipe_list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/recipes_cate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/event_f.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/event_j.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/giftbox/gift_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/giftbox/gift_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/giftbox/gift_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/giftbox/gift_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/giftbox/gift_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/giftbox/gift_06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/QA.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/arrow_down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/arrow_red_back.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/arrow_red_next.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/check_circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/chef.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/chef2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/chevron_down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/delivery_truck.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/diameter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/exchange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/fb.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/like.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/like_red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/mail.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/map_marker.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/member.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/member_red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/pastania_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/policy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/privacy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/recipe_esay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/recipe_hard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/recipe_medium.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/recipe_portion.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/recipe_time.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/responsibility.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/review1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/review1_red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/review2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/review2_red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/review_border.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/ruler.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/search_red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/service.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/shopping_bag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/shopping_bag_red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/shopping_cart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/time.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/icon/width.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_cooking.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_italy_flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/about/aboutus_our_team.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_noodle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_t1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_t2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_t3-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/fa/event_f_t4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_noodle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_t01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_t02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_t03-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/event/ja/event_j_t04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/banner-f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/banner_j.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/declaration_durum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/declaration_health.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/declaration_health_food.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/declaration_made.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/declaration_type.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/index_made_in_italy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/index_wheat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/landing_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/long.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/minute.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/short.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/special.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/index/stuffed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/map_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/map_italy_flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/map_triangle_blue.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/map_triangle_gray.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_detail_recipe_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_detail_recommend_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_giftset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_long.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_minute.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_sauce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_short.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_special.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/product_stuffed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/recipes_light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/recipes_occasion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/recipes_party.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/recipes_starter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/others/recipes_typical.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/LongPasta.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/MinutePasta.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/ShortPasta.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/SpeciaityPasta.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/StuffedPasta.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/pre_landing_page_bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/pre_page_lid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/pre_page_plate.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/pre_page_wheat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/prelanding/wheel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/gift_set_long_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/gift_set_title.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/long_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/long_title.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/minute_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/minute_title.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/product_list_bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/sauce_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/sauce_title.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/short_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/short_title.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/specialty_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/specialty_title.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/stuffed_cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/pages/product_list/stuffed_title.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F10_Ravioletti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F11_Ravioli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F12_Raviolo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F13_Sacchettoni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F14_Tortelli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F15_Tortellini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F16_Tortelloni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F17_Fazzoletti_Ripieni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F18_Manicotti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F19_Fazzoletti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F1_Agnolotti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F20_Foglie_dUlivo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F22_Mparrettati.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F23_Passatelli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F24_Sagne_Ncaannulate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F2_Agnolotti_del_Plin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F3_Cappelletti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F4_Cappelletti_Umbria.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F5_Caramelle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F6_Casoncelli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F7_Conchiglioni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F8_Mezzelune.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/F9_Pansotti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L10_Maccheroni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L11_Maccheroni_Inferrettati.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L12_Pici.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L13_Spaghetti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L14_Spaghettini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L15_Spaghettoni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L16_Vermicelli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L17_Vermicelloni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L1_Bigoli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L2_Bucatini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L3_Matriciani.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L4_Fedelini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L5_Fusilli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L6_Fusilli_Bucati_Corti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L7_Fusilli_Bucati_Lunghi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L7_Fusilli_Bucati_Lunhi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L8_Capelli_dAngelo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/L9_Capellini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M10_Farfalline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M11_Filini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M12_Occhi_di_Pernice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M13_Puntalette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M14_Quadretti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M15_Riso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M16_Seme_di_Melone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M17_Stellette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M18_Lancette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M19_Peperini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M1_Alfabeto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M20_Rombi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M21_Cuoretti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M22_Stortini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M23_Spaghetti_Tagliati.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M24_Rotelline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M2_Anelli_Siciliani.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M3_Acini_di_Pepe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M4_Anellini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M5_Conchigliette_Piccole.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M6_Coralli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M7_Coquillettes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M8_Ditali_Lisci.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/M9_Ditali_Rigati.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P10_Cavatelli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P11_Cencioni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P12_Margherite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P13_Pasta_al_ceppo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P14_Troffiette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P15_Orecchiette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P16_Torchio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P17_Strozzapreti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P18_Francesine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P19_Funghetti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P1_Farfalle_Tricolore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P20_Fusi_Istriani.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P21_Garganelli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P22_Gigli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P23_Lanterne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P2_Assabesi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P3_Ballerine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P4_Busiate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P5_Canestrini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P6_Casarecci.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P7_Maltagliati.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P8_Corzetti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/P9_Capunti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R1_Mafalde.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R2_Tripoline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R3_Linguine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R4_Sagnarelli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R5_Pizzoccheri.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R6_Pillus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R7_Bavette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R8_Pappardelle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/R9_Lasagne_Ricce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S10_Lumachine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S11_Caserecce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S12_Orecchiette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S13_Conchiglie_Rigate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S14_Conchigliette_Rigate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S15_Gemelli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S15_Gemellin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S16_Rotelle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S17_Gnocchi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S18_Gnocchetti_Sardi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S19_Cavatappi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S1_Penne_Lisce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S20_Sedani.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S21_Sedanini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S21_Sedaninin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S22_Ziti_Tagliati.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S23_Sagnette_Abruzzesi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S24_Spaccatella.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S25_Racchette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S2_Penne_Rigate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S3_Pennoni_Rigati.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S4_Mezze_Penne_Rigate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S5_Rigatoni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S6_Mezzi_ Rigatoni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S6_Mezzi_Rigatonin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S7_Fusilli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S8_Fusilli_Corti_Bucatin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/l/S9_Lumache_Rigate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F10_Ravioletti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F11_Ravioli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F12_Raviolo_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F13_Sacchettoni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F14_Tortelli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F15_Tortellini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F16_Tortelloni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F17_Fazzoletti_Ripieni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F18_Manicotti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F19_Fazzoletti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F1_Agnolotti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F20_Foglie_dUlivo_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F22_Mparrettati_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F23_Passatelli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F24_Sagne_Ncaannulate_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F2_Agnolotti_del_Plin_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F3_Cappelletti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F4_Cappelletti_Umbria_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F5_Caramelle_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F6_Casoncelli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F7_Conchiglioni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F8_Mezzelune_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/F9_Pansotti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L10_Maccheroni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L11_Maccheroni_Inferrettati_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L12_Pici_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L13_Spaghetti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L14_Spaghettini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L15_Spaghettoni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L16_Vermicelli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L17_Vermicelloni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L1_Bigoli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L2_Bucatini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L3_Matriciani_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L4_Fedelini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L5_Fusilli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L6_Fusilli_Bucati_Corti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L7_Fusilli_Bucati_Lunghi_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L8_Capelli_dAngelo_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/L9_Capellini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M10_Farfalline_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M11_Filini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M12_Occhi_di_Pernice_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M13_Puntalette_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M14_Quadretti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M15_Riso_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M16_Seme_di_Melone_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M17_Stellette_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M18_Lancette_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M19_Peperini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M1_Alfabeto_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M20_Rombi_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M21_Cuoretti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M22_Stortini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M23_Spaghetti_Tagliati_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M24_Rotelline_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M2_Anelli_Siciliani_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M3_Acini_di_Pepe_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M4_Anellini _s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M4_Anellini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M5_Conchigliette_Piccole_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M6_Coralli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M7_Coquillettes_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M8_Ditali_Lisci_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/M9_Ditali_Rigati_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P10_Cavatelli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P11_Cencioni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P12_Margherite_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P13_Pasta_al_Ceppo_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P14_Troffiette_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P15_Orecchiette_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P16_Torchio_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P17_Strozzapreti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P18_Francesine_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P19_Funghetti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P1_Farfalle_Tricolore_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P20_Fusi_Istriani_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P21_Garganelli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P22_Gigli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P23_Lanterne_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P2_Assabesi_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P3_Ballerine_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P4_Busiate_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P5_Canestrini_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P6_Casarecci_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P7_Maltagliati_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P8_Corzetti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/P9_Capunti_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R1_Mafalde_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R2_Tripoline_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R3_Linguine_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R4_Sagnarelli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R5_Pizzoccheri_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R6_Pillus_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R7_Bavette_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R8_Pappardelle_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/R9_Lasagne_Ricce_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S10_Lumachine_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S11_Caserecce_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S12_Orecchiette_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S13_Conchiglie_Rigate_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S14_Conchigliette_Rigate_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S15_Gemellin_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S16_Rotelle_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S17_Gnocchi_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S18_Gnocchetti_Sardi_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S19_Cavatappi_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S1_Penne_Lisce_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S20_Sedani_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S21_Sedaninin_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S22_Ziti_Tagliati_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S23_Sagnette_Abruzzesi _s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S23_Sagnette_Abruzzesi_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S24_Spaccatella_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S25_Racchette_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S2_Penne_Rigate_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S3_Pennoni_Rigatin_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S4_Mezze_Penne_Rigate_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S5_Rigatoni_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S6_Mezzi_Rigatonin_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S7_Fusilli_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S8_Fusilli_Corti_Bucatin_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/product/s/S9_Lumache_Rigate_s.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/10_light_SAPWCTARC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/11_typical_SAP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/12_party_CPPWBSAB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/13_party_L.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/14_party_G.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/15_typical_TPG.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/16_occasion_C.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/17_light_Cpg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/18_typical_B.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/19_starter_M.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/1_starter_BTS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/20_occasion_C.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/21_light_S.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/22_light_AWQTABS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/23_starter_TC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/24_party_LAB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/25_typical_BTP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/26_light_CWC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/27_starter_LFAPP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/28_starter_IPGB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/29_light_SVP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/2_starter_VS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/30_light_SS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/31_party_CAB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/32_typical_BIS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/33_typical_BCL.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/34_party_BA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/35_light_SPC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/36_light_BCFWW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/37_starter_FPSWVAS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/38_typical_FWLGPAC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/39_occasion_FBA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/3_occasion_BA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/40_occasion_FBLRPS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/41_party_AHPWSALCS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/42_light_WWPWGCP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/43_party_ISWPCP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/44_starter_RWEP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/45_typical_CTSP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/46_party_CTWBP_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/47_light_MAGCP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/48_light_AAPP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/49_typiacl_CTAPP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/4_starter_STS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/50_party_CMP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/51_typical_AWBS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/52_light_SWPC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/53_typical_FCWH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/54_typical_FVG.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/55_typical_TAP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/56_typical_PWOR.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/57_occasion_V.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/58_typical_C.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/59_party_AF.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/5_party_HSMAC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/60_occasion_CCRDM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/61_typical_SAS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/62_party_B.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/63_occasion_C.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/64_light_PAN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/65_occasion_SC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/6_light_FS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/7_light_BSWPAS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/8_starter_SCCAPS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/recipe/9_light_CLPS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/sauce/l/Sauce_1_Basilico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/sauce/l/Sauce_2_Puttanesca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/sauce/l/Sauce_3_Genovese.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/sauce/l/Sauce_4_Walnut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/sauce/l/Sauce_5_Pesto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/sauce/l/Sauce_6_Salsa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/sauce/l/Sauce_7_Napoletano.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/img/sauce/l/Sauce_8_Amatriciana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/js/jquery-3.3.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/js/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/login_api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_giftset_detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_list_gift_set.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_list_long.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_list_minute.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_list_sauce.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_list_specialty.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_list_stuffed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_sauce_detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/product_short_cut.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/products_cate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/recipe_detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/recipe_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/recipes_cate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/register_api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Public/sess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastania.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__connect_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/__connect_db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__html_foot.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__html_head.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__navbar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/__navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_detail.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_list_gift_set.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_list_long.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_list_minute.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_list_sauce.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_list_specialty.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_list_stuffed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/product_short_cut.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/products_cate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/recipe_list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/recipes_cate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event_f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/event_j.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/giftbox/gift_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/giftbox/gift_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/giftbox/gift_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/giftbox/gift_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/giftbox/gift_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/giftbox/gift_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/QA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/arrow_down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/arrow_red_back.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/arrow_red_next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/check_circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/chef.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/chef2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/chevron_down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/delivery_truck.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/diameter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/exchange.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/fb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/instagram.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/like.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/like_red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/mail.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/map_marker.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/member.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/member_red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/pastania_logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/policy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/privacy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/recipe_esay.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/recipe_hard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/recipe_medium.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/recipe_portion.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/recipe_time.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/responsibility.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/review1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/review1_red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/review2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/review2_red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/review_border.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/ruler.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/search_red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/service.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/shopping_bag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/shopping_bag_red.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/shopping_cart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/time.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icon/width.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_cooking.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_img3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_img4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_img5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_italy_flag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/about/aboutus_our_team.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_noodle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_t1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_t2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_t3-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/fa/event_f_t4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_noodle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_t01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_t02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_t03-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/event/ja/event_j_t04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/banner-f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/banner_j.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/declaration_durum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/declaration_health.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/declaration_health_food.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/declaration_made.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/declaration_type.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/index_made_in_italy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/index_wheat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/landing_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/long.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/minute.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/short.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/special.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/index/stuffed.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/map_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/map_italy_flag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/map_triangle_blue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/map_triangle_gray.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_detail_recipe_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_detail_recommend_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_giftset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_long.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_minute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_sauce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_short.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_special.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/product_stuffed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/recipes_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/recipes_occasion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/recipes_party.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/recipes_starter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/others/recipes_typical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/LongPasta.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/MinutePasta.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/ShortPasta.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/SpeciaityPasta.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/StuffedPasta.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/pre_landing_page_bg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/pre_page_lid.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/pre_page_plate.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/pre_page_wheat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/prelanding/wheel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/gift_set_long_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/gift_set_title.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/long_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/long_title.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/minute_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/minute_title.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/product_list_bg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/sauce_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/sauce_title.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/short_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/short_title.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/specialty_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/specialty_title.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/stuffed_cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/pages/product_list/stuffed_title.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F10_Ravioletti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F11_Ravioli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F12_Raviolo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F13_Sacchettoni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F14_Tortelli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F15_Tortellini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F16_Tortelloni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F17_Fazzoletti_Ripieni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F18_Manicotti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F19_Fazzoletti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F1_Agnolotti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F20_Foglie_dUlivo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F22_Mparrettati.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F23_Passatelli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F24_Sagne_Ncaannulate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F2_Agnolotti_del_Plin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F3_Cappelletti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F4_Cappelletti_Umbria.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F5_Caramelle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F6_Casoncelli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F7_Conchiglioni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F8_Mezzelune.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/F9_Pansotti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L10_Maccheroni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L11_Maccheroni_Inferrettati.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L12_Pici.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L13_Spaghetti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L14_Spaghettini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L15_Spaghettoni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L16_Vermicelli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L17_Vermicelloni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L1_Bigoli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L2_Bucatini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L3_Matriciani.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L4_Fedelini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L5_Fusilli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L6_Fusilli_Bucati_Corti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L7_Fusilli_Bucati_Lunghi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L7_Fusilli_Bucati_Lunhi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L8_Capelli_dAngelo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/L9_Capellini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M10_Farfalline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M11_Filini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M12_Occhi_di_Pernice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M13_Puntalette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M14_Quadretti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M15_Riso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M16_Seme_di_Melone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M17_Stellette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M18_Lancette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M19_Peperini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M1_Alfabeto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M20_Rombi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M21_Cuoretti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M22_Stortini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M23_Spaghetti_Tagliati.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M24_Rotelline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M2_Anelli_Siciliani.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M3_Acini_di_Pepe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M4_Anellini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M5_Conchigliette_Piccole.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M6_Coralli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M7_Coquillettes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M8_Ditali_Lisci.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/M9_Ditali_Rigati.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P10_Cavatelli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P11_Cencioni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P12_Margherite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P13_Pasta_al_ceppo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P14_Troffiette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P15_Orecchiette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P16_Torchio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P17_Strozzapreti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P18_Francesine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P19_Funghetti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P1_Farfalle_Tricolore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P20_Fusi_Istriani.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P21_Garganelli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P22_Gigli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P23_Lanterne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P2_Assabesi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P3_Ballerine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P4_Busiate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P5_Canestrini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P6_Casarecci.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P7_Maltagliati.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P8_Corzetti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/P9_Capunti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R1_Mafalde.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R2_Tripoline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R3_Linguine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R4_Sagnarelli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R5_Pizzoccheri.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R6_Pillus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R7_Bavette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R8_Pappardelle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/R9_Lasagne_Ricce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S10_Lumachine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S11_Caserecce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S12_Orecchiette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S13_Conchiglie_Rigate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S14_Conchigliette_Rigate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S15_Gemelli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S15_Gemellin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S16_Rotelle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S17_Gnocchi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S18_Gnocchetti_Sardi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S19_Cavatappi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S1_Penne_Lisce.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S20_Sedani.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S21_Sedanini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S21_Sedaninin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S22_Ziti_Tagliati.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S23_Sagnette_Abruzzesi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S24_Spaccatella.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S25_Racchette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S2_Penne_Rigate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S3_Pennoni_Rigati.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S4_Mezze_Penne_Rigate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S5_Rigatoni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S6_Mezzi_ Rigatoni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S6_Mezzi_Rigatonin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S7_Fusilli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S8_Fusilli_Corti_Bucatin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/l/S9_Lumache_Rigate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F10_Ravioletti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F11_Ravioli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F12_Raviolo_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F13_Sacchettoni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F14_Tortelli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F15_Tortellini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F16_Tortelloni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F17_Fazzoletti_Ripieni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F18_Manicotti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F19_Fazzoletti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F1_Agnolotti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F20_Foglie_dUlivo_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F22_Mparrettati_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F23_Passatelli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F24_Sagne_Ncaannulate_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F2_Agnolotti_del_Plin_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F3_Cappelletti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F4_Cappelletti_Umbria_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F5_Caramelle_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F6_Casoncelli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F7_Conchiglioni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F8_Mezzelune_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/F9_Pansotti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L10_Maccheroni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L11_Maccheroni_Inferrettati_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L12_Pici_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L13_Spaghetti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L14_Spaghettini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L15_Spaghettoni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L16_Vermicelli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L17_Vermicelloni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L1_Bigoli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L2_Bucatini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L3_Matriciani_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L4_Fedelini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L5_Fusilli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L6_Fusilli_Bucati_Corti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L7_Fusilli_Bucati_Lunghi_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L8_Capelli_dAngelo_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/L9_Capellini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M10_Farfalline_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M11_Filini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M12_Occhi_di_Pernice_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M13_Puntalette_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M14_Quadretti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M15_Riso_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M16_Seme_di_Melone_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M17_Stellette_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M18_Lancette_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M19_Peperini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M1_Alfabeto_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M20_Rombi_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M21_Cuoretti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M22_Stortini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M23_Spaghetti_Tagliati_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M24_Rotelline_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M2_Anelli_Siciliani_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M3_Acini_di_Pepe_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M4_Anellini _s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M4_Anellini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M5_Conchigliette_Piccole_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M6_Coralli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M7_Coquillettes_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M8_Ditali_Lisci_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/M9_Ditali_Rigati_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P10_Cavatelli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P11_Cencioni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P12_Margherite_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P13_Pasta_al_Ceppo_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P14_Troffiette_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P15_Orecchiette_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P16_Torchio_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P17_Strozzapreti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P18_Francesine_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P19_Funghetti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P1_Farfalle_Tricolore_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P20_Fusi_Istriani_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P21_Garganelli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P22_Gigli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P23_Lanterne_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P2_Assabesi_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P3_Ballerine_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P4_Busiate_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P5_Canestrini_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P6_Casarecci_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P7_Maltagliati_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P8_Corzetti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/P9_Capunti_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R1_Mafalde_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R2_Tripoline_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R3_Linguine_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R4_Sagnarelli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R5_Pizzoccheri_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R6_Pillus_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R7_Bavette_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R8_Pappardelle_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/R9_Lasagne_Ricce_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S10_Lumachine_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S11_Caserecce_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S12_Orecchiette_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S13_Conchiglie_Rigate_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S14_Conchigliette_Rigate_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S15_Gemellin_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S16_Rotelle_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S17_Gnocchi_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S18_Gnocchetti_Sardi_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S19_Cavatappi_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S1_Penne_Lisce_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S20_Sedani_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S21_Sedaninin_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S22_Ziti_Tagliati_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S23_Sagnette_Abruzzesi _s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S23_Sagnette_Abruzzesi_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S24_Spaccatella_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S25_Racchette_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S2_Penne_Rigate_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S3_Pennoni_Rigatin_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S4_Mezze_Penne_Rigate_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S5_Rigatoni_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S6_Mezzi_Rigatonin_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S7_Fusilli_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S8_Fusilli_Corti_Bucatin_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/product/s/S9_Lumache_Rigate_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/10_light_SAPWCTARC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/11_typical_SAP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/12_party_CPPWBSAB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/13_party_L.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/14_party_G.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/15_typical_TPG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/16_occasion_C.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/17_light_Cpg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/18_typical_B.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/19_starter_M.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/1_starter_BTS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/20_occasion_C.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/21_light_S.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/22_light_AWQTABS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/23_starter_TC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/24_party_LAB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/25_typical_BTP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/26_light_CWC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/27_starter_LFAPP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/28_starter_IPGB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/29_light_SVP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/2_starter_VS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/30_light_SS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/31_party_CAB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/32_typical_BIS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/33_typical_BCL.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/34_party_BA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/35_light_SPC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/36_light_BCFWW.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/37_starter_FPSWVAS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/38_typical_FWLGPAC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/39_occasion_FBA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/3_occasion_BA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/40_occasion_FBLRPS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/41_party_AHPWSALCS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/42_light_WWPWGCP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/43_party_ISWPCP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/44_starter_RWEP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/45_typical_CTSP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/46_party_CTWBP_.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/47_light_MAGCP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/48_light_AAPP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/49_typiacl_CTAPP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/4_starter_STS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/50_party_CMP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/51_typical_AWBS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/52_light_SWPC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/53_typical_FCWH.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/54_typical_FVG.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/55_typical_TAP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/56_typical_PWOR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/57_occasion_V.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/58_typical_C.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/59_party_AF.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/5_party_HSMAC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/60_occasion_CCRDM.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/61_typical_SAS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/62_party_B.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/63_occasion_C.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/64_light_PAN.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/65_occasion_SC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/6_light_FS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/7_light_BSWPAS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/8_starter_SCCAPS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/recipe/9_light_CLPS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sauce/l/Sauce_1_Basilico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sauce/l/Sauce_2_Puttanesca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sauce/l/Sauce_3_Genovese.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sauce/l/Sauce_4_Walnut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sauce/l/Sauce_5_Pesto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sauce/l/Sauce_6_Salsa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sauce/l/Sauce_7_Napoletano.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/sauce/l/Sauce_8_Amatriciana.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-3.3.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_detail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_giftset_detail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_list_gift_set.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_list_long.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_list_minute.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_list_sauce.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_list_specialty.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_list_stuffed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_sauce_detail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_short_cut.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products_cate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipe_detail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipe_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes_cate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register_api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sess.php" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Pastania" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/__navbar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="760" column="50" lean-forward="true" selection-start-line="760" selection-start-column="50" selection-end-line="760" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/product_detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/__html_head.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/event_j.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>::place</find>
+      <find>$come_from</find>
+      <find>api</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/css/__navbar.css" />
+        <option value="$PROJECT_DIR$/product_list_stuffed.php" />
+        <option value="$PROJECT_DIR$/__connect_db.php" />
+        <option value="$PROJECT_DIR$/__html_foot.php" />
+        <option value="$PROJECT_DIR$/register_api.php" />
+        <option value="$PROJECT_DIR$/__navbar.php" />
+        <option value="$PROJECT_DIR$/recipe_detail.php" />
+        <option value="$PROJECT_DIR$/product_short_cut.php" />
+        <option value="$PROJECT_DIR$/cart.php" />
+        <option value="$PROJECT_DIR$/event_f.php" />
+        <option value="$PROJECT_DIR$/event_j.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/login_api.php" />
+        <option value="$PROJECT_DIR$/product_detail.php" />
+        <option value="$PROJECT_DIR$/product_giftset_detail.php" />
+        <option value="$PROJECT_DIR$/product_list_gift_set.php" />
+        <option value="$PROJECT_DIR$/product_list_long.php" />
+        <option value="$PROJECT_DIR$/product_list_minute.php" />
+        <option value="$PROJECT_DIR$/product_list_sauce.php" />
+        <option value="$PROJECT_DIR$/product_list_specialty.php" />
+        <option value="$PROJECT_DIR$/product_sauce_detail.php" />
+        <option value="$PROJECT_DIR$/products_cate.php" />
+        <option value="$PROJECT_DIR$/recipe_list.php" />
+        <option value="$PROJECT_DIR$/recipes_cate.php" />
+        <option value="$PROJECT_DIR$/__html_head.php" />
+        <option value="$PROJECT_DIR$/Public/index.php" />
+        <option value="$PROJECT_DIR$/Public/__navbar.php" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="32" />
+    <option name="width" value="1400" />
+    <option name="height" value="837" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Pastania" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pastania" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pastania" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pastania" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pastania" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pastania" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Public" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f0238076-6605-4e59-8ba7-7ce48e97650f" name="Default Changelist" comment="" />
+      <created>1548244534120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548244534120</updated>
+      <workItem from="1548244536829" duration="9481000" />
+    </task>
+    <task id="LOCAL-00001" summary="0123 - css folder update">
+      <created>1548246774212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548246774213</updated>
+    </task>
+    <task id="LOCAL-00002" summary="0123 - images update">
+      <created>1548247061813</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1548247061814</updated>
+    </task>
+    <task id="LOCAL-00003" summary="0123 - php files update">
+      <created>1548249879777</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548249879777</updated>
+    </task>
+    <task id="LOCAL-00004" summary="0123 - php files reformat">
+      <created>1548250747734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1548250747734</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9481000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="20" y="43" width="1400" height="837" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" sideWeight="0.50067115" side_tool="true" weight="0.2496318" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49932885" visible="true" weight="0.2496318" />
+      <window_info id="Structure" order="2" sideWeight="0.50067115" side_tool="true" weight="0.2496318" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.08993289" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32885906" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0123 - css folder update" />
+    <MESSAGE value="0123 - images update" />
+    <MESSAGE value="0123 - php files update" />
+    <MESSAGE value="0123 - php files reformat" />
+    <MESSAGE value="0123 - files move to Public" />
+    <option name="LAST_COMMIT_MESSAGE" value="0123 - files move to Public" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/product_detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2687">
+          <caret line="1139" column="9" selection-start-line="1139" selection-start-column="9" selection-end-line="1139" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/__navbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="463" column="6" selection-start-line="463" selection-start-column="6" selection-end-line="463" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/__connect_db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__html_foot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4642">
+          <caret line="482" lean-forward="true" selection-start-line="482" selection-end-line="482" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipe_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_short_cut.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1897">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event_f.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event_j.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_giftset_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_list_gift_set.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1346" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_list_long.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_list_minute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_list_sauce.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_list_specialty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_list_stuffed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product_sauce_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products_cate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipe_list.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipes_cate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__html_head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/login_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/event_j.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/__html_head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/product_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/__navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="760" column="50" lean-forward="true" selection-start-line="760" selection-start-column="50" selection-end-line="760" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
