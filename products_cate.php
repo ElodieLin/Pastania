@@ -1,14 +1,13 @@
-<?php include __DIR__. '/__html_head.php' ?>
-<?php include __DIR__. '/__navbar.php' ?>
+<?php include __DIR__ . '/__html_head.php' ?>
+<?php include __DIR__ . '/__navbar.php' ?>
 
-<head>
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/products_cate.css">
-</head>    
-    
+    <head>
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/products_cate.css">
+    </head>
 
 
-<body>
+    <body>
     <header>
         <div class="w_product_cover"></div>
     </header>
@@ -23,8 +22,6 @@
             </div>
         </div>
         <!------------ 以上為title區域 ------------>
-
-
 
 
         <!------------ 以下為長麵區域 ------------>
@@ -42,8 +39,6 @@
             </div>
         </div>
         <!------------ 以上為長麵區域 ------------>
-
-
 
 
         <!------------ 以下為短麵區域 ------------>
@@ -143,27 +138,26 @@
         <!------------ 以上為組合包區域 ------------>
 
 
-
-
-
     </section>
     </div>
 
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-        </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
 
     <script src="js/wow.min.js"></script>
 
     <script>
         new WOW().init();
     </script>
-</body>
+    </body>
 
-<?php include __DIR__. '/__html_foot.php' ?>
+<?php include __DIR__ . '/__html_foot.php' ?>

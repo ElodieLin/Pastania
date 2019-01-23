@@ -8,7 +8,6 @@ $db_pass = 'root';
 $dsn = sprintf('mysql:host=%s;dbname=%s', $db_host, $db_name);
 
 
-
 try {
     $pdo = new PDO($dsn, $db_user, $db_pass);
 
@@ -17,11 +16,11 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // $pdo->query("use `mytest`"); // 指定使用的資料庫
-} catch(PDOException $ex) {
-    echo 'Connection failed:'. $ex->getMessage();
+} catch (PDOException $ex) {
+    echo 'Connection failed:' . $ex->getMessage();
 }
 
 //要設定如果未設定session要啟用
-if(! isset($_SESSION)){
+if (!isset($_SESSION)) {
     session_start();
 }

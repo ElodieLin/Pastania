@@ -1,49 +1,45 @@
-       <?php
+<?php
 
-        require __DIR__. '/__connect_db.php';
-        
-        $productID = $_GET['product'];
-        
-        $p_sql = sprintf("SELECT * FROM giftbox WHERE sid = $productID LIMIT 1");
-        $p_stmt = $pdo->query($p_sql);
-        
-        while($row = $p_stmt->fetch(PDO::FETCH_ASSOC))
-        {
-            $product = $row;
-        }
-        
-        // sauce_info query
-        $sauceID = $_GET['sauce'];
+require __DIR__ . '/__connect_db.php';
 
-    $s_sql = sprintf("SELECT giftbox.*, sauce_info.Description as soase_des FROM giftbox join sauce_info on giftbox.sauce_sid = sauce_info.sid WHERE giftbox.sid = $sauceID");
-        $s_stmt = $pdo->query($s_sql);
+$productID = $_GET['product'];
 
-        while($row_s = $s_stmt->fetch(PDO::FETCH_ASSOC))
-        {
-            $sauce = $row_s;
-        }
+$p_sql = sprintf("SELECT * FROM giftbox WHERE sid = $productID LIMIT 1");
+$p_stmt = $pdo->query($p_sql);
+
+while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
+    $product = $row;
+}
+
+// sauce_info query
+$sauceID = $_GET['sauce'];
+
+$s_sql = sprintf("SELECT giftbox.*, sauce_info.Description as soase_des FROM giftbox join sauce_info on giftbox.sauce_sid = sauce_info.sid WHERE giftbox.sid = $sauceID");
+$s_stmt = $pdo->query($s_sql);
+
+while ($row_s = $s_stmt->fetch(PDO::FETCH_ASSOC)) {
+    $sauce = $row_s;
+}
 
 
-
-        // product_info query
-        
+// product_info query
 
 
+?>
 
-        ?>
+<?php include __DIR__ . '/__html_head.php' ?>
+<?php include __DIR__ . '/__navbar.php' ?>
 
-        <?php include __DIR__. '/__html_head.php' ?>
-        <?php include __DIR__. '/__navbar.php' ?>
+    <head>
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/product_detail.css">
+    </head>
 
-        <head>   
-                <link rel="stylesheet" href="css/animate.css">
-                <link rel="stylesheet" href="css/product_detail.css">
-        </head>
-        
     <style>
         body {
             overflow-x: hidden;
         }
+
         .noto_thin {
             font-family: 'Noto Sans TC';
             font-weight: 100;
@@ -231,14 +227,13 @@
 
         .w_product_giftset_detail_wrapper_six {
             /* ----------此為為購買提醒、立即購買按鈕區域(隱藏中)---------- */
-            width: 90%; 
+            width: 90%;
             margin: 0 auto;
             text-align: center;
             display: none;
         }
 
         /* ----------------------------------以上區域大盒子設定------------------------------------ */
-
 
 
         /* ----------以下為商品照片灰色背景---------- */
@@ -249,8 +244,6 @@
         }
 
         /* ----------以上為商品照片灰色背景---------- */
-
-
 
 
         /* ----------以下為商品照片---------- */
@@ -270,7 +263,6 @@
         /* ----------以上為商品照片---------- */
 
 
-
         /*--------- 以下為麵包屑的設定 --------- */
         .w_product_giftset_detail_word {
             padding-top: 3%;
@@ -286,7 +278,7 @@
             margin-bottom: 10%;
         }
 
-        .w_product_giftset_detail_breadcrumbs_box>a {
+        .w_product_giftset_detail_breadcrumbs_box > a {
             text-decoration: none;
             color: #5C7880;
         }
@@ -297,32 +289,31 @@
             padding-left: 10px;
         }
 
-        .w_product_giftset_detail_word>.w_product_giftset_detail_breadcrumbs_box>a>.w_product_giftset_detail_breadcrumbs_ch {
+        .w_product_giftset_detail_word > .w_product_giftset_detail_breadcrumbs_box > a > .w_product_giftset_detail_breadcrumbs_ch {
             display: none;
         }
 
-        .w_product_giftset_detail_word>.w_product_giftset_detail_breadcrumbs_box>a:hover .w_product_giftset_detail_breadcrumbs_ch {
+        .w_product_giftset_detail_word > .w_product_giftset_detail_breadcrumbs_box > a:hover .w_product_giftset_detail_breadcrumbs_ch {
             display: block;
             color: #E67348;
         }
 
-        .w_product_giftset_detail_word>.w_product_giftset_detail_breadcrumbs_box>a>.w_product_giftset_detail_breadcrumbs_en {
+        .w_product_giftset_detail_word > .w_product_giftset_detail_breadcrumbs_box > a > .w_product_giftset_detail_breadcrumbs_en {
             margin-top: -26px;
         }
 
-        .w_product_giftset_detail_word>.w_product_giftset_detail_breadcrumbs_box>a:hover .w_product_giftset_detail_breadcrumbs_en {
+        .w_product_giftset_detail_word > .w_product_giftset_detail_breadcrumbs_box > a:hover .w_product_giftset_detail_breadcrumbs_en {
             display: none;
         }
 
         /*--------- 以上為麵包屑的設定 --------- */
 
 
-
         /*--------- 以下為大標、愛心設定--------- */
         .w_product_giftset_detail_bigtitle {
             display: flex;
             align-items: center;
-            word-wrap:break-word;
+            word-wrap: break-word;
         }
 
         .w_product_giftset_detail_bigtitle img {
@@ -355,10 +346,6 @@
         /*---------- 以上為星星旁邊的數字設定（2 Reviews） ----------*/
 
 
-
-
-
-
         /*---------- 以下為星星設定---------- */
         .w_product_giftset_detail_star_box_in {
             display: flex;
@@ -375,9 +362,6 @@
         /*---------- 以上為星星設定 ----------*/
 
 
-
-
-
         /* ----------以下為金額、免運文字設定---------- */
 
         .w_product_giftset_detail_star_box_in_money p {
@@ -385,10 +369,6 @@
         }
 
         /* ----------以上為金額、免運文字設定---------- */
-
-
-
-
 
 
         /* ----------以下為500g (7人份)、數量按鍵盒子設定---------- */
@@ -405,13 +385,14 @@
             margin-bottom: 10px;
             padding: 20px 65px;
         }
+
         .input-box {
             display: inline-block;
             min-width: 50px;
             /* border: 1px solid #ccc; */
-            padding-top:1px;
+            padding-top: 1px;
             padding-bottom: 2px;
-            border-top:#5C7880 1px solid;
+            border-top: #5C7880 1px solid;
             border-bottom: #5C7880 1px solid;
             text-align: center;
         }
@@ -419,22 +400,20 @@
         .input-box:focus {
             outline: none;
         }
+
         .number-box button:focus {
             outline: none;
             box-shadow: 0 0 0 0.2rem #C8DBD8;
         }
 
-        .w_input_change_style{
-             /* ----------數量按鍵樣式設定---------- */
+        .w_input_change_style {
+            /* ----------數量按鍵樣式設定---------- */
             background: rgb(255, 255, 255);
             border: #5C7880 1px solid;
         }
-        
+
 
         /* ----------以上為500g (7人份)、數量按鍵盒子設定---------- */
-
-
-
 
 
         /*---------- 以下為加入購物車橘色大按鈕---------- */
@@ -458,15 +437,10 @@
         /*---------- 以上為加入購物車橘色大按鈕---------- */
 
 
-
-
-
-
         /*----------------------------------- 以下開始為商品介紹設定（從商品介紹開始） ------------------------------------- */
-         
-         
-         
-         /* ----------以下為三個icon設定---------- */
+
+
+        /* ----------以下為三個icon設定---------- */
 
         .w_product_giftset_detail_icon {
             display: flex;
@@ -481,16 +455,13 @@
         /* ----------以上為三個icon設定---------- */
 
 
-
-
-
-         /*--------- 以下為商品介紹、原料區域設定 --------- */
-         .w_product_giftset_detail_wrapper_orange {
+        /*--------- 以下為商品介紹、原料區域設定 --------- */
+        .w_product_giftset_detail_wrapper_orange {
             width: 90%;
             margin: 120px 0px 0px 0px;
             border: #E67348 1px solid;
             margin-right: 15%;
-            padding:40px 0px;
+            padding: 40px 0px;
             /* margin-bottom: 0px; */
         }
 
@@ -519,6 +490,7 @@
             border-bottom: #5C7880 1px solid;
             margin-bottom: 12px;
         }
+
         .w_product_giftset_detail_cook_title_line_two {
             border-bottom: #5C7880 1px solid;
             margin-bottom: 12px;
@@ -526,11 +498,6 @@
         }
 
         /*--------- 以上為商品介紹、區域設定 --------- */
-
-
-        
-
-
 
 
         /* ----------以下為大標文字設定---------- */
@@ -547,8 +514,6 @@
         }
 
         /* ----------以上為大標文字設定---------- */
-
-
 
 
         /* ----------以下為推薦食譜區域---------- */
@@ -596,10 +561,6 @@
         }
 
         /* ----------以上為推薦食譜區域---------- */
-
-
-        
-
 
 
         /* ----------以下為底部評價區域---------- */
@@ -682,9 +643,6 @@
         /* ----------以上為底部評價區域---------- */
 
 
-
-
-
         /* ----------以下為顧客寫評價區域---------- */
         .w_writing_review_name_box {
             display: flex;
@@ -724,8 +682,6 @@
         /* ----------以上為顧客寫評價區域---------- */
 
 
-
-
         /* ----------以下為送出按鈕區域---------- */
 
         .w_btn {
@@ -753,9 +709,6 @@
         /* ----------以上為送出按鈕區域---------- */
 
 
-
-
-
         /* ----------以下為撰寫評價按鈕區域---------- */
         .w_outline_btn {
             width: 372px;
@@ -775,7 +728,6 @@
         /* ----------以下為撰寫評價按鈕區域---------- */
 
 
-
         /* ----------以下為購買提醒、立即購買按鈕區域---------- */
         .w_product_giftset_detail_attention {
             padding: 100px 0px 50px 0px;
@@ -783,9 +735,8 @@
 
         /* ----------以上為購買提醒、立即購買按鈕區域---------- */
 
-     
 
-        @media screen and (max-width:575.98px) {
+        @media screen and (max-width: 575.98px) {
 
             /* ----------以下為寫評論、送出區域(隱藏中)---------- */
             .w_product_giftset_detail_wrapper_four {
@@ -793,19 +744,12 @@
             }
 
             /* ----------以上為寫評論、送出區域(隱藏中)---------- */
-
-
-
-
             /* ----------以下為麵包屑(隱藏中)---------- */
-
             .w_product_giftset_detail_breadcrumbs_box {
                 display: none;
             }
 
             /* ----------以上為麵包屑(隱藏中)---------- */
-
-
             .noto_thin {
                 font-size: 1rem;
             }
@@ -874,13 +818,9 @@
             }
 
             /* ----------以上為非模組字體設定---------- */
-
-
-
-
             .w_product_giftset_detail_wrapper_one {
                 flex-direction: column;
-                
+
             }
 
             .w_product_giftset_detail_word {
@@ -896,9 +836,6 @@
             }
 
             /* ----------以上為商品照片灰色背景---------- */
-
-
-
             /* ----------以下為商品照片---------- */
             .w_product_giftset_detail_img_box {
                 width: 100vw;
@@ -909,85 +846,56 @@
                 width: 100vw;
                 height: 55vh;
             }
+
             /* ----------以上為商品照片---------- */
-
-
-
-
             /*--------- 以下為大標、愛心設定--------- */
             .w_product_giftset_detail_bigtitle img {
                 width: 7%;
                 margin-right: 10%;
                 margin-bottom: 15%;
             }
-        
+
 
             .w_product_giftset_detail_bigtitle p {
                 margin-bottom: 0px;
             }
 
             /*--------- 以上為大標、愛心設定--------- */
-
-
-
-
-       
-
             /*---------- 以下為星星旁邊的數字設定（2 Reviews） ----------*/
-
             .star_padi_one {
-                    padding-top: 23px;
+                padding-top: 23px;
             }
 
             .star_padi_two {
-                padding-top:22px;
+                padding-top: 22px;
             }
 
             /*---------- 以上為星星旁邊的數字設定（2 Reviews） ----------*/
-
-
-
-
             /*---------- 以下為星星設定---------- */
             .w_product_giftset_detail_star_box_in {
-            margin-top: 14px;
+                margin-top: 14px;
             }
+
             /*---------- 以上為星星設定 ----------*/
-
-
-
-
-
-             /* ----------以下為金額、免運文字設定---------- */
-
+            /* ----------以下為金額、免運文字設定---------- */
             .w_product_giftset_detail_star_box_in_money p {
                 margin-bottom: -5px;
             }
 
             /* ----------以上為金額、免運文字設定---------- */
-
-
-
-
-
-
             /* ----------以下為500g (7人份)、數量按鍵盒子設定---------- */
             .w_product_giftset_detail_word_box_in {
                 margin: 10% 0%;
             }
+
             .w_product_giftset_detail_number {
-            /* border: #5C7880 1px solid; */
+                /* border: #5C7880 1px solid; */
                 margin-left: 20px;
                 margin-bottom: 10px;
                 padding: 20px 45px;
-            }        
+            }
+
             /* ----------以上為500g (7人份)、數量按鍵盒子設定---------- */
-
-
-
-
-
-
             /*---------- 以下為加入購物車橘色大按鈕---------- */
             .w_product_giftset_detail_cart_btn {
                 width: 100%;
@@ -997,16 +905,13 @@
                 margin-top: -20px;
 
             }
+
             .w_product_giftset_detail_cart_btn a {
                 text-align: center;
                 padding: 7% 0%;
             }
 
             /*---------- 以上為加入購物車橘色大按鈕---------- */
-
-
-
-
             /* ----------以下為大標文字設定---------- */
             .w_product_giftset_detail_title p {
                 padding: 0px 0px 10px 0px;
@@ -1021,13 +926,7 @@
             }
 
             /* ----------以上為大標文字設定---------- */
-
-
-
-
-
             /* ----------以下為三個icon設定---------- */
-
             .w_product_giftset_detail_icon {
                 width: 100%;
             }
@@ -1036,17 +935,12 @@
                 width: 50%;
             }
 
-        /* ----------以上為三個icon設定---------- */
-
-
-
-
-
+            /* ----------以上為三個icon設定---------- */
             /*--------- 以下為商品介紹、原料區域設定 --------- */
             .w_product_giftset_detail_wrapper_orange {
                 width: 95%;
                 margin: 40px 0px 50px 0px;
-                padding:30px 0px;
+                padding: 30px 0px;
             }
 
             .w_product_giftset_detail_cook_step {
@@ -1057,12 +951,8 @@
                 width: 115%;
                 padding: 20px 20px 20px 40px;
             }
+
             /*--------- 以上為商品介紹、區域設定 --------- */
-            
-
-                
-
-
             /* ----------以下為推薦食譜區域---------- */
             .w_product_giftset_detail_recipe_bg {
                 height: 30%;
@@ -1085,11 +975,7 @@
             }
 
             /* ----------以上為推薦食譜區域---------- */
-
-
-
             /* ----------以下為你可能喜歡區域---------- */
-
             .w_product_giftset_detail_like {
                 flex-direction: column;
                 text-align: center;
@@ -1137,8 +1023,6 @@
             }
 
             /* ----------以上為你可能喜歡區域---------- */
-
-
             /* ----------以下為底部評價區域---------- */
             .w_product_giftset_detail_wrapper_three_two {
                 /* 底部評價區域最大盒子 */
@@ -1217,10 +1101,7 @@
             }
 
             /* ----------以上為底部評價區域---------- */
-
-
             /* ----------以下為底部評價區域---------- */
-
             .w_product_giftset_detail_wrapper_three_two {
                 /* 底部評價區域最大盒子 */
                 width: 90%;
@@ -1277,11 +1158,6 @@
             }
 
             /* ----------以上為底部評價區域---------- */
-
-
-
-
-
             /* ----------以下為送出按鈕區域---------- */
             .w_btn {
                 width: 100%;
@@ -1290,15 +1166,11 @@
             /* ----------以上為送出按鈕區域---------- */
 
 
-
-
-
-
         }
     </style>
-</head>
+    </head>
 
-<body>
+    <body>
     <div class="w_container">
         <div class="w_product_giftset_detail_wrapper_one">
             <div class="w_product_giftset_detail_bg">
@@ -1332,8 +1204,6 @@
                 <!-- 以上為麵包屑區域 -->
 
 
-
-
                 <!-- 以下為品名區域 -->
                 <div class="w_product_giftset_detail_bigtitle">
                     <div class="en_font">
@@ -1343,7 +1213,6 @@
                     <img src="img/icon/like.svg" alt="">
                 </div>
                 <!-- 以上為品名區域 -->
-
 
 
                 <div class="w_product_giftset_detail_star_box">
@@ -1363,7 +1232,6 @@
                         <p class="product_detail_small_noto_thin">全站購物滿千免運</p>
                     </div>
                 </div>
-
 
 
                 <div class="w_product_giftset_detail_word_box_in">
@@ -1404,8 +1272,6 @@
     <!------- 以上為三個icon設定 ------->
 
 
-
-
     <!------- 以下為商品介紹、原料區域設定 ------->
     <div class="w_product_giftset_detail_wrapper_orange">
         <div class="row">
@@ -1416,7 +1282,7 @@
                     <p class="en_font">Description</p>
                     <!------- 商品介紹文字 ------->
                     <p class="noto_thin">
-                        <?= $sauce['soase_des']?>
+                        <?= $sauce['soase_des'] ?>
                         <!-- 煙花女醬來自拿坡里海灣上的一個小島Ischia，據說餐館主人半夜到
                         一群飢腸轆轆的客人，飆罵髒話要求隨便拿出任何食物都好，無奈下
                         廚師使用廚房僅剩的幾顆番茄、幾顆橄欖和一小把的酸豆做成醬汁意
@@ -1471,16 +1337,6 @@
             </div>
         </div>
         <!------------ 以上為推薦食譜區域 ------------>
-
-
-
-
-
-
-
-
-
-
 
 
         <!--------------------- 以下為評價區域 --------------------->
@@ -1540,7 +1396,6 @@
             <div class="w_bottom_review_word_line"></div><!-- 平價欄位區隔線 -->
 
 
-
             <div class="w_bottom_review_word_box">
 
 
@@ -1583,8 +1438,6 @@
         <!--------------------- 以上為評價區域 --------------------->
 
 
-
-
         <!------------------------ 以下為底部撰寫評價區域 ------------------------>
 
         <div class="w_product_giftset_detail_wrapper_four">
@@ -1613,19 +1466,17 @@
                 </div>
 
 
-
             </div>
             <div class="w_writing_review_box">
                 <textarea name="" id="" cols="30" rows="5" class="noto_light">顧客寫評價區</textarea>
             </div>
 
 
-
-
             <div class="w_btn_box">
                 <div class="w_btn">
                     <a href="">
-                        <button class="w_btn  product_detail_noto_light_big   w_product_giftset_detail_transition">送出</button>
+                        <button class="w_btn  product_detail_noto_light_big   w_product_giftset_detail_transition">送出
+                        </button>
                     </a>
                 </div>
             </div>
@@ -1633,19 +1484,17 @@
         <!------------------------ 以下為底部撰寫評價區域 ------------------------>
 
 
-
-
         <!------------------------ 以下為寫評價按鈕區域 ------------------------>
         <div class="w_product_giftset_detail_wrapper_five">
             <div class="w_outline_btn_box">
                 <a href="">
-                    <button class="w_outline_btn   product_detail_noto_light_big   w_product_giftset_detail_transition">寫評價</button>
+                    <button class="w_outline_btn   product_detail_noto_light_big   w_product_giftset_detail_transition">
+                        寫評價
+                    </button>
                 </a>
             </div>
         </div>
         <!------------------------ 以上為寫評價按鈕區域 ------------------------>
-
-
 
 
         <!------------------------ 以下為購買提醒、立即購買按鈕區域 ------------------------>
@@ -1655,37 +1504,25 @@
             <p class="w_product_sauce_detail_attention   product_detail_small_two_en_font_r">提醒：完成此商品訂單之會員即可發表評價！</p>
             <div class="w_outline_btn_box">
                 <a href="">
-                    <button class="w_outline_btn   product_detail_noto_light_big   w_product_giftset_detail_transition">立即購買</button>
+                    <button class="w_outline_btn   product_detail_noto_light_big   w_product_giftset_detail_transition">
+                        立即購買
+                    </button>
                 </a>
             </div>
         </div>
         <!------------------------ 以上為購買提醒、立即購買按鈕區域 ------------------------>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous">
-            </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                crossorigin="anonymous"></script>
         <script>
             initInputBox($('.input-number'), 1, 20);
 
@@ -1784,6 +1621,6 @@
 
         </script>
 
-</body>
+    </body>
 
-<?php include __DIR__. '/__html_foot.php' ?>
+<?php include __DIR__ . '/__html_foot.php' ?>

@@ -1,47 +1,47 @@
 <?php
 
-require __DIR__. '/__connect_db.php';
+require __DIR__ . '/__connect_db.php';
 
 $productID = $_GET['product'];
 
 $p_sql = sprintf("SELECT * FROM product_info WHERE sid = $productID LIMIT 1");
 $p_stmt = $pdo->query($p_sql);
 
-while($row = $p_stmt->fetch(PDO::FETCH_ASSOC))
-{
+while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
     $product = $row;
 }
 
 
 ?>
 
-<!-- try assoc product_list & product_info DB -->
-<!-- <?php
-$typeID = $_GET['type'];
-$t_sql = sprintf("SELECT * FROM product_list WHERE parent_sid LIMIT 1");
-$t_stmt = $pdo->query($t_sql);
+    <!-- try assoc product_list & product_info DB -->
+    <!-- <?php
+    $typeID = $_GET['type'];
+    $t_sql = sprintf("SELECT * FROM product_list WHERE parent_sid LIMIT 1");
+    $t_stmt = $pdo->query($t_sql);
 
 
-?> -->
+    ?> -->
 
 
-<?php include __DIR__. '/__html_head.php' ?>
-<?php include __DIR__. '/__navbar.php' ?>
+<?php include __DIR__ . '/__html_head.php' ?>
+<?php include __DIR__ . '/__navbar.php' ?>
 
-<head>   
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/product_detail.css">
-</head>
+    <head>
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/product_detail.css">
+    </head>
 
-<body>
+    <body>
     <div class="w_container">
         <div class="w_product_detail_wrapper_one">
 
-        <?php  ?>
+            <?php ?>
 
             <div class="w_product_detail_bg">
                 <div class="w_product_detail_img_box">
-                    <img class="w_product_detail_small_pasta_img" src="img/product/s/<?= $product['Image_small']; ?>.png" alt="">
+                    <img class="w_product_detail_small_pasta_img"
+                         src="img/product/s/<?= $product['Image_small']; ?>.png" alt="">
                     <img class="w_product_detail_img" src="img/product/l/<?= $product['Image_large']; ?>.png">
                 </div>
             </div>
@@ -57,13 +57,13 @@ $t_stmt = $pdo->query($t_sql);
                     </a>
                     <span>></span>
 
-                <!-- try assoc product_list & product_info DB -->
-                <!-- <?php while($row = $t_stmt->fetch(PDO::FETCH_ASSOC)):?> -->
+                    <!-- try assoc product_list & product_info DB -->
+                    <!-- <?php while ($row = $t_stmt->fetch(PDO::FETCH_ASSOC)): ?> -->
                     <a href="product_list_specialty.php"><!-- direct to the correspond categories -->
-                        <span class="w_product_detail_breadcrumbs_ch"><?= $row['pasta_type_ch']?>特別款</span>
-                        <span class="w_product_detail_breadcrumbs_en"><?= $row['pasta_type']?>Specialty</span>
+                        <span class="w_product_detail_breadcrumbs_ch"><?= $row['pasta_type_ch'] ?>特別款</span>
+                        <span class="w_product_detail_breadcrumbs_en"><?= $row['pasta_type'] ?>Specialty</span>
                     </a>
-                <!-- <?php endwhile; ?> -->
+                    <!-- <?php endwhile; ?> -->
 
                     <span>></span>
 
@@ -75,21 +75,18 @@ $t_stmt = $pdo->query($t_sql);
                 <!-- 以上為麵包屑區域 -->
 
 
-
-
                 <!-- 以下為品名區域 -->
                 <div class="w_product_detail_bigtitle">
                     <div class="en_font">
                         <p class="pro_name">
                             <?php echo $product['Name_En']; ?> <?= $product['product_no']; ?>
-                            <span class="heart_p"><i class="far fa-heart"></i> </span> 
-                        <!-- <img src="img/icon/like.svg" alt=""> -->
-                    </p>
+                            <span class="heart_p"><i class="far fa-heart"></i> </span>
+                            <!-- <img src="img/icon/like.svg" alt=""> -->
+                        </p>
                         <p class="noto_thin"><?= $product['Name_Ch']; ?></p>
                     </div>
                 </div>
                 <!-- 以上為品名區域 -->
-
 
 
                 <div class="w_product_detail_star_box">
@@ -111,7 +108,6 @@ $t_stmt = $pdo->query($t_sql);
                 </div>
 
 
-
                 <div class="w_product_detail_word_box_in">
                     <br>
                     <p class="product_detail_small_noto_thin_b">500g (<?= $product['Serve'] ?>人份)</p>
@@ -130,9 +126,6 @@ $t_stmt = $pdo->query($t_sql);
             </div>
         </div>
     </div>
-
-
-
 
 
     <div class="w_product_detail_wrapper_two">
@@ -172,7 +165,6 @@ $t_stmt = $pdo->query($t_sql);
     <!------- 以下為介紹文字、三個icon設定 ------->
 
 
-
     <!------------ 以下為推薦食譜區域 ------------>
     <div class="w_product_detail_wrapper_one">
         <div class="w_product_detail_recipe_bg">
@@ -192,8 +184,6 @@ $t_stmt = $pdo->query($t_sql);
     <!------------ 以上為推薦食譜區域 ------------>
 
 
-
-
     <!------------ 以下為你可能會喜歡區域 ------------>
     <div class="w_product_detail_wrapper_two">
 
@@ -207,7 +197,6 @@ $t_stmt = $pdo->query($t_sql);
                     <p class="product_detail_big_en_font">This may also interest you</p>
                 </div>
                 <!------ 以上為大標文字和線區域 ------->
-
 
 
                 <!------ 以下為產品名稱和按鈕區域 ------->
@@ -233,7 +222,6 @@ $t_stmt = $pdo->query($t_sql);
         </div>
 
 
-
         <!------ 以下為你可能會喜歡背景區域 ------->
         <div class="w_product_detail_like_img_box_bg">
             <img src="img/pages/others/product_detail_recommend_bg.png" alt="">
@@ -241,11 +229,6 @@ $t_stmt = $pdo->query($t_sql);
         <!------ 以下為你可能會喜歡背景區域 ------->
     </div>
     <!------------ 以上為你可能會喜歡區域 ------------>
-
-
-
-
-
 
 
     <!--------------------- 以下為評價區域 --------------------->
@@ -305,7 +288,6 @@ $t_stmt = $pdo->query($t_sql);
         <div class="w_bottom_review_word_line"></div><!-- 平價欄位區隔線 -->
 
 
-
         <div class="w_bottom_review_word_box">
 
 
@@ -348,8 +330,6 @@ $t_stmt = $pdo->query($t_sql);
     <!--------------------- 以上為評價區域 --------------------->
 
 
-
-
     <!------------------------ 以下為底部撰寫評價區域 ------------------------>
 
     <div class="w_product_detail_wrapper_four">
@@ -378,13 +358,10 @@ $t_stmt = $pdo->query($t_sql);
             </div>
 
 
-
         </div>
         <div class="w_writing_review_box">
             <textarea cols="30" rows="5" class="noto_light" id="commentText" placeholder="顧客寫評價區"></textarea>
         </div>
-
-
 
 
         <div class="w_btn_box">
@@ -398,8 +375,6 @@ $t_stmt = $pdo->query($t_sql);
     <!------------------------ 以下為底部撰寫評價區域 ------------------------>
 
 
-
-
     <!------------------------ 以下為寫評價按鈕區域 ------------------------>
     <div class="w_product_detail_wrapper_five">
         <div class="w_outline_btn_box">
@@ -411,8 +386,6 @@ $t_stmt = $pdo->query($t_sql);
     <!------------------------ 以上為寫評價按鈕區域 ------------------------>
 
 
-
-
     <!------------------------ 以下為購買提醒、立即購買按鈕區域 ------------------------>
 
 
@@ -420,37 +393,24 @@ $t_stmt = $pdo->query($t_sql);
         <p class="w_product_detail_attention   product_detail_small_two_en_font_r">提醒：完成此商品訂單之會員即可發表評價！</p>
         <div class="w_outline_btn_box">
             <a href="">
-                <button class="w_outline_btn   product_detail_noto_light_big   w_product_detail_transition">立即購買</button>
+                <button class="w_outline_btn   product_detail_noto_light_big   w_product_detail_transition">立即購買
+                </button>
             </a>
         </div>
     </div>
     <!------------------------ 以上為購買提醒、立即購買按鈕區域 ------------------------>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-        </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
     <script>
         initInputBox($('.input-number'), 1, 20);
 
@@ -547,18 +507,16 @@ $t_stmt = $pdo->query($t_sql);
         }
 
 
-    // add to wish list
+        // add to wish list
 
-    $('.far').click(function() {
-    $(this).toggleClass('fas');
-    // $('.far').toggleClass('fas');
-    });
- 
-
+        $('.far').click(function () {
+            $(this).toggleClass('fas');
+            // $('.far').toggleClass('fas');
+        });
 
 
     </script>
 
-</body>
+    </body>
 
-<?php include __DIR__. '/__html_foot.php' ?>
+<?php include __DIR__ . '/__html_foot.php' ?>

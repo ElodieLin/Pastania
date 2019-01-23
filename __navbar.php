@@ -350,7 +350,8 @@ if (empty($_SERVER['HTTP_REFERER'])) {
               <span class="input-group-text" id="basic-serach"><img src="img/icon/search.svg" alt=""
                                                                     style="width: 20px"></span>
                         </div>
-                        <input type="search" class="form-control" id="search-bar" name="search-bar" placeholder="請輸入關鍵字搜尋"
+                        <input type="search" class="form-control" id="search-bar" name="search-bar"
+                               placeholder="請輸入關鍵字搜尋"
                                aria-label="search" aria-describedby="basic-serach">
                     </div>
                 </div>
@@ -408,9 +409,6 @@ if (empty($_SERVER['HTTP_REFERER'])) {
 
 
     <!-- /* ～～～～～～～以上為手機版wish model～～～～～～～ */ -->
-
-
-
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">

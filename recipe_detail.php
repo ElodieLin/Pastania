@@ -1,29 +1,29 @@
 <?php
 
-        require __DIR__. '/__connect_db.php';
-        
-        // $productID = $_GET['product'];
-        
-        // $p_sql = sprintf("SELECT * FROM recipe_info WHERE sid = $productID LIMIT 1");
-        // $p_stmt = $pdo->query($p_sql);
-        
-        // while($row = $p_stmt->fetch(PDO::FETCH_ASSOC))
-        // {
-        //     $product = $row;
-        // }
-        
+require __DIR__ . '/__connect_db.php';
+
+// $productID = $_GET['product'];
+
+// $p_sql = sprintf("SELECT * FROM recipe_info WHERE sid = $productID LIMIT 1");
+// $p_stmt = $pdo->query($p_sql);
+
+// while($row = $p_stmt->fetch(PDO::FETCH_ASSOC))
+// {
+//     $product = $row;
+// }
+
 ?>
 
 
-<?php include __DIR__. '/__html_head.php' ?>
-<?php include __DIR__. '/__navbar.php' ?>
+<?php include __DIR__ . '/__html_head.php' ?>
+<?php include __DIR__ . '/__navbar.php' ?>
 
 <head>
 
     <link rel="stylesheet" href="css/animate.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous"> -->
-    
+
     <style>
         body {
             overflow-x: hidden;
@@ -99,9 +99,7 @@
         }
 
 
-
         /* ----------以上為非模組字體設定---------- */
-
 
 
         /*--------- 以下為麵包屑的設定 --------- */
@@ -123,7 +121,7 @@
             /* margin-bottom: 10%; */
         }
 
-        .w_recipes_detail_breadcrumbs_box>a {
+        .w_recipes_detail_breadcrumbs_box > a {
             text-decoration: none;
             color: #5C7880;
         }
@@ -134,27 +132,24 @@
             padding-left: 10px;
         }
 
-        .w_recipes_detail_breadcrumbs_word>.w_recipes_detail_breadcrumbs_box>a>.w_recipes_detail_breadcrumbs_ch {
+        .w_recipes_detail_breadcrumbs_word > .w_recipes_detail_breadcrumbs_box > a > .w_recipes_detail_breadcrumbs_ch {
             display: none;
         }
 
-        .w_recipes_detail_breadcrumbs_word>.w_recipes_detail_breadcrumbs_box>a:hover .w_recipes_detail_breadcrumbs_ch {
+        .w_recipes_detail_breadcrumbs_word > .w_recipes_detail_breadcrumbs_box > a:hover .w_recipes_detail_breadcrumbs_ch {
             display: block;
             color: #E67348;
         }
 
-        .w_recipes_detail_breadcrumbs_word>.w_recipes_detail_breadcrumbs_box>a>.w_recipes_detail_breadcrumbs_en {
+        .w_recipes_detail_breadcrumbs_word > .w_recipes_detail_breadcrumbs_box > a > .w_recipes_detail_breadcrumbs_en {
             margin-top: -26px;
         }
 
-        .w_recipes_detail_breadcrumbs_word>.w_recipes_detail_breadcrumbs_box>a:hover .w_recipes_detail_breadcrumbs_en {
+        .w_recipes_detail_breadcrumbs_word > .w_recipes_detail_breadcrumbs_box > a:hover .w_recipes_detail_breadcrumbs_en {
             display: none;
         }
 
         /*--------- 以上為麵包屑的設定 --------- */
-
-
-
 
 
         /*--------- 以下為菜色照片、標題文字的設定 --------- */
@@ -203,8 +198,6 @@
         /*--------- 以上為菜色照片、標題文字的設定 --------- */
 
 
-
-
         /*--------- 以下為介紹內文設定 --------- */
         .w_recipes_detail_wrapper_two {
             width: 90%;
@@ -222,8 +215,6 @@
         /*--------- 以上為介紹內文設定 --------- */
 
 
-
-
         /*--------- 以下為三個icon設定 --------- */
         .w_recipes_detail_icon {
             display: flex;
@@ -236,8 +227,6 @@
         }
 
         /*--------- 以上為三個icon設定 --------- */
-
-
 
 
         /*--------- 以下為烹煮步驟、材料區域設定 --------- */
@@ -323,11 +312,7 @@
             }
 
             /*--------- 以上為麵包屑的設定 --------- */
-
-
-
             /*--------- 以下為菜色照片、標題文字的設定 --------- */
-
             .w_recipes_detail_big_img_box {
                 width: 85vw;
             }
@@ -344,8 +329,6 @@
             /*--------- 以上為菜色照片、標題文字的設定 --------- */
 
         }
-
-
 
 
         @media (max-width: 800px) {
@@ -386,10 +369,6 @@
             }
 
             /* ----------以上為非模組字體設定---------- */
-
-
-
-
             /*--------- 以下為菜色照片、標題文字的設定 --------- */
             .w_recipes_detail_wrapper_one {
                 display: flex;
@@ -416,22 +395,13 @@
             }
 
             /*--------- 以上為菜色照片、標題文字的設定 --------- */
-
-
-
-
-
             /*--------- 以下為介紹內文設定 --------- */
-
             .w_recipes_detail_introduction {
                 width: 90%;
                 margin: 20px 0px 50px 0px;
             }
 
             /*--------- 以上為介紹內文設定 --------- */
-
-
-
             /*--------- 以下為三個icon設定 --------- */
             .w_recipes_detail_icon {
                 margin: 30px 0px 10px 0px;
@@ -442,8 +412,6 @@
             }
 
             /*--------- 以上為三個icon設定 --------- */
-
-
             /*--------- 以下為烹煮步驟、材料區域設定 --------- */
             .w_recipes_detail_wrapper_three {
                 width: 95%;
@@ -466,10 +434,6 @@
             }
 
             /*--------- 以上為烹煮步驟、材料區域設定 --------- */
-
-
-
-
             /*--------- 以下為最佳搭配區域設定 --------- */
             .w_recipes_detail_wrapper_four {
                 margin-bottom: 40px;
@@ -482,223 +446,199 @@
 </head>
 
 <body>
-    <div class="w_recipes_detail_breadcrumbs_word_big_box">
-        <div class="w_recipes_detail_breadcrumbs_word">
-            <!-- 以下為麵包屑區域 -->
-            <div class="w_recipes_detail_breadcrumbs_box   product_detail_small_noto_thin_b">
-                <a href="recipes_cate.php">
-                    <span class="w_recipes_detail_breadcrumbs_ch">食譜種類</span>
-                    <span class="w_recipes_detail_breadcrumbs_en">Recipes</span>
-                </a>
-                <span>></span>
-                <a href="recipe_list_party.php">
-                    <span class="w_recipes_detail_breadcrumbs_ch">週末派對</span>
-                    <span class="w_recipes_detail_breadcrumbs_en">Party</span>
-                </a>
-                <span>></span>
-                <a href="recipe_detail.php">
-                    <span class="w_recipes_detail_breadcrumbs_ch">波隆那肉醬千層麵</span>
-                    <span class="w_recipes_detail_breadcrumbs_en">Lasagne alla Bolognese</span>
-                </a>
-            </div>
-            <!-- 以上為麵包屑區域 -->
+<div class="w_recipes_detail_breadcrumbs_word_big_box">
+    <div class="w_recipes_detail_breadcrumbs_word">
+        <!-- 以下為麵包屑區域 -->
+        <div class="w_recipes_detail_breadcrumbs_box   product_detail_small_noto_thin_b">
+            <a href="recipes_cate.php">
+                <span class="w_recipes_detail_breadcrumbs_ch">食譜種類</span>
+                <span class="w_recipes_detail_breadcrumbs_en">Recipes</span>
+            </a>
+            <span>></span>
+            <a href="recipe_list_party.php">
+                <span class="w_recipes_detail_breadcrumbs_ch">週末派對</span>
+                <span class="w_recipes_detail_breadcrumbs_en">Party</span>
+            </a>
+            <span>></span>
+            <a href="recipe_detail.php">
+                <span class="w_recipes_detail_breadcrumbs_ch">波隆那肉醬千層麵</span>
+                <span class="w_recipes_detail_breadcrumbs_en">Lasagne alla Bolognese</span>
+            </a>
+        </div>
+        <!-- 以上為麵包屑區域 -->
+    </div>
+</div>
+
+
+<!------- 以下為介紹內文設定 ------->
+<div class="w_recipes_detail_wrapper_one">
+    <div class="w_recipes_detail_big_img_box">
+        <img src="img/recipe/51_typical_AWBS.jpg" alt="">
+    </div>
+    <div class="w_recipes_detail_big_word_box">
+        <div class="w_recipes_detail_big_word_opacity">
+            <!------- 標題文字 ------->
+            <p class="w_recipes_detail_title_en_font">Lasagne alla Bolognese</p>
+            <p class="w_recipes_detail_title_noto_light">波隆那肉醬千層麵</p>
         </div>
     </div>
+</div>
+<div class="w_recipes_detail_wrapper_two">
+    <div class="w_recipes_detail_introduction">
+        <!------- 介紹文字 ------->
+        <p class="noto_thin distric_into">艾米利亞-羅馬涅大區人口約4百萬，人口密度為180人/平方公里，是義大利最發達的大區之一，
+            亦是義大利著名的美食天堂。波隆那肉醬千層麵為該地經典的義式美食，為著名卡通明星加菲貓
+            的最愛。</p>
+    </div>
+</div>
+<!------- 以上為介紹內文設定 ------->
 
 
-
-    <!------- 以下為介紹內文設定 ------->
-    <div class="w_recipes_detail_wrapper_one">
-        <div class="w_recipes_detail_big_img_box">
-            <img src="img/recipe/51_typical_AWBS.jpg" alt="">
+<div class="w_recipes_detail_wrapper_three">
+    <!------- 以下以為三個icon設定 ------->
+    <div class="row w_recipes_detail_icon">
+        <div class="col-md-4 col-4">
+            <img src="img/icon/recipe_portion.svg" alt="">
+            <p class="noto_light">4人份</p>
         </div>
-        <div class="w_recipes_detail_big_word_box">
-            <div class="w_recipes_detail_big_word_opacity">
-                <!------- 標題文字 ------->
-                <p class="w_recipes_detail_title_en_font">Lasagne alla Bolognese</p>
-                <p class="w_recipes_detail_title_noto_light">波隆那肉醬千層麵</p>
+        <div class="col-md-4 col-4">
+            <img src="img/icon/recipe_time.svg" alt="">
+            <p class="noto_light">15 mins</p>
+        </div>
+        <div class="col-md-4 col-4">
+            <img src="img/icon/recipe_medium.svg" alt="">
+            <p class="noto_light">難易度 簡單</p>
+        </div>
+    </div>
+    <!------- 以上以為三個icon設定 ------->
+
+
+    <!------- 以下為烹煮步驟、材料區域設定 ------->
+    <div class="row">
+        <div class="col-md-7">
+            <div class="w_recipes_detail_cook_step">
+                <p class="w_recipes_detail_cook_title_in   noto_regular">烹煮步驟</p>
+                <!------- 烹煮步驟文字 ------->
+                <p class="noto_thin">1.將牛奶倒入鍋中加熱，同時用另一個鍋子將奶油融化。奶油融
+                    化後加入篩過的麵粉均勻攪拌。
+                    <br>
+                    <br>
+                    2. 牛奶加熱後加入磨碎的肉豆蔻與少許鹽調味，倒入另一個鍋
+                    中均勻攪拌約5-6分鐘，直到它呈現稠狀，完成調味醬。
+                    <br>
+                    <br>
+                    3.取一個30x20厘米大小的烤盤，先於底部塗上適量調味醬，放
+                    上麵條撲滿烤盤，再塗上調味醬、帕馬森起司與波隆那肉醬。
+                    重複動作直到烤盤邊緣。
+                    <br>
+                    <br>
+                    4.於頂層撒上帕馬森起司，放入在預熱的烤箱中以200°烘烤約25分鐘，完成!
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="w_recipes_detail_cook_material">
+                <p class="w_recipes_detail_cook_title_in   noto_regular">材料</p>
+                <!------- 材料文字 ------->
+                <p class="noto_thin ingredients">．1包(500克)Lasagne Ricce麵條<br>
+                    ．Pastania波隆那肉醬一罐(600克)<br>
+                    ．全脂牛奶1公升<br>
+                    ．奶油100 公克<br>
+                    ．高筋麵粉100公克<br>
+                    ．肉荳蔻 少許<br>
+                    ．鹽少許<br>
+                    ．帕馬森起司250公克<br>
+                    ．1包(500克)Lasagne Ricce麵條<br>
+                    ．Pastania波隆那肉醬一罐(600克)<br>
+                    ．全脂牛奶1公升<br>
+                    ．奶油100 公克<br>
+                    ．高筋麵粉100公克<br>
+                    ．肉荳蔻 少許<br>
+                    ．鹽少許<br>
+                    ．帕馬森起司250公克</p>
+                </p>
             </div>
         </div>
     </div>
-    <div class="w_recipes_detail_wrapper_two">
-        <div class="w_recipes_detail_introduction">
-            <!------- 介紹文字 ------->
-            <p class="noto_thin distric_into">艾米利亞-羅馬涅大區人口約4百萬，人口密度為180人/平方公里，是義大利最發達的大區之一，
-                亦是義大利著名的美食天堂。波隆那肉醬千層麵為該地經典的義式美食，為著名卡通明星加菲貓
-                的最愛。</p>
+</div>
+<!------- 以上為烹煮步驟、材料區域設定 ------->
+
+
+<!------- 以下最佳搭配設定 Best with ------->
+<div class="w_recipes_detail_wrapper_four">
+    <div class="row">
+        <div class="col-md-4">
+            <p class="w_recipes_detail_cook_title_in  noto_regular">最佳搭配</p>
         </div>
     </div>
-    <!------- 以上為介紹內文設定 ------->
-
-
-
-
-    <div class="w_recipes_detail_wrapper_three">
-        <!------- 以下以為三個icon設定 ------->
-        <div class="row w_recipes_detail_icon">
-            <div class="col-md-4 col-4">
-                <img src="img/icon/recipe_portion.svg" alt="">
-                <p class="noto_light">4人份</p>
-            </div>
-            <div class="col-md-4 col-4">
-                <img src="img/icon/recipe_time.svg" alt="">
-                <p class="noto_light">15 mins</p>
-            </div>
-            <div class="col-md-4 col-4">
-                <img src="img/icon/recipe_medium.svg" alt="">
-                <p class="noto_light">難易度 簡單</p>
-            </div>
-        </div>
-        <!------- 以上以為三個icon設定 ------->
-
-
-
-
-        <!------- 以下為烹煮步驟、材料區域設定 ------->
-        <div class="row">
-            <div class="col-md-7">
-                <div class="w_recipes_detail_cook_step">
-                    <p class="w_recipes_detail_cook_title_in   noto_regular">烹煮步驟</p>
-                    <!------- 烹煮步驟文字 ------->
-                    <p class="noto_thin">1.將牛奶倒入鍋中加熱，同時用另一個鍋子將奶油融化。奶油融
-                        化後加入篩過的麵粉均勻攪拌。
-                        <br>
-                        <br>
-                        2. 牛奶加熱後加入磨碎的肉豆蔻與少許鹽調味，倒入另一個鍋
-                        中均勻攪拌約5-6分鐘，直到它呈現稠狀，完成調味醬。
-                        <br>
-                        <br>
-                        3.取一個30x20厘米大小的烤盤，先於底部塗上適量調味醬，放
-                        上麵條撲滿烤盤，再塗上調味醬、帕馬森起司與波隆那肉醬。
-                        重複動作直到烤盤邊緣。
-                        <br>
-                        <br>
-                        4.於頂層撒上帕馬森起司，放入在預熱的烤箱中以200°烘烤約25分鐘，完成!
-                    </p>
+    <div class="row">
+        <div class="col-md-3  col-6   w_recipes_detail_best">
+            <!------- 最佳搭配商品圖片 ------->
+            <a href="product_detail.php"><img src="img/product/l/P3_Ballerine.png" alt="">
+                <!-- direct to random pasta detail page  -->
+                <div class="w_recipes_detail_best_word_box">
+                    <!------- 最佳搭配品名、金額 ------->
+                    <p class="w_recipes_detail_best_en_font">Farfalle nº 87</p>
+                    <p class="noto_light">蝴蝶麵</p>
+                    <p class="w_recipes_detail_best_en_font    w_recipes_detail_best_money">NT＄ 109</p>
                 </div>
-            </div>
-            <div class="col-md-5">
-                <div class="w_recipes_detail_cook_material">
-                    <p class="w_recipes_detail_cook_title_in   noto_regular">材料</p>
-                    <!------- 材料文字 ------->
-                    <p class="noto_thin ingredients">．1包(500克)Lasagne Ricce麵條<br>
-                        ．Pastania波隆那肉醬一罐(600克)<br>
-                        ．全脂牛奶1公升<br>
-                        ．奶油100 公克<br>
-                        ．高筋麵粉100公克<br>
-                        ．肉荳蔻 少許<br>
-                        ．鹽少許<br>
-                        ．帕馬森起司250公克<br>
-                        ．1包(500克)Lasagne Ricce麵條<br>
-                        ．Pastania波隆那肉醬一罐(600克)<br>
-                        ．全脂牛奶1公升<br>
-                        ．奶油100 公克<br>
-                        ．高筋麵粉100公克<br>
-                        ．肉荳蔻 少許<br>
-                        ．鹽少許<br>
-                        ．帕馬森起司250公克</p>
-                    </p>
+            </a>
+        </div>
+        <div class="col-md-3  col-6  w_recipes_detail_best">
+            <!------- 最佳搭配商品圖片 ------->
+            <a href="product_detail.php"><img src="img/product/l/P3_Ballerine.png" alt="">
+                <!-- direct to random pasta detail page  -->
+                <div class="w_recipes_detail_best_word_box">
+                    <!------- 最佳搭配品名、金額 ------->
+                    <p class="w_recipes_detail_best_en_font">Farfalle nº 87</p>
+                    <p class="noto_light">蝴蝶麵</p>
+                    <p class="w_recipes_detail_best_en_font    w_recipes_detail_best_money">NT＄ 109</p>
                 </div>
-            </div>
+            </a>
+        </div>
+        <div class="col-md-3   col-6   w_recipes_detail_best">
+            <!------- 最佳搭配商品圖片 ------->
+            <a href="product_detail.php"><img src="img/product/l/P3_Ballerine.png" alt="">
+                <!-- direct to random pasta detail page  -->
+                <div class="w_recipes_detail_best_word_box">
+                    <!------- 最佳搭配品名、金額 ------->
+                    <p class="w_recipes_detail_best_en_font">Farfalle nº 87</p>
+                    <p class="noto_light">蝴蝶麵</p>
+                    <p class="w_recipes_detail_best_en_font    w_recipes_detail_best_money">NT＄ 109</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3   col-6   w_recipes_detail_best">
+            <!------- 最佳搭配商品圖片 ------->
+            <a href="product_detail.php"><img src="img/product/l/P3_Ballerine.png" alt="">
+                <!-- direct to random pasta detail page  -->
+                <div class="w_recipes_detail_best_word_box">
+                    <!------- 最佳搭配品名、金額 ------->
+                    <p class="w_recipes_detail_best_en_font">Farfalle nº 87</p>
+                    <p class="noto_light">蝴蝶麵</p>
+                    <p class="w_recipes_detail_best_en_font    w_recipes_detail_best_money">NT＄ 109</p>
+                </div>
+            </a>
         </div>
     </div>
-    <!------- 以上為烹煮步驟、材料區域設定 ------->
+</div>
+<!------- 以上最佳搭配設定 ------->
 
 
-    <!------- 以下最佳搭配設定 Best with ------->
-    <div class="w_recipes_detail_wrapper_four">
-        <div class="row">
-            <div class="col-md-4">
-                <p class="w_recipes_detail_cook_title_in  noto_regular">最佳搭配</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3  col-6   w_recipes_detail_best">
-                <!------- 最佳搭配商品圖片 ------->
-                <a href="product_detail.php"><img src="img/product/l/P3_Ballerine.png" alt=""> <!-- direct to random pasta detail page  -->
-                    <div class="w_recipes_detail_best_word_box">
-                        <!------- 最佳搭配品名、金額 ------->
-                        <p class="w_recipes_detail_best_en_font">Farfalle nº 87</p>
-                        <p class="noto_light">蝴蝶麵</p>
-                        <p class="w_recipes_detail_best_en_font    w_recipes_detail_best_money">NT＄ 109</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3  col-6  w_recipes_detail_best">
-                <!------- 最佳搭配商品圖片 ------->
-                <a href="product_detail.php"><img src="img/product/l/P3_Ballerine.png" alt=""><!-- direct to random pasta detail page  -->
-                    <div class="w_recipes_detail_best_word_box">
-                        <!------- 最佳搭配品名、金額 ------->
-                        <p class="w_recipes_detail_best_en_font">Farfalle nº 87</p>
-                        <p class="noto_light">蝴蝶麵</p>
-                        <p class="w_recipes_detail_best_en_font    w_recipes_detail_best_money">NT＄ 109</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3   col-6   w_recipes_detail_best">
-                <!------- 最佳搭配商品圖片 ------->
-                <a href="product_detail.php"><img src="img/product/l/P3_Ballerine.png" alt=""><!-- direct to random pasta detail page  -->
-                    <div class="w_recipes_detail_best_word_box">
-                        <!------- 最佳搭配品名、金額 ------->
-                        <p class="w_recipes_detail_best_en_font">Farfalle nº 87</p>
-                        <p class="noto_light">蝴蝶麵</p>
-                        <p class="w_recipes_detail_best_en_font    w_recipes_detail_best_money">NT＄ 109</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3   col-6   w_recipes_detail_best">
-                <!------- 最佳搭配商品圖片 ------->
-                <a href="product_detail.php"><img src="img/product/l/P3_Ballerine.png" alt=""><!-- direct to random pasta detail page  -->
-                    <div class="w_recipes_detail_best_word_box">
-                        <!------- 最佳搭配品名、金額 ------->
-                        <p class="w_recipes_detail_best_en_font">Farfalle nº 87</p>
-                        <p class="noto_light">蝴蝶麵</p>
-                        <p class="w_recipes_detail_best_en_font    w_recipes_detail_best_money">NT＄ 109</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!------- 以上最佳搭配設定 ------->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
-        </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script>
+<script>
 
-    </script>
+</script>
 
 </body>
 
-<?php include __DIR__. '/__html_foot.php' ?>
+<?php include __DIR__ . '/__html_foot.php' ?>

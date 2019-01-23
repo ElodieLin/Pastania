@@ -1,7 +1,7 @@
 <?php
-require __DIR__. '/__connect_db.php';
+require __DIR__ . '/__connect_db.php';
 
-$result =[
+$result = [
     'success' => false,
     'code' => 400,
     'info' => '參數不足',
@@ -9,25 +9,24 @@ $result =[
 ];
 
 
-if(isset($_POST['nickname']) and isset($_POST['email']) and isset($_POST['password']) and isset($_POST['password']) and isset($_POST['address'])){
+if (isset($_POST['nickname']) and isset($_POST['email']) and isset($_POST['password']) and isset($_POST['password']) and isset($_POST['address'])) {
     $result['postData'] = $_POST;
 
     // TODO: 後端的欄位檢查
     // email 檢查可以參考 filter_var()
 
 
-
     $s_sql = "SELECT 1 FROM `members` WHERE `email`=?";
     $s_stmt = $pdo->prepare($s_sql);
-    $s_stmt->execute([ $_POST['email'] ]);
-    if($s_stmt->rowCount() >= 1){
+    $s_stmt->execute([$_POST['email']]);
+    if ($s_stmt->rowCount() >= 1) {
         $result['code'] = 420;
         $result['info'] = '此Email已被註冊';
         echo json_encode($result, JSON_UNESCAPED_UNICODE);
         exit;
     }
 
-    $hash = sha1($_POST['email']. uniqid());
+    $hash = sha1($_POST['email'] . uniqid());
     // 去掉頭尾空白, 然後轉小寫
     $email2 = strtolower(trim($_POST['email']));
     // 密碼編碼, 不要明碼
@@ -55,7 +54,7 @@ if(isset($_POST['nickname']) and isset($_POST['email']) and isset($_POST['passwo
     ]);
 
     // 影響的列數 (筆數)
-    if($stmt->rowCount()==1){
+    if ($stmt->rowCount() == 1) {
         $result['success'] = true;
         $result['code'] = 200;
         $result['info'] = '註冊成功！';

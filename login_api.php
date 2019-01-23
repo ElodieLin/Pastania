@@ -1,7 +1,7 @@
 <?php
-require __DIR__. '/__connect_db.php';
+require __DIR__ . '/__connect_db.php';
 
-$result =[
+$result = [
     'success' => false,
     'code' => 400,
     'info' => '參數不足',
@@ -9,7 +9,7 @@ $result =[
 ];
 
 
-if(isset($_POST['email']) and isset($_POST['password'])){
+if (isset($_POST['email']) and isset($_POST['password'])) {
     $result['postData'] = $_POST;
 
 
@@ -28,7 +28,7 @@ if(isset($_POST['email']) and isset($_POST['password'])){
     ]);
 
     // 影響的列數 (筆數)
-    if($stmt->rowCount()==1){
+    if ($stmt->rowCount() == 1) {
         $result['success'] = true;
         $result['code'] = 200;
         $result['info'] = '登入成功';
