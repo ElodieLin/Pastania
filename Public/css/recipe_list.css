@@ -1,0 +1,480 @@
+  .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .en_font {
+            font-family: 'Lao MN', 'Arya';
+            font-size: 2rem;
+            color: #5C7880;
+        }
+
+        /* adjust for title padding */
+        .en_font.title_party {
+            padding-top: 15px;
+        }
+
+        .noto_regular {
+            font-family: 'Noto Sans TC';
+            letter-spacing: 2px;
+            font-size: 2rem;
+            color: #5C7880;
+        }
+
+
+        /* ----------以下為非模組字體設定---------- */
+        .w_recipes_list_en_font_small {
+            font-family: 'Lao MN', 'Arya';
+            letter-spacing: 2px;
+            font-size: 1.6rem;
+            color: #5C7880;
+        }
+
+        .w_recipes_list_noto_regular_small {
+            font-family: 'Noto Sans TC';
+            letter-spacing: 2px;
+            font-size: 1.6rem;
+            color: #5C7880;
+        }
+
+        .w_pd_en_font_small_red {
+            font-family: 'Lao MN', 'Arya';
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: #D3554A;
+        }
+
+        .product_detail_small_noto_thin_b {
+            font-family: 'Noto Sans TC';
+            font-weight: 100;
+            /* 這是最細的(thin) */
+            letter-spacing: 2px;
+            font-size: 1rem;
+            color: #5C7880;
+        }
+
+        /* ----------以上為非模組字體設定---------- */
+
+
+        /*--------- 以下為麵包屑的設定 --------- */
+        .w_recipes_list_breadcrumbs_word_big_box {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .w_recipes_list_breadcrumbs_word {
+            padding-top: 9%;
+            padding-right: 0%;
+            width: 35vw;
+        }
+
+        .w_recipes_list_breadcrumbs_box {
+            display: flex;
+            border-bottom: #5C7880 1px solid;
+            padding-bottom: 2%;
+            /* margin-bottom: 10%; */
+        }
+
+        .w_recipes_list_breadcrumbs_box>a {
+            text-decoration: none;
+            color: #5C7880;
+        }
+
+        .w_recipes_list_breadcrumbs_ch,
+        .w_recipes_list_breadcrumbs_en {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .w_recipes_list_breadcrumbs_word>.w_recipes_list_breadcrumbs_box>a>.w_recipes_list_breadcrumbs_ch {
+            display: none;
+        }
+
+        .w_recipes_list_breadcrumbs_word>.w_recipes_list_breadcrumbs_box>a:hover .w_recipes_list_breadcrumbs_ch {
+            display: block;
+            color: #E67348;
+        }
+
+        .w_recipes_list_breadcrumbs_word>.w_recipes_list_breadcrumbs_box>a>.w_recipes_list_breadcrumbs_en {
+            margin-top: -26px;
+        }
+
+        .w_recipes_list_breadcrumbs_word>.w_recipes_list_breadcrumbs_box>a:hover .w_recipes_list_breadcrumbs_en {
+            display: none;
+        }
+
+        /*--------- 以上為麵包屑的設定 --------- */
+
+        /* ----------以下為大標文字設定---------- */
+
+        .w_recipes_list_title {
+            margin: auto;
+            text-align: center;
+            width: 25%;
+            padding: 80px 0px 40px 0px;
+        }
+
+        .w_recipes_list_title_line {
+            border-bottom: #5C7880 1px solid;
+            padding: 20px 0px;
+        }
+
+        /* ----------以上為大標文字設定---------- */
+
+
+
+        /* ----------以下為大盒子設定---------- */
+        .w_recipes_list_wrapper {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* ----------以上為大盒子設定---------- */
+
+
+        /* ----------以下為藍背景區域設定---------- */
+        .w_recipes_list_bg_b {
+            background-color: rgb(200, 219, 216);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .w_recipes_list_bg_b:hover {
+            background-color: rgba(200, 219, 216, 0.486);
+            transition: all .2s;
+            -webkit-transition: all .2s ease;
+        }
+
+        .w_recipes_list_bg_b a {
+            text-decoration: none;
+        }
+
+        /* ----------以上為藍背景區域設定---------- */
+
+
+        /* ----------以下為黃背景區域設定---------- */
+
+        .w_recipes_list_bg_y {
+            background-color: rgb(246, 208, 105);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .w_recipes_list_bg_y:hover {
+            background-color: rgba(246, 208, 105, 0.466);
+            text-decoration: none;
+            transition: all .2s;
+            -webkit-transition: all .2s ease;
+        }
+
+        .w_recipes_list_bg_y a {
+            text-decoration: none;
+        }
+
+        /* ----------以上為黃背景區域設定---------- */
+
+
+
+        /* ----------以下為食譜照片區域設定---------- */
+
+        .w_recipes_list_img_box img {
+            width: 330px;
+            height: 330px;
+            object-fit: cover;
+        }
+
+        /* ----------以上為食譜照片區域設定---------- */
+
+
+
+
+        /* ----------以下為文字、線條、箭頭icon區域設定（藍色背景區域的）---------- */
+
+        .w_recipes_list_word_box {
+            margin-left: 5%;
+        }
+
+        .w_recipes_list_word_box p {
+            word-break: normal;
+            margin-bottom: 0px;
+        }
+
+        .w_recipes_list_word_line_box {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .w_recipes_list_word_img {
+            width: 32px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        /* .w_recipes_list_word_img:hover {
+            background-color: #F6D169;
+            border-radius: 100%;
+        } */
+
+        .w_recipes_list_word_line {
+            width: 100%;
+            height: 1px;
+            margin-top: 3.5%;
+            background-color: #5C7880;
+        }
+
+        /* ----------以上為文字、線條、箭頭icon區域設定（藍色背景區域的）---------- */
+
+
+        /* ----------以下為文字、線條、箭頭icon區域設定（黃色背景區域的）---------- */
+        .w_recipes_list_word_box_r {
+            margin-right: 5%;
+        }
+
+        .w_recipes_list_word_box_r p {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            word-break: normal;
+            margin-bottom: 0px;
+            margin-left: 25px;/*  */
+        }
+
+        .w_recipes_list_word_line_box_r {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            /* justify-content: flex-end; */
+        }
+
+        .w_recipes_list_word_img_r {
+            width: 32px;
+            margin-right: 10%;
+            margin-left: 10%;
+            transform: rotateY(180deg);
+        }
+
+        /* .w_recipes_list_word_img_r:hover {
+            background-color: #C8DBD8;
+            border-radius: 100%;
+        } */
+
+        .w_recipes_list_word_line_r {
+            width: 100%;
+            height: 1px;
+            background-color: #5C7880;
+        }
+
+        /* ----------以下為文字、線條、箭頭icon區域設定（黃色背景區域的）---------- */
+
+
+
+
+        /* ----------以下為底部換頁面按鈕設定---------- */
+
+        .w_prodiuct_list_page {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .w_prodiuct_list_page_number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* margin-top: 20px; */
+            margin-top: 6px;
+        }
+
+        .w_prodiuct_list_page_number a {
+            color: #D3554A;
+            padding: 0px 6px;
+            text-decoration: none;
+        }
+
+        .w_prodiuct_list_page_number a:hover {
+            color: rgba(230, 114, 72, 0.6);
+
+        }
+
+        .w_prodiuct_list_page_back img {
+            width: 20%;
+            margin-left: 50%;
+        }
+
+        .w_prodiuct_list_page_next img {
+            width: 20%;
+            margin-right: 50%;
+        }
+
+        /* ----------以上為底部換頁面按鈕設定---------- */
+
+        @media screen and (max-width:1200px) {
+            .en_font {
+                font-size: 1.6rem;
+            }
+
+            .noto_regular {
+                font-size: 1.6rem;
+            }
+
+
+            /* ----------以下為非模組字體設定---------- */
+            .w_recipes_list_en_font_small {
+                font-size: 1.2rem;
+            }
+
+            .w_recipes_list_noto_regular_small {
+                font-size: 1.2rem;
+            }
+
+            .w_pd_en_font_small_red {
+                font-size: 1.2rem;
+            }
+
+            /* ----------以上為非模組字體設定---------- */
+
+
+            /* ----------以下為食譜照片區域設定---------- */
+
+            .w_recipes_list_img_box img {
+                width: 150px;
+                height: 160px;
+                object-fit: cover;
+            }
+
+            /* ----------以上為食譜照片區域設定---------- */
+        }
+
+
+
+        @media screen and (max-width:900px) {
+            .w_recipes_list_breadcrumbs_word_big_box {
+                display: none;
+            }
+
+            .en_font {
+                font-size: 1.2rem;
+            }
+
+            .noto_regular {
+                font-size: 1.2rem;
+            }
+
+
+            /* ----------以下為非模組字體設定---------- */
+            .w_recipes_list_en_font_small {
+                font-size: 1rem;
+            }
+
+            .w_recipes_list_noto_regular_small {
+                font-size: 1rem;
+            }
+
+            .w_pd_en_font_small_red {
+                font-size: 1rem;
+            }
+
+            /* ----------以上為非模組字體設定---------- */
+
+
+
+            /* ----------以下為大標文字設定---------- */
+            .w_recipes_list_title_line {
+                margin-top: 20px;
+                padding: 15px 0px;
+            }
+
+            /* ----------以上為大標文字設定---------- */
+
+
+
+            /* ----------以下為大盒子設定---------- */
+            .w_recipes_list_wrapper {
+                width: 90%;
+            }
+
+            /* ----------以上為大盒子設定---------- */
+
+
+
+
+            /* ----------以下為食譜照片區域設定---------- */
+
+            .w_recipes_list_img_box img {
+                width: 100px;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            /* ----------以上為食譜照片區域設定---------- */
+
+
+            /* ----------以下為文字、線條、箭頭icon區域設定（藍色背景區域的）---------- */
+
+            .w_recipes_list_word_box {
+                margin-left: 3%;
+                padding: 20px;
+            }
+
+            .w_recipes_list_word_line_box {
+                padding-top: 12px;
+            }
+
+            .w_recipes_list_word_img {
+                width: 10%;
+                margin-left: 10%;
+            }
+
+            .w_recipes_list_word_img:active {
+                background-color: #F6D169;
+            }
+
+            /* .w_recipes_list_word_line {
+                width: 170px;
+            } */
+
+            /* ----------以上為文字、線條、箭頭icon區域設定（藍色背景區域的）---------- */
+
+
+            /* ----------以下為文字、線條、箭頭icon區域設定（黃色背景區域的）---------- */
+            .w_recipes_list_word_box_r {
+                margin-right: 3%;
+                padding: 20px;
+            }
+
+
+            .w_recipes_list_word_line_box_r {
+
+                padding-top: 12px;
+                /* justify-content: flex-end; */
+            }
+
+            .w_recipes_list_word_img_r {
+                width: 10%;
+            }
+
+            .w_recipes_list_word_img_r:active {
+                background-color: #C8DBD8;
+                border-radius: 100%;
+            }
+
+            /* .w_recipes_list_word_line_r {
+                width: 170px;
+            } */
+
+            /* ----------以下為文字、線條、箭頭icon區域設定（黃色背景區域的）---------- */
+
+
+
+
+
+
+
+
+        }
