@@ -12,16 +12,16 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
 }
 
 
-?>
-
-    <!-- try assoc product_list & product_info DB -->
-    <!-- <?php
-    $typeID = $_GET['type'];
-    $t_sql = sprintf("SELECT * FROM product_list WHERE parent_sid LIMIT 1");
+$typeID = $_GET['type'];
+    $t_sql = sprintf("SELECT product_info.*, product_list.pasta_type as soase_type, product_list.pasta_type_ch as soase_type_ch FROM product_info join product_list on product_info.productlist_sid = product_list.parent_sid WHERE product_info.productlist_sid = '$typeID' ");
     $t_stmt = $pdo->query($t_sql);
 
+    while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
+        $type = $row_t;
+    }
 
-    ?> -->
+?>
+
 
 
 <?php include __DIR__ . '/__html_head.php' ?>
@@ -57,13 +57,12 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
                     </a>
                     <span>></span>
 
-                    <!-- try assoc product_list & product_info DB -->
-                    <!-- <?php while ($row = $t_stmt->fetch(PDO::FETCH_ASSOC)): ?> -->
+                  
                     <a href="product_list_specialty.php"><!-- direct to the correspond categories -->
-                        <span class="w_product_detail_breadcrumbs_ch"><?= $row['pasta_type_ch'] ?>特別款</span>
-                        <span class="w_product_detail_breadcrumbs_en"><?= $row['pasta_type'] ?>Specialty</span>
+                        <span class="w_product_detail_breadcrumbs_ch"><?= $type['soase_type_ch'] ?></span>
+                        <span class="w_product_detail_breadcrumbs_en"><?= $type['soase_type'] ?></span>
                     </a>
-                    <!-- <?php endwhile; ?> -->
+                    
 
                     <span>></span>
 
@@ -120,7 +119,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
                 </div>
                 <br>
                 <div class="col-md-9 w_product_detail_cart_btn product_detail_noto_light_big">
-                    <a class="w_product_detail_transition" href="#">加入購物車</a>
+                    <a class="w_product_detail_transition add_to_cart_btn" href="#">加入購物車</a>
                     <!-------- 橘色大按鈕連結------->
                 </div>
             </div>
@@ -176,12 +175,23 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
 
 
             <div class="w_product_detail_recipe_title_btn">
-                <a class="w_product_detail_transition" href="recipe_detail.php">了解更多</a>
+                <a class="w_product_detail_transition" href="recipe_detail.php?<?= $product['Recipe_sid']; ?>&recipe=<?php echo $product['Recipe_sid']; ?>">了解更多</a>
                 <!-- direct to recipe detail page via mapping db -->
             </div>
         </div>
     </div>
     <!------------ 以上為推薦食譜區域 ------------>
+
+<?php
+    $likeID = $_GET['ran_product'];
+
+    $l_sql = sprintf("SELECT * FROM product_info ORDER BY RAND() LIMIT 1;");
+    $l_stmt = $pdo->query($l_sql);
+
+    while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
+        $ran_product = $row_ran;
+    }
+?>
 
 
     <!------------ 以下為你可能會喜歡區域 ------------>
@@ -202,11 +212,11 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
                 <!------ 以下為產品名稱和按鈕區域 ------->
                 <div class="w_product_detail_like_word_two">
                     <div class="w_product_detail_like_word_two_word">
-                        <p class="product_detail_big_en_font_b">Farfalle nº 87</p>
-                        <p class="product_detail_noto_light_big">蝴蝶麵</p>
+                        <p class="product_detail_big_en_font_b"><?=$ran_product['Name_En'] ?> <?=$ran_product['product_no'] ?></p>
+                        <p class="product_detail_noto_light_big"><?=$ran_product['Name_Ch'] ?></p>
 
                         <div class="w_product_detail_like_word_btn ">
-                            <a class="w_product_detail_transition" href="">了解更多</a>
+                            <a class="w_product_detail_transition" href="product_detail.php?product=<?=$ran_product['sid'] ?>">了解更多</a>
                         </div>
                     </div>
                 </div>
@@ -216,7 +226,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
 
             <!------ 以下為產品照片區域 ------->
             <div class="w_product_detail_like_img_box">
-                <img src="img/product/l/P1_Farfalle_Tricolore.png" alt="">
+                <img src="img/product/l/<?=$ran_product['Image_large']?>.png" alt="">
             </div>
             <!------ 以上為產品照片區域 ------->
         </div>
@@ -512,6 +522,20 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
         $('.far').click(function () {
             $(this).toggleClass('fas');
             // $('.far').toggleClass('fas');
+        });
+
+
+        //add to cart
+        $('.add_to_cart_btn').click(function(){
+        var card = $(this).closest('.product-item');
+            var sid = card.attr('data-sid');
+            var qty = card.find('select').val(); 
+
+    // ajax
+        $.get('add_to_cart.php', {sid:sid, qty:qty}, function(data){
+                // alert('已加入購物車')
+                cart_count(data); //連接navbar_list裡的cart_count data, 可即時更新
+            }, 'json');
         });
 
 

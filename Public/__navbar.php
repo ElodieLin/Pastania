@@ -62,7 +62,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                     <!-- 以下為下拉選單區域 collapse-->
                     <ul class="w_nav_sub noto_regular transition">
                         <li class="w_nav_noto_regular_sub"><a href="about.php">品牌介紹</a></li>
-                        <li class="w_nav_noto_regular_sub"><a href="map.php">義麵地圖</a></li>
+                        <li class="w_nav_noto_regular_sub"><a href="pasta_map.php">義麵地圖</a></li>
                     </ul>
                     <!-- 以上為下拉選單區域 -->
 
@@ -118,7 +118,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                         <?php while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)): ?>
 
                             <li class="w_nav_en_font_sub"><a
-                                        href="recipe_list.php?category=<?php echo $row['sid']; ?>"><?php echo $row['recipe_type_en']; ?><?php echo $row['recipe_type_ch']; ?></a>
+                                        href="recipe_list.php?category=<?php echo $row['sid']; ?>"><?php echo $row['recipe_type_en']; ?> <?php echo $row['recipe_type_ch']; ?></a>
                             </li>
 
                         <?php endwhile; ?>
@@ -156,9 +156,9 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                     <!--以下會員登入後選單-->
                     <ul class="w_nav_sub r_iocnbox r_login">
                         <li class="w_nav_en_font_sub"><p>會員姓名</p></li>
-                        <li class="w_nav_en_font_sub"><a href="">帳號設定</a></li>
-                        <li class="w_nav_en_font_sub"><a href="">訂單查詢</a></li>
-                        <li class="w_nav_en_font_sub r_btn"><a style="color:white">登出</a></li>
+                        <li class="w_nav_en_font_sub"><a href="edit_me.php">帳號設定</a></li>
+                        <li class="w_nav_en_font_sub"><a href="history.php">訂單查詢</a></li>
+                        <li class="w_nav_en_font_sub r_btn"><a style="color:white" href="">登出</a></li>
                     </ul>
                     <!--以上會員登入後選單-->
                 </li>
@@ -264,7 +264,13 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                 <div class="bar bar3 "></div>
             </div>
             <ul>
-                <li class=""><a href="">About Us</a></li>
+                <li >
+                    <a class="r_arrow_icon">About Us<i class="fas fa-angle-right r_arrow_icon transition"></i></a>
+                    <ul class="sub-menu ">
+                        <li><a href="about.php">品牌宣言</a></li>
+                        <li><a href="pasta_map.php">義麵地圖</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a class="r_arrow_icon ">Events<i class="fas fa-angle-right r_arrow_icon transition"></i></a>
                     <ul class="sub-menu ">
@@ -288,11 +294,11 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                     <a class="r_arrow_icon ">Recipes<i class="fas fa-angle-right r_arrow_icon transition"></i></a>
                     <ul class="sub-menu">
 
-                        <li><a>Party 週末派對</a></li>
-                        <li><a>Occasion 特殊節慶</a></li>
-                        <li><a>Light 健康輕食</a></li>
-                        <li><a>Starter 開胃前菜</a></li>
-                        <li><a>Typical 義國風情</a></li>
+                        <li><a href="recipe_list.php?category=1">Party 週末派對</a></li>
+                        <li><a href="recipe_list.php?category=2">Occasion 特殊節慶</a></li>
+                        <li><a href="recipe_list.php?category=3">Light 健康輕食</a></li>
+                        <li><a href="recipe_list.php?category=4">Starter 開胃前菜</a></li>
+                        <li><a href="recipe_list.php?category=5">Typical 義國風情</a></li>
 
 
                     </ul>
@@ -389,6 +395,18 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                                 <li class="w_nav_en_font_sub"><p>Farfalle nº 87</p></li>
                                 <li class="w_nav_en_font_sub"><p>蝴蝶麵</p></li>
                                 <li class="w_nav_en_font_sub"><p>NT＄ 109</p></li>
+
+                                <!-- wishlist item move to cart icon -->
+                                <li class="r_flex r_f_center r_wish_ml">
+                                    <a href=""><img src="img/icon/shopping_bag.svg" alt=""></a>
+                                </li>
+
+                                <!-- wishlist item delete icon -->
+                                <li class="r_flex r_f_center">
+                                    <a href="" class="r_wish_delet_p">
+                                        <img src="img/icon/delete.svg" alt="">
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="r_flex r_f_center">
@@ -763,10 +781,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                     // console.log(data)
                     if (data.success) {
                         alertType = 'login_success';
-                        // 設定登入成功後自動跳轉頁時間
-                        //     setTimeout(function(){
-                        //         location.href = come_from;
-                        //     }, 1000);
+  
                     } else {
                         alertType = 'login_pop';
                     }
@@ -775,7 +790,10 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                         info.html(data.info);
                         info.slideDown();
                     }
-
+                      // 設定登入成功後自動跳轉頁時間
+                      setTimeout(function(){
+                                location.href = come_from;
+                            }, 1800);
 
                 }, 'json');
 
@@ -835,7 +853,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
             }
 
             // email confirm check
-            if (document.form2.password3.value.length < 6) {
+            if (document.form2.password3.value !== document.form2.password2.value) {
                 setAlert('password3', '請輸入與設定密碼相同字符');
                 isPass = false;
             }
@@ -867,7 +885,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                     setTimeout(function () {
                         location.href = come_from;
                         $("#signup").modal("hide");
-                    }, 1000);
+                    }, 1400);
 
 
                 }, 'json');

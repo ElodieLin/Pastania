@@ -94,7 +94,7 @@ $p_stmt = $pdo->query($p_sql);
                         </div>
                         <div class="w_product_list_word_bg">
                             <!------------ 此處為商品照片連結 （電腦版）------------>
-                            <a href="product_giftset_detail.php?product=<?= $row['sid']; ?>&sauce=<?= $row['sid'] ?>"
+                            <a href="product_giftset_detail.php?product=<?= $row['sid']; ?>&sauce=<?= $row['sid'] ?>&pasta=<?= $row['sid'] ?>"
                                class="">
                                 <p class="w_gift_set_noto_light_small    w_product_list_word_center    padding-r"><?= $row['Name_Ch'] ?></p>
                                 <p class="w_gift_set_en_font_small    w_product_list_word_center    padding-r"><?= $row['Name_En'] ?></p>

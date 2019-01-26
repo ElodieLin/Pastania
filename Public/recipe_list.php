@@ -4,6 +4,51 @@ $page_name = 'recipe_list';
 $per_page = 5; //5 items per page
 $parmas = []; //associative array
 
+$cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0;
+if (isset($_GET['cate'])) {
+    $params['cate'] = $cate;
+}
+
+
+// 用戶要看第幾頁 which page for user
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+
+
+//get parent_sid from product list db
+//撈資料庫裡categories的parent_sid
+// 取得分類資料
+$c_sql = "SELECT * FROM recipe_list WHERE sid= 1";
+$c_stmt = $pdo->query($c_sql);
+$cates = $c_stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// 把where 1 當作是true, 這麼寫可以下多個判斷
+$where = ' WHERE 1';
+if (!empty($cate)) {
+    $where .= " AND sid=$cate ";
+    // 連接->category_sid
+}
+
+// 取得總筆數, 在選擇該項目時 get items via productlist_sid
+$t_sql = " SELECT COUNT(1) FROM recipe_info WHERE parent_sid= 1 ";
+$total_rows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
+$total_pages = ceil($total_rows / $per_page); //總頁數
+
+
+$page = $page > $total_pages ? $total_pages : $page;
+$page = $page < 1 ? 1 : $page;
+
+
+// get productlist_id from product info db
+// 取得商品資料 get product info
+
+$starting_limit = ($page - 1) * $per_page;
+
+$page_sql = sprintf("SELECT * FROM recipe_info WHERE parent_sid = 1 LIMIT $starting_limit, $per_page");
+$page_stmt = $pdo->query($page_sql);
+
+
+
+
 ?>
 
 <?php include __DIR__ . '/__html_head.php' ?>
@@ -51,6 +96,9 @@ $parmas = []; //associative array
 
         </div>
     </div>
+
+
+
 
     <!------------ 以下為title區域 ------------>
     <div class="container-fluid">
@@ -120,7 +168,7 @@ $parmas = []; //associative array
 
 
                     <div class="w_recipes_list_word_box">
-                        <a href="recipe_detail.php?id=<?php echo $row['sid']; ?>">
+                        <a href="recipe_detail.php?id=<?php echo $row['sid']; ?>&recipe=<?php echo $row['sid']; ?>">
                             <!-- direct to recipe detail page  -->
                             <!------------ 以下為食譜名稱區域 ------------>
                             <p class="w_recipes_list_en_font_small"><?php echo $row['name_en']; ?></p>
@@ -144,7 +192,7 @@ $parmas = []; //associative array
 
                 <div class="w_recipes_list_bg_y">
                     <div class="w_recipes_list_word_box_r">
-                        <a href="recipe_detail.php?id=<?php echo $row['sid']; ?>">
+                        <a href="recipe_detail.php?id=<?php echo $row['sid']; ?>&recipe=<?php echo $row['sid']; ?>">
                             <!-- direct to recipe detail page  -->
 
                             <!------------ 以下為食譜名稱區域 ------------>
@@ -178,35 +226,79 @@ $parmas = []; //associative array
     </div>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="w_prodiuct_list_page">
-                <div class="w_prodiuct_list_page_back">
-                    <a href="">
-                        <img src="img/icon/arrow_red_back.svg" alt="">
-                    </a>
-                </div>
-                <div class="w_prodiuct_list_page_number">
-                    <p class="w_prodiuct_list_page_number_one   w_pd_en_font_small_red">
-                        <a href="">1</a>
-                    </p>
-                    <p class="w_prodiuct_list_page_number_two   w_pd_en_font_small_red">
-                        <a href="">2</a>
-                    </p>
-                    <p class="w_prodiuct_list_page_number_three   w_pd_en_font_small_red">
-                        <a href="">3</a>
-                    </p>
-                </div>
+          <!-- pagination start -->
+          <div class="container">
+            <div class="row">
+                <!-- pre_arrow -->
+                <div class="w_prodiuct_list_page">
 
-                <div class="w_prodiuct_list_page_next">
-                    <a href="">
-                        <img src="img/icon/arrow_red_next.svg" alt="">
-                    </a>
+                    <!-- <style>
+                        .disabledArrow {
+                            opacity: 0.25;
+                        }
+                        </style> -->
+
+                    <?php
+
+                    $prevPage = $page - 1;
+                    $isHidden = false;
+
+                    if ($prevPage < 1) {
+                        $prevPage = 1;
+                        $isHidden = true;
+                    }
+
+                    ?>
+
+                    <div class="w_prodiuct_list_page_back <?php if ($isHidden) echo 'disabledArrow'; ?>">
+                        <a href="?page=<?php echo $prevPage; ?>">
+                            <img src="img/icon/arrow_red_back.svg" alt="">
+                        </a>
+                    </div>
+
+                    <!-- 設定頁數迴圈 & 點到該分頁變成active -->
+                    <?php for ($i = 1; $i <= $total_pages; $i++):
+                        $params['page'] = $i;
+
+                        ?>
+
+                        <!-- <style>
+                            .active a {
+                                color: blue;
+                            }
+                            </style> -->
+
+                        <div class="w_prodiuct_list_page_number">
+                            <p class="w_prodiuct_list_page_number_one   w_pd_en_font_small_red <?= $i == $page ? 'active' : '' ?>">
+                                <a href="?<?= http_build_query($params) ?>"><?= $i ?></a>
+                            </p>
+
+                        </div>
+                    <?php endfor ?>
+
+                    <?php
+
+                    $nextPage = $page + 1;
+                    $isHidden = false;
+
+                    if ($nextPage > $total_pages) {
+                        $nextPage = $total_pages;
+                        $isHidden = true;
+                    }
+
+                    ?>
+
+                    <!-- next icon -->
+                    <div class="w_prodiuct_list_page_next <?php if ($isHidden) echo 'disabledArrow'; ?>">
+                        <a href="?page=<?php echo $nextPage; ?>">
+                            <img src="img/icon/arrow_red_next.svg" alt="">
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-
+        <!-- pagination end -->
 
 </section>
 </div>
