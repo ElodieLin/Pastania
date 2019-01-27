@@ -2,7 +2,7 @@
 <?php include __DIR__ . '/__navbar.php' ?>
 
 <head>
-    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -493,11 +493,11 @@
         .e_payment_method .form-check-inline{
             margin-right: 1.5rem;
         }
-        
+
         .e_payment_method .form-check-inline .form-check-input{
             margin-right: .5rem;
         }
-        
+
         .e_payment_method_alert{
             margin-top: .7rem;
             color: #D3554A;
@@ -515,14 +515,14 @@
             .sum_wrapper hr{
                 width: 68%;
             }
-        
+
         }
 
         @media screen and (max-width: 576px) {
             .sum_wrapper hr{
                 width: 80%;
             }
-        
+
         }
 
 /* ----------確認配送資訊----------  */
@@ -741,8 +741,10 @@
 
 
         <div class="e_cart_btn">
-            <button class="e_btn_outline noto_light">上 一 步</button>
-            <button class="e_btn noto_light">確 認 結 帳</button>
+            <form action="cart_step5.php" method="post">
+                <button class="e_btn_outline noto_light">上 一 步</button>
+                <button class="e_btn noto_light" type="submit">確 認 結 帳</button>
+            </form>
         </div>
 
 

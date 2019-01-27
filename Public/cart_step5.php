@@ -1,8 +1,20 @@
 <?php include __DIR__ . '/__html_head.php' ?>
-<?php include __DIR__ . '/__navbar.php' ?>
+<?php include __DIR__ . '/__navbar.php'; ?>
+<?php require __DIR__ . '/__connect_db.php';
+//寫入資料庫
+$products = $_SESSION['products'];
+$order = $_SESSION['order'];
+
+$sql = "INSERT INTO `orders` (`delivery_way`) VALUES (?)";
+$pdo->prepare($sql)->execute([
+        $order['delivery_way']
+]);
+
+session_destroy();
+?>
 
 <head>
-   
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
