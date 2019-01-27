@@ -92,7 +92,7 @@ $p_stmt = $pdo->query($p_sql);
                     </div>
                     <div class="w_product_list_word_bg">
                         <!------------ 此處為商品照片連結 （電腦版）------------>
-                        <a href="product_detail.php?product=<?php echo $row['sid']; ?>" class="">
+                        <a href="product_detail.php?product=<?php echo $row['sid']; ?>&type=<?php echo $row['productlist_sid']; ?>" class="">
                             <p class="w_noto_light_small    w_product_list_word_center    padding-r"><?= $row['Name_Ch'] ?></p>
                             <p class="w_en_font_small    w_product_list_word_center    padding-r"><?= $row['Name_En'] ?></p>
                             <div class="w_product_list_arrow    padding-r"><img class="" src="img/icon/arrow.svg"

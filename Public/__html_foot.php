@@ -388,12 +388,12 @@
 
                         <ul class="sub_footer">
                             <li class="noto_thin  none_display_w"><a href="">品牌介紹</a></li>
-                            <li class="noto_thin  none_display_w"><a href="">義麵地圖</a></li>
+                            <li class="noto_thin  none_display_w"><a href="pasta_map.php">義麵地圖</a></li>
                         </ul>
 
                     </li>
                     <li class="noto_thin none_display_m"><a href="">品牌介紹</a></li>
-                    <li class="noto_thin none_display_m"><a href="">義麵地圖</a></li>
+                    <li class="noto_thin none_display_m"><a href="pasta_map.php">義麵地圖</a></li>
                 </ul>
 
                 <ul>
@@ -419,13 +419,13 @@
                         <a class="e_dropdown noto_regular">政策與規範<i
                                     class="fas fa-angle-right e_arrow_icon transition"></i></a>
                         <ul class="sub_footer ">
-                            <li class="noto_thin  none_display_w"><a href="">企業責任</a></li>
-                            <li class="noto_thin  none_display_w"><a href="">隱私權保護</a></li>
+                            <li class="noto_thin  none_display_w"><a href="service_privacy.php">企業責任</a></li>
+                            <li class="noto_thin  none_display_w"><a href="service_privacy.php">隱私權保護</a></li>
                         </ul>
 
                     </li>
-                    <li class="noto_thin none_display_m"><a href="">企業責任</a></li>
-                    <li class="noto_thin none_display_m"><a href="">隱私權保護</a></li>
+                    <li class="noto_thin none_display_m"><a href="service_privacy.php">企業責任</a></li>
+                    <li class="noto_thin none_display_m"><a href="service_privacy.php">隱私權保護</a></li>
                 </ul>
 
             </div>

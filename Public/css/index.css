@@ -1,0 +1,738 @@
+ body {
+            overflow-x: hidden;
+        }
+
+        .owl-carousel .owl-item .w_event_mobil_j {
+            display: none;
+        }
+
+        .owl-carousel .owl-item .w_event_mobil_f {
+            display: none;
+        }
+
+        .owl-carousel .owl-item .w_event_web_j {
+            display: block;
+        }
+
+        .owl-carousel .owl-item .w_event_web_f {
+            display: block;
+        }
+
+        .w_index_declaration_img_moblie {
+            display: none;
+        }
+
+
+        .w_index_en_font {
+            font-family: 'Lao MN', 'Arya';
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: #5C7880;
+        }
+
+        .w_index_noto_regular {
+            font-family: 'Noto Sans TC';
+            letter-spacing: 2px;
+            font-size: 2rem;
+            color: #5C7880;
+        }
+
+        .w_index_noto_light {
+            font-family: 'Noto Sans TC';
+            font-weight: 300;
+            /* 這是次細的(light) */
+            letter-spacing: 2px;
+            font-size: 1.3rem;
+            color: #5C7880;
+        }
+
+        .w_index_noto_light_white {
+            font-family: 'Noto Sans TC';
+            font-weight: 300;
+            /* 這是次細的(light) */
+            letter-spacing: 2px;
+            font-size: 1.3rem;
+            color: rgb(255, 255, 255);
+        }
+
+        .w_index_noto_regular_small {
+            font-family: 'Noto Sans TC';
+            letter-spacing: 2px;
+            font-size: 1.3rem;
+            color: #5C7880;
+        }
+
+        .w_index_en_font_title_red {
+            font-family: 'Lao MN', 'Arya';
+            font-size: 2.6rem;
+            letter-spacing: 2px;
+            color: #D3554A;
+            margin-bottom: 0;
+        }
+
+        .w_index_noto_regular_title_red {
+            font-family: 'Noto Sans TC';
+            letter-spacing: 2px;
+            font-size: 1.6rem;/* 1.4rem -> 1.6rem */
+            color: #D3554A;
+            margin-bottom: 0;
+        }
+
+        .w_index_en_font_declaration_red {
+            font-family: 'Lao MN', 'Arya';
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            color: #D3554A;
+            line-height: 0.4;
+        }
+
+        .w_index_noto_regular_declaration_red {
+            font-family: 'Noto Sans TC';
+            letter-spacing: 2px;
+            font-size: 1.6rem;
+            color: #D3554A;
+            line-height: 0.4;
+            margin-left: 3%;
+        }
+
+        /* ----------叉子標題、叉子、盤子、左右按鈕圖片設定---------- */
+
+        .w_index_wrapper_one {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .w_index_landing_bg img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .w_index_landing_bg_in_gray {
+            width: 100vw;
+            height: 100vh;
+            background-color: #70707006;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .w_index_dish_box {
+            /* background-color: aqua; */
+            position: absolute;
+            z-index: 3;
+            width: 40vw;
+            margin-top: 3%;
+        }
+
+        .w_index_dish_img {
+            width: 100%;
+        }
+
+        /* ----------以下叉子標題、叉子、盤子、左右按鈕 slider設定---------- */
+        .w_fork_slider_box {
+            position: absolute;
+            top: 180px;
+            z-index: 4;
+        }
+
+        .w_fork_item {
+            margin: auto;
+            width: 300px;
+            height: 500px;
+            text-align: center;
+        }
+
+        .owl-nav img {
+            /* 左右按鈕icon設定 */
+            color: #5C7880;
+            width: 65px;
+        }
+
+        .owl-prev {
+            /* 左鍵icon位置設定 */
+            position: absolute;
+            top: 35%;
+            left: 34%;
+        }
+
+        .owl-next {
+            /* 右鍵icon位置設定 */
+            position: absolute;
+            top: 35%;
+            right: 34%;
+        }
+
+        .owl-prev:focus,
+        .owl-next:focus,
+        .owl-dot:hover,
+        .owl-dot.active {
+            /* 左右按鈕icon、下方原點按鈕外框取消 */
+            outline: none;
+        }
+
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            /* 左右按鈕icon hover效果取消 */
+            background: none;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            width: 13px;
+            height: 13px;
+            background-color: #ffffff;
+        }
+
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background-color: #F6D169;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span {
+            background-color: #F6D169;
+        }
+
+        /* ----------以上叉子標題、叉子、盤子、左右按鈕 slider設定---------- */
+
+
+        /* ----------以下為活動大標文字設定---------- */
+        .w_index_wrapper_two {
+            width: 100%;
+            margin: 3% auto;
+        }
+
+        .w_index_events_title {
+            margin: 0 auto;
+            text-align: center;
+            width: 20%;
+            padding: 20px 0px;
+        }
+
+        .w_index_events_title_line {
+            border-bottom: #5C7880 1px solid;
+            padding: 20px 0px;
+        }
+
+        /* ----------以上為活動大標文字設定---------- */
+
+
+
+        /* ----------以下為活動slider區域---------- */
+
+        .w_index_event_slider_box {
+            width: 100%;
+        }
+
+        .w_index_event_item {
+            margin: auto;
+            width: 100%;
+            /* height: 500px; */
+            text-align: center;
+        }
+
+        .w_index_event_slider_box .owl-nav img {
+            /* 左右按鈕icon設定 */
+            color: #5C7880;
+            width: 80px;
+        }
+
+        .w_index_event_slider_box .owl-prev {
+            /* 左鍵icon位置設定 */
+            position: absolute;
+            top: 40%;
+            left: 0%;
+        }
+
+        .w_index_event_slider_box .owl-next {
+            /* 右鍵icon位置設定 */
+            position: absolute;
+            top: 40%;
+            right: 0%;
+        }
+
+        .w_index_event_slider_box .owl-prev:focus,
+        .w_index_event_slider_box .owl-next:focus,
+        .w_index_event_slider_box .owl-dot:hover,
+        .w_index_event_slider_box .owl-dot.active {
+            /* 左右按鈕icon、下方原點按鈕外框取消 */
+            outline: none;
+        }
+
+        .w_index_event_slider_box .owl-theme [class*=owl-]:hover {
+            /* 方原點按鈕 hover效果取消 */
+            background: none;
+        }
+
+        .w_index_event_slider_box .owl-nav img {
+            /* 左右按鈕icon白色背景 */
+            background: #ffffff86;
+        }
+
+        .w_index_event_slider_box .owl-nav img:hover {
+            /* 左右按鈕icon白色背景 */
+            background: #ffffff;
+        }
+
+        .w_index_event_slider_box .owl-dots .owl-dot span {
+            /* 下方原點按鈕設定 */
+            width: 13px;
+            height: 13px;
+            background-color: #ffffff;
+            border: #E67348 1px solid;
+        }
+
+        .w_index_event_slider_box .owl-dots .owl-dot:hover span {
+            /* 下方原點按鈕設定 */
+            background-color: #E67348;
+        }
+
+        .w_index_event_slider_box .owl-dots .owl-dot.active span {
+            /* 下方原點按鈕設定 */
+            background-color: #E67348;
+        }
+
+        .w_event_slider_btn {
+            /* 了解更多按鈕設定 */
+            display: flex;
+            justify-content: center;
+        }
+
+        .w_event_slider_btn a {
+            /* 了解更多按鈕連結文字設定 */
+            color: #ffffff;
+        }
+
+        .w_event_slider_btn_bg {
+            /* 了解更多按鈕設定 */
+            background-color: #E67348;
+            padding: 20px 120px;
+        }
+
+        .w_event_slider_btn_bg:hover {
+            /* 了解更多按鈕設定 */
+            background-color: #D3554A;
+        }
+
+        /* ----------以上為活動slider區域---------- */
+
+
+
+
+
+
+        /* ----------以下為品牌宣言大標文字設定---------- */
+        .w_index_wrapper_three {
+            width: 100%;
+            margin: 6% 0 auto;
+        }
+
+        .w_index_declaration_title {
+            margin: 0 auto;
+            text-align: center;
+            width: 20%;
+            padding: 40px 0px;
+        }
+
+        .w_index_declaration_title_line {
+            border-bottom: #5C7880 1px solid;
+            padding: 20px 0px;
+        }
+
+        /* ----------以上為品牌宣言大標文字設定---------- */
+
+
+
+
+        /* ----------以下為品牌宣言區域設定---------- */
+        .w_index_declaration_word_box {
+            /* 品牌宣言最大盒子設定 */
+            width: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .w_index_declaration_word_box_in_one img {
+            /* 宣言圖片和區域設定 */
+            width: 40vw;
+            height: 50vh;
+            /* background-color: antiquewhite; */
+            object-fit: contain;
+        }
+
+
+        .w_index_declaration_word_box_in_two {
+            /* 藍色、黃色背景的大盒子 */
+            width: 60vw;
+            height: 40vh;
+            position: relative;
+            z-index: 4;
+            /* background-color: rgb(213, 255, 241); */
+        }
+
+        .w_index_declaration_blue_bg {
+            /* 藍色背景 */
+            height: 0;
+            border-bottom: 294px solid rgba(200, 219, 216, 0.562);
+            border-left: 300px solid transparent;
+        }
+
+        .w_index_declaration_yellow_bg {
+            /* 黃色背景 */
+            height: 0;
+            border-bottom: 294px solid rgba(246, 208, 105, 0.555);
+            border-right: 300px solid transparent;
+        }
+
+        .w_index_declaration_red_bg {
+            /* 紅背景 */
+            height: 0;
+            border-bottom: 294px solid #FBEAE4;
+            border-right: 300px solid transparent;
+        }
+
+        .w_index_declaration_word_box_in_three {
+            /* 宣言介紹文字大盒子（圖在左邊） */
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            z-index: 7;
+            width: 40vw;
+            margin-left: 40vw;
+            margin-bottom: 40px;
+        }
+
+        .w_index_declaration_word_box_in_three_left {
+            /* 宣言介紹文字大盒子（圖在右邊） */
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            z-index: 7;
+            width: 40vw;
+            margin-left: 15vw;
+            margin-bottom: 40px;
+        }
+
+        .w_index_declaration_word_line {
+            /* 標題中間區隔線 */
+            height: 1px;
+            width: 50vw;
+            /* margin-top: -18px; */
+            margin-bottom: 15px;
+            margin-top: 13px;
+            background-color: #5C7880;
+        }
+
+        .w_index_wheat {
+            /* 麥子圖 */
+            width: 28%;
+            position: absolute;
+            z-index: 8;
+            margin-top: 22%;
+            margin-left: 80%;
+        }
+
+        .w_index_made_in_italy {
+            /* 義大利製造圖 */
+            width: 25%;
+            position: absolute;
+            z-index: 8;
+            margin-top: 25%;
+            margin-left: 70%;
+
+        }
+
+        .w_index_health_food {
+            /* 健康飲食圖 */
+            width: 33%;
+            position: absolute;
+            z-index: 8;
+            margin-top: 15%;
+            margin-left: 110%;
+        }
+
+        /* ----------以上為品牌宣言區域設定---------- */
+
+
+
+
+        @media (max-width: 800px) {
+
+            .owl-carousel .owl-item .w_event_web_j {
+                display: none;
+            }
+
+            .owl-carousel .owl-item .w_event_web_f {
+                display: none;
+            }
+
+            .owl-carousel .owl-item .w_event_mobil_j {
+                display: block;
+            }
+
+            .owl-carousel .owl-item .w_event_mobil_f {
+                display: block;
+            }
+
+            .w_index_en_font {
+                font-size: 1.2rem;
+            }
+
+            .w_index_noto_regular {
+                font-size: 1.2rem;
+            }
+
+            .w_index_en_font_title_red {
+                font-size: 1.2rem;
+            }
+
+            .w_index_noto_regular_title_red {
+                font-size: 1.3rem;
+                /* 1.2->1.3 */
+            }
+
+            .w_index_en_font_declaration_red {
+                font-size: 2rem;
+            }
+
+            .w_index_noto_regular_declaration_red {
+                font-size: 1.3rem;
+            }
+
+
+            .w_index_noto_light {
+                font-size: 1rem;
+            }
+
+            .w_index_noto_regular_small {
+                font-size: 1rem;
+            }
+
+
+
+
+
+            /* ----------以下叉子標題、叉子、盤子、左右按鈕 slider設定---------- */
+            .w_index_dish_box {
+                width: 90vw;
+                margin-top: -10%;
+            }
+
+            .w_fork_slider_box {
+                position: absolute;
+                top: 200px;
+                z-index: 10;
+                
+            }
+
+            .w_fork_item {
+                margin: auto;
+                width: 200px;
+                height: 400px;
+                text-align: center;
+            }
+
+            .owl-nav img {
+                /* 左右按鈕icon設定 */
+                color: #5C7880;
+                width: 50px;
+            }
+
+            .owl-prev {
+                /* 左鍵icon位置設定 */
+                position: absolute;
+                top: 26%;
+                left: 15%;
+            }
+
+            .owl-next {
+                /* 右鍵icon位置設定 */
+                position: absolute;
+                top: 26%;
+                right: 15%;
+            }
+
+            /* ----------以上叉子標題、叉子、盤子、左右按鈕 slider設定---------- */
+
+
+
+
+
+            /* ----------以下為活動大標文字設定---------- */
+
+            .w_index_events_title {
+                width: 35%;
+                padding: 15px 0px;
+            }
+
+            .w_index_events_title_line {
+                padding: 15px 0px;
+            }
+
+            /* ----------以上為活動大標文字設定---------- */
+
+
+
+
+            /* ----------以下為活動slider區域---------- */
+
+
+            .w_index_event_slider_box .owl-nav img {
+                /* 左右按鈕icon設定 */
+                color: #5C7880;
+                width: 35px;
+                padding: 5px;
+            }
+
+            /* ----------以上為活動slider區域---------- */
+
+
+
+
+
+            /* ----------以下為品牌宣言大標文字設定---------- */
+
+            .w_index_declaration_title {
+                width: 40%;
+                padding: 15px 0px;
+            }
+
+            .w_index_declaration_title_line {
+                padding: 15px 0px;
+            }
+
+            /* ----------以上為品牌宣言大標文字設定---------- */
+
+            /* ----------以下為品牌宣言區域設定---------- */
+
+            .w_index_declaration_img_web {
+                display: none;
+            }
+
+            .w_index_declaration_img_moblie {
+                display: block;
+            }
+
+            .w_index_declaration_word_box {
+                /* 品牌宣言最大盒子設定 */
+                width: 100%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .w_index_declaration_word_box_in_one img {
+                /* 宣言圖片和區域設定 */
+                width: 60vw;
+                height: 40vh;
+                margin: auto;
+                /* background-color: antiquewhite; */
+                object-fit: contain;
+            }
+
+
+            .w_index_declaration_word_box_in_two {
+                /* 藍色、黃色背景的大盒子 */
+                width: 90vw;
+                height: 30vh;
+                position: relative;
+                z-index: 4;
+                /* background-color: rgb(213, 255, 241); */
+            }
+
+            .w_index_declaration_blue_bg {
+                /* 藍色背景 */
+                height: 0;
+                border-bottom: 184px solid rgba(200, 219, 216, 0.562);
+                border-left: 120px solid transparent;
+            }
+
+            .w_index_declaration_yellow_bg {
+                /* 黃色背景 */
+                height: 0;
+                border-bottom: 184px solid rgba(246, 208, 105, 0.555);
+                border-right: 120px solid transparent;
+            }
+
+            .w_index_declaration_red_bg {
+                /* 紅背景 */
+                height: 0;
+                border-bottom: 184px solid #FBEAE4;
+                border-right: 120px solid transparent;
+            }
+
+            .w_index_declaration_word_box_in_three {
+                /* 宣言介紹文字大盒子（圖在左邊） */
+                display: flex;
+                flex-wrap: wrap;
+                position: absolute;
+                z-index: 7;
+                width: 70vw;
+                margin-left: 0vw;
+                margin-bottom: 0px;
+                margin-top: 130px;
+            }
+
+            .w_index_declaration_word_box_in_three_left {
+                /* 宣言介紹文字大盒子（圖在右邊） */
+                display: flex;
+                flex-wrap: wrap;
+                position: absolute;
+                z-index: 7;
+                width: 80vw;
+                margin-left: 0vw;
+                margin-bottom: 0px;
+                margin-top: 130px;
+            }
+
+            .w_index_declaration_word_line {
+                /* 標題中間區隔線 */
+                height: 1px;
+                width: 90vw;
+                /* margin-top: -18px; */
+                margin-bottom: 17px;
+                background-color: #5C7880;
+            }
+
+            .w_index_wheat {
+                /* 麥子圖 */
+                width: 40%;
+                position: absolute;
+                z-index: 8;
+                margin-top: 35%;
+                margin-left: 70%;
+            }
+
+            .w_index_made_in_italy {
+                /* 義大利製造圖 */
+                width: 25%;
+                position: absolute;
+                z-index: 8;
+                margin-top: 40%;
+                margin-left: 70%;
+
+            }
+
+            .w_index_health_food {
+                /* 健康飲食圖 */
+                width: 35%;
+                position: absolute;
+                z-index: 8;
+                margin-top: -45%;
+                margin-left: 10%;
+            }
+
+            /*  */
+            .w_fork_slider_box.owl-carousel.owl-theme.owl-loaded{
+                margin-top: 84px;
+
+            }
+            /*  */
+            /* ----------以上為品牌宣言區域設定---------- */
+
+        }
