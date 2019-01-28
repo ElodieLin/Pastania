@@ -4,10 +4,11 @@ $page_name = 'recipe_list';
 $per_page = 5; //5 items per page
 $parmas = []; //associative array
 
-$cate = isset($_GET['cate']) ? intval($_GET['cate']) : 0;
-if (isset($_GET['cate'])) {
-    $params['cate'] = $cate;
+$cate = isset($_GET['category']) ? intval($_GET['category']) : 0;
+if (! empty($cate)) {
+    $params['category'] = $cate;
 }
+
 
 
 // 用戶要看第幾頁 which page for user
