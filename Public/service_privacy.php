@@ -3,8 +3,8 @@
 <head>
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
     <!-- 以下是英文字型 -->
     <title>服務 政策與規範</title>
     <!-- 以下是jq -->
@@ -17,6 +17,7 @@
             overflow: hidden;
             color: #5C7880;
             font-family: 'Lao MN', 'Arya', 'Noto Sans TC';
+            margin-top: 76px;/*  */
         }
 
         .slide_toogle {
@@ -268,7 +269,7 @@
         .shop .qq {
             margin-top: 0%;
             list-style: none;
-            margin-left: -40px;
+            /* margin-left: -40px; */
         }
 
         .shop .si {
