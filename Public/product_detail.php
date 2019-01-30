@@ -28,7 +28,7 @@ $typeID = $_GET['type'];
 <?php include __DIR__ . '/__navbar.php' ?>
 
     <head>
-        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/aos.css">
         <link rel="stylesheet" href="css/product_detail.css">
     </head>
 
@@ -112,14 +112,14 @@ $typeID = $_GET['type'];
                     <p class="product_detail_small_noto_thin_b">500g (<?= $product['Serve'] ?>人份)</p>
                     <!-- <span class="w_product_detail_number"></span> -->
                     <div class="w_product_detail_number">
-                        <!-- 在這裡插入加減數字欄位 -->
-                        <input type="text" class="input-number">
+                        <!-- 在這裡插入加減數字欄位 qty box-->
+                        <input type="text" class="input-number" value="<?=$i?>">
                     </div>
 
                 </div>
                 <br>
                 <div class="col-md-9 w_product_detail_cart_btn product_detail_noto_light_big">
-                    <a class="w_product_detail_transition add_to_cart_btn" href="#">加入購物車</a>
+                    <a class="w_product_detail_transition add_to_cart_btn" >加入購物車</a>
                     <!-------- 橘色大按鈕連結------->
                 </div>
             </div>
@@ -145,7 +145,7 @@ $typeID = $_GET['type'];
             </div>
         </div>
 
-
+        <div data-aos="zoom-in">
         <div class="row w_product_detail_icon">
             <div class="col-md-4 col-4">
                 <img src="img/icon/time.svg" alt="">
@@ -160,6 +160,7 @@ $typeID = $_GET['type'];
                 <p class="noto_light"><?= $product['Diameter']; ?></p>
             </div>
         </div>
+        </div>
     </div>
     <!------- 以下為介紹文字、三個icon設定 ------->
 
@@ -169,7 +170,7 @@ $typeID = $_GET['type'];
         <div class="w_product_detail_recipe_bg">
             <img src="img/pages/others/product_detail_recipe_bg.jpg" alt="">
         </div>
-        <div class="col-md-3 w_product_detail_recipe_title">
+        <div data-aos="flip-left" class="col-md-3 w_product_detail_recipe_title">
             <img src="img/icon/chef2.svg" alt="">
             <p class="product_detail_noto_light_big">推 薦 食 譜</p>
 
@@ -200,14 +201,14 @@ $typeID = $_GET['type'];
         <div class="w_product_detail_like">
             <div class="w_product_detail_like_word_box">
 
-
+            <div data-aos="fade-right">
                 <!------ 以下為大標文字和線區域 ------->
                 <div class="w_product_detail_like_word_one ">
                     <p class="noto_regular w_product_detail_like_word_line">你可能喜歡</p>
                     <p class="product_detail_big_en_font">This may also interest you</p>
                 </div>
                 <!------ 以上為大標文字和線區域 ------->
-
+            </div>
 
                 <!------ 以下為產品名稱和按鈕區域 ------->
                 <div class="w_product_detail_like_word_two">
@@ -409,7 +410,8 @@ $typeID = $_GET['type'];
         </div>
     </div>
     <!------------------------ 以上為購買提醒、立即購買按鈕區域 ------------------------>
-
+    <script src="js/aos.js"></script>
+    <!-- aos動畫特效設定 -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -527,9 +529,13 @@ $typeID = $_GET['type'];
 
         //add to cart
         $('.add_to_cart_btn').click(function(){
+            console.log("hi")
         var card = $(this).closest('.product-item');
-            var sid = card.attr('data-sid');
-            var qty = card.find('select').val(); 
+            var sid = <?= $product['sid']?>;
+            var qty = $('.input-box').text(); 
+            console.log(qty)
+            console.log(sid)
+          
 
     // ajax
         $.get('add_to_cart.php', {sid:sid, qty:qty}, function(data){
@@ -538,7 +544,13 @@ $typeID = $_GET['type'];
             }, 'json');
         });
 
-
+    //aos動畫特效設定
+ $(function () {
+            AOS.init({
+                delay: 200,
+                easing: 'ease-in-out'
+            });
+        })
     </script>
 
     </body>
