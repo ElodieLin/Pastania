@@ -1,12 +1,12 @@
 <?php include __DIR__. '/__html_head.php' ?>
 <?php include __DIR__. '/__navbar.php' ?>
-
 <head>
 
     
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link href="https://fonts.googleapis.com/css?family=Arya|Reem+Kufi" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -15,6 +15,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    
 </head>
 
 <body>
@@ -69,7 +70,7 @@
                 <h3 class="w_index_noto_regular_title_red   text-center">夾餡款</h3>
                 <!-------- 夾餡款連結位置 -------->
                 <a href="product_list_stuffed.php">
-                    <img src="img/pages/index/stuffed.svg" alt="">
+                    <img src="img/pages/index/stuffed-01.png" alt="">
                 </a>
             </div>
             <div class="w_fork_item item">
@@ -139,7 +140,7 @@
             </div>
             <!------------ 以上為品牌宣言title區域 ------------>
             <div class="w_index_declaration_word_box">
-                <div class="w_index_declaration_word_box_in_one">
+                <div data-aos="zoom-in" class="w_index_declaration_word_box_in_one">
                     <img class="w_index_declaration_img" src="img/pages/index/declaration_durum.png" alt="">
                 </div>
 
@@ -162,7 +163,7 @@
             <div class="w_index_declaration_word_box">
                 <div class="w_index_declaration_word_box_in_one">
                     <!-- 手機版圖片位置 -->
-                    <img class="w_index_declaration_img_moblie" src="img/pages/index/declaration_made.png" alt="">
+                    <img data-aos="zoom-in" class="w_index_declaration_img_moblie" src="img/pages/index/declaration_made.png" alt="">
                 </div>
 
                 <div class="w_index_declaration_word_box_in_two">
@@ -179,7 +180,7 @@
                 </div>
 
                 <div class="w_index_declaration_word_box_in_one">
-                    <img class="w_index_declaration_img   w_index_declaration_img_web" src="img/pages/index/declaration_made.png"
+                    <img data-aos="zoom-in" class="w_index_declaration_img   w_index_declaration_img_web" src="img/pages/index/declaration_made.png"
                         alt="">
                 </div>
             </div>
@@ -189,7 +190,7 @@
         <div class="w_index_wrapper_three">
             <div class="w_index_declaration_word_box">
                 <div class="w_index_declaration_word_box_in_one">
-                    <img class="w_index_declaration_img" src="img/pages/index/declaration_type.png" alt="">
+                    <img data-aos="zoom-in" class="w_index_declaration_img" src="img/pages/index/declaration_type.png" alt="">
                 </div>
 
                 <div class="w_index_declaration_word_box_in_two">
@@ -210,7 +211,7 @@
             <div class="w_index_declaration_word_box">
                 <div class="w_index_declaration_word_box_in_one">
                     <!-- 手機版圖片位置 -->
-                    <img class="w_index_declaration_img_moblie" src="img/pages/index/declaration_health.png" alt="">
+                    <img data-aos="zoom-in" class="w_index_declaration_img_moblie" src="img/pages/index/declaration_health.png" alt="">
                 </div>
 
                 <div class="w_index_declaration_word_box_in_two">
@@ -226,7 +227,7 @@
                 </div>
 
                 <div class="w_index_declaration_word_box_in_one">
-                    <img class="w_index_declaration_img   w_index_declaration_img_web" src="img/pages/index/declaration_health.png"
+                    <img data-aos="zoom-in" class="w_index_declaration_img   w_index_declaration_img_web" src="img/pages/index/declaration_health.png"
                         alt="">
                 </div>
             </div>
@@ -241,8 +242,9 @@
 
     </section>
 
-
-
+    <!-- aos動畫特效設定 -->
+    <script src="js/aos.js"></script>
+   
 
     <script>
         $('.w_fork_slider_box').owlCarousel({
@@ -286,6 +288,16 @@
                     items: 1
                 }
             }
+        })
+
+
+
+                //aos動畫特效設定
+                $(function () {
+            AOS.init({
+                delay: 100,
+                easing: 'ease-in-out'
+            });
         })
     </script>
 </body>
