@@ -30,8 +30,8 @@
                 font-weight: 100;
                 /* 這是最細的(thin) */
                 letter-spacing: 2px;
-                font-size: 1.3rem;
-                color: #5C7880;
+                /* font-size: 1.3rem;
+                color: #5C7880; */
 
             }
 
