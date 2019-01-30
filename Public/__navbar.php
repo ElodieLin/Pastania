@@ -10,6 +10,13 @@ if (empty($_SERVER['HTTP_REFERER'])) {
 }
 
 
+// $i_sql = sprintf("SELECT * FROM `members` WHERE `id` = 1");
+
+// $i_stmt = $pdo->query($i_sql);
+// $rows = $i_stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
 ?>
 
 
@@ -142,6 +149,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
           </a>
         </li>
         <!-- 會員按鈕 -->
+        
         <li class="w_nav_icon_boxin r_btn_i">
           <a class="nav-link" href="login.php" data-toggle="modal" data-target=".bd-example-modal-lg">
                                 <span class="w_nav_icon_before">
@@ -150,12 +158,19 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                                     <img src="img/icon/member_red.svg" alt=""></span>
           </a>
           <!--以下會員登入後選單-->
+          <?php
+              
+          ?>
+          <?php if(isset($_SESSION['user'])): ?>
           <ul class="w_nav_sub r_iocnbox r_login">
-            <li class="w_nav_en_font_sub"><p>會員姓名</p></li>
+            <li class="w_nav_en_font_sub"><p><?= $_SESSION['user']['nickname'] ?></p></li>
             <li class="w_nav_en_font_sub"><a href="edit_me.php">帳號設定</a></li>
             <li class="w_nav_en_font_sub"><a href="history.php">訂單查詢</a></li>
-            <li class="w_nav_en_font_sub r_btn"><a style="color:white" href="">登出</a></li>
+            <li class="w_nav_en_font_sub r_btn"><a style="color:white" href="logout.php">登出</a></li>
+          
+          
           </ul>
+          <?php endif ?>
           <!--以上會員登入後選單-->
         </li>
         <!-- 收藏清單按鈕 wishlist btn-->
@@ -213,7 +228,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
           </a>
 
           <!-- qty badge -->
-          <a href=""><span class="badge badge_position">0</span></a>
+          <a href="cart.php"><span class="badge badge_position badge_pill">0</span></a>
 
           <!--以下為購物車內容 cart content-->
           <ul class="w_nav_sub r_iocnbox r_cart_list">
@@ -312,7 +327,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="" data-toggle="modal" data-target=".bd-example-modal-lg">
           <img src="img/icon/member.svg" alt="">
         </a>
       </li>
@@ -322,7 +337,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="" data-toggle="modal" data-target="">
           <img src="img/icon/shopping_bag.svg" alt="">
         </a>
       </li>
@@ -422,7 +437,14 @@ if (empty($_SERVER['HTTP_REFERER'])) {
   </div>
 
 
-  <!-- /* ～～～～～～～以上為手機版wish model～～～～～～～ */ -->
+  <!-- /* ～～～～～～～以上為手機版wish modal～～～～～～～ */ -->
+
+
+
+
+
+
+
 
 
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -808,9 +830,10 @@ if (empty($_SERVER['HTTP_REFERER'])) {
     }
 
 
-    // log in submit and close modal
+    // click register btb submit and close modal
+      
 
-
+      
     // register
 
     var fields = ['nickname', 'email2', 'password2', 'password3', 'address'];
@@ -904,4 +927,21 @@ if (empty($_SERVER['HTTP_REFERER'])) {
     //       // alert($('#form2').val());
     // })
 
+
+
+    // badge pill (show add to cart qty)
+    // cart badge顯示 
+      var badge_pill = $('.badge_pill');
+
+      function cart_count(obj){
+                var s, t=0;
+        for(s in obj){
+            t += 1 
+            // 只加購買種類, 不是累加全部購買數量
+        }
+        badge_pill.text(t);
+}
+
+
+   
 </script>
