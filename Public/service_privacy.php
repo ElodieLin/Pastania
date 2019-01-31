@@ -7,9 +7,6 @@
         crossorigin="anonymous"> -->
     <!-- 以下是英文字型 -->
     <title>服務 政策與規範</title>
-    <!-- 以下是jq -->
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
-
     <style>
         .e_container {
             max-width: 90%;
@@ -469,7 +466,7 @@
         /* 展開收合效果 */
         .flex+.toogle {
             display: none;
-            margin-top: 10px 0;
+            margin-top: 10px;
         }
     </style>
 
