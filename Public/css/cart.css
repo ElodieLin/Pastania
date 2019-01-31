@@ -657,3 +657,8 @@
         .fas {
             color: #5C7880;
         }
+
+        .far:hover{
+            color: #E67348 !important;
+            opacity: .8 !important;
+        }
