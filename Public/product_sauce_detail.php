@@ -20,7 +20,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
 <?php include __DIR__ . '/__navbar.php' ?>
 
 <head>
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/aos.css">  
     <link rel="stylesheet" href="css/product_sauce_detail.css">
 </head>
 <style>
@@ -108,13 +108,13 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
                 <!-- <span class="w_product_detail_number"></span> -->
                 <div class="w_product_sauce_detail_number">
                     <!-- 在這裡插入加減數字欄位 -->
-                    <input type="text" class="input-number">
+                    <input type="text" class="input-number" value="<?=$i?>">
                 </div>
 
             </div>
             <br>
             <div class="w_product_sauce_detail_cart_btn    product_detail_noto_light_big">
-                <a class="w_product_sauce_detail_transition" href="">加入購物車</a>
+                <a class="w_product_sauce_detail_transition add_to_cart_btn" >加入購物車</a>
                 <!-------- 橘色大按鈕連結------->
             </div>
         </div>
@@ -136,7 +136,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </div>
         <div class="col-md-5">
-            <div class="w_product_sauce_detail_cook_material">
+            <div data-aos="fade-left" class="w_product_sauce_detail_cook_material">
                 <p class="noto_regular">原料</p>
                 <div class="w_product_sauce_detail_cook_title_line_two"></div>
                 <p class="en_font">Ingredient</p>
@@ -157,7 +157,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
         <div class="w_product_sauce_detail_recipe_bg">
             <img src="img/pages/others/product_detail_recipe_bg.jpg" alt="">
         </div>
-        <div class="col-md-3 w_product_sauce_detail_recipe_title">
+        <div data-aos="flip-left" class="col-md-3 w_product_sauce_detail_recipe_title">
             <img src="img/icon/chef2.svg" alt="">
             <p class="product_detail_noto_light_big">推 薦 食 譜</p>
 
@@ -180,7 +180,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
 
 
                 <!------ 以下為大標文字和線區域 ------->
-                <div class="w_pproduct_sauce_detail_like_word_one ">
+                <div data-aos="fade-right" class="w_pproduct_sauce_detail_like_word_one ">
                     <p class="noto_regular    w_product_sauce_detail_like_word_line">可搭配麵種</p>
                     <p class="product_detail_big_en_font">Recommended with</p>
                 </div>
@@ -388,7 +388,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
         </div>
     </div>
     <!------------------------ 以上為購買提醒、立即購買按鈕區域 ------------------------>
-
+    <script src="js/aos.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -504,6 +504,32 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
             // $('.far').toggleClass('fas');
         });
 
+        //add to cart
+        $('.add_to_cart_btn').click(function(){
+                    console.log("hi")
+                var card = $(this).closest('.product-item');
+                    var sid = <?= $product['sid']?>;
+                    var qty = $('.input-box').text(); 
+                    console.log(qty)
+                    console.log(sid)
+                
+
+            // ajax
+                $.get('add_to_cart.php', {sid:sid, qty:qty}, function(data){
+                        // alert('已加入購物車')
+                        cart_count(data); //連接navbar_list裡的cart_count data, 可即時更新
+                    }, 'json');
+                });
+
+
+
+ //aos動畫特效設定
+ $(function () {
+                AOS.init({
+                    delay: 200,
+                    easing: 'ease-in-out'
+                });
+            })
     </script>
 
 </body>

@@ -34,7 +34,7 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>
 <head>
 
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/aos.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/recipe_detail.css">
@@ -50,12 +50,12 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
                 <span class="w_recipes_detail_breadcrumbs_en">Recipes</span>
             </a>
             <span>></span>
-            <a href="recipe_list_party.php">
+            <a href="recipe_list.php?category=<?= $type['parent_sid'] ?>">
                 <span class="w_recipes_detail_breadcrumbs_ch"><?= $recipe['type'] ?></span>
                 <span class="w_recipes_detail_breadcrumbs_en"><?= $type['soase_type_en'] ?></span>
             </a>
             <span>></span>
-            <a href="recipe_detail.php">
+            <a href="#">
                 <span class="w_recipes_detail_breadcrumbs_ch"><?= $recipe['name_ch'] ?></span>
                 <span class="w_recipes_detail_breadcrumbs_en"><?= $recipe['name_en'] ?></span>
             </a>
@@ -71,7 +71,7 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
         <img src="img/recipe/<?= $recipe['image'] ?>.jpg" alt="">
     </div>
     <div class="w_recipes_detail_big_word_box">
-        <div class="w_recipes_detail_big_word_opacity">
+        <div data-aos="fade-left" class="w_recipes_detail_big_word_opacity">
             <!------- 標題文字 ------->
             <p class="w_recipes_detail_title_en_font"><?= $recipe['name_en'] ?></p>
             <p class="w_recipes_detail_title_noto_light"><?= $recipe['name_ch']?></p>
@@ -89,7 +89,7 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
 
 <div class="w_recipes_detail_wrapper_three">
     <!------- 以下以為三個icon設定 ------->
-    <div class="row w_recipes_detail_icon">
+    <div data-aos="zoom-in" class="row w_recipes_detail_icon">
         <div class="col-md-4 col-4">
             <img src="img/icon/recipe_portion.svg" alt="">
             <p class="noto_light"><?= $recipe['serve'] ?>人份</p>
@@ -118,7 +118,7 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </div>
         <div class="col-md-5">
-            <div class="w_recipes_detail_cook_material">
+            <div data-aos="fade-left" class="w_recipes_detail_cook_material">
                 <p class="w_recipes_detail_cook_title_in   noto_regular">材料</p>
                 <!------- 材料文字 ------->
                 <p class="noto_thin ingredients">
@@ -145,7 +145,7 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
 
 
 <!------- 以下最佳搭配設定 Best with ------->
-<div class="w_recipes_detail_wrapper_four">
+<div data-aos="fade-up" class="w_recipes_detail_wrapper_four">
     <div class="row">
 
 
@@ -179,7 +179,7 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
 </div>
 <!------- 以上最佳搭配設定 ------->
 
-
+<script src="js/aos.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
@@ -191,7 +191,13 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script>
-
+  //aos動畫特效設定
+  $(function () {
+            AOS.init({
+                delay: 200,
+                easing: 'ease-in-out'
+            });
+        })
 </script>
 
 </body>

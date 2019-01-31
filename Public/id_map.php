@@ -11,6 +11,7 @@ $m_stmt = $pdo->query($m_sql);
 while ($row = $m_stmt->fetch(PDO::FETCH_ASSOC)) {
     $map = $row;
 }
+
 ?>
 <!-- The Modal Head -->
 <div class="modal-header border-bottom-0 pb-0 ">
@@ -36,7 +37,7 @@ while ($row = $m_stmt->fetch(PDO::FETCH_ASSOC)) {
 </div>
 <!-- The Modal Footer -->
 <div class="modal-footer pt-0 pr-5 pl-5 border-top-0">
-    <a href="./" class="btn r_btn col-md-12 mx-auto noto_light pt-3 pb-3 mt-0 mb-3">
+    <a href="recipe_detail.php?id=<?= $map['Recipe_no'] ?>&recipe=<?= $map['Recipe_no'] ?>" class="btn r_btn col-md-12 mx-auto noto_light pt-3 pb-3 mt-0 mb-3">
         前往食譜頁
 
     </a>

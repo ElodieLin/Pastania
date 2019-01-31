@@ -10,7 +10,6 @@ if (! empty($cate)) {
 }
 
 
-
 // 用戶要看第幾頁 which page for user
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 
@@ -18,7 +17,7 @@ $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 //get parent_sid from product list db
 //撈資料庫裡categories的parent_sid
 // 取得分類資料
-$c_sql = "SELECT * FROM recipe_list WHERE sid= 1";
+$c_sql = "SELECT * FROM recipe_list WHERE sid = $cate ";
 $c_stmt = $pdo->query($c_sql);
 $cates = $c_stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -30,7 +29,7 @@ if (!empty($cate)) {
 }
 
 // 取得總筆數, 在選擇該項目時 get items via productlist_sid
-$t_sql = " SELECT COUNT(1) FROM recipe_info WHERE parent_sid= 1 ";
+$t_sql = " SELECT COUNT(1) FROM recipe_info $where ";
 $total_rows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
 $total_pages = ceil($total_rows / $per_page); //總頁數
 
@@ -44,7 +43,7 @@ $page = $page < 1 ? 1 : $page;
 
 $starting_limit = ($page - 1) * $per_page;
 
-$page_sql = sprintf("SELECT * FROM recipe_info WHERE parent_sid = 1 LIMIT $starting_limit, $per_page");
+$page_sql = sprintf("SELECT * FROM recipe_info WHERE parent_sid = $cate LIMIT $starting_limit, $per_page");
 $page_stmt = $pdo->query($page_sql);
 
 
@@ -57,7 +56,7 @@ $page_stmt = $pdo->query($page_sql);
 
 
 <head>
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/aos.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/recipe_list.css">
@@ -82,7 +81,52 @@ $page_stmt = $pdo->query($page_sql);
                 $p_sql = sprintf("SELECT * FROM recipe_list WHERE sid = '$categoryID'");
                 $p_stmt = $pdo->query($p_sql);
 
-                ?>
+
+
+//                 $cate = isset($_GET['category']) ? intval($_GET['category']) : 0;
+// if (! empty($cate)) {
+//     $params['category'] = $cate;
+// }
+
+
+// // 用戶要看第幾頁 which page for user
+// $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+
+
+// //get parent_sid from product list db
+// //撈資料庫裡categories的parent_sid
+// // 取得分類資料
+
+// $p_stmt = $pdo->query($c_sql);
+
+
+// // 把where 1 當作是true, 這麼寫可以下多個判斷
+// $where = ' WHERE 1';
+// if (!empty($cate)) {
+//     $where .= " AND sid=$cate ";
+//     // 連接->category_sid
+// }
+
+// // 取得總筆數, 在選擇該項目時 get items via productlist_sid
+// $t_sql = " SELECT COUNT(1) FROM recipe_info $where ";
+// $total_rows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
+// $total_pages = ceil($total_rows / $per_page); //總頁數
+
+
+// $page = $page > $total_pages ? $total_pages : $page;
+// $page = $page < 1 ? 1 : $page;
+
+
+// // get productlist_id from product info db
+// // 取得商品資料 get product info
+
+// $starting_limit = ($page - 1) * $per_page;
+
+// $page_sql = sprintf("SELECT * FROM recipe_info WHERE parent_sid = $cate LIMIT $starting_limit, $per_page");
+// $page_stmt = $pdo->query($page_sql);
+
+
+//                 ?>
 
 
 
@@ -103,7 +147,7 @@ $page_stmt = $pdo->query($page_sql);
 
     <!------------ 以下為title區域 ------------>
     <div class="container-fluid">
-        <div class="w_recipes_list_title">
+        <div data-aos="fade-right" class="w_recipes_list_title">
 
             <!-- title detabase connect start -->
             <?php
@@ -113,7 +157,6 @@ $page_stmt = $pdo->query($page_sql);
 
             $p_sql = sprintf("SELECT * FROM recipe_list WHERE sid = '$categoryID'");
             $p_stmt = $pdo->query($p_sql);
-
 
             ?>
 
@@ -160,7 +203,7 @@ $page_stmt = $pdo->query($page_sql);
 
             <?php if ($isEven): ?>
 
-                <div class="w_recipes_list_bg_b">
+                <div data-aos="fade-right" class="w_recipes_list_bg_b">
                     <!------------ 以下為食譜照片區域 ------------>
                     <div class="w_recipes_list_img_box">
                         <img src="img/recipe/<?php echo $row['image']; ?>.jpg" alt="">
@@ -191,7 +234,7 @@ $page_stmt = $pdo->query($page_sql);
 
             <?php else: ?>
 
-                <div class="w_recipes_list_bg_y">
+                <div data-aos="fade-left" class="w_recipes_list_bg_y">
                     <div class="w_recipes_list_word_box_r">
                         <a href="recipe_detail.php?id=<?php echo $row['sid']; ?>&recipe=<?php echo $row['sid']; ?>">
                             <!-- direct to recipe detail page  -->
@@ -309,10 +352,17 @@ $page_stmt = $pdo->query($page_sql);
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
 </script>
+   <script src="js/aos.js"></script>
+    <!-- aos動畫特效設定 -->
 
 
 <script>
-
+        //aos動畫特效設定
+        $(function () {
+            AOS.init({
+                easing: 'ease-in-out'
+            });
+        })
 </script>
 </body>
 

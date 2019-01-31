@@ -43,7 +43,7 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
 <?php include __DIR__ . '/__navbar.php' ?>
 
     <head>
-        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/aos.css">
         <link rel="stylesheet" href="css/product_giftset_detail.css">
     </head>
 
@@ -121,12 +121,12 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
                     <p class="product_detail_small_noto_thin_b">淨重：1000g</p>
                     <div class="w_product_giftset_detail_number">
                         <!-- 在這裡插入加減數字欄位 -->
-                        <input type="text" class="input-number">
+                        <input type="text" class="input-number" value="<?=$i?>">
                     </div>
                 </div>
                 <br>
                 <div class="w_product_giftset_detail_cart_btn    product_detail_noto_light_big">
-                    <a class="w_product_giftset_detail_transition" href="">加入購物車</a>
+                    <a class="w_product_giftset_detail_transition add_to_cart_btn">加入購物車</a>
                     <!-------- 橘色大按鈕連結------->
                 </div>
             </div>
@@ -135,6 +135,7 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
 
 
     <!------- 以下為三個icon設定 ------->
+    <div data-aos="zoom-in">
     <div class="w_product_giftset_detail_wrapper_three">
         <div class="row   w_product_giftset_detail_icon">
             <div class="col-md-4 col-4">
@@ -150,6 +151,7 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
                 <p class="noto_light"><?= $product['diameter']; ?></p>
             </div>
         </div>
+    </div>
     </div>
     <!------- 以上為三個icon設定 ------->
 
@@ -177,7 +179,7 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
                 </div>
             </div>
             <div class="col-md-5">
-                <div class="w_product_giftset_detail_cook_material">
+                <div data-aos="fade-left" class="w_product_giftset_detail_cook_material">
                     <p class="noto_regular">原料</p>
                     <div class="w_product_giftset_detail_cook_title_line_two"></div>
                     <p class="en_font">Ingredient</p>
@@ -206,7 +208,7 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="w_product_giftset_detail_recipe_bg">
                 <img src="img/pages/others/product_detail_recipe_bg.jpg" alt="">
             </div>
-            <div class="col-md-3 w_product_giftset_detail_recipe_title">
+            <div data-aos="flip-left" class="col-md-3 w_product_giftset_detail_recipe_title">
                 <img src="img/icon/chef2.svg" alt="">
                 <p class="product_detail_noto_light_big">推 薦 食 譜</p>
 
@@ -391,7 +393,8 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </div>
         <!------------------------ 以上為購買提醒、立即購買按鈕區域 ------------------------>
-
+        <script src="js/aos.js"></script>
+        <!-- aos動畫特效設定 -->
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"
                 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -504,6 +507,35 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
             // $('.far').toggleClass('fas');
         });
 
+
+         //add to cart
+         $('.add_to_cart_btn').click(function(){
+            console.log("hi")
+        var card = $(this).closest('.product-item');
+            var sid = <?= $product['sid']?>;
+            var qty = $('.input-box').text(); 
+            console.log(qty)
+            console.log(sid)
+          
+
+        // ajax
+        $.get('add_to_cart.php', {sid:sid, qty:qty}, function(data){
+                // alert('已加入購物車')
+                cart_count(data); //連接navbar_list裡的cart_count data, 可即時更新
+            }, 'json');
+        });
+
+
+
+
+
+            //aos動畫特效設定
+            $(function () {
+                AOS.init({
+                    delay: 200,
+                    easing: 'ease-in-out'
+                });
+            })
         </script>
 
     </body>

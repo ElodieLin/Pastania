@@ -383,18 +383,18 @@
               <i class="fas fa-angle-right e_arrow_icon transition"></i></a>
 
             <ul class="sub_footer">
-              <li class="noto_thin  none_display_w"><a href="">品牌介紹</a></li>
+              <li class="noto_thin  none_display_w"><a href="about.php">品牌介紹</a></li>
               <li class="noto_thin  none_display_w"><a href="pasta_map.php">義麵地圖</a></li>
             </ul>
 
           </li>
-          <li class="noto_thin none_display_m"><a href="">品牌介紹</a></li>
+          <li class="noto_thin none_display_m"><a href="about.php">品牌介紹</a></li>
           <li class="noto_thin none_display_m"><a href="pasta_map.php">義麵地圖</a></li>
         </ul>
 
         <ul>
           <li class="section_title">
-            <a class="e_dropdown noto_regular">服務<i class="fas fa-angle-right e_arrow_icon transition"></i></a>
+            <a class="e_dropdown noto_regular" href="service_privacy.php">服務<i class="fas fa-angle-right e_arrow_icon transition"></i></a>
 
             <ul class="sub_footer">
               <li class="noto_thin  none_display_w"><a href="">購買流程</a></li>

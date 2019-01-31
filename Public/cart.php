@@ -2,11 +2,7 @@
 $page_name = 'cart';
 
 //$_SESSION fake
-$_SESSION['cart'] = [
-    2 => 2,//p_sid=>數量
-    3 => 1,
-    5 => 3,
-];
+
 
 //購物車裡不是0的時候才會執行
 if (!empty($_SESSION['cart'])) {
@@ -105,8 +101,10 @@ if (!empty($_SESSION['cart'])) {
         </ul>
     </div>
 
-    <!-- 插入購物車是空的 start -->
+    <!-- 插入購物車是空的 empty cart start -->
+    
     <div class="e_no_items">
+        
         <p class="e_empty_cart noto_light">購 物 車 是 空 的</p>
 
         <hr>
@@ -116,67 +114,63 @@ if (!empty($_SESSION['cart'])) {
         </div>
 
     </div>
-    <!-- 插入購物車是空的 end -->
+    <!-- 插入購物車是空的 empty cart end -->
 
 
-    <!-- 購物車有商品 start -->
+    <!-- 購物車有商品 cart with items start -->
     <div class="e_cart_items_outerwrapper">
         <form action="cart_step2.php" method="post">
             <!-- 每個商品都包在 innerwrapper裡 -->
-            <div class="e_cart_items_innerwrapper noto_light ">
-                <?php foreach ($cart_data as $sid => $item): ?>
-                    <input type="hidden" name="products[][sid]" value="<?php echo $sid ?>"/>
-                    <input type="hidden" name="products[][qty]" value="<?php echo $sessionCart[$sid] ?>"/>
+            <!-- $cart_data as $sid => $item -->
+            <div class="e_cart_items_innerwrapper noto_light " >
+                <?php 
+                $total = 0;
 
-                    <ul class="e_cart_item">
+                foreach ($keys as $k){
+                $i = $cart_data[$k];
+                $total += $i['qty'] * $i['price']; ?>
+                    <!-- <input type="hidden" name="products[][sid]" value="<?php echo $sid ?>"/>
+                    <input type="hidden" name="products[][qty]" value="<?php echo $sessionCart[$sid] ?>"/> -->
+
+                    <ul class="e_cart_item product-item" data-sid="<?= $i['sid'] ?>" id="product<?= $i['sid'] ?>"> 
                         <li>
-                            <div class="d_flex">
+                            <div class="d_flex py-2"  >
                                 <div class="e_img_w">
-                                    <a href="product_detail.php?product="><img src="img/product/l/P1_Farfalle_Tricolore.png" alt=""></a>
+                                    <a href="product_detail.php?product=<?php echo $sid ?>&type=<?= $i['productlist_sid']?>"><img src="img/product/l/<?php echo $i['Image_large'] ?>.png" alt=""></a>
                                 </div>
                                 <div class="e_item_w">
-                                    <ul class="d_colum">
-                                        <li class="e_cart_item_name en_font "><a href="">Farfalle nº 87</a></li>
-                                        <li class="e_cart_item_name_zh noto_light"><a href=""><?php echo $item['Name_Ch'] ?></a></li>
-                                        <li class="e_cart_item_weight noto_light e_mt20">500g (7人份)</li>
+                                    <ul class="d_colum ">
+                                        <li class="e_cart_item_name en_font "><a href=""><?php echo $i['Name_En'] ?> <?php echo $i['product_no'] ?></a></li>
+                                        <li class="e_cart_item_name_zh noto_light"><a href=""><?php echo $i['Name_Ch'] ?></a></li>
+                                        <li class="e_cart_item_weight noto_light e_mt20">500g (<?php echo $i['Serve'] ?>人份)</li>
 
-                                        <!-- 手機版顯示的 -->
+                                        <!-- 手機版顯示的 mobile display-->
                                         <li class="e_w e_none_display_w e_margin_b e_mt10">
                                             <input type="text" class="input-number">
                                         </li>
-                                        <li class="e_w e_cart_item_price en_font e_price e_none_display_w e_mt20">NT＄ 109</li>
+                                        <li class="e_w e_cart_item_price en_font e_price e_none_display_w e_mt20">NT＄ <?php echo $i['Price'] ?></li>
                                         <li class="e_icon_w e_operate_icon e_none_display_w e_mt10" display=flex>
                                             <div class="e_cart_operate_icon ">
-                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                     xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px"
-                                                     width="25.15px" height="22.15px" viewBox="0 0 458.9 405"
-                                                     style="enable-background:new 0 0 458.9 405;"
-                                                     xml:space="preserve">
-                                            <path class="st0" d="M421,38.3c-24.5-24.5-57.1-38-91.8-38s-67.3,13.5-91.9,38.1l-7.7,7.7l-8-7.9C197,13.6,164.3,0,129.6,0
-                                                            C95,0,62.4,13.5,37.9,38C13.4,62.7-0.1,95.3,0,129.9c0,34.7,13.6,67.3,38.2,91.8l177.7,177.7c3.5,3.5,8.6,5.6,13.4,5.6
-                                                            c5,0,9.9-2,13.4-5.5l178-177.4c24.6-24.6,38.1-57.2,38.1-91.9C458.9,95.4,445.4,62.8,421,38.3z M420.7,130.2L420.7,130.2
-                                                            c0.1,24.4-9.4,47.4-26.8,64.8L229.3,359L65.1,194.7c-17.4-17.4-26.9-40.4-26.9-64.9c0-24.5,9.5-47.5,26.8-64.8s40.3-26.8,64.7-26.8
-                                                            c24.6,0,47.6,9.6,65,26.9l21.4,21.4c3.6,3.6,8.5,5.7,13.6,5.6c5.1,0,9.8-2,13.4-5.6l21.2-21.2c17.4-17.4,40.4-26.9,64.9-26.9
-                                                            c24.3,0,47.3,9.5,64.8,26.8C411.2,82.6,420.7,105.7,420.7,130.2z"/>
-                                        </svg>
+                                                <!-- heart icon (mobile) -->
+                                                <a href="#"><i class="far fa-heart"></i></a>
                                             </div>
-
+                                            <!-- remove icon (mobile) -->
                                             <div class="e_cart_operate_icon">
+                                                <a href="javascript: remove_item(<?= $i['sid'] ?>)">
                                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                                      xmlns:xlink="http://www.w3.org/1999/xlink"
                                                      xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px"
                                                      width="22.35" height="25.55" viewBox="0 0 368.5 422.1"
                                                      style="enable-background:new 0 0 368.5 422.1;"
                                                      xml:space="preserve">
-
+                                            
                                             <path class="st0" d="M221.1,147.6c-3.5,0-6.3,2.8-6.3,6.3v181.3c0,3.5,2.8,6.3,6.3,6.3h20.1c3.5,0,6.3-2.8,6.3-6.3V153.9
                                                             c0-3.5-2.8-6.3-6.3-6.3H221.1z M127.1,147.6c-3.5,0-6.3,2.8-6.3,6.3v181.3c0,3.5,2.8,6.3,6.3,6.3h20.1c3.5,0,6.3-2.8,6.3-6.3V153.9
                                                             c0-3.5-2.8-6.3-6.3-6.3H127.1z M352,67.1h-64.6l-29.6-49.4C251.2,6.8,239.2,0,226.5,0h-84.6c-12.7,0-24.7,6.8-31.3,17.7L81,67.1
                                                             H16.4C7.4,67.1,0,74.4,0,83.5v10.1c0,3.5,2.8,6.3,6.3,6.3h20.6v285.7c0,20.1,16.4,36.5,36.5,36.5h241.7c20.1,0,36.5-16.4,36.5-36.5
                                                             V99.8h20.6c3.5,0,6.3-2.8,6.3-6.3V83.4C368.4,74.4,361.1,67.1,352,67.1z M137.2,36.9c1.6-2.6,4.5-4.3,7.6-4.3h78.9
                                                             c3.1,0,6,1.6,7.6,4.3L249.4,67H119.1L137.2,36.9z M308.8,380.5c0,4.9-4,8.8-8.8,8.8H68.4c-4.9,0-8.8-4-8.8-8.8V99.8h249.2V380.5z"/>
-                                        </svg>
+                                        </svg></a>
                                             </div>
                                         </li>
                                         <!-- 手機版顯示 end -->
@@ -185,22 +179,24 @@ if (!empty($_SESSION['cart'])) {
                             </div>
                         </li>
 
-
-                        <li class="e_w e_cart_item_price en_font e_none_display_m">NT＄ 109</li>
-
-                        <li class="e_w e_none_display_m ">
-                            <input type="text" class="input-number">
+                        <!-- price -->
+                        <li class="e_w e_cart_item_price en_font e_none_display_m price product-price py-2" data-price="<?= $i['price'] ?>">NT＄ <?php echo $i['Price'] ?></li>
+                        
+                        <!-- select qty -->
+                        <li class="e_w e_none_display_m py-2 " data-qty="<?= $i['qty'] ?>">
+                            <input type="text" class="input-number item-qty"  value="<?=$i?>">
                         </li>
 
-                        <li class="e_w e_cart_item_price en_font e_none_display_m">NT＄ 109</li>
+                        <!-- sub_total -->
+                        <li class="e_w e_cart_item_price en_font e_none_display_m price sub-total py-2" data-price="<?= $i['price']*$i['qty'] ?>">NT＄ <?php echo $i['Price'] ?></li>
                         <li class="e_icon_w e_operate_icon e_none_display_m wish_icon">
                             <!-- heart icon  -->
-                            <div class="e_cart_operate_icon ">
+                            <div class="e_cart_operate_icon py-2">
                                 <a href="#"><i class="far fa-heart"></i></a>
                             </div>
                             <!-- remove icon  -->
-                            <div class="e_cart_operate_icon remove_icon">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            <div class="e_cart_operate_icon remove_icon py-2">
+                                <a href="javascript: remove_item(<?= $i['sid'] ?>)"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                      xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="22.35"
                                      height="25.55" viewBox="0 0 368.5 422.1" style="enable-background:new 0 0 368.5 422.1;"
                                      xml:space="preserve">
@@ -210,11 +206,13 @@ if (!empty($_SESSION['cart'])) {
                                             H16.4C7.4,67.1,0,74.4,0,83.5v10.1c0,3.5,2.8,6.3,6.3,6.3h20.6v285.7c0,20.1,16.4,36.5,36.5,36.5h241.7c20.1,0,36.5-16.4,36.5-36.5
                                             V99.8h20.6c3.5,0,6.3-2.8,6.3-6.3V83.4C368.4,74.4,361.1,67.1,352,67.1z M137.2,36.9c1.6-2.6,4.5-4.3,7.6-4.3h78.9
                                             c3.1,0,6,1.6,7.6,4.3L249.4,67H119.1L137.2,36.9z M308.8,380.5c0,4.9-4,8.8-8.8,8.8H68.4c-4.9,0-8.8-4-8.8-8.8V99.8h249.2V380.5z"/>
-                            </svg>
+                            </svg></a>
+                                
                             </div>
                         </li>
                     </ul>
-                <?php endforeach;; ?>
+                    
+                <?php } ?>
             </div>
 
             <hr class="e_cart_hr">
@@ -225,7 +223,7 @@ if (!empty($_SESSION['cart'])) {
                         <span class="noto_light e_sum_fontsize e_position">總金額</span>
                     </div>
                     <div class="e_col_3_full">
-                        <span class="en_font e_sum_fontsize_en e_position_en">NT＄ 109</span>
+                        <span class="en_font e_sum_fontsize_en e_position_en ">NT＄ 109 <span id="total-price" class="price" data-price="<?= $total ?>"></span> </span>
                     </div>
                 </div>
 
@@ -240,57 +238,38 @@ if (!empty($_SESSION['cart'])) {
         </form>
     </div>
 
-    <!-- 購物車有商品 end -->
+    <!-- 購物車有商品 cart with items end -->
+    <?php
+    $likeID = $_GET['ran_product'];
 
+    $l_sql = sprintf("SELECT * FROM product_info ORDER BY RAND() LIMIT 4;");
+    $l_stmt = $pdo->query($l_sql);
 
-    <!-- 以下是推薦商品 -->
+    ?>
+
+    <!-- 以下是推薦商品 recommend -->
     <div class="e_cart_recommend">
         <p class="noto_light ">你可能喜歡</p>
         <hr class="e_cart_hr">
 
+       
         <div class="e_recommend_item_wrap">
+        <?php while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)): ?>
             <div class="e_recommend_item col_3">
                 <div class="recommend_img_size cursor">
-                    <a href=""><img src="img/product/l/P1_Farfalle_Tricolore.png" alt=""></a>
+                    <a href="product_detail.php?product=<?= $row_ran['sid'] ?>"><img src="img/product/l/<?= $row_ran['Image_large'] ?>.png" alt=""></a>
                 </div>
                 <div class="e_recommend_item_text">
-                    <span class="e_recommend_item_name en_font "><a href="">Farfalle nº 87</a></span>
-                    <span class="e_recommend_item_name_zh noto_light "><a href="">蝴蝶麵</a></span>
-                    <span class="e_item_price en_font ">NT＄ 109</span>
+                    <span class="e_recommend_item_name en_font "><a href=""><?= $row_ran['Name_En'] ?> <?= $row_ran['product_no'] ?></a></span>
+                    <span class="e_recommend_item_name_zh noto_light "><a href=""><?= $row_ran['Name_Ch'] ?></a></span>
+                    <span class="e_item_price en_font ">NT＄ <?= $row_ran['Price'] ?></span>
                 </div>
             </div>
+        <?php endwhile; ?>
 
-            <div class="e_recommend_item col_3">
-                <div class="recommend_img_size cursor">
-                    <a href=""><img src="img/product/l/P1_Farfalle_Tricolore.png" alt=""></a>
-                </div>
-                <div class="e_recommend_item_text">
-                    <span class="e_recommend_item_name en_font "><a href="">Farfalle nº 87</a></span>
-                    <span class="e_recommend_item_name_zh noto_light "><a href="">蝴蝶麵</a></span>
-                    <span class="e_item_price en_font ">NT＄ 109</span>
-                </div>
-            </div>
-            <div class="e_recommend_item col_3">
-                <div class="recommend_img_size cursor">
-                    <a href=""><img src="img/product/l/P1_Farfalle_Tricolore.png" alt=""></a>
-                </div>
-                <div class="e_recommend_item_text">
-                    <span class="e_recommend_item_name en_font "><a href="">Farfalle nº 87</a></span>
-                    <span class="e_recommend_item_name_zh noto_light "><a href="">蝴蝶麵</a></span>
-                    <span class="e_item_price en_font ">NT＄ 109</span>
-                </div>
-            </div>
-            <div class="e_recommend_item col_3">
-                <div class="recommend_img_size cursor">
-                    <a href=""><img src="img/product/l/P1_Farfalle_Tricolore.png" alt=""></a>
-                </div>
-                <div class="e_recommend_item_text">
-                    <span class="e_recommend_item_name en_font "><a href="">Farfalle nº 87</a></span>
-                    <span class="e_recommend_item_name_zh noto_light "><a href="">蝴蝶麵</a></span>
-                    <span class="e_item_price en_font ">NT＄ 109</span>
-                </div>
-            </div>
+
         </div>
+        
 
     </div>
 
@@ -405,8 +384,6 @@ if (!empty($_SESSION['cart'])) {
 
     })
   }
-
-
   // add to wish list
 
   $('.far').click(function () {
@@ -414,6 +391,80 @@ if (!empty($_SESSION['cart'])) {
     // $('.far').toggleClass('fas');
 
   });
+
+
+
+
+
+// 移除商品(用reload page刷新頁面資訊) remove item
+var remove_item = function(sid){
+            $.get('add_to_cart.php', {sid:sid}, function(data){
+                // location.reload(); //刷新頁面的方式
+                // confirm ('確認要刪除此商品嗎？');
+                
+                cart_count(data); // 更新選單上泡泡裡的數字
+                $('#product'+sid).remove(); // 移除該列 <tr>
+                calTotalPrice(); // 計算總共多少錢
+                updateAllPrice(); // 依據資料變更呈現
+
+
+            }, 'json');
+        };
+
+
+// 單項商品金額小計 product price
+var updateAllPrice = function(){
+        $('.price').each(function(){
+            var p = $(this).attr('data-price');
+            p = dallorCommas(p);
+            $(this).text(p);
+            // $(this).text('NT $ ' + p + '元');
+        });
+    };
+    updateAllPrice(); //呼叫變數
+
+    //計算總金額
+    var calTotalPrice = function(){
+        var t_price = $('#total-price'); //總金額下的id
+        var total = 0;
+
+        $('.product-item').each(function(){
+                var price = $(this).find('.product-price').attr('data-price');
+                var qty = $(this).find('select').val();
+
+                total += price*qty;
+            });
+
+            t_price.attr('data-price', total);
+    };
+
+
+
+    //商品變更數量, 帶入新小計
+        $('.item-qty').on('change', function(){
+           var item_row = $(this).closest('tr');
+           var sid = item_tr.attr('data-sid');
+           var qty = $(this).val();
+           var price = item_tr.find('.product-price').attr('data-price');
+
+            $.get('add_to_cart.php', {sid:sid, qty:qty}, function(data){
+                // location.reload();//刷新頁面用
+
+                cart_count(data); // 更新選單上泡泡裡的數字
+
+                item_tr.find('.sub-total').attr('data-price', price*qty); // 變更該項目的小計
+                calTotalPrice(); // 計算總共多少錢
+
+                updateAllPrice();
+            }, 'json');
+
+        });
+
+
+
+
+
+  
 </script>
 
 </body>

@@ -61,6 +61,7 @@ $p_stmt = $pdo->query($p_sql);
 
 <head>
     <link rel="stylesheet" href="css/product_list_sauce.css">
+    <link rel="stylesheet" href="css/aos.css">
 </head>
 
 <body>
@@ -157,12 +158,20 @@ $p_stmt = $pdo->query($p_sql);
 
 </section>
 
-
+<script src="js/aos.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
 </script>
 <script>
+
+     //aos動畫特效設定
+     $(function () {
+                AOS.init({
+                    delay: 200,
+                    easing: 'ease-in-out'
+                });
+            })
 </script>
 
 </body>
