@@ -44,6 +44,7 @@
     height: 100vh;
     transition: all ease .5s;
     transform: translateX(100%);
+    z-index: 100;
 }
 
 .pre_wrap.open {
@@ -172,13 +173,12 @@
     position: absolute;
     top: 15%;
     right: 100%;
-    margin-right: 10px;
 }
 
 .open_wheel {
-    width: 40px;
-    height: 40px;
-}
+    height: 80px;
+    transform: scaleX(1.4);
+    width: 20px;}
 
 .r_wheel_warp {
 
