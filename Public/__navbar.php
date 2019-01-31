@@ -139,14 +139,18 @@ if (empty($_SERVER['HTTP_REFERER'])) {
       <ul class="w_nav_icon_box">
         <!-- 搜尋按鈕 -->
         <li class="w_nav_icon_boxin r_search_box">
-          <input type="search" autocomplete="off" placeholder="&nbsp;search" required
-                 class="r_search transition">
-          <a class="r_btn_s">
-                                <span class="w_nav_icon_before">
+          <form action="">
+            <input type="search" autocomplete="off" placeholder="&nbsp;search" required
+                   class="r_search transition">
+            <button type="submit" class="r_s_btn">
+              <a class="r_btn_s">
+                                <span class="r_nav_icon_before">
                                     <img src="img/icon/search.svg" alt=""></span>
-            <span class="w_nav_icon_after">
+                <span class="r_nav_icon_after">
                                     <img src="img/icon/search_red.svg" alt=""></span>
-          </a>
+              </a>
+            </button>
+          </form>
         </li>
         <!-- 會員按鈕 -->
         
@@ -689,7 +693,18 @@ if (empty($_SERVER['HTTP_REFERER'])) {
         $(document).click(function () {
             $(".r_search").removeClass("r_s_hide");
         });
+        $('.r_s_btn').click(function (e) {
+            e.preventDefault();
+            location.href='搜尋頁？q＝'+ $('input').val();
+        });
     });
+
+
+
+
+
+
+
 
     //漢堡選單 (hamburger menu)
     $(".menu-btn .bar-box").click(function () {
@@ -796,7 +811,13 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                 // console.log(data)
                 if (data.success) {
                     alertType = 'login_success';
-
+                    $('登入按鈕').html('<div>' + data.name + '</div>');
+                    var data = {
+                        success: true,
+                        code: 200,
+                        info: '',
+                        name: ''
+                    }
                 } else {
                     alertType = 'login_pop';
                 }
@@ -920,6 +941,11 @@ if (empty($_SERVER['HTTP_REFERER'])) {
         $('#' + fieldName + 'Help').text('');
     }
 
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        location.href = '/search.php?q=' + $('input').val();
+    })
 
     // submit and close modal
     // $('#re_submit').click(function(e)){

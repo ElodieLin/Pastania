@@ -182,6 +182,31 @@
     display: block;
   }
 
+  .r_s_btn{
+    border: none;
+    background: transparent;
+    outline:none!important;
+  }
+
+  .r_nav_icon_before{
+    display: block;
+  }
+
+  .r_nav_icon_after{
+    display: none;
+  }
+
+  .r_s_btn:hover a .r_nav_icon_before{
+    display: none;
+  }
+
+  .r_s_btn:hover a .r_nav_icon_after{
+    display: block;
+  }
+
+
+
+
   .w_nav_icon_boxin > a .w_nav_icon_before {
     margin-right: -24px;
   }
