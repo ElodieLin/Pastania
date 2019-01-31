@@ -147,8 +147,8 @@ if (!empty($_SESSION['cart'])) {
                       <li class="e_cart_item_weight noto_light e_mt20">500g (<?php echo $i['Serve'] ?>人份)</li>
 
                       <!-- 手機版顯示的 mobile display-->
-                      <li class="e_w e_none_display_w e_margin_b e_mt10">
-                        <input type="text" class="input-number">
+                      <li class="e_w e_none_display_w e_margin_b e_mt10" data-qty="<?= $i['qty'] ?>">
+                        <input type="text" class="input-number item-qty" value="<?= $i['qty'] ?>">
                       </li>
                       <li class="e_w e_cart_item_price en_font e_price e_none_display_w e_mt20">
                         NT＄ <?php echo $i['Price'] ?></li>
