@@ -29,6 +29,10 @@
   <link href="https://fonts.googleapis.com/css?family=Arya|Reem+Kufi" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700" rel="stylesheet">
   <!-- sweet alert -->
+  <!-- wow -->
+  <script type="text/javascript" src="./js/wow.min.js"></script>
+  <!-- wow -->
+
   <!-- wheel -->
   <link rel="stylesheet" href="./css/clock.css">
   <link rel="stylesheet" href="./css/pre.css">
