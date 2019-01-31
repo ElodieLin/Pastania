@@ -22,9 +22,6 @@
     font-weight: 100;
     /* 這是最細的(thin) */
     letter-spacing: 2px;
-    font-size: 1.3rem;
-    color: #5C7880;
-
 }
 
 /* 以下是中文字型標題大小 regular，頁面大標題用，如果要改字級大小(參考ＸＤ檔)再去要改的class設定 */
