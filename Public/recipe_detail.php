@@ -180,7 +180,7 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
 <!------- 以上最佳搭配設定 ------->
 
 
-
+<script>
   //aos動畫特效設定
   $(function () {
             AOS.init({
