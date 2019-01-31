@@ -189,7 +189,7 @@ if (!empty($_SESSION['cart'])) {
 
               <!-- select qty -->
               <li class="e_w e_none_display_m py-2 " data-qty="<?= $i['qty'] ?>">
-                <input type="text" class="input-number item-qty" value="<?= $i ?>">
+                <input type="text" class="input-number item-qty" value="<?= $i['qty'] ?>">
               </li>
 
               <!-- sub_total -->
@@ -311,7 +311,7 @@ if (!empty($_SESSION['cart'])) {
             $minus = $wrap.find('.minus');
             $inputBox = $wrap.find('.input-box');
 
-            $inputBox.text(min);
+            $inputBox.text($input.val());
 
             function add() {
                 if (parseInt($inputBox.text()) < max) {

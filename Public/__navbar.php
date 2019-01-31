@@ -689,7 +689,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
         });
         $('.r_s_btn').click(function (e) {
             e.preventDefault();
-            location.href = '搜尋頁？q＝' + $('input').val();
+            location.href = 'search.php？q＝' + $('input').val();
         });
     });
 
