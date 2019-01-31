@@ -16,7 +16,6 @@ if (empty($_SERVER['HTTP_REFERER'])) {
 // $rows = $i_stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-
 ?>
 
 
@@ -153,7 +152,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
           </form>
         </li>
         <!-- 會員按鈕 -->
-        
+
         <li class="w_nav_icon_boxin r_btn_i">
           <a class="nav-link" href="login.php" data-toggle="modal" data-target=".bd-example-modal-lg">
                                 <span class="w_nav_icon_before">
@@ -162,19 +161,19 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                                     <img src="img/icon/member_red.svg" alt=""></span>
           </a>
           <!--以下會員登入後選單-->
-          <?php
-              
-          ?>
-          <?php if(isset($_SESSION['user'])): ?>
-          <ul class="w_nav_sub r_iocnbox r_login">
-            <li class="w_nav_en_font_sub"><p><?= $_SESSION['user']['nickname'] ?></p></li>
-            <li class="w_nav_en_font_sub"><a href="edit_me.php">帳號設定</a></li>
-            <li class="w_nav_en_font_sub"><a href="history.php">訂單查詢</a></li>
-            <li class="w_nav_en_font_sub r_btn"><a style="color:white" href="logout.php">登出</a></li>
-          
-          
-          </ul>
-          <?php endif ?>
+            <?php
+
+            ?>
+            <?php if (isset($_SESSION['user'])): ?>
+              <ul class="w_nav_sub r_iocnbox r_login">
+                <li class="w_nav_en_font_sub"><p><?= $_SESSION['user']['nickname'] ?></p></li>
+                <li class="w_nav_en_font_sub"><a href="edit_me.php">帳號設定</a></li>
+                <li class="w_nav_en_font_sub"><a href="history.php">訂單查詢</a></li>
+                <li class="w_nav_en_font_sub r_btn"><a style="color:white" href="logout.php">登出</a></li>
+
+
+              </ul>
+            <?php endif ?>
           <!--以上會員登入後選單-->
         </li>
         <!-- 收藏清單按鈕 wishlist btn-->
@@ -364,21 +363,23 @@ if (empty($_SERVER['HTTP_REFERER'])) {
           </button>
         </div>
         <div class="modal-body">
-          <h4 class="card-title text-center pt-4 pb-2">未找到 餛飩 相關產品</h4>
           <h6 class="card-title text-center pb-2">請輸入關鍵字搜尋</h6>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
+          <form action="">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
               <span class="input-group-text" id="basic-serach"><img src="img/icon/search.svg" alt=""
                                                                     style="width: 20px"></span>
+              </div>
+              <input type="search" class="form-control" id="search-bar" name="search-bar"
+                     placeholder="請輸入關鍵字搜尋"
+                     aria-label="search" aria-describedby="basic-serach">
             </div>
-            <input type="search" class="form-control" id="search-bar" name="search-bar"
-                   placeholder="請輸入關鍵字搜尋"
-                   aria-label="search" aria-describedby="basic-serach">
-          </div>
         </div>
+
         <div class="modal-footer pt-0 border-top-0">
-          <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3">前往搜尋</button>
+          <button type="submit" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3">前往搜尋</button>
         </div>
+        </form>
       </div>
     </div>
   </div>
@@ -442,13 +443,6 @@ if (empty($_SERVER['HTTP_REFERER'])) {
 
 
   <!-- /* ～～～～～～～以上為手機版wish modal～～～～～～～ */ -->
-
-
-
-
-
-
-
 
 
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
@@ -695,15 +689,9 @@ if (empty($_SERVER['HTTP_REFERER'])) {
         });
         $('.r_s_btn').click(function (e) {
             e.preventDefault();
-            location.href='搜尋頁？q＝'+ $('input').val();
+            location.href = '搜尋頁？q＝' + $('input').val();
         });
     });
-
-
-
-
-
-
 
 
     //漢堡選單 (hamburger menu)
@@ -852,9 +840,8 @@ if (empty($_SERVER['HTTP_REFERER'])) {
 
 
     // click register btb submit and close modal
-      
 
-      
+
     // register
 
     var fields = ['nickname', 'email2', 'password2', 'password3', 'address'];
@@ -954,20 +941,18 @@ if (empty($_SERVER['HTTP_REFERER'])) {
     // })
 
 
-
     // badge pill (show add to cart qty)
     // cart badge顯示 
-      var badge_pill = $('.badge_pill');
+    var badge_pill = $('.badge_pill');
 
-      function cart_count(obj){
-                var s, t=0;
-        for(s in obj){
-            t += 1 
+    function cart_count(obj) {
+        var s, t = 0;
+        for (s in obj) {
+            t += 1
             // 只加購買種類, 不是累加全部購買數量
         }
         badge_pill.text(t);
-}
+    }
 
 
-   
 </script>
