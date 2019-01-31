@@ -138,7 +138,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
       <ul class="w_nav_icon_box">
         <!-- 搜尋按鈕 -->
         <li class="w_nav_icon_boxin r_search_box">
-          <form action="">
+          <form action="" id="search">
             <input type="search" autocomplete="off" placeholder="&nbsp;search" required
                    class="r_search transition">
             <button type="submit" class="r_s_btn">
@@ -364,7 +364,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
         </div>
         <div class="modal-body">
           <h6 class="card-title text-center pb-2">請輸入關鍵字搜尋</h6>
-          <form action="">
+          <form action="" id="search">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
               <span class="input-group-text" id="basic-serach"><img src="img/icon/search.svg" alt=""
@@ -929,7 +929,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
     }
 
 
-    $('form').submit(function (e) {
+    $('#search').submit(function (e) {
         e.preventDefault();
         location.href = '/search.php?q=' + $('input').val();
     })
