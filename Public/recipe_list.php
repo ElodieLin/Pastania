@@ -29,7 +29,7 @@ if (!empty($cate)) {
 }
 
 // 取得總筆數, 在選擇該項目時 get items via productlist_sid
-$t_sql = " SELECT COUNT(1) FROM recipe_info $where ";
+$t_sql = " SELECT COUNT(1) FROM recipe_info WHERE parent_sid = $cate ";
 $total_rows = $pdo->query($t_sql)->fetch(PDO::FETCH_NUM)[0];
 $total_pages = ceil($total_rows / $per_page); //總頁數
 
@@ -180,7 +180,12 @@ $page_stmt = $pdo->query($page_sql);
         $categoryID = $_GET['category'];
 
 
-        $p_sql = sprintf("SELECT * FROM recipe_info WHERE parent_sid = '$categoryID'");
+        // $p_sql = sprintf("SELECT * FROM recipe_info WHERE parent_sid = '$categoryID'");
+        // $p_stmt = $pdo->query($p_sql);
+
+        $starting_limit = ($page - 1) * $per_page;
+
+        $p_sql = sprintf("SELECT * FROM recipe_info WHERE parent_sid = $categoryID LIMIT $starting_limit, $per_page");
         $p_stmt = $pdo->query($p_sql);
 
         $count = 0;
@@ -295,7 +300,7 @@ $page_stmt = $pdo->query($page_sql);
                     ?>
 
                     <div class="w_prodiuct_list_page_back <?php if ($isHidden) echo 'disabledArrow'; ?>">
-                        <a href="?page=<?php echo $prevPage; ?>">
+                        <a href="?category=<?php echo $categoryID; ?>&page=<?php echo $prevPage; ?>">
                             <img src="img/icon/arrow_red_back.svg" alt="">
                         </a>
                     </div>
@@ -334,7 +339,7 @@ $page_stmt = $pdo->query($page_sql);
 
                     <!-- next icon -->
                     <div class="w_prodiuct_list_page_next <?php if ($isHidden) echo 'disabledArrow'; ?>">
-                        <a href="?page=<?php echo $nextPage; ?>">
+                        <a href="?category=<?php echo $categoryID; ?>&page=<?php echo $nextPage; ?>">
                             <img src="img/icon/arrow_red_next.svg" alt="">
                         </a>
                     </div>
