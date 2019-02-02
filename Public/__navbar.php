@@ -648,6 +648,8 @@ if (empty($_SERVER['HTTP_REFERER'])) {
               $(this).closest('.wishlist-item').remove();
               $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
               }, 'json');
+              $.get('add_to_cart.php', {sid: sid, qty: 1}, function (data) {
+              }, 'json');
             });
           });
         });
