@@ -4,8 +4,8 @@
 <head>
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
 
     <link rel="stylesheet" href="css/cart_step4_card.css">
 
@@ -120,8 +120,10 @@
 
             <hr class="e_cart_hr">
 
-            <!-- 總金額計算 -->
+            <!-- 總金額計算 total price (include delivery fee)-->
             <div class="sum_wrapper">
+
+                <!-- total price -->
                 <div class="sum">
 
                     <div class="e_col_3_full">
@@ -132,6 +134,7 @@
                         <span class="en_font e_sum_fontsize_en e_position_en">NT＄ 1090</span>
                     </div>
                 </div>
+                <!-- delivery fee -->
                 <div class="sum">
 
                     <div class="e_col_3_full">
@@ -143,6 +146,8 @@
                     </div>
                 </div>
                 <hr>
+
+                <!-- total payment -->
                 <div class="sum">
 
                     <div class="e_col_3_full">
@@ -158,7 +163,7 @@
         <!-- 購物車有商品 end -->
 
 
-        <!-- 選擇付款方式 -->
+        <!-- 選擇付款方式 choose payment method -->
         <p class="noto_light ">選擇付款方式</p>
         <hr class="e_cart_hr">
 
@@ -180,7 +185,7 @@
         <!-- 選擇付款方式 end-->
 
 
-        <!-- 刷卡資訊 -->
+        <!-- 刷卡資訊 Card info-->
         <div class="card noto_light e_card_payment_info">
             <div class="card-body e_card_payment_info_body">
 
@@ -277,14 +282,18 @@
         </div>
 
 
-        <!-- 確認配送資訊 -->
+        <!-- 確認配送資訊 Delivery info -->
         <p class="noto_light ">確認配送資訊</p>
         <hr class="e_cart_hr">
 
         <div class="alert e_delivery_info_confirm" role="alert">
+            <!-- name -->
             <p class="noto_light e_info_confirm">姓名： <span>王小小</span> </p>
+            <!-- address -->
             <p class="noto_light e_info_confirm">地址：<span>112 台北市北投區有錢路1號1樓錢路1號1樓錢路1號1樓</span></p>
+            <!-- mobile -->
             <p class="noto_light e_info_confirm">手機：<span>0910－000111</span></p>
+            <!-- delivery time -->
             <p class="noto_light e_info_confirm">配送時間：<span>不指定</span></p>
         </div>
 
