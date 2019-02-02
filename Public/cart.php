@@ -128,7 +128,7 @@ if (!empty($_SESSION['cart'])) {
 
           foreach ($keys as $k) {
               $i = $cart_data[$k];
-              $total += $i['qty'] * $i['price']; ?>
+              $total += $i['qty'] * $i['Price']; ?>
             <!-- <input type="hidden" name="products[][sid]" value="<?php echo $sid ?>"/>
                     <input type="hidden" name="products[][qty]" value="<?php echo $sessionCart[$sid] ?>"/> -->
 
@@ -166,7 +166,7 @@ if (!empty($_SESSION['cart'])) {
                                  width="22.35" height="25.55" viewBox="0 0 368.5 422.1"
                                  style="enable-background:new 0 0 368.5 422.1;"
                                  xml:space="preserve">
-                                            
+
                                             <path class="st0" d="M221.1,147.6c-3.5,0-6.3,2.8-6.3,6.3v181.3c0,3.5,2.8,6.3,6.3,6.3h20.1c3.5,0,6.3-2.8,6.3-6.3V153.9
                                                             c0-3.5-2.8-6.3-6.3-6.3H221.1z M127.1,147.6c-3.5,0-6.3,2.8-6.3,6.3v181.3c0,3.5,2.8,6.3,6.3,6.3h20.1c3.5,0,6.3-2.8,6.3-6.3V153.9
                                                             c0-3.5-2.8-6.3-6.3-6.3H127.1z M352,67.1h-64.6l-29.6-49.4C251.2,6.8,239.2,0,226.5,0h-84.6c-12.7,0-24.7,6.8-31.3,17.7L81,67.1
@@ -185,7 +185,7 @@ if (!empty($_SESSION['cart'])) {
 
               <!-- price -->
               <li class="e_w e_cart_item_price en_font e_none_display_m price product-price py-2"
-                  data-price="<?= $i['price'] ?>">NT＄ <?php echo $i['Price'] ?></li>
+                  data-price="<?= $i['Price'] ?>">NT＄ <?php echo $i['Price'] ?></li>
 
               <!-- select qty -->
               <li class="e_w e_none_display_m py-2 " data-qty="<?= $i['qty'] ?>">
