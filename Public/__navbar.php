@@ -128,7 +128,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
 
 
           </ul>
-          <!-- 以上為下拉選單區域 -->
+          <!-- 以上為下拉選單區域 navbar collapse end-->
         </li>
         <!-- 以上為按鈕區域 -->
 
@@ -151,7 +151,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
             </button>
           </form>
         </li>
-        <!-- 會員按鈕 -->
+        <!-- 會員按鈕 members btn-->
 
         <li class="w_nav_icon_boxin r_btn_i">
           <a class="nav-link" href="login.php" data-toggle="modal" data-target=".bd-example-modal-lg">
@@ -160,7 +160,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
             <span class="w_nav_icon_after">
                                     <img src="img/icon/member_red.svg" alt=""></span>
           </a>
-          <!--以下會員登入後選單-->
+          <!--以下會員登入後選單 navbar collapse content after member login (edit & order_list) & logout-->
             <?php
 
             ?>
@@ -220,7 +220,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
           </ul>
           <!--以上為收藏內容-->
         </li>
-        <!-- 購物車按鈕 cart btn-->
+        <!-- 購物車按鈕 cart check out btn -> go to cart page-->
         <li class="w_nav_icon_boxin r_btn_i <?= $page_name == 'cart' ? 'active' : '' ?>">
           <a href="cart.php">
                                 <span class="w_nav_icon_before cart_icon_position">
@@ -233,7 +233,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
           <!-- qty badge -->
           <a href="cart.php"><span class="badge badge_position badge_pill">0</span></a>
 
-          <!--以下為購物車內容 cart content-->
+          <!--以下為購物車內容 navbar cart content-->
           <ul class="w_nav_sub r_iocnbox r_cart_list">
             <li class="w_nav_en_font_sub">
               <ul class="r_flex">
@@ -340,7 +340,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
         </a>
       </li>
       <li>
-        <a href="" data-toggle="modal" data-target="">
+        <a href="cart.php">
           <img src="img/icon/shopping_bag.svg" alt="">
         </a>
       </li>
@@ -348,7 +348,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
   </div>
   <!-- /* ～～～～～～～以上為手機版icon選單區域 mobile icons end～～～～～～～ */ -->
 
-  <!-- /* ～～～～～～～以下為手機版search model～～～～～～～ */ -->
+  <!-- /* ～～～～～～～以下為手機版search modal～～～～～～～ */ -->
   <!-- Modal -->
   <div class="modal fade" id="searchModalCenter" tabindex="-1" role="dialog"
        aria-labelledby="srarchModalCenterTitle" aria-hidden="true">
@@ -384,8 +384,8 @@ if (empty($_SERVER['HTTP_REFERER'])) {
     </div>
   </div>
 
-  <!-- /* ～～～～～～～以上為手機版search model～～～～～～～ */ -->
-  <!-- /* ～～～～～～～以下為手機版wish model～～～～～～～ */ -->
+  <!-- /* ～～～～～～～以上為手機版search modal end～～～～～～～ */ -->
+  <!-- /* ～～～～～～～以下為手機版wishlist modal start～～～～～～～ */ -->
   <div class="modal fade" id="wishModalCenter" tabindex="-1" role="dialog"
        aria-labelledby="wishModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -442,7 +442,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
   </div>
 
 
-  <!-- /* ～～～～～～～以上為手機版wish modal～～～～～～～ */ -->
+  <!-- /* ～～～～～～～以上為手機版wish modal end～～～～～～～ */ -->
 
 
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
