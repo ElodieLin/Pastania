@@ -231,8 +231,7 @@ if (!empty($_SESSION['cart'])) {
             <span class="noto_light e_sum_fontsize e_position">總金額</span>
           </div>
           <div class="e_col_3_full">
-            <span class="en_font e_sum_fontsize_en e_position_en ">NT＄ 109 <span id="total-price" class="price"
-                                                                                 data-price="<?= $total ?>"></span> </span>
+            <span class="en_font e_sum_fontsize_en e_position_en ">NT＄ <span id="total-price" class="price" data-price="<?= $total ?>"></span> </span>
           </div>
         </div>
 <!-- Total price end-->
@@ -293,7 +292,7 @@ if (!empty($_SESSION['cart'])) {
 
 <script>
 
-  // qty input number 
+  // qty input number
     initInputBox($('.input-number'), 1, 20);
 
     function initInputBox(elem, min, max) {
@@ -317,19 +316,23 @@ if (!empty($_SESSION['cart'])) {
 
             function add() {
               var sid = $($wrap).closest('.e_cart_item').data('sid');
-              console.log(sid);
                 if (parseInt($inputBox.text()) < max) {
                   var value = parseInt($inputBox.text()) + 1;
                     $inputBox.text(parseInt($inputBox.text()) + 1);
-                    item_increase(1, value);
+                    $(this).closest('.e_cart_item').find('.item-qty').val(value);
+                    item_increase(sid, value);
+                    calTotalPrice();
                 }
             }
 
             function minus() {
+              var sid = $($wrap).closest('.e_cart_item').data('sid');
                 if (parseInt($inputBox.text()) > min) {
                   var value = parseInt($inputBox.text()) - 1;
                     $inputBox.text(parseInt($inputBox.text()) - 1);
-                    item_decrease(1, value);
+                    $(this).closest('.e_cart_item').find('.item-qty').val(value);
+                    item_decrease(sid, value);
+                    calTotalPrice();
                 }
             }
 
@@ -448,7 +451,7 @@ if (!empty($_SESSION['cart'])) {
     var updateAllPrice = function () {
         $('.price').each(function () {
             var p = $(this).attr('data-price');
-            p = dallorCommas(p);
+            // p = dallorCommas(p);
             $(this).text(p);
             // $(this).text('NT $ ' + p + '元');
         });
