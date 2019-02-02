@@ -136,7 +136,7 @@ if (!empty($_SESSION['cart'])) {
               <li>
                 <div class="d_flex py-2">
                   <div class="e_img_w">
-                    <a href="product_detail.php?product=<?php echo $sid ?>&type=<?= $i['productlist_sid'] ?>"><img
+                    <a href="product_detail.php?product=<?= $i['sid'] ?>&type=<?= $i['productlist_sid'] ?>"><img
                               src="img/product/l/<?php echo $i['Image_large'] ?>.png" alt=""></a>
                   </div>
                   <div class="e_item_w">
@@ -194,7 +194,7 @@ if (!empty($_SESSION['cart'])) {
 
               <!-- sub_total -->
               <li class="e_w e_cart_item_price en_font e_none_display_m price sub-total py-2"
-                  data-price="<?= $i['price'] * $i['qty'] ?>">NT＄ <?php echo $i['Price'] ?></li>
+                  data-price="<?= $i['Price'] * $i['qty'] ?>">NT＄ <?= $i['Price'] * $i['qty'] ?></li>
               <li class="e_icon_w e_operate_icon e_none_display_m wish_icon">
                 <!-- heart icon  -->
                 <div class="e_cart_operate_icon py-2">
@@ -224,7 +224,7 @@ if (!empty($_SESSION['cart'])) {
       </div>
 
       <hr class="e_cart_hr">
-
+<!-- Total price start-->
       <div class="sum_wrapper">
         <div class="sum">
           <div class="e_col_3_full">
@@ -235,7 +235,7 @@ if (!empty($_SESSION['cart'])) {
                                                                                  data-price="<?= $total ?>"></span> </span>
           </div>
         </div>
-
+<!-- Total price end-->
         <br>
         <p class="noto_light">全站滿千免運喔！</p>
       </div>
@@ -292,6 +292,8 @@ if (!empty($_SESSION['cart'])) {
 
 
 <script>
+
+  // qty input number 
     initInputBox($('.input-number'), 1, 20);
 
     function initInputBox(elem, min, max) {
@@ -314,14 +316,20 @@ if (!empty($_SESSION['cart'])) {
             $inputBox.text($input.val());
 
             function add() {
+              var sid = $($wrap).closest('.e_cart_item').data('sid');
+              console.log(sid);
                 if (parseInt($inputBox.text()) < max) {
+                  var value = parseInt($inputBox.text()) + 1;
                     $inputBox.text(parseInt($inputBox.text()) + 1);
+                    item_increase(1, value);
                 }
             }
 
             function minus() {
                 if (parseInt($inputBox.text()) > min) {
+                  var value = parseInt($inputBox.text()) - 1;
                     $inputBox.text(parseInt($inputBox.text()) - 1);
+                    item_decrease(1, value);
                 }
             }
 
@@ -410,8 +418,33 @@ if (!empty($_SESSION['cart'])) {
         }, 'json');
     };
 
+    var item_increase = function(sid, quantity) {
+      $.get('add_to_cart.php', {sid: sid, qty: quantity}, function (data) {
+            // location.reload(); //刷新頁面的方式
+            // confirm ('確認要刪除此商品嗎？');
 
-    // 單項商品金額小計 product price
+            cart_count(data); // 更新選單上泡泡裡的數字
+            // calTotalPrice(); // 計算總共多少錢
+            updateAllPrice(); // 依據資料變更呈現
+
+
+        }, 'json');
+    }
+
+    var item_decrease = function(sid, quantity) {
+      $.get('add_to_cart.php', {sid: sid, qty: quantity}, function (data) {
+            // location.reload(); //刷新頁面的方式
+            // confirm ('確認要刪除此商品嗎？');
+
+            cart_count(data); // 更新選單上泡泡裡的數字
+            // calTotalPrice(); // 計算總共多少錢
+            updateAllPrice(); // 依據資料變更呈現
+
+
+        }, 'json');
+    }
+
+    // 單項商品金額小計 product sub total
     var updateAllPrice = function () {
         $('.price').each(function () {
             var p = $(this).attr('data-price');
@@ -422,14 +455,14 @@ if (!empty($_SESSION['cart'])) {
     };
     updateAllPrice(); //呼叫變數
 
-    //計算總金額
+    //計算總金額 total price
     var calTotalPrice = function () {
         var t_price = $('#total-price'); //總金額下的id
         var total = 0;
 
         $('.product-item').each(function () {
             var price = $(this).find('.product-price').attr('data-price');
-            var qty = $(this).find('select').val();
+            var qty = $(this).find('.item-qty').val();
 
             total += price * qty;
         });
@@ -438,19 +471,22 @@ if (!empty($_SESSION['cart'])) {
     };
 
 
-    //商品變更數量, 帶入新小計
+    //商品變更數量, 帶入新小計 change qty number, and with new sub total
     $('.item-qty').on('change', function () {
-        var item_row = $(this).closest('tr');
-        var sid = item_tr.attr('data-sid');
+      alert('huh');
+        var item_row = $(this).closest('ul');
+        var sid = item_ul.attr('data-sid');
         var qty = $(this).val();
-        var price = item_tr.find('.product-price').attr('data-price');
+        // var qty = $('.input-box').text();
+        var price = item_ul.find('.product-price').attr('data-price');
 
+      console.log('test');
         $.get('add_to_cart.php', {sid: sid, qty: qty}, function (data) {
             // location.reload();//刷新頁面用
 
             cart_count(data); // 更新選單上泡泡裡的數字
 
-            item_tr.find('.sub-total').attr('data-price', price * qty); // 變更該項目的小計
+            item_ul.find('.sub-total').attr('data-price', price * qty); // 變更該項目的小計
             calTotalPrice(); // 計算總共多少錢
 
             updateAllPrice();
