@@ -1,17 +1,34 @@
+<?php
+
+require __DIR__ . '/__connect_db.php';
+
+if ($_POST)
+{
+  $order = $_SESSION['order'];
+  $cart  = $_SESSION['cart'];
+
+  $trackingNo = sprintf('PASTA-%s', mt_rand(10000000, 99999999));
+
+  $sql = "INSERT INTO `orders` (`member_sid`, `amount`, `mobile`, `delivery_way`,
+  `delivery_time`, `payment`, `status`, `order_date`, `receive_name`, `tracking_num`) VALUES (
+    ?, ?, ?, ?, ?, ?, ?, NOW(), ?, ?)";
+  $pdo->prepare($sql)->execute([
+    $_SESSION['user']['id'],
+    $_SESSION['order']['total'],
+    $_SESSION['order']['phone'],
+    $_SESSION['order']['delivery_way'],
+    $_SESSION['order']['delivery_time'],
+    $_SESSION['order']['payment_option'],
+    NULL,
+    $_SESSION['order']['name'],
+    $trackingNo
+  ]);
+}
+
+?>
+
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php'; ?>
-<?php require __DIR__ . '/__connect_db.php';
-//寫入資料庫
-$products = $_SESSION['products'];
-$order = $_SESSION['order'];
-
-$sql = "INSERT INTO `orders` (`delivery_way`) VALUES (?)";
-$pdo->prepare($sql)->execute([
-        $order['delivery_way']
-]);
-
-session_destroy();
-?>
 
 <head>
 
@@ -72,7 +89,7 @@ session_destroy();
             <p class="noto_light ">感謝您的購買</p>
             <hr class="e_cart_hr">
             <!-- order tracking number  -->
-            <p class="noto_light">訂單編號：T20181222000445</p>
+            <p class="noto_light">訂單編號：<?php echo $trackingNo; ?></p>
             <p class="noto_light">訂單購買確認信已經寄送到您的信箱，詳細購買明細及發票資訊請查閱電子郵件。</p>
         </div>
 

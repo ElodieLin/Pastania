@@ -71,111 +71,12 @@
 
     <!-- 購物車有商品 start -->
     <div class="e_cart_items_outerwrapper">
-      <!-- 每個商品都包在 innerwrapper ul 裡 -->
-      <div class="e_cart_items_innerwrapper noto_light ">
 
-        <ul class="e_cart_item">
-          <div class="d_flex">
-            <li class="e_img_w">
-              <a href=""><img src="img/product/l/P1_Farfalle_Tricolore.png" alt=""></a>
-            </li>
+      <?php include_once('order_cart.php'); ?>
 
-            <li class="e_item_w">
-              <ul class="e_item_">
-                <li class="e_cart_item_name en_font "><a href="">Farfalle nº 87</a></li>
-                <li class="e_cart_item_name_zh noto_light"><a href="">蝴蝶麵</a></li>
-                <li class="e_cart_item_weight noto_light e_mt20">500g (7人份)</li>
-
-                <!-- 手機版顯示的 -->
-                <li class=" e_price e_none_display_w">
-                  <span class="noto_light e_price">單價： <span class="en_font e_price">NT＄ 109</span></span>
-                </li>
-
-                <li class=" e_none_display_w e_margin_b e_mt10">
-                  <span class="noto_light e_price">數量： <span class="en_font e_quantity">10</span></span>
-                </li>
-
-                <li class=" e_price e_none_display_w e_mt20">
-                  <span class="noto_light e_price">小計： <span class="en_font e_price">NT＄ 1090</span></span>
-
-                </li>
-                <!-- 手機版顯示end -->
-
-
-              </ul>
-            </li>
-          </div>
-
-          <li class="e_w e_cart_item_price en_font e_none_display_m">NT＄ 109</li>
-
-          <li class="e_w e_none_display_m ">
-            <p class="en_font e_subtotal">10</p>
-          </li>
-
-          <li class="e_w e_cart_item_price en_font e_none_display_m">NT＄ 1090</li>
-
-        </ul>
-      </div>
-
-      <hr class="e_cart_hr">
-
-      <!-- 總金額計算 -->
-      <div class="sum_wrapper">
-        <div class="sum">
-
-          <div class="e_col_3_full">
-            <span class="noto_light e_sum_fontsize e_position">總金額</span>
-          </div>
-
-          <div class="e_col_3_full">
-            <span class="en_font e_sum_fontsize_en e_position_en">NT＄ 1090</span>
-          </div>
-        </div>
-        <div class="sum">
-
-          <div class="e_col_3_full">
-            <span class="noto_light e_sum_fontsize e_position">運費</span>
-          </div>
-
-          <div class="e_col_3_full">
-            <span class="en_font e_sum_fontsize_en e_position_en">NT＄ 0</span>
-          </div>
-        </div>
-        <hr>
-        <div class="sum">
-
-          <div class="e_col_3_full">
-            <span class="noto_light e_sum_fontsize e_position e_b">應付金額</span>
-          </div>
-
-          <div class="e_col_3_full">
-            <span class="en_font e_sum_fontsize_en e_position_en e_b_en">NT＄ 1090</span>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- 購物車有商品 end -->
 
-
-    <!-- 選擇付款方式 -->
-    <p class="noto_light ">選擇付款方式</p>
-    <hr class="e_cart_hr">
-
-    <div class="e_payment_method">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="paymentSelect" id="paymentOption1" value="ATM"
-               checked>
-        <label class="form-check-label noto_light" for="paymentOption1">ATM匯款</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="paymentSelect" id="paymentOption2" value="Card">
-        <label class="form-check-label noto_light" for="paymentOption2">信用卡線上刷卡</label>
-      </div>
-
-      <!-- alert -->
-      <!-- <small id="" class="form-text e_payment_method_alert col-4 noto_light">請選擇付款方式</small> -->
-
-    </div>
     <!-- 選擇付款方式 end-->
 
 
@@ -192,6 +93,7 @@
     </div>
     <div class="e_cart_btn">
       <form action="cart_step5.php" method="post">
+        <input type="hidden" name="action" value="order" />
         <button class="e_btn_outline noto_light">上 一 步</button>
         <button class="e_btn noto_light" type="submit">確 認 結 帳</button>
       </form>

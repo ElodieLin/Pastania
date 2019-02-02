@@ -136,13 +136,13 @@ if (!empty($_SESSION['cart'])) {
               <li>
                 <div class="d_flex py-2">
                   <div class="e_img_w">
-                    <a href="product_detail.php?product=<?= $i['sid'] ?>&type=<?= $i['productlist_sid'] ?>"><img
-                              src="img/product/l/<?php echo $i['Image_large'] ?>.png" alt=""></a>
+                    <a href="product_detail.php?product=<?= $i['sid'] ?>&type=<?= $i['productlist_sid'] ?>">
+                      <img src="img/product/l/<?php echo $i['Image_large'] ?>.png" alt=""></a>
                   </div>
                   <div class="e_item_w">
                     <ul class="d_colum ">
-                      <li class="e_cart_item_name en_font "><a
-                                href=""><?php echo $i['Name_En'] ?><?php echo $i['product_no'] ?></a></li>
+                      <li class="e_cart_item_name en_font ">
+                        <a href=""><?php echo $i['Name_En'] ?><?php echo $i['product_no'] ?></a></li>
                       <li class="e_cart_item_name_zh noto_light"><a href=""><?php echo $i['Name_Ch'] ?></a></li>
                       <li class="e_cart_item_weight noto_light e_mt20">500g (<?php echo $i['Serve'] ?>人份)</li>
 
@@ -240,7 +240,7 @@ if (!empty($_SESSION['cart'])) {
       </div>
 
       <div class="e_cart_btn">
-        <button class="e_btn_outline noto_light">繼 續 購 物</button>
+        <a href="<?php echo $come_from; ?>" class="e_btn_outline noto_light">繼 續 購 物</a>
         <button type="submit" class="e_btn noto_light">結 帳 去</button>
       </div>
     </form>

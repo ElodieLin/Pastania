@@ -3,12 +3,14 @@ require __DIR__ . '/__connect_db.php';
 $page_name = 'login';
 $page_title = '登入';
 
-if (empty($_SERVER['HTTP_REFERER'])) {
-    $come_from = './';
-} else {
-    $come_from = $_SERVER['HTTP_REFERER'];
+if (!isset($come_from))
+{
+  if (empty($_SERVER['HTTP_REFERER'])) {
+      $come_from = './';
+  } else {
+      $come_from = $_SERVER['HTTP_REFERER'];
+  }  
 }
-
 
 // $i_sql = sprintf("SELECT * FROM `members` WHERE `id` = 1");
 
