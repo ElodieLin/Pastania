@@ -7,9 +7,9 @@ $_SESSION['products'] = $_POST['products'];
 
   <head>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
+          crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/cart_step2.css">
 
 
@@ -74,7 +74,7 @@ $_SESSION['products'] = $_POST['products'];
         <p class="noto_light e_terms"><a href="">閱讀物流條款</a></p>
       </div>
 
-      <!-- 選擇門市表單 (選擇7-11取貨才顯示) pick store -->
+      <!-- 選擇門市表單 (選擇7-11取貨才顯示) choose 7-11 and pop out below pick store -->
       <div class="form-inline e_search_postcode_form">
         <div class="form-group e_select_branches">
 
@@ -101,9 +101,24 @@ $_SESSION['products'] = $_POST['products'];
       </div>
 
 
-      <!--    會員配送資訊  delivery info  -->
+      <!--    會員配送資訊  delivery info (click checkbox and will bring member info automatically -->
       <div class="e_member_delivery_info">
         <p class="noto_light ">配送資訊</p>
+
+        <div class="row">
+            <div class="pr-5">
+              <p>已是會員?</p>
+              <a href=""><button class="btn btn-info">點我快速登入</button></a>
+            </div>
+            <div>
+            <p>還不是會員？首次購物即可自動註冊成會員</p>
+              <a href=""><button class="btn btn-info">首次購物</button></a>
+            </div>
+        </div>
+
+
+    <!-- below content shows when in login status -->
+        <!-- same as member info checkbox-->
         <div class="form-check e_same_as_member_info noto_light mt-5">
           <input class="form-check-input" type="checkbox" value="" id="sameAsMemberInfo">
           <label class="form-check-label" for="sameAsMemberInfo">
@@ -170,7 +185,7 @@ $_SESSION['products'] = $_POST['products'];
 
                 </div>
               </div>
-
+          <!-- above content shows when in login status -->
               <div class="mb-3 form-group e_time_select">
                 <label for="deliverTime" class="form-group e_col_3 mb-3">配送時段</label>
 
@@ -196,7 +211,8 @@ $_SESSION['products'] = $_POST['products'];
       </div>
 
 
-      <!--    訂購資料（首次購物才顯示）    -->
+      <!--    訂購資料（首次購物才顯示） only display when first buy (not member yet)   -->
+      <!-- fill forms and equal register-->
       <div class="e_first_order_delivery_info">
         <p class="noto_light ">訂購資料及配送資訊</p>
         <div class="card e_first_order_info">
