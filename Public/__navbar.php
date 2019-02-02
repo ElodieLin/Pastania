@@ -177,8 +177,8 @@ if (empty($_SERVER['HTTP_REFERER'])) {
           <!--以上會員登入後選單-->
         </li>
         <!-- 收藏清單按鈕 wishlist btn-->
-        <li class="w_nav_icon_boxin w_list r_btn_i">
-          <a href="">
+        <li class="w_nav_icon_boxin w_list r_btn_i js-wishlist">
+          <a href="#">
                                 <span class="w_nav_icon_before">
                                     <img src="img/icon/like.svg" alt=""></span>
             <span class="w_nav_icon_after">
@@ -189,39 +189,14 @@ if (empty($_SERVER['HTTP_REFERER'])) {
             <li class="w_nav_en_font_sub r_wish_tittle">
               <p class="w_nav_en_font r_wish_u_line">Wish List</p>
             </li>
-            <li class="w_nav_en_font_sub">
-              <ul class="r_flex">
-                <li>
-                  <a href="#">
-                    <img src="img/product/l/F1_Agnolotti.png" alt="" class="r_wish_p">
-                  </a>
-                </li>
-                <li class="r_flex r_f_center">
-                  <ul>
-                    <li class="w_nav_en_font_sub"><p>Farfalle nº 87</p></li>
-                    <li class="w_nav_en_font_sub"><p>蝴蝶麵</p></li>
-                    <li class="w_nav_en_font_sub"><p>NT＄ 109</p></li>
-                  </ul>
-                </li>
-
-                <!-- wishlist item move to cart icon -->
-                <li class="r_flex r_f_center r_wish_ml">
-                  <a href=""><img src="img/icon/shopping_bag.svg" alt=""></a>
-                </li>
-
-                <!-- wishlist item delete icon -->
-                <li class="r_flex r_f_center">
-                  <a href="" class="r_wish_delet_p">
-                    <img src="img/icon/delete.svg" alt="">
-                  </a>
-                </li>
-              </ul>
+            <li class="w_nav_en_font_sub js-wishlist-data">
+              <!-- JSON Feed of wishlist items -->
             </li>
           </ul>
           <!--以上為收藏內容-->
         </li>
         <!-- 購物車按鈕 cart check out btn -> go to cart page-->
-        <li class="w_nav_icon_boxin r_btn_i <?= $page_name == 'cart' ? 'active' : '' ?>">
+        <li class="w_nav_icon_boxin r_btn_i js-cart <?= $page_name == 'cart' ? 'active' : '' ?>">
           <a href="cart.php">
                                 <span class="w_nav_icon_before cart_icon_position">
                                     <img src="img/icon/shopping_bag.svg" alt=""></span>
@@ -236,23 +211,9 @@ if (empty($_SERVER['HTTP_REFERER'])) {
           <!--以下為購物車內容 navbar cart content-->
           <ul class="w_nav_sub r_iocnbox r_cart_list">
             <li class="w_nav_en_font_sub">
-              <ul class="r_flex">
-                <li>
-                  <a href="">
-                    <img src="img/product/l/F1_Agnolotti.png" alt="" class="r_wish_p">
-                  </a>
-                </li>
-                <li class="r_flex r_f_center">
-                  <ul>
-                    <li class="w_nav_en_font_sub"><p>Farfalle nº 87</p></li>
-                    <li class="w_nav_en_font_sub"><p>蝴蝶麵</p></li>
-                    <li class="w_nav_en_font_sub"><p>數量:1</p></li>
-                  </ul>
-                </li>
-                <li class="w_nav_en_font_sub r_flex r_f_center r_cart_flex">
-                  <p>NT＄ 109</p>
-                </li>
-              </ul>
+              <div class="js-cart-data">
+                <!-- JSON Feed of cart items -->
+              </div>
 
               <!-- checkout btn -->
             <li class="w_nav_en_font_sub r_btn r_cart_y">
@@ -672,6 +633,30 @@ if (empty($_SERVER['HTTP_REFERER'])) {
                 $('.js-button-register').prop('disabled', true);
             }
         });
+
+        $('.js-wishlist').hover(function () {
+          $(this).find('.js-wishlist-data').load('feed_wishlist.php', function() {
+            $('.js-wishlist-remove').on('click', function() {
+              var sid = $(this).data('sid');
+              $(this).closest('.wishlist-item').remove();
+              $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
+              }, 'json');
+            });
+
+            $('.js-wishlist-buy').on('click', function() {
+              var sid = $(this).data('sid');
+              $(this).closest('.wishlist-item').remove();
+              $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
+              }, 'json');
+            });
+          });
+        });
+
+        $('.js-cart').hover(function () {
+          $(this).find('.js-cart-data').load('feed_cart.php', function() {
+
+          });
+        });
     });
     // icon下拉選單
 
@@ -942,7 +927,7 @@ if (empty($_SERVER['HTTP_REFERER'])) {
 
 
     // badge pill (show add to cart qty)
-    // cart badge顯示 
+    // cart badge顯示
     var badge_pill = $('.badge_pill');
 
     function cart_count(obj) {

@@ -57,12 +57,12 @@ $typeID = $_GET['type'];
                     </a>
                     <span>></span>
 
-                  
+
                     <a href="product_list_specialty.php"><!-- direct to the correspond categories -->
                         <span class="w_product_detail_breadcrumbs_ch"><?= $type['soase_type_ch'] ?></span>
                         <span class="w_product_detail_breadcrumbs_en"><?= $type['soase_type'] ?></span>
                     </a>
-                    
+
 
                     <span>></span>
 
@@ -79,7 +79,7 @@ $typeID = $_GET['type'];
                     <div class="en_font">
                         <p class="pro_name">
                             <?php echo $product['Name_En']; ?> <?= $product['product_no']; ?>
-                            <span class="heart_p"><i class="far fa-heart"></i> </span>
+                            <span class="heart_p"><i class="far fa-heart" data-sid="<?php echo $product['sid']; ?>"></i> </span>
                             <!-- <img src="img/icon/like.svg" alt=""> -->
                         </p>
                         <p class="noto_thin"><?= $product['Name_Ch']; ?></p>
@@ -507,8 +507,26 @@ $typeID = $_GET['type'];
             })
         }
 
-
         // add to wish list
+
+        $('.fa-heart').on('click', function() {
+          // Add item to wishlist, or remove if already on wishlist
+
+          // find sid of element
+
+          var sid = $(this).data('sid');
+          var quantity = 1;
+
+          // If the heart is checked, we should set a quantity of 1
+
+          if (!$(this).hasClass('fas')) {
+            quantity = 1;
+          }
+
+          $.get('add_to_wishlist.php', {sid: sid, qty: quantity}, function (data) {
+            console.log(data);
+          }, 'json');
+        });
 
         $('.far').click(function () {
             $(this).toggleClass('fas');
@@ -521,10 +539,10 @@ $typeID = $_GET['type'];
             console.log("hi")
         var card = $(this).closest('.product-item');
             var sid = <?= $product['sid']?>;
-            var qty = $('.input-box').text(); 
+            var qty = $('.input-box').text();
             console.log(qty)
             console.log(sid)
-          
+
 
     // ajax
         $.get('add_to_cart.php', {sid:sid, qty:qty}, function(data){

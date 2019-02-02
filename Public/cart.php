@@ -473,6 +473,24 @@ if (!empty($_SESSION['cart'])) {
         t_price.attr('data-price', total);
     };
 
+    $('.fa-heart').on('click', function() {
+      // Add item to wishlist, or remove if already on wishlist
+
+      // find sid of element
+
+      var sid = $(this).closest('.e_cart_item').data('sid');
+      var quantity = 0;
+
+      // If the heart is checked, we should set a quantity of 1
+
+      if ($(this).hasClass('fas')) {
+        quantity = 1;
+      }
+
+      $.get('add_to_wishlist.php', {sid: sid, qty: quantity}, function (data) {
+
+      }, 'json');
+    });
 
     //商品變更數量, 帶入新小計 change qty number, and with new sub total
     $('.item-qty').on('change', function () {
@@ -483,7 +501,6 @@ if (!empty($_SESSION['cart'])) {
         // var qty = $('.input-box').text();
         var price = item_ul.find('.product-price').attr('data-price');
 
-      console.log('test');
         $.get('add_to_cart.php', {sid: sid, qty: qty}, function (data) {
             // location.reload();//刷新頁面用
 
