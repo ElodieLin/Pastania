@@ -10,11 +10,9 @@ $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 
 <?php if (count($cart) > 0): ?>
 
-  <?php foreach ($cart as $key => $value): ?>
+  <?php foreach ($cart as $productID => $productQuantity): ?>
 
     <?php
-
-    $productID = $key;
 
     $query  = sprintf("SELECT * FROM product_info WHERE sid = '$productID' LIMIT 1");
     $result = $pdo->query($query);
@@ -33,8 +31,12 @@ $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
           <ul>
             <li class="w_nav_en_font_sub"><p> <?php echo $product['Name_En']; ?></p></li>
             <li class="w_nav_en_font_sub"><p> <?php echo $product['Name_Ch']; ?></p></li>
-            <li class="w_nav_en_font_sub"><p>NT＄ <?php echo $product['Price']; ?></p></li>
+            <li class="w_nav_en_font_sub">數量: <?php echo $productQuantity; ?></li>
           </ul>
+        </li>
+
+        <li class="r_flex r_f_center r_wish_ml">
+          <p>NT＄ <?php echo $productQuantity * $product['Price']; ?></p>
         </li>
       </ul>
 
