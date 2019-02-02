@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 

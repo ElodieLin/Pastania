@@ -1,6 +1,4 @@
-<?php
-
-require __DIR__ . '/__connect_db.php';
+<?php require __DIR__ . '/__connect_db.php';
 
 if ($_POST)
 {
@@ -9,20 +7,28 @@ if ($_POST)
 
   $trackingNo = sprintf('PASTA-%s', mt_rand(10000000, 99999999));
 
-  $sql = "INSERT INTO `orders` (`member_sid`, `amount`, `mobile`, `delivery_way`,
-  `delivery_time`, `payment`, `status`, `order_date`, `receive_name`, `tracking_num`) VALUES (
-    ?, ?, ?, ?, ?, ?, ?, NOW(), ?, ?)";
-  $pdo->prepare($sql)->execute([
+
+  
+  try {
+
+    $sql = "INSERT INTO `orders` (`member_sid`, `amount`, `mobile`, `delivery_way`,
+    `delivery_time`, `payment`, `order_date`, `receive_name`, `tracking_num`) VALUES (
+      ?, ?, ?, ?, ?, ?, NOW(), ?, ?)";
+    $stmt = $pdo->prepare($sql);
+
+      $stmt->execute([
     $_SESSION['user']['id'],
     $_SESSION['order']['total'],
     $_SESSION['order']['phone'],
     $_SESSION['order']['delivery_way'],
     $_SESSION['order']['delivery_time'],
     $_SESSION['order']['payment_option'],
-    NULL,
     $_SESSION['order']['name'],
     $trackingNo
   ]);
+    } catch (PDOException $e) {
+        var_dump($e);
+    }
 }
 
 ?>
