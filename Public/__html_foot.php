@@ -368,7 +368,8 @@
                                 c1.2,1.3,2.8,2,4.5,2c1.4,0,2.8-0.5,4-1.5l59.5-53.1c1-0.9,1.6-2.1,1.9-3.3C348.3,213.2,348.4,212.6,348.4,212z"/>
                             </svg>
           </div>
-
+          
+        <!-- input email to subscribe -->
           <input class="subscribe_effect" type="text" placeholder=" 輸入電子信箱訂閱">
           <span class="e_focus_border"></span>
         </div>
