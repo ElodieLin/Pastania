@@ -16,8 +16,8 @@ session_destroy();
 <head>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
 
     <link rel="stylesheet" href="css/cart_step5.css">
 
@@ -67,16 +67,17 @@ session_destroy();
     <div class="container">
 
 
-        <!-- 感謝購買-->
+        <!-- 感謝購買 Thanks for purchasing-->
         <div class="e_thanks">
             <p class="noto_light ">感謝您的購買</p>
             <hr class="e_cart_hr">
+            <!-- order tracking number  -->
             <p class="noto_light">訂單編號：T20181222000445</p>
             <p class="noto_light">訂單購買確認信已經寄送到您的信箱，詳細購買明細及發票資訊請查閱電子郵件。</p>
         </div>
 
 
-        <!-- ATM轉帳資訊 （card&超取不顯示）-->
+        <!-- ATM轉帳資訊 （card&超取不顯示）will show when choose ATM  payment transition -->
         <div class="e_selected_ATM">
             <p class="noto_light ">付款方式 - ATM</p>
             <hr class="e_cart_hr">
