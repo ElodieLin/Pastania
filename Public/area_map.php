@@ -2,9 +2,6 @@
 
 require __DIR__. '/__connect_db.php';
 
-$_GET['area'];
-
-
 $m_sql = sprintf("SELECT * FROM `pasta_map` WHERE `Area` = '" . $_GET['area'] . "' ");
 
 // echo $m_sql;
