@@ -140,16 +140,14 @@ if (!isset($come_from))
       <ul class="w_nav_icon_box">
         <!-- 搜尋按鈕 -->
         <li class="w_nav_icon_boxin r_search_box">
-          <form action="" id="search">
+          <form action="/search.php" class="search">
             <input type="search" autocomplete="off" placeholder="&nbsp;search" required
                    class="r_search transition">
-            <button type="submit" class="r_s_btn">
-              <a class="r_btn_s">
+            <button type="button" class="r_s_btn r_btn_s">
                                 <span class="r_nav_icon_before">
                                     <img src="img/icon/search.svg" alt=""></span>
                 <span class="r_nav_icon_after">
                                     <img src="img/icon/search_red.svg" alt=""></span>
-              </a>
             </button>
           </form>
         </li>
@@ -327,13 +325,13 @@ if (!isset($come_from))
         </div>
         <div class="modal-body">
           <h6 class="card-title text-center pb-2">請輸入關鍵字搜尋</h6>
-          <form action="" id="search">
+          <form action="/search.php" class="search">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
               <span class="input-group-text" id="basic-serach"><img src="img/icon/search.svg" alt=""
                                                                     style="width: 20px"></span>
               </div>
-              <input type="search" class="form-control" id="search-bar" name="search-bar"
+              <input type="search" class="form-control" id="search-bar" name="q"
                      placeholder="請輸入關鍵字搜尋"
                      aria-label="search" aria-describedby="basic-serach">
             </div>
@@ -668,7 +666,12 @@ if (!isset($come_from))
     $(document).ready(function () {
         $(".r_btn_s").click(function (e) {
             e.stopPropagation();
-            $(".r_search").toggleClass("r_s_hide");
+            if($(".r_search").hasClass('r_s_hide')) {
+                $(".r_search").removeClass("r_s_hide");
+            } else {
+                $(".r_search").addClass("r_s_hide");
+                $(this).parents('form').find('[type="search"]').focus();
+            }
         });
         $(".r_search").click(function (e) {
             e.stopPropagation();
@@ -678,7 +681,10 @@ if (!isset($come_from))
         });
         $('.r_s_btn').click(function (e) {
             e.preventDefault();
-            location.href = 'search.php？q＝' + $('input').val();
+            if ($(this).parents('form').find('[type="search"]').val() == '') {
+                return false;
+            }
+            location.href = 'search.php?q=' + $(this).parents('form').find('[type="search"]').val();
         });
     });
 
@@ -701,19 +707,6 @@ if (!isset($come_from))
     $(".r_arrow_icon").click(function () {
         $(this).find('i').toggleClass("ar_turn");
     });
-
-
-    // cart badge顯示
-    var badge_pill = $('.badge-pill');
-
-    function cart_count(obj) {
-        var s, t = 0;
-        for (s in obj) {
-            t += 1
-            // 只加購買種類, 不是累加全部購買數量
-        }
-        badge_pill.text(t);
-    }
 
     // ajax
     $.get('add_to_cart.php', function (data) {
@@ -918,10 +911,11 @@ if (!isset($come_from))
     }
 
 
-    $('#search').submit(function (e) {
+    $('.search').submit(function (e) {
         e.preventDefault();
-        location.href = '/search.php?q=' + $('input').val();
-    })
+        e.stopPropagation();
+        location.href = '/search.php?q=' + $(this).find('[type="search"]').val();
+    });
 
     // submit and close modal
     // $('#re_submit').click(function(e)){
