@@ -694,7 +694,24 @@
 
 
   /*bs modal 太長讓他可以拉*/
-  .modal { overflow-y: auto !important; }
+  .modal { overflow-y: auto !important;}
+
+
+  /*選單地址欄的ｃｓｓ*/
+
+  .zipcode_select {
+    -webkit-appearance: none;
+    border: 1px solid #5C7880;
+    height: calc(2.75rem);
+    padding: .375rem 1.5rem .375rem .75rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-left: 10px;
+    margin-bottom: 17px;
+    background: url("../img/icon/select_arrow.svg") no-repeat right center transparent;
+    background-size: 20px;
+    max-width: 35%;
+  }
 
 
 

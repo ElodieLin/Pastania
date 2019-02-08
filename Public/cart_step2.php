@@ -175,7 +175,7 @@ $_SESSION['products'] = $_POST['products'];
 
           <label for="selectBranches" class="noto_light">選擇門市</label>
 
-          <input type="search" id="" class="e_form_control mx-sm-3 noto_light" maxlength="5" placeholder="請輸入郵遞區號">
+          <input type="search" class="e_form_control mx-sm-3 noto_light" maxlength="5" placeholder="請輸入郵遞區號">
 
 
           <!--      未選門市的alert         -->
@@ -234,15 +234,15 @@ $_SESSION['products'] = $_POST['products'];
               <div class="form-group form-inline ">
                 <label for="recipient" class="col-3 e_none_display_m">收件人姓名*</label>
                 <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['nickname']; ?>" />
-                <input type="text" class="form-control col-4 js-autofill" id="" name="nickname" placeholder="收件人姓名*">
+                <input type="text" class="form-control col-4 js-autofill" name="nickname" placeholder="收件人姓名*">
 
                 <!-- alert -->
-                <small id="" class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>
+                <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>
               </div>
 
               <div class="form-inline">
                 <small class="col-3 e_none_display_m"></small>
-                <small id="" class="form-text col-9 ">
+                <small class="form-text col-9 ">
                   務必填寫完整收件人姓名，避免包裹無法順利簽收
                 </small>
 
@@ -250,42 +250,31 @@ $_SESSION['products'] = $_POST['products'];
 
               <div class="form-group form-inline ">
                 <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
-                <input type="text" class="form-control col-4" name="phone" id="" placeholder="手機*">
+                <input type="text" class="form-control col-4" name="phone" placeholder="手機*">
 
                 <!-- alert -->
-                <small id="" class="form-text e_order_info_alert col-4">請輸入手機號碼</small>
+                <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>
               </div>
 
 
               <div class="form-group form-inline">
                 <label for="deliverAddress" class="form-group col-3 e_none_display_m">地址*</label>
-                <div class=" form-inline e_col_4_add e_area_select">
+                <div class=" form-inline e_col_4_add e_area_select zipcode">
 
-                  <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號">
+                  <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號" name="postcode">
 
+                    <select name="city" class="zipcode_select"></select>
 
-                  <div class="e_custom_select form-control col-md-3 mx-2 e_margin_b noto_light">
-                    <select name="postcode" id="" class=" ">
-                      <option selected>選擇縣市</option>
-                      <option>...</option>
-                    </select>
-                  </div>
-
-                  <div class="e_custom_select form-control col-md-3 e_margin_b noto_light">
-                    <select name="region" id="" class="">
-                      <option selected>選擇地區</option>
-                      <option>...</option>
-                    </select>
-                  </div>
+                    <select name="area" class="zipcode_select"></select>
 
                   <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['address']; ?>" />
 
-                  <input type="text" class="form-control col-7 js-autofill" name="address" id="" placeholder="地址*">
+                  <input type="text" class="form-control col-7 js-autofill" name="address" placeholder="地址*">
 
                   <button type="submit" class="btn e_save_add">加入常用地址</button>
 
                   <!-- alert -->
-                  <small id="" class="form-text e_order_info_alert col-4">請輸入完整地址</small>
+                  <small class="form-text e_order_info_alert col-4">請輸入完整地址</small>
 
                 </div>
               </div>
@@ -331,11 +320,11 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="email" name="email" class="form-control col-4" placeholder="會員信箱*">
 
                   <!-- alert -->
-                  <small id="" class="form-text e_order_info_alert col-4">請輸入完整信箱</small>
+                  <small class="form-text e_order_info_alert col-4">請輸入完整信箱</small>
                 </div>
                 <div class="form-inline">
                   <small class="col-3 e_none_display_m"></small>
-                  <small id="" class="form-text col-9 ">
+                  <small class="form-text col-9 ">
                     待訂單成立後E-mail將會成為您的會員帳號，請務必確認是否填寫正確
                   </small>
                 </div>
@@ -345,7 +334,7 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="password" name="password" class="form-control col-4" placeholder="設定密碼*">
 
                   <!-- alert -->
-                  <small id="" class="form-text e_order_info_alert col-4">請輸入密碼</small>
+                  <small class="form-text e_order_info_alert col-4">請輸入密碼</small>
                 </div>
 
                 <div class="form-group form-inline ">
@@ -353,7 +342,7 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="password" name="password_repeat" class="form-control col-4" placeholder="密碼確認*">
 
                   <!-- alert -->
-                  <small id="" class="form-text e_order_info_alert col-4">請輸入正確密碼</small>
+                  <small class="form-text e_order_info_alert col-4">請輸入正確密碼</small>
                 </div>
 
                 <div class="form-group form-inline ">
@@ -361,12 +350,12 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="text" name="nickname" class="form-control col-4" placeholder="收件人姓名*">
 
                   <!-- alert -->
-                  <small id="" class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>
+                  <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>
                 </div>
 
                 <div class="form-inline">
                   <small class="col-3 e_none_display_m"></small>
-                  <small id="" class="form-text col-9 ">
+                  <small class="form-text col-9 ">
                     務必填寫完整收件人姓名，避免包裹無法順利簽收
                   </small>
 
@@ -377,36 +366,26 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="text" name="phone" class="form-control col-4" placeholder="手機*">
 
                   <!-- alert -->
-                  <small id="" class="form-text e_order_info_alert col-4">請輸入手機號碼</small>
+                  <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>
                 </div>
 
 
                 <div class=" form-group form-inline">
                   <label for="deliverAddress" class="form-group col-3 e_none_display_m">地址*</label>
-                  <div class="form-inline e_col_4_add e_area_select">
+                  <div class="form-inline e_col_4_add e_area_select zipcode">
 
-                    <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號">
-
-
-                    <div class="e_custom_select form-control col-md-3 mx-2 e_margin_b noto_light">
-                      <select id="" class=" ">
-                        <option selected>選擇縣市</option>
-                        <option>...</option>
-                      </select>
-                    </div>
-
-                    <div class="e_custom_select form-control col-md-3 e_margin_b noto_light">
-                      <select id="" class="">
-                        <option selected>選擇地區</option>
-                        <option>...</option>
-                      </select>
-                    </div>
+                    <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號" name="postcode">
 
 
-                    <input type="text" name="address" class="form-control col-7" id="" placeholder="地址*">
+                    <select name="city" class="zipcode_select"></select>
+
+                    <select name="area" class="zipcode_select" ></select>
+
+
+                    <input type="text" name="address" class="form-control col-7" placeholder="地址*">
 
                     <!-- alert -->
-                    <small id="" class="form-text e_order_info_alert col-4">請輸入地址</small>
+                    <small class="form-text e_order_info_alert col-4">請輸入地址</small>
                   </div>
                 </div>
 
@@ -538,56 +517,7 @@ $_SESSION['products'] = $_POST['products'];
     });
   });
 
-      var x, i, j, selElmnt, a, b, c;
-      /*look for any elements with the class "e_custom_select":*/
-      x = document.getElementsByClassName("e_custom_select");
-      for (i = 0; i < x.length; i++) {
-          selElmnt = x[i].getElementsByTagName("select")[0];
-          /*for each element, create a new DIV that will act as the selected item:*/
-          a = document.createElement("DIV");
-          a.setAttribute("class", "select-selected");
-          a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-          x[i].appendChild(a);
-          /*for each element, create a new DIV that will contain the option list:*/
-          b = document.createElement("DIV");
-          b.setAttribute("class", "select-items select-hide");
-          for (j = 1; j < selElmnt.length; j++) {
-              /*for each option in the original select element,
-               create a new DIV that will act as an option item:*/
-              c = document.createElement("DIV");
-              c.innerHTML = selElmnt.options[j].innerHTML;
-              c.addEventListener("click", function (e) {
-                  /*when an item is clicked, update the original select box,
-                   and the selected item:*/
-                  var y, i, k, s, h;
-                  s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                  h = this.parentNode.previousSibling;
-                  for (i = 0; i < s.length; i++) {
-                      if (s.options[i].innerHTML == this.innerHTML) {
-                          s.selectedIndex = i;
-                          h.innerHTML = this.innerHTML;
-                          y = this.parentNode.getElementsByClassName("same-as-selected");
-                          for (k = 0; k < y.length; k++) {
-                              y[k].removeAttribute("class");
-                          }
-                          this.setAttribute("class", "same-as-selected");
-                          break;
-                      }
-                  }
-                  h.click();
-              });
-              b.appendChild(c);
-          }
-          x[i].appendChild(b);
-          a.addEventListener("click", function (e) {
-              /*when the select box is clicked, close any other select boxes,
-               and open/close the current select box:*/
-              e.stopPropagation();
-              closeAllSelect(this);
-              this.nextSibling.classList.toggle("select-hide");
-              this.classList.toggle("select-arrow-active");
-          });
-      }
+
 
       function closeAllSelect(elmnt) {
           /*a function that will close all select boxes in the document,
@@ -611,7 +541,7 @@ $_SESSION['products'] = $_POST['products'];
 
       /*if the user clicks anywhere outside the select box,
        then close all select boxes:*/
-      document.addEventListener("click", closeAllSelect);
+      // document.addEventListener("click", closeAllSelect);
   </script>
 
 

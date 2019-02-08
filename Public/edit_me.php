@@ -65,18 +65,23 @@ if(! isset($_SESSION['user'])){
                         <div class="form-group row mx-auto">
                         <label for="address" class="col-md-3 label_text">地址</label>
                                 <!-- postcode select start  -->
-                                <input type="email" class="form-control col-sm-2 mr-3 my-1" id="exampleFormControlInput1"
-                                   placeholder="郵遞區號">
-                                   <select require class="form-control col-sm-3 mr-4 pre_option my-1" id="id_mySelect"
-                                    name="City">
-                                </select>
-                                <select class="form-control col-sm-3 pre_option my-1" id="exampleFormControlSelect1">
-                                <option>請選擇區域</option>
-                                <option>北投區</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                          <div class="form-group col-md-9 row mx-auto zipcode">
+
+                            <!-- postcode select start  -->
+                            <input type="text" class="form-control col-sm-3 mr-4 my-1" id="exampleFormControlInput1"
+                                   placeholder="郵遞區號" name="postcode">
+                            <!-- with selected city & district -->
+
+                            <!-- select city -->
+
+
+                            <select require class="form-control col-sm-3 mr-4 pre_option my-1" id="id_mySelect" name="city"></select>
+                            <!-- select district -->
+                            <select class="form-control col-sm-3 pre_option my-1" id="exampleFormControlSelect1" name="area"></select>
+                            <!-- postcode select end  -->
+
+                          </div>
+
                         </div>
                         <div class="form-group row mx-auto">
                             <div class="col-lg-3 "></div>

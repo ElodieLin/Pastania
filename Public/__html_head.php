@@ -22,6 +22,7 @@
           crossorigin="anonymous"></script>
 
   <script src="./vendor/owlCarousel/owl.carousel.min.js"></script>
+  <script src="./js/zipcode.js"></script>
 
   <!-- <script src="./bootstrap/js/bootstrap.js"></script> -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

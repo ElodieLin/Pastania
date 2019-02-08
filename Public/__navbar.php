@@ -577,44 +577,21 @@ if (!isset($come_from)) {
               <small id="password3Help" class="form-text col-md-9 pl-0"></small>
             </div>
             <!-- 新加的 password confirmation end -->
-            <div class="form-group col-md-10 row mx-auto">
+            <div class="form-group col-md-10 row mx-auto zipcode">
               <label for="exampleFormControlSelect1 label_text" class="col-md-3 label_text my-1">地址<span
                         class="red">*</span></label>
 
               <!-- postcode select start  -->
-              <input type="email" class="form-control col-sm-2 mr-4 my-1" id="exampleFormControlInput1"
-                     placeholder="郵遞區號">
+              <input type="text" class="form-control col-sm-2 mr-4 my-1" id="exampleFormControlInput1"
+                     placeholder="郵遞區號" name="postcode">
               <!-- with selected city & district -->
 
               <!-- select city -->
 
 
-              <select require class="form-control col-sm-3 mr-4 pre_option my-1" id="id_mySelect"
-                      name="City">
-
-                  <?php
-
-                  // 取得分類資料
-                  $c_sql = "SELECT * FROM tw_postcode ORDER BY zipcode ASC";
-                  $c_stmt = $pdo->query($c_sql);
-
-                  while ($row = $c_stmt->fetch()) {
-                      $cityName = sprintf('%s %s %s', $row['City'], $row['Area'], $row['ZipCode']);
-                      printf('<option value="%s">%s</option>', $row['id'], $cityName);
-                  }
-
-
-                  ?>
-
-              </select>
+              <select require class="form-control col-sm-3 mr-4 pre_option my-1" id="id_mySelect" name="city"></select>
               <!-- select district -->
-              <select class="form-control col-sm-3 pre_option my-1" id="exampleFormControlSelect1">
-                <option>請選擇區域</option>
-                <option>北投區</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              <select class="form-control col-sm-3 pre_option my-1" id="exampleFormControlSelect1" name="area"></select>
               <!-- postcode select end  -->
 
             </div>
@@ -777,7 +754,40 @@ if (!isset($come_from)) {
 
 
     // 城市&區域select 控制 (postcode select)
+    $(function () {
+        $('.zipcode').each(function (obj) {
+            var $this = $(this),
+                city = $this.find('[name="city"]'),
+                area = $this.find('[name="area"]'),
+                postcode = $this.find('[name="postcode"]'),
+                cityOptions = '',
+                areaOptions = '';
 
+            console.log(city)
+            console.log(area)
+            console.log(postcode)
+            cityOptions = Object.keys(zipcodes).map(function (obj) {
+                return '<option>' + obj + '</option>'
+            }).join('');
+
+            city.html('<option value="">選擇縣市</option>' + cityOptions);
+
+            city.on('change', function () {
+                var _cityVal = $(this).val();
+                areaOptions = Object.keys(zipcodes[_cityVal]).map(function (obj) {
+                    return '<option>' + obj + '</option>'
+                }).join('');
+
+                area.html('<option value="">選擇地區</option>' + areaOptions);
+            });
+
+            area.on('change', function () {
+                var _cityVal = city.val(),
+                    _areaVal = $(this).val();
+                postcode.val(zipcodes[_cityVal][_areaVal]);
+            });
+        });
+    });
 
     //log-in start
     var fields = ['email', 'password'];
