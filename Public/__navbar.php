@@ -43,7 +43,6 @@ if (!isset($come_from)) {
   .signup_success {
     color: blue;
   }
-
 </style>
 <nav>
   <div class="w_menubar fixed-nav-bar">
@@ -469,7 +468,7 @@ if (!isset($come_from)) {
           </div>
           <h5 class="card-title text-center pt-4">SIGN IN</h5>
           <h6 class="card-title text-center pb-4">已是會員？登入快速結帳！</h6>
-          <div id="info" class="login_alert text-center pb-4" style="display: none"></div>
+          <div id="lo_info" class="login_alert text-center pb-4" style="display: none"></div>
           <form name="form1" method="post" onsubmit="return formCheck()" class="row">
 
             <!-- email -->
@@ -525,7 +524,7 @@ if (!isset($come_from)) {
 
     <!-- bootstrap Modal start (Register) -->
 
-    <div class="modal fade register-modal-lg" id="signup">
+    <div class="modal fade register-modal-lg" id="signup" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered " role="document">
         <div class="modal-content container">
           <div class="modal-header">
@@ -788,6 +787,7 @@ if (!isset($come_from)) {
     // 登入後跳轉
     var submit_btn = $('button[type=submit]');
     var come_from = '<?= $come_from ?>';
+    var lo_info = $('#lo_info');
 
 
     function formCheck() {
@@ -797,53 +797,28 @@ if (!isset($come_from)) {
         // for(s in fields){
         //     cancelAlert(fields[s]);
         // }
+        $.post('login_api.php', $(document.form1).serialize(), function (data) {
+            var alertType = 'login_pop';
 
-        var isPass = true;
-        var email_pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            info.removeClass('login_pop');
+            info.removeClass('login_success');
+            // console.log(data)
+            if (data.success) {
+                alertType = 'login_success';
+            } else {
+                alertType = 'login_pop';
+            }
+            lo_info.addClass(alertType);
+            if (data.info) {
+                lo_info.html(data.info);
+                lo_info.slideDown();
+            }
+            // 設定登入成功後自動跳轉頁時間
+            setTimeout(function () {
+                location.href = come_from;
+            }, 1000);
 
-
-        if (!email_pattern.test(document.form1.email.value)) {
-            setAlert('email', '請輸入正確的 email 格式');
-            isPass = false;
-        }
-        if (document.form1.password.value.length < 6) {
-            setAlert('password', '密碼請輸入六個字以上');
-            isPass = false;
-        }
-
-        if (isPass) {
-
-            $.post('login_api.php', $(document.form1).serialize(), function (data) {
-                var alertType = 'login_pop';
-
-                info.removeClass('login_pop');
-                info.removeClass('login_success');
-                // console.log(data)
-                if (data.success) {
-                    alertType = 'login_success';
-                    $('登入按鈕').html('<div>' + data.name + '</div>');
-                    var data = {
-                        success: true,
-                        code: 200,
-                        info: '',
-                        name: ''
-                    }
-                } else {
-                    alertType = 'login_pop';
-                }
-                info.addClass(alertType);
-                if (data.info) {
-                    info.html(data.info);
-                    info.slideDown();
-                }
-                // 設定登入成功後自動跳轉頁時間
-                setTimeout(function () {
-                    location.href = come_from;
-                }, 1800);
-
-            }, 'json');
-
-        }
+        }, 'json');
 
         return false;
     }
@@ -925,7 +900,7 @@ if (!isset($come_from)) {
                 }
 
                 setTimeout(function () {
-                    location.href = come_from;
+                    // location.href = come_from;
                     $("#signup").modal("hide");
                 }, 1400);
 
