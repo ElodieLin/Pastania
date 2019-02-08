@@ -693,6 +693,10 @@
   /* badge position end */
 
 
+  /*bs modal 太長讓他可以拉*/
+  .modal { overflow-y: auto !important; }
+
+
 
 
 
