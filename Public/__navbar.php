@@ -3,13 +3,12 @@ require __DIR__ . '/__connect_db.php';
 $page_name = 'login';
 $page_title = '登入';
 
-if (!isset($come_from))
-{
-  if (empty($_SERVER['HTTP_REFERER'])) {
-      $come_from = './';
-  } else {
-      $come_from = $_SERVER['HTTP_REFERER'];
-  }  
+if (!isset($come_from)) {
+    if (empty($_SERVER['HTTP_REFERER'])) {
+        $come_from = './';
+    } else {
+        $come_from = $_SERVER['HTTP_REFERER'];
+    }
 }
 
 // $i_sql = sprintf("SELECT * FROM `members` WHERE `id` = 1");
@@ -140,32 +139,28 @@ if (!isset($come_from))
       <ul class="w_nav_icon_box">
         <!-- 搜尋按鈕 -->
         <li class="w_nav_icon_boxin r_search_box">
-          <form action="" id="search">
+          <form action="/search.php" class="search">
             <input type="search" autocomplete="off" placeholder="&nbsp;search" required
                    class="r_search transition">
-            <button type="submit" class="r_s_btn">
-              <a class="r_btn_s">
+            <button type="button" class="r_s_btn r_btn_s">
                                 <span class="r_nav_icon_before">
                                     <img src="img/icon/search.svg" alt=""></span>
-                <span class="r_nav_icon_after">
+              <span class="r_nav_icon_after">
                                     <img src="img/icon/search_red.svg" alt=""></span>
-              </a>
             </button>
           </form>
         </li>
         <!-- 會員按鈕 members btn-->
 
         <li class="w_nav_icon_boxin r_btn_i">
-          <a class="nav-link" href="login.php" data-toggle="modal" data-target=".bd-example-modal-lg">
+          <a class="nav-link" <?php if (!isset($_SESSION['user'])): ?>href="login.php" data-toggle="modal"
+             data-target=".bd-example-modal-lg"<?php endif; ?>>
                                 <span class="w_nav_icon_before">
                                     <img src="img/icon/member.svg" alt=""></span>
             <span class="w_nav_icon_after">
                                     <img src="img/icon/member_red.svg" alt=""></span>
           </a>
           <!--以下會員登入後選單 navbar collapse content after member login (edit & order_list) & logout-->
-            <?php
-
-            ?>
             <?php if (isset($_SESSION['user'])): ?>
               <ul class="w_nav_sub r_iocnbox r_login">
                 <li class="w_nav_en_font_sub"><p><?= $_SESSION['user']['nickname'] ?></p></li>
@@ -293,7 +288,8 @@ if (!isset($come_from))
         </a>
       </li>
       <li>
-        <a href="" data-toggle="modal" data-target=".bd-example-modal-lg">
+        <a data-toggle="modal" <?php if (isset($_SESSION['user'])): ?>data-target="#memberModalCenter"
+           <?php else: ?>data-target=".bd-example-modal-lg"<?php endif; ?>>
           <img src="img/icon/member.svg" alt="">
         </a>
       </li>
@@ -314,7 +310,7 @@ if (!isset($come_from))
   <!-- /* ～～～～～～～以下為手機版search modal～～～～～～～ */ -->
   <!-- Modal -->
   <div class="modal fade" id="searchModalCenter" tabindex="-1" role="dialog"
-       aria-labelledby="srarchModalCenterTitle" aria-hidden="true">
+       aria-labelledby="searchModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -327,13 +323,13 @@ if (!isset($come_from))
         </div>
         <div class="modal-body">
           <h6 class="card-title text-center pb-2">請輸入關鍵字搜尋</h6>
-          <form action="" id="search">
+          <form action="/search.php" class="search">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
               <span class="input-group-text" id="basic-serach"><img src="img/icon/search.svg" alt=""
                                                                     style="width: 20px"></span>
               </div>
-              <input type="search" class="form-control" id="search-bar" name="search-bar"
+              <input type="search" class="form-control" id="search-bar" name="q"
                      placeholder="請輸入關鍵字搜尋"
                      aria-label="search" aria-describedby="basic-serach">
             </div>
@@ -348,6 +344,48 @@ if (!isset($come_from))
   </div>
 
   <!-- /* ～～～～～～～以上為手機版search modal end～～～～～～～ */ -->
+  <!-- /* ～～～～～～～以下為手機版member model start～～～～～～～ */ -->
+    <?php if (isset($_SESSION['user'])): ?>
+
+      <div class="modal fade" id="memberModalCenter" tabindex="-1" role="dialog"
+           aria-labelledby="memberModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="col-12 modal-title mx-auto text-center">
+                <img src="img/icon/pastania_logo.svg" class="logo_img" alt="">
+              </a>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6 class="w_nav_en_font_sub text-center mb-3 mt-2">您好：<?= $_SESSION['user']['nickname'] ?></h6>
+              <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3"
+                      onclick="parent.location='edit_me.php'">
+                帳號設定
+              </button>
+              <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3"
+                      onclick="parent.location='history.php'">
+                訂單查詢
+              </button>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3"
+                      onclick="parent.location='logout.php'">
+                登出
+              </button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    <?php endif ?>
+
+  <!-- /* ～～～～～～～以上為手機版member modal end～～～～～～～ */ -->
+
+
   <!-- /* ～～～～～～～以下為手機版wishlist modal start～～～～～～～ */ -->
   <div class="modal fade" id="wishModalCenter" tabindex="-1" role="dialog"
        aria-labelledby="wishModalCenterTitle" aria-hidden="true">
@@ -637,29 +675,29 @@ if (!isset($come_from))
         });
 
         $('.js-wishlist').hover(function () {
-          $(this).find('.js-wishlist-data').load('feed_wishlist.php', function() {
-            $('.js-wishlist-remove').on('click', function() {
-              var sid = $(this).data('sid');
-              $(this).closest('.wishlist-item').remove();
-              $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
-              }, 'json');
-            });
+            $(this).find('.js-wishlist-data').load('feed_wishlist.php', function () {
+                $('.js-wishlist-remove').on('click', function () {
+                    var sid = $(this).data('sid');
+                    $(this).closest('.wishlist-item').remove();
+                    $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
+                    }, 'json');
+                });
 
-            $('.js-wishlist-buy').on('click', function() {
-              var sid = $(this).data('sid');
-              $(this).closest('.wishlist-item').remove();
-              $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
-              }, 'json');
-              $.get('add_to_cart.php', {sid: sid, qty: 1}, function (data) {
-              }, 'json');
+                $('.js-wishlist-buy').on('click', function () {
+                    var sid = $(this).data('sid');
+                    $(this).closest('.wishlist-item').remove();
+                    $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
+                    }, 'json');
+                    $.get('add_to_cart.php', {sid: sid, qty: 1}, function (data) {
+                    }, 'json');
+                });
             });
-          });
         });
 
         $('.js-cart').hover(function () {
-          $(this).find('.js-cart-data').load('feed_cart.php', function() {
+            $(this).find('.js-cart-data').load('feed_cart.php', function () {
 
-          });
+            });
         });
     });
     // icon下拉選單
@@ -668,7 +706,12 @@ if (!isset($come_from))
     $(document).ready(function () {
         $(".r_btn_s").click(function (e) {
             e.stopPropagation();
-            $(".r_search").toggleClass("r_s_hide");
+            if ($(".r_search").hasClass('r_s_hide')) {
+                $(".r_search").removeClass("r_s_hide");
+            } else {
+                $(".r_search").addClass("r_s_hide");
+                $(this).parents('form').find('[type="search"]').focus();
+            }
         });
         $(".r_search").click(function (e) {
             e.stopPropagation();
@@ -678,7 +721,10 @@ if (!isset($come_from))
         });
         $('.r_s_btn').click(function (e) {
             e.preventDefault();
-            location.href = 'search.php？q＝' + $('input').val();
+            if ($(this).parents('form').find('[type="search"]').val() == '') {
+                return false;
+            }
+            location.href = 'search.php?q=' + $(this).parents('form').find('[type="search"]').val();
         });
     });
 
@@ -701,19 +747,6 @@ if (!isset($come_from))
     $(".r_arrow_icon").click(function () {
         $(this).find('i').toggleClass("ar_turn");
     });
-
-
-    // cart badge顯示
-    var badge_pill = $('.badge-pill');
-
-    function cart_count(obj) {
-        var s, t = 0;
-        for (s in obj) {
-            t += 1
-            // 只加購買種類, 不是累加全部購買數量
-        }
-        badge_pill.text(t);
-    }
 
     // ajax
     $.get('add_to_cart.php', function (data) {
@@ -918,10 +951,11 @@ if (!isset($come_from))
     }
 
 
-    $('#search').submit(function (e) {
+    $('.search').submit(function (e) {
         e.preventDefault();
-        location.href = '/search.php?q=' + $('input').val();
-    })
+        e.stopPropagation();
+        location.href = '/search.php?q=' + $(this).find('[type="search"]').val();
+    });
 
     // submit and close modal
     // $('#re_submit').click(function(e)){
