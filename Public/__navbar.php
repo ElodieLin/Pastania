@@ -3,13 +3,12 @@ require __DIR__ . '/__connect_db.php';
 $page_name = 'login';
 $page_title = '登入';
 
-if (!isset($come_from))
-{
-  if (empty($_SERVER['HTTP_REFERER'])) {
-      $come_from = './';
-  } else {
-      $come_from = $_SERVER['HTTP_REFERER'];
-  }  
+if (!isset($come_from)) {
+    if (empty($_SERVER['HTTP_REFERER'])) {
+        $come_from = './';
+    } else {
+        $come_from = $_SERVER['HTTP_REFERER'];
+    }
 }
 
 // $i_sql = sprintf("SELECT * FROM `members` WHERE `id` = 1");
@@ -146,7 +145,7 @@ if (!isset($come_from))
             <button type="button" class="r_s_btn r_btn_s">
                                 <span class="r_nav_icon_before">
                                     <img src="img/icon/search.svg" alt=""></span>
-                <span class="r_nav_icon_after">
+              <span class="r_nav_icon_after">
                                     <img src="img/icon/search_red.svg" alt=""></span>
             </button>
           </form>
@@ -154,16 +153,14 @@ if (!isset($come_from))
         <!-- 會員按鈕 members btn-->
 
         <li class="w_nav_icon_boxin r_btn_i">
-          <a class="nav-link" href="login.php" data-toggle="modal" data-target=".bd-example-modal-lg">
+          <a class="nav-link" <?php if (!isset($_SESSION['user'])): ?>href="login.php" data-toggle="modal"
+             data-target=".bd-example-modal-lg"<?php endif; ?>>
                                 <span class="w_nav_icon_before">
                                     <img src="img/icon/member.svg" alt=""></span>
             <span class="w_nav_icon_after">
                                     <img src="img/icon/member_red.svg" alt=""></span>
           </a>
           <!--以下會員登入後選單 navbar collapse content after member login (edit & order_list) & logout-->
-            <?php
-
-            ?>
             <?php if (isset($_SESSION['user'])): ?>
               <ul class="w_nav_sub r_iocnbox r_login">
                 <li class="w_nav_en_font_sub"><p><?= $_SESSION['user']['nickname'] ?></p></li>
@@ -291,7 +288,8 @@ if (!isset($come_from))
         </a>
       </li>
       <li>
-        <a href="" data-toggle="modal" data-target=".bd-example-modal-lg">
+        <a data-toggle="modal" <?php if (isset($_SESSION['user'])): ?>data-target="#memberModalCenter"
+           <?php else: ?>data-target=".bd-example-modal-lg"<?php endif; ?>>
           <img src="img/icon/member.svg" alt="">
         </a>
       </li>
@@ -312,7 +310,7 @@ if (!isset($come_from))
   <!-- /* ～～～～～～～以下為手機版search modal～～～～～～～ */ -->
   <!-- Modal -->
   <div class="modal fade" id="searchModalCenter" tabindex="-1" role="dialog"
-       aria-labelledby="srarchModalCenterTitle" aria-hidden="true">
+       aria-labelledby="searchModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -346,6 +344,48 @@ if (!isset($come_from))
   </div>
 
   <!-- /* ～～～～～～～以上為手機版search modal end～～～～～～～ */ -->
+  <!-- /* ～～～～～～～以下為手機版member model start～～～～～～～ */ -->
+    <?php if (isset($_SESSION['user'])): ?>
+
+      <div class="modal fade" id="memberModalCenter" tabindex="-1" role="dialog"
+           aria-labelledby="memberModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <a href="#" class="col-12 modal-title mx-auto text-center">
+                <img src="img/icon/pastania_logo.svg" class="logo_img" alt="">
+              </a>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6 class="w_nav_en_font_sub text-center mb-3 mt-2">您好：<?= $_SESSION['user']['nickname'] ?></h6>
+              <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3"
+                      onclick="parent.location='edit_me.php'">
+                帳號設定
+              </button>
+              <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3"
+                      onclick="parent.location='history.php'">
+                訂單查詢
+              </button>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3"
+                      onclick="parent.location='logout.php'">
+                登出
+              </button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    <?php endif ?>
+
+  <!-- /* ～～～～～～～以上為手機版member modal end～～～～～～～ */ -->
+
+
   <!-- /* ～～～～～～～以下為手機版wishlist modal start～～～～～～～ */ -->
   <div class="modal fade" id="wishModalCenter" tabindex="-1" role="dialog"
        aria-labelledby="wishModalCenterTitle" aria-hidden="true">
@@ -635,29 +675,29 @@ if (!isset($come_from))
         });
 
         $('.js-wishlist').hover(function () {
-          $(this).find('.js-wishlist-data').load('feed_wishlist.php', function() {
-            $('.js-wishlist-remove').on('click', function() {
-              var sid = $(this).data('sid');
-              $(this).closest('.wishlist-item').remove();
-              $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
-              }, 'json');
-            });
+            $(this).find('.js-wishlist-data').load('feed_wishlist.php', function () {
+                $('.js-wishlist-remove').on('click', function () {
+                    var sid = $(this).data('sid');
+                    $(this).closest('.wishlist-item').remove();
+                    $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
+                    }, 'json');
+                });
 
-            $('.js-wishlist-buy').on('click', function() {
-              var sid = $(this).data('sid');
-              $(this).closest('.wishlist-item').remove();
-              $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
-              }, 'json');
-              $.get('add_to_cart.php', {sid: sid, qty: 1}, function (data) {
-              }, 'json');
+                $('.js-wishlist-buy').on('click', function () {
+                    var sid = $(this).data('sid');
+                    $(this).closest('.wishlist-item').remove();
+                    $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
+                    }, 'json');
+                    $.get('add_to_cart.php', {sid: sid, qty: 1}, function (data) {
+                    }, 'json');
+                });
             });
-          });
         });
 
         $('.js-cart').hover(function () {
-          $(this).find('.js-cart-data').load('feed_cart.php', function() {
+            $(this).find('.js-cart-data').load('feed_cart.php', function () {
 
-          });
+            });
         });
     });
     // icon下拉選單
@@ -666,7 +706,7 @@ if (!isset($come_from))
     $(document).ready(function () {
         $(".r_btn_s").click(function (e) {
             e.stopPropagation();
-            if($(".r_search").hasClass('r_s_hide')) {
+            if ($(".r_search").hasClass('r_s_hide')) {
                 $(".r_search").removeClass("r_s_hide");
             } else {
                 $(".r_search").addClass("r_s_hide");
