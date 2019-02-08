@@ -786,7 +786,6 @@ if (!isset($come_from)) {
 
     // 登入後跳轉
     var submit_btn = $('button[type=submit]');
-    var come_from = '<?= $come_from ?>';
     var lo_info = $('#lo_info');
 
 
@@ -815,7 +814,7 @@ if (!isset($come_from)) {
             }
             // 設定登入成功後自動跳轉頁時間
             setTimeout(function () {
-                location.href = come_from;
+                location.reload();
             }, 1000);
 
         }, 'json');
@@ -900,8 +899,8 @@ if (!isset($come_from)) {
                 }
 
                 setTimeout(function () {
-                    // location.href = come_from;
                     $("#signup").modal("hide");
+                    location.reload();
                 }, 1400);
 
 
