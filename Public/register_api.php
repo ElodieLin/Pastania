@@ -11,7 +11,6 @@ $result = [
 
 if (isset($_POST['nickname']) and isset($_POST['email']) and isset($_POST['password']) and isset($_POST['password']) and isset($_POST['address'])) {
     $result['postData'] = $_POST;
-
     // TODO: 後端的欄位檢查
     // email 檢查可以參考 filter_var()
 
@@ -33,10 +32,10 @@ if (isset($_POST['nickname']) and isset($_POST['email']) and isset($_POST['passw
     $password2 = sha1(trim($_POST['password']));
 
     $sql = "INSERT INTO `members`(
-        `email`, `password`, `mobile`, `address`,
+        `email`, `password`, `mobile`, `postcode`, `city`, `area`, `address`,
          `birthday`, `hash`, `nickname`, `create_at`
           ) VALUES (
-          ?, ?, ?, ?,
+          ?, ?, ?, ?, ?, ?, ?,
           ?, ?, ?, NOW()
           )";
 
@@ -47,6 +46,9 @@ if (isset($_POST['nickname']) and isset($_POST['email']) and isset($_POST['passw
         $email2,
         $password2,
         $_POST['mobile'],
+        $_POST['postcode'],
+        $_POST['city'],
+        $_POST['area'],
         $_POST['address'],
         $_POST['birthday'],
         $hash,
