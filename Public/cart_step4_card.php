@@ -63,7 +63,7 @@ session_start();
         <hr class="e_cart_hr">
 
         <div class="e_cart_title e_none_display_m">
-            <ul class="noto_light">
+            <ul class="noto_light py-2">
                 <div class="d_flex">
                     <li class="e_img_w"> </li>
                     <li class="e_item_w">項 目</li>
@@ -169,7 +169,7 @@ session_start();
 
                 <div class="e_card_payment_notice">
                     <label for="notice" class="col-3 e_notice">注意事項</label>
-                    <ul>
+                    <ul class="notice_list">
                         <li>請確認您的訂單資料正確，再輸入您的信用卡資訊。</li>
                         <li>本頁面已使用 256-bit SSL 安全加密機制。</li>
                         <li>為確保網路交易安全，您同意本公司得就此筆交易向發卡銀行、收單銀行及持卡人核對是否屬實。</li>
@@ -200,8 +200,8 @@ session_start();
 
 
 
-        <div class="e_cart_btn">
-          <form action="cart_step5.php" method="post">
+        <div class="">
+          <form action="cart_step5.php" method="post" class="e_cart_btn">
             <input type="hidden" name="action" value="order" />
             <button class="e_btn_outline noto_light">上 一 步</button>
             <button class="e_btn noto_light" type="submit">確 認 結 帳</button>
