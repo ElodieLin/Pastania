@@ -807,25 +807,22 @@ if (!isset($come_from)) {
         //     cancelAlert(fields[s]);
         // }
         $.post('login_api.php', $(document.form1).serialize(), function (data) {
-            var alertType = 'login_pop';
-
             info.removeClass('login_pop');
             info.removeClass('login_success');
-            // console.log(data)
-            if (data.success) {
-                alertType = 'login_success';
-            } else {
-                alertType = 'login_pop';
-            }
+
+            var alertType = data.success ? "login_success" : "login_pop"
+
             lo_info.addClass(alertType);
             if (data.info) {
                 lo_info.html(data.info);
                 lo_info.slideDown();
             }
             // 設定登入成功後自動跳轉頁時間
-            setTimeout(function () {
-                location.reload();
-            }, 1000);
+            if(data.success){
+                setTimeout(function () {
+                    location.reload();
+                }, 1000);
+            }
 
         }, 'json');
 
