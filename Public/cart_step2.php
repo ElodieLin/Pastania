@@ -203,13 +203,13 @@ $_SESSION['products'] = $_POST['products'];
       <div class="e_member_delivery_info">
         <p class="noto_light ">配送資訊</p>
 
-        <div class="row">
+        <div class="row mx-auto py-5 pl-5 ">
             <div class="pr-5">
-              <p>已是會員?</p>
+              <p class="new_btn">已是會員?</p>
               <a href="#"><button class="btn btn-info js-login">點我快速登入</button></a>
             </div>
             <div>
-            <p>還不是會員？首次購物即可自動註冊成會員</p>
+            <p class="new_btn">還不是會員？首次購物即可自動註冊成會員</p>
               <a href="#"><button class="btn btn-info js-first-order">首次購物</button></a>
             </div>
         </div>
@@ -442,8 +442,8 @@ $_SESSION['products'] = $_POST['products'];
         </div>
         <div class="form-check e_agree_terms">
           <input class="form-check-input e_agree_terms_checkbox" type="checkbox" value="" id="agreeTerms">
-          <label class="form-check-label noto_light e_agree_terms_text" for="agreeTerms">
-            我同意接<a href="">Pastania服務條款</a>和<a href="">隱私權政策</a>
+          <label class="form-check-label noto_light e_agree_terms_text d-flex" for="agreeTerms">
+            我同意接<a href="service_privacy.php">Pastania服務條款</a>和<a href="service_privacy.php">隱私權政策</a>
           </label>
 
         </div>
