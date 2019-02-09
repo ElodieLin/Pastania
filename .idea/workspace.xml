@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0238076-6605-4e59-8ba7-7ce48e97650f" name="Default Changelist" comment="0131 - navbar z-index adjusted">
-      <change afterPath="$PROJECT_DIR$/Public/add_to_wishlist.php" afterDir="false" />
+    <list default="true" id="f0238076-6605-4e59-8ba7-7ce48e97650f" name="Default Changelist" comment="0210- agreement style update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/cart_step3.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/cart_step3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/cart_step4_ATM.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/cart_step4_ATM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/cart_step4_card.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/cart_step4_card.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/cart_step5.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/cart_step5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/order_cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/Public/order_cart.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,21 +19,51 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/__navbar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2000">
-              <caret line="786" column="46" selection-start-line="786" selection-start-column="46" selection-end-line="786" selection-end-column="46" />
+            <state relative-caret-position="12150">
+              <caret line="810" selection-start-line="810" selection-end-line="810" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-              <folding>
-                <element signature="n#style#0;n#svg#0;n#a#0;n#div#1;n#li#5;n#ul#0;n#div#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#form#0;n#div#2;n#div#2;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#svg#0;n#a#0;n#div#1;n#li#4;n#ul#0;n#div#0;n#form#0;n#div#2;n#div#2;n#body#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/css/cart.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/cart_step3.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-427">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/cart_step2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7642" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/css/cart_step2.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -45,7 +71,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/css/__navbar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
+            <state relative-caret-position="10095">
               <caret line="673" selection-start-line="673" selection-end-line="673" />
             </state>
           </provider>
@@ -58,6 +84,7 @@
       <find>::place</find>
       <find>$come_from</find>
       <find>api</find>
+      <find>.e_btn_outline</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,6 +126,7 @@
         <option value="$PROJECT_DIR$/__html_head.php" />
         <option value="$PROJECT_DIR$/Public/index.php" />
         <option value="$PROJECT_DIR$/Public/__navbar.php" />
+        <option value="$PROJECT_DIR$/Public/css/cart.css" />
       </list>
     </option>
   </component>
@@ -116,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,11 +157,16 @@
               <item name="Pastania" type="462c0819:PsiDirectoryNode" />
               <item name="Public" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Pastania" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pastania" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -169,6 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1548244534120</updated>
       <workItem from="1548244536829" duration="9481000" />
+      <workItem from="1549707068495" duration="2023000" />
     </task>
     <task id="LOCAL-00001" summary="0123 - css folder update">
       <created>1548246774212</created>
@@ -373,23 +408,86 @@
       <option name="project" value="LOCAL" />
       <updated>1549109790814</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="0209 - btn adjust">
+      <created>1549707108388</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1549707108388</updated>
+    </task>
+    <task id="LOCAL-00031" summary="0209 - btn adjust">
+      <created>1549707423132</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1549707423132</updated>
+    </task>
+    <task id="LOCAL-00032" summary="0209 - add session destroy">
+      <created>1549736742697</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1549736742697</updated>
+    </task>
+    <task id="LOCAL-00033" summary="0209 - add padding between purchase items">
+      <created>1549736806472</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1549736806472</updated>
+    </task>
+    <task id="LOCAL-00034" summary="0209 - add padding between purchase items">
+      <created>1549736839928</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1549736839928</updated>
+    </task>
+    <task id="LOCAL-00035" summary="0209 - add padding between purchase items">
+      <created>1549736918569</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1549736918569</updated>
+    </task>
+    <task id="LOCAL-00036" summary="0210 - update first order / quick login style">
+      <created>1549737013730</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1549737013730</updated>
+    </task>
+    <task id="LOCAL-00037" summary="0210 - card notice list style update">
+      <created>1549737056106</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1549737056106</updated>
+    </task>
+    <task id="LOCAL-00038" summary="0210- agreement style update">
+      <created>1549737107992</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1549737107992</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13164000" />
+    <option name="totallyTimeSpent" value="15187000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="35" width="1400" height="837" extended-state="0" />
+    <frame x="10" y="32" width="1400" height="837" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50067115" side_tool="true" weight="0.2496318" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49932885" visible="true" weight="0.18262151" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49932885" visible="true" weight="0.18483064" />
       <window_info id="Structure" order="2" sideWeight="0.50067115" side_tool="true" weight="0.2496318" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.08993289" />
-      <window_info anchor="bottom" id="Messages" order="4" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Messages" order="4" visible="true" weight="0.06711409" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
@@ -418,12 +516,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0123 - css folder update" />
-    <MESSAGE value="0123 - images update" />
-    <MESSAGE value="0123 - php files update" />
-    <MESSAGE value="0123 - php files reformat" />
-    <MESSAGE value="0123 - files move to Public" />
-    <MESSAGE value="0128 - area map php update for mobile" />
     <MESSAGE value="0128 - past map update for desktop" />
     <MESSAGE value="0128 - pagination adjust" />
     <MESSAGE value="0128 - pasta map image size adjust" />
@@ -443,7 +535,13 @@
     <MESSAGE value="0202 - add comment" />
     <MESSAGE value="0202 - fix sub total" />
     <MESSAGE value="0202 - update btns for first buy &amp; login alert" />
-    <option name="LAST_COMMIT_MESSAGE" value="0202 - update btns for first buy &amp; login alert" />
+    <MESSAGE value="0209 - btn adjust" />
+    <MESSAGE value="0209 - add session destroy" />
+    <MESSAGE value="0209 - add padding between purchase items" />
+    <MESSAGE value="0210 - update first order / quick login style" />
+    <MESSAGE value="0210 - card notice list style update" />
+    <MESSAGE value="0210- agreement style update" />
+    <option name="LAST_COMMIT_MESSAGE" value="0210- agreement style update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/product_detail.css" />
@@ -544,36 +642,12 @@
     <entry file="file://$PROJECT_DIR$/Public/css/aos.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/css/cart_step2.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/img/pages/prelanding/wheel.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/css/__navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="673" selection-start-line="673" selection-end-line="673" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/__navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2000">
-          <caret line="786" column="46" selection-start-line="786" selection-start-column="46" selection-end-line="786" selection-end-column="46" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/recipe_detail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2481" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/cart_step3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2077">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/product_list_sauce.php">
@@ -581,21 +655,62 @@
         <state relative-caret-position="-1954" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-          <folding>
-            <element signature="n#style#0;n#svg#0;n#a#0;n#div#1;n#li#5;n#ul#0;n#div#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#form#0;n#div#2;n#div#2;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#svg#0;n#a#0;n#div#1;n#li#4;n#ul#0;n#div#0;n#form#0;n#div#2;n#div#2;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/pasta_map.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
           <caret line="187" column="8" selection-start-line="187" selection-start-column="8" selection-end-line="187" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/__navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12150">
+          <caret line="810" selection-start-line="810" selection-end-line="810" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/css/__navbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10095">
+          <caret line="673" selection-start-line="673" selection-end-line="673" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="103" column="36" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/cart_step4_card.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/css/cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/cart_step3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/cart_step2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7642" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/css/cart_step2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
