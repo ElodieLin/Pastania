@@ -42,7 +42,7 @@ $total += $i['qty'] * $i['Price'];
 ?>
 
   <ul class="e_cart_item">
-    <div class="d_flex">
+    <div class="d_flex py-2">
       <li class="e_img_w">
         <img src="img/product/l/<?php echo $i['Image_large'] ?>.png" alt=""></a>
       </li>
@@ -55,7 +55,7 @@ $total += $i['qty'] * $i['Price'];
 
           <!-- 手機版顯示的 -->
           <li class=" e_price e_none_display_w">
-            <span class="noto_light e_price">單價： <span class="en_font e_price">NT＄ <?php echo $i['Price'] ?></span></span>
+            <span class="noto_light e_price ">單價： <span class="en_font e_price">NT＄ <?php echo $i['Price'] ?></span></span>
           </li>
 
           <li class=" e_none_display_w e_margin_b e_mt10">
@@ -73,13 +73,13 @@ $total += $i['qty'] * $i['Price'];
       </li>
     </div>
 
-    <li class="e_w e_cart_item_price en_font e_none_display_m">NT＄ <?php echo $i['Price'] ?></li>
+    <li class="e_w e_cart_item_price en_font e_none_display_m py-2">NT＄ <?php echo $i['Price'] ?></li>
 
-    <li class="e_w e_none_display_m ">
+    <li class="e_w e_none_display_m py-2">
       <p class="en_font e_subtotal"><?php echo $i['qty'] ?></p>
     </li>
 
-    <li class="e_w e_cart_item_price en_font e_none_display_m">NT＄ <?php echo $i['qty'] * $i['Price']; ?></li>
+    <li class="e_w e_cart_item_price en_font e_none_display_m py-2">NT＄ <?php echo $i['qty'] * $i['Price']; ?></li>
 
   </ul>
 
