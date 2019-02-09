@@ -561,7 +561,7 @@
 }
 
 .e_agree_terms a {
-    text-decoration: underline;
+    text-decoration: underline !important;
     color: #5C7880;
 }
 
@@ -597,3 +597,30 @@ input[type=checkbox] {
 .e_search_postcode_form, .e_branches_select {
     display: none;
 }
+
+
+/* check log-in or first buy btn */
+.btn-info.js-login, .btn-info.js-first-order{
+    width: 250px;
+    height: 40px;
+    margin-right: 100px;
+    margin-top: 10px;
+    background-color: #E67348 !important;
+    border: 0 !important;
+}
+
+.btn-info.js-login:hover, .btn-info.js-first-order:hover {
+    background-color: #D3554A !important;
+
+}
+
+.new_btn{
+    font-family: 'Noto Sans TC';
+    font-weight: 300;
+    /* 這是次細的(light) */
+    /* letter-spacing: 2px; */
+    font-size: 1.1rem;
+    color: #5C7880;
+}
+
+
