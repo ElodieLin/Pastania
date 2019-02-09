@@ -30,7 +30,7 @@ if ($_POST)
         var_dump($e);
     }
 }
-
+session_destroy();
 ?>
 
 <?php include __DIR__ . '/__html_head.php' ?>
