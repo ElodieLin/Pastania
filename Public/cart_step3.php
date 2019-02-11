@@ -87,7 +87,7 @@ if ($_POST)
     <hr class="e_cart_hr">
 
     <div class="e_cart_title e_none_display_m">
-      <ul class="noto_light">
+      <ul class="noto_light py-2">
         <div class="d_flex">
           <li class="e_img_w"></li>
           <li class="e_item_w">項 目</li>

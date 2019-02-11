@@ -263,7 +263,7 @@
         .e_cart_title ul {
             display: flex;
             justify-content: space-between;
-            list-style: none;
+            list-style: none ;
             padding: 0;
 
         }
@@ -751,3 +751,19 @@
         }
 
 
+/* ---notice list------ */
+        .notice_list{
+            list-style: disc;
+            margin-left: 25px;
+        }
+
+
+
+
+
+        @media screen and (max-width: 575.98px){
+                 .notice_list li{
+                    list-style: disc ;
+                    }
+        }
+   
