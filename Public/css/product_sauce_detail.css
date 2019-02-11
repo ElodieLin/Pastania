@@ -27,6 +27,7 @@
             font-size: 2rem;
             letter-spacing: 2px;
             color: #5C7880;
+            /* padding-bottom: 15px; */
         }
 
         .noto_regular {
@@ -34,6 +35,7 @@
             letter-spacing: 2px;
             font-size: 2rem;
             color: #5C7880;
+            /* padding-bottom: 15px; */
         }
 
 
@@ -43,6 +45,7 @@
             font-size: 1.5rem;
             letter-spacing: 2px;
             color: #5C7880;
+            padding: 15px 0;
         }
 
         .product_detail_big_en_font_r {
@@ -386,12 +389,13 @@
             margin: 0 auto;
             width: 100%;
             height: 70px;
-            padding: 4% 20%;
+            padding-top: 3.5%;
             background-color: #E67348;
             border-radius: 5px;
             text-align: center;
-            color: #ffffff;
+            color: #ffffff !important;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .w_product_sauce_detail_cart_btn:hover a {
@@ -574,10 +578,10 @@
             position: absolute;
             z-index: 3;
             width: 80%;
-            height: 300px;
+            height: 348px;
             display: flex;
             margin-left: 10%;
-            margin-top: -300px;
+            margin-top: -485px;
 
         }
 
@@ -1058,7 +1062,7 @@
                 height: 180px;
                 display: flex;
                 margin-left: -5%;
-                margin-top: -170px;
+                margin-top: -194px;
             }
 
             /* ----------以上為你可能喜歡區域---------- */
@@ -1205,4 +1209,13 @@
             /* ----------以上為送出按鈕區域---------- */
 
 
+        }
+
+        .big_title_add {
+            padding-bottom: 15px;
+        }
+
+        .col-md-9.w_product_sauce_detail_cart_btn{
+            margin-left: -16px !important;
+            margin-top: -20px;
         }

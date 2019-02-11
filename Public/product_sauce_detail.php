@@ -113,7 +113,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
 
             </div>
             <br>
-            <div class="w_product_sauce_detail_cart_btn    product_detail_noto_light_big">
+            <div class="col-md-9 w_product_sauce_detail_cart_btn    product_detail_noto_light_big">
                 <a class="w_product_sauce_detail_transition add_to_cart_btn" >加入購物車</a>
                 <!-------- 橘色大按鈕連結------->
             </div>
@@ -127,9 +127,9 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
     <div class="row">
         <div class="col-md-7">
             <div class="w_product_sauce_detail_cook_step">
-                <p class="noto_regular">商品介紹</p>
+                <p class="noto_regular big_title_add">商品介紹</p>
                 <div class="w_product_sauce_detail_cook_title_line"></div>
-                <p class="en_font">Description</p>
+                <p class="en_font big_title_add">Description</p>
                 <!------- 商品介紹文字 ------->
                 <p class="noto_thin"><?= $product['Description']; ?>
                 </p>
@@ -137,9 +137,9 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
         </div>
         <div class="col-md-5">
             <div data-aos="fade-left" class="w_product_sauce_detail_cook_material">
-                <p class="noto_regular">原料</p>
+                <p class="noto_regular big_title_add">原料</p>
                 <div class="w_product_sauce_detail_cook_title_line_two"></div>
-                <p class="en_font">Ingredient</p>
+                <p class="en_font big_title_add">Ingredient</p>
                 <!------- 原料文字 ------->
                 <p class="noto_thin"><?= $product['Ingredient']; ?>
                 </p>
@@ -223,8 +223,8 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
     <div class="w_product_sauce_detail_wrapper_three_two">
         <!------------ 以下為評價title區域 ------------>
         <div class="col-md-6 w_product_sauce_detail_title">
-            <p class="noto_regular  w_product_sauce_detail_title_line">評價</p>
-            <p class="en_font">Reviews</p>
+            <p class="noto_regular  w_product_sauce_detail_title_line ">評價</p>
+            <p class="en_font pt-3">Reviews</p>
         </div>
         <!------------ 以上為評價title區域 ------------>
         <div class="row">

@@ -710,7 +710,12 @@
     margin-bottom: 17px;
     background: url("../img/icon/select_arrow.svg") no-repeat right center transparent;
     background-size: 20px;
-    max-width: 35%;
+  }
+
+  @media screen and (max-width: 575.98px) {
+    .zipcode_select{
+      max-width: 35%;
+    }
   }
 
 

@@ -281,11 +281,11 @@ $page_stmt = $pdo->query($page_sql);
                 <!-- pre_arrow -->
                 <div class="w_prodiuct_list_page">
 
-                    <!-- <style>
+                    <style>
                         .disabledArrow {
                             opacity: 0.25;
                         }
-                        </style> -->
+                        </style>
 
                     <?php
 
@@ -311,11 +311,11 @@ $page_stmt = $pdo->query($page_sql);
 
                         ?>
 
-                        <!-- <style>
+                        <style>
                             .active a {
-                                color: blue;
+                                color: rgba(230, 114, 72, 0.6) !important;
                             }
-                            </style> -->
+                            </style>
 
                         <div class="w_prodiuct_list_page_number">
                             <p class="w_prodiuct_list_page_number_one   w_pd_en_font_small_red <?= $i == $page ? 'active' : '' ?>">
