@@ -18,7 +18,7 @@ if (isset($_POST['email']) and isset($_POST['password'])) {
     // 密碼編碼, 不要明碼
     $password = sha1(trim($_POST['password']));
 
-    $sql = "SELECT `id`, `email`, `mobile`, `address`, `birthday`, `nickname` FROM `members` WHERE `email`=? AND `password`=?";
+    $sql = "SELECT `id`, `email`, `mobile`, `address`, `birthday`,`nickname`,`area`,`city`,`postcode` FROM `members` WHERE `email`=? AND `password`=?";
 
     $stmt = $pdo->prepare($sql);
 

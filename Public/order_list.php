@@ -2,6 +2,32 @@
 
 $page_name = 'order_list';
 
+
+if(! isset($_SESSION['user'])){
+    header('Location: ./');
+    exit;
+}
+
+// 查訂單
+
+$o_sql = "SELECT `sid`, `member_sid`, `amount`, `order_date`, `tracking_num` 
+          FROM `orders` 
+          WHERE `member_sid`=? AND `order_date`>'2018-07-01' ORDER BY `order_date` DESC";
+
+
+$o_stmt = $pdo->prepare($o_sql);
+$o_stmt->execute([
+    $_SESSION['user']['id']
+]);
+
+$orders = $o_stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$order_sids = [];
+foreach($orders as $order){
+    $order_sids[] = $order['sid'];
+}
+
+
 ?>
 
 <?php include __DIR__ . '/__html_head.php' ?>
@@ -98,32 +124,51 @@ $page_name = 'order_list';
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row" class="en_font en_font_content">1</th>
-      <td class="en_font en_font_content">XITOWIEJR</td>
-      <td class="en_font en_font_content">2019-02-02</td>
-      <td class="en_font en_font_content">NT$ </td>
+    <?php 
+    $order_sids = [];
+    foreach ($orders as $order){
+       
+    // $order_sids[] = $order['sid'];
+    // $orders = $o_stmt->fetchAll(PDO::FETCH_ASSOC);
+   
+  
+    ?>
+    <tr class="rows">
+      <th scope="row" class="en_font en_font_content rowCount"></th>
+      <td class="en_font en_font_content"><?= $order['tracking_num'] ?></td>
+      <td class="en_font en_font_content"><?= $order['order_date']?></td>
+      <td class="en_font en_font_content">NT$ <?= $order['amount']?> </td>
       <td class="noto_thin">訂單確認中</td>
       <td><a href="cart_step4_card.php"> <button class="btn btn-info e_btn">查看訂單 </button></a></td>
     </tr>
-
-    <tr>
+<?php }  ?>
+<script>
+                var i = 1;
+    $(".rowCount").each(
+            function(){
+                $(this).text(i);
+                i++;
+            }
+        )
+   
+</script>
+    <!-- <tr>
       <th scope="row" class="en_font en_font_content">2</th>
       <td class="en_font en_font_content">XITOWIEJR</td>
       <td class="en_font en_font_content">2019-02-02</td>
       <td class="en_font en_font_content">NT$ </td>
       <td class="noto_thin">訂單確認中</td>
       <td><a href="cart_step4_card.php"> <button class="btn btn-info e_btn">查看訂單 </button></a></td>
-    </tr>
+    </tr> -->
 
-    <tr>
+    <!-- <tr>
       <th scope="row" class="en_font en_font_content">3</th>
       <td class="en_font en_font_content">XITOWIEJR</td>
       <td class="en_font en_font_content">2019-02-02</td>
       <td class="en_font en_font_content">NT$ </td>
       <td class="noto_thin">訂單確認中</td>
       <td><a href="cart_step4_card.php"> <button class="btn btn-info e_btn">查看訂單 </button></a></td>
-    </tr>
+    </tr> -->
     
   </tbody>
 </table>

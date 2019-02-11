@@ -164,7 +164,7 @@ if (!isset($come_from)) {
               <ul class="w_nav_sub r_iocnbox r_login">
                 <li class="w_nav_en_font_sub"><p><?= $_SESSION['user']['nickname'] ?></p></li>
                 <li class="w_nav_en_font_sub"><a href="edit_me.php">帳號設定</a></li>
-                <li class="w_nav_en_font_sub"><a href="history.php">訂單查詢</a></li>
+                <li class="w_nav_en_font_sub"><a href="order_list.php">訂單查詢</a></li>
                 <li class="w_nav_en_font_sub r_btn"><a style="color:white" href="logout.php">登出</a></li>
 
 
@@ -365,7 +365,7 @@ if (!isset($come_from)) {
                 帳號設定
               </button>
               <button type="button" class="btn btn-primary col-md-12 mx-auto pt-3 pb-3 mt-0 mb-3"
-                      onclick="parent.location='history.php'">
+                      onclick="parent.location='order_list.php'">
                 訂單查詢
               </button>
             </div>
@@ -575,6 +575,13 @@ if (!isset($come_from)) {
                      placeholder="請重新輸入預設密碼">
               <div class="col-md-3"></div>
               <small id="password3Help" class="form-text col-md-9 pl-0"></small>
+            </div>
+            <div class="form-group col-md-10 row mx-auto">
+              <label for="mobile" class="col-md-3 label_text">手機<span class="red">*</span></label>
+              <input type="text" class="form-control col-md-9" id="mobile123" name="mobile"
+                     placeholder="請輸入您的手機號碼">
+              <div class="col-md-3"></div>
+              <small id="mobile123Help" class="form-text col-md-9 pl-0"></small>
             </div>
             <!-- 新加的 password confirmation end -->
             <div class="form-group col-md-10 row mx-auto zipcode">
@@ -847,7 +854,7 @@ if (!isset($come_from)) {
 
     // register
 
-    var fields = ['nickname', 'email2', 'password2', 'password3', 'address'];
+    var fields = ['nickname', 'email2', 'password2', 'password3','mobile123', 'address'];
     var i, s;
     var info = $('#re_info');
 
@@ -860,6 +867,7 @@ if (!isset($come_from)) {
 
         var isPass = true;
         var email_pattern = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        var mobile_check= /^09\d{2}-?\d{3}-?\d{3}$/;
 
         if (document.form2.nickname.value.length < 2) {
             setAlert('nickname', '請輸入正確的暱稱');
@@ -874,6 +882,11 @@ if (!isset($come_from)) {
             setAlert('password2', '密碼請輸入六個字以上');
             isPass = false;
         }
+        if  (!mobile_check.test(document.form2.mobile123.value)) {
+            setAlert('mobile123', '請輸入正確的手機格式');
+            isPass = false;
+        }
+
 
         // email confirm check
         if (document.form2.password3.value !== document.form2.password2.value) {

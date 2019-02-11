@@ -18,7 +18,7 @@ if(isset($_POST['nickname']) and isset($_POST['password']) and isset($_SESSION['
     // 密碼編碼, 不要明碼
     $password = sha1(trim($_POST['password']));
 
-    $sql = "UPDATE `members` SET `mobile`=?,`address`=?,`birthday`=?,`nickname`=? WHERE `id`=? AND `password`=?";
+    $sql = "UPDATE `members` SET `mobile`=?,`address`=?,`birthday`=?,`nickname`=?,`city`=?,`area`=?,`postcode`=? WHERE `id`=? AND `password`=?";
 
     $stmt = $pdo->prepare($sql);
 
@@ -27,9 +27,14 @@ if(isset($_POST['nickname']) and isset($_POST['password']) and isset($_SESSION['
         $_POST['address'],
         $_POST['birthday'],
         $_POST['nickname'],
+        $_POST['city'],
+        $_POST['area'],
+        $_POST['postcode'],
         $_SESSION['user']['id'],
         $password
     ]);
+
+
 
     // 影響的列數 (筆數)
     if($stmt->rowCount()==1){
