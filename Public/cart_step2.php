@@ -4,89 +4,93 @@ require __DIR__ . '/__connect_db.php';
 
 $come_from = 'cart_step2.php';
 
-if ($_POST)
-{
-  // If we are a new user, insert into the DB!
+if ($_POST) {
+    // If we are a new user, insert into the DB!
 
-  $userID = $_POST['user_id'];
+    $userID = $_POST['user_id'];
 
-  $inputDeliveryWay  = $_POST['delivery_way'];
-  $inputDeliveryTime = $_POST['delivery_time'];
+    $inputDeliveryWay = $_POST['delivery_way'];
+    $inputDeliveryTime = $_POST['delivery_time'];
 
-  $inputEmail       = $_POST['email'];
-  $inputPassword    = $_POST['password'];
-  $inputPasswordRe  = $_POST['password_repeat'];
-  $inputPhone       = $_POST['phone'];
-  $inputAddress     = $_POST['address'];
-  $inputNickname    = $_POST['nickname'];
+    $inputEmail = $_POST['email'];
+    $inputPassword = $_POST['password'];
+    $inputPasswordRe = $_POST['password_repeat'];
+    $inputPhone = $_POST['phone'];
+    $inputAddress = $_POST['address'];
+    $inputNickname = $_POST['nickname'];
+    $inputCity = $_POST['city'];
+    $inputArea = $_POST['area'];
+    $inputPostcode = $_POST['postcode'];
 
-  if ($userID == '')
-  {
-    // Check if email exists
+    if ($userID == '') {
+        // Check if email exists
 
-    $s_sql = "SELECT 1 FROM `members` WHERE `email`=?";
-    $s_stmt = $pdo->prepare($s_sql);
-    $s_stmt->execute([$inputEmail]);
-    if ($s_stmt->rowCount() >= 1) {
-      echo 'Email already used!';
-      exit;
-    }
+        $s_sql = "SELECT 1 FROM `members` WHERE `email`=?";
+        $s_stmt = $pdo->prepare($s_sql);
+        $s_stmt->execute([$inputEmail]);
+        if ($s_stmt->rowCount() >= 1) {
+            echo 'Email already used!';
+            exit;
+        }
 
-    $hash = sha1($inputEmail . uniqid());
-    // 去掉頭尾空白, 然後轉小寫
-    $email2 = strtolower(trim($inputEmail));
-    // 密碼編碼, 不要明碼
-    $password2 = sha1(trim($inputPassword));
+        $hash = sha1($inputEmail . uniqid());
+        // 去掉頭尾空白, 然後轉小寫
+        $email2 = strtolower(trim($inputEmail));
+        // 密碼編碼, 不要明碼
+        $password2 = sha1(trim($inputPassword));
 
-    $sql = "INSERT INTO `members`(
-        `email`, `password`, `mobile`, `address`,
+        $sql = "INSERT INTO `members`(
+        `email`, `password`, `mobile`, `postcode`, `city`, `area`, `address`,
          `birthday`, `hash`, `nickname`, `create_at`
           ) VALUES (
-          ?, ?, ?, ?,
+          ?, ?, ?, ?, ?, ?, ?,
           ?, ?, ?, NOW()
           )";
 
-  //照上面的?對應POST項目
-    $stmt = $pdo->prepare($sql);
+        //照上面的?對應POST項目
+        $stmt = $pdo->prepare($sql);
 
-    $stmt->execute([
-        $email2,
-        $password2,
-        $inputPhone,
-        $inputAddress,
-        NULL,
-        $hash,
-        $inputNickname
-    ]);
+        $stmt->execute([
+            $email2,
+            $password2,
+            $inputPhone,
+            $inputPostcode,
+            $inputCity,
+            $inputArea,
+            $inputAddress,
+            NULL,
+            $hash,
+            $inputNickname
+        ]);
 
-    $userID = $pdo->lastInsertId();
+        $userID = $pdo->lastInsertId();
 
-    // Login as the new user :)
+        // Login as the new user :)
 
-    $sql = "SELECT `id`, `email`, `mobile`, `address`, `birthday`, `nickname` FROM `members` WHERE `id`=?";
+        $sql = "SELECT `id`, `email`, `mobile`, `address`, `birthday`, `nickname` FROM `members` WHERE `id`=?";
 
-    $stmt = $pdo->prepare($sql);
+        $stmt = $pdo->prepare($sql);
 
-    $stmt->execute([
-        $userID
-    ]);
+        $stmt->execute([
+            $userID
+        ]);
 
-    // 影響的列數 (筆數)
-    if ($stmt->rowCount() == 1) {
-        $_SESSION['user'] = $stmt->fetch(PDO::FETCH_ASSOC);
+        // 影響的列數 (筆數)
+        if ($stmt->rowCount() == 1) {
+            $_SESSION['user'] = $stmt->fetch(PDO::FETCH_ASSOC);
+        }
     }
-  }
 
-  $_SESSION['order'] = array();
-  $_SESSION['order']['member_id']     = $userID;
-  $_SESSION['order']['delivery_way']  = $inputDeliveryWay;
-  $_SESSION['order']['delivery_time'] = $inputDeliveryTime;
-  $_SESSION['order']['name']          = $inputNickname;
-  $_SESSION['order']['address']       = $inputAddress;
-  $_SESSION['order']['phone']         = $inputPhone;
+    $_SESSION['order'] = array();
+    $_SESSION['order']['member_id'] = $userID;
+    $_SESSION['order']['delivery_way'] = $inputDeliveryWay;
+    $_SESSION['order']['delivery_time'] = $inputDeliveryTime;
+    $_SESSION['order']['name'] = $inputNickname;
+    $_SESSION['order']['address'] = $inputAddress;
+    $_SESSION['order']['phone'] = $inputPhone;
 
-  header('Location: cart_step3.php');
-  exit();
+    header('Location: cart_step3.php');
+    exit();
 }
 
 ?>
@@ -100,125 +104,128 @@ $_SESSION['products'] = $_POST['products'];
 ?>
 
 
-  <head>
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="css/cart_step2.css">
+<head>
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/cart_step2.css">
 
 
-  </head>
+</head>
 
-  <body>
-  <div class="container e_cart">
-    <p class="noto_light">購 物 車</p>
-  </div>
+<body>
+<div class="container e_cart">
+  <p class="noto_light">購 物 車</p>
+</div>
 
-  <div class="process_wrap active_step">
-    <div class="process_main">
-      <div class="e_col_5 ">
-        <div class="process_step_cont">
-          <div class="process_step step-1 en_font ">1</div>
-          <span class="process_label noto_light">購物車清單</span>
-        </div>
+<div class="process_wrap active_step">
+  <div class="process_main">
+    <div class="e_col_5 ">
+      <div class="process_step_cont">
+        <div class="process_step step-1 en_font ">1</div>
+        <span class="process_label noto_light">購物車清單</span>
       </div>
-      <div class="e_col_5 ">
-        <div class="process_step_cont">
-          <div class="process_step step-2 en_font">2</div>
-          <span class="process_label noto_light">取貨方式</span>
-        </div>
+    </div>
+    <div class="e_col_5 ">
+      <div class="process_step_cont">
+        <div class="process_step step-2 en_font">2</div>
+        <span class="process_label noto_light">取貨方式</span>
       </div>
-      <div class="e_col_5">
-        <div class="process_step_cont">
-          <div class="process_step step-3 en_font">3</div>
-          <span class="process_label noto_light">付款方式</span>
-        </div>
+    </div>
+    <div class="e_col_5">
+      <div class="process_step_cont">
+        <div class="process_step step-3 en_font">3</div>
+        <span class="process_label noto_light">付款方式</span>
       </div>
-      <div class="e_col_5">
-        <div class="process_step_cont">
-          <div class="process_step step-4 en_font">4</div>
-          <span class="process_label noto_light">確認購物</span>
-        </div>
+    </div>
+    <div class="e_col_5">
+      <div class="process_step_cont">
+        <div class="process_step step-4 en_font">4</div>
+        <span class="process_label noto_light">確認購物</span>
       </div>
-      <div class="e_col_5">
-        <div class="process_step_cont">
-          <div class="process_step step-5 en_font">5</div>
-          <span class="process_label noto_light">完成</span>
-        </div>
+    </div>
+    <div class="e_col_5">
+      <div class="process_step_cont">
+        <div class="process_step step-5 en_font">5</div>
+        <span class="process_label noto_light">完成</span>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="container">
-    <form method="post" action="cart_step2.php">
-      <div class="e_delivery_method">
-        <p class="noto_light ">選擇取貨方式</p>
-        <hr class="e_cart_hr">
+<div class="container">
+  <form method="post" action="cart_step2.php">
+    <div class="e_delivery_method">
+      <p class="noto_light ">選擇取貨方式</p>
+      <hr class="e_cart_hr">
 
-        <div class="e_custom_select e_col_4 noto_light">
-          <select name="delivery_way">
-            <option value="0">選擇取貨方式</option>
-            <option value="1">7-11取貨付款 &nbsp; &nbsp; &nbsp;NT$ 60</option>
-            <option value="2">7-11純取貨&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 60</option>
-            <option value="3" selected>宅配到府&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 100</option>
-
-          </select>
-        </div>
-
-        <p class="noto_light e_terms"><a href="">閱讀物流條款</a></p>
-      </div>
-
-      <!-- 選擇門市表單 (選擇7-11取貨才顯示) choose 7-11 and pop out below pick store -->
-      <div class="form-inline e_search_postcode_form">
-        <div class="form-group e_select_branches">
-
-          <label for="selectBranches" class="noto_light">選擇門市</label>
-
-          <input type="search" class="e_form_control mx-sm-3 noto_light" maxlength="5" placeholder="請輸入郵遞區號">
-
-
-          <!--      未選門市的alert         -->
-          <small class="noto_light e_select_branches_alert">
-            請選擇門市
-          </small>
-        </div>
-      </div>
-
-      <div class="e_custom_select e_col_4 noto_light e_branches_select">
-        <select>
-          <option value="0">對照郵遞區號顯示城市地區鄰里</option>
-          <option value="1">崇尚門市 （店號：991942）<br>40646 台中市北屯區崇德路二段450號1樓
-          </option>
-          <option value="2">鑫巴黎門市 （店號：136886）<br>40646 台中市北屯區崇德路二段119號1樓</option>
-
+      <div class="e_col_4 noto_light">
+        <select class="zipcode_select">
+          <option selected value="0">選擇取貨方式</option>
+          <option value="1">7-11取貨付款 &nbsp; &nbsp; &nbsp;NT$ 60</option>
+          <option value="2">7-11純取貨&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 60</option>
+          <option value="3">宅配到府&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 100</option>
         </select>
       </div>
+
+      <p class="noto_light e_terms"><a href="">閱讀物流條款</a></p>
+    </div>
+
+    <!-- 選擇門市表單 (選擇7-11取貨才顯示) choose 7-11 and pop out below pick store -->
+    <div class="form-inline e_search_postcode_form">
+      <div class="form-group e_select_branches">
+
+        <label for="selectBranches" class="noto_light">選擇門市</label>
+
+        <input type="search" class="e_form_control mx-sm-3 noto_light" maxlength="5" placeholder="請輸入郵遞區號">
+
+
+        <!--      未選門市的alert         -->
+        <small class="noto_light e_select_branches_alert">
+          請選擇門市
+        </small>
+      </div>
+    </div>
+
+    <div class="e_custom_select e_col_4 noto_light e_branches_select">
+      <select>
+        <option value="0">對照郵遞區號顯示城市地區鄰里</option>
+        <option value="1">崇尚門市 （店號：991942）<br>40646 台中市北屯區崇德路二段450號1樓
+        </option>
+        <option value="2">鑫巴黎門市 （店號：136886）<br>40646 台中市北屯區崇德路二段119號1樓</option>
+
+      </select>
+    </div>
 
       <?php if (!isset($_SESSION['user'])): ?>
 
         <!-- Only show if user is not logged in -->
 
-      <!--    會員配送資訊  delivery info (click checkbox and will bring member info automatically -->
-      <div class="e_member_delivery_info">
+        <!--    會員配送資訊  delivery info (click checkbox and will bring member info automatically -->
+        <div class="e_member_delivery_info">
         <p class="noto_light ">配送資訊</p>
 
         <div class="row mx-auto py-5 pl-5 ">
-            <div class="pr-5">
-              <p class="new_btn">已是會員?</p>
-              <a href="#"><button class="btn btn-info js-login">點我快速登入</button></a>
-            </div>
-            <div>
+          <div class="pr-5">
+            <p class="new_btn">已是會員?</p>
+            <a href="#">
+              <button class="btn btn-info js-login">點我快速登入</button>
+            </a>
+          </div>
+          <div>
             <p class="new_btn">還不是會員？首次購物即可自動註冊成會員</p>
-              <a href="#"><button class="btn btn-info js-first-order">首次購物</button></a>
-            </div>
+            <a href="#">
+              <button class="btn btn-info js-first-order">首次購物</button>
+            </a>
+          </div>
         </div>
 
       <?php else: ?>
 
         <!-- Show checkbox if user is logged in -->
 
-    <!-- below content shows when in login status -->
+        <!-- below content shows when in login status -->
         <!-- same as member info checkbox-->
         <div class="form-check e_same_as_member_info noto_light mt-5">
           <input class="form-check-input js-auto-checkbox" type="checkbox" value="1" id="sameAsMemberInfo">
@@ -233,7 +240,7 @@ $_SESSION['products'] = $_POST['products'];
             <div class="noto_light">
               <div class="form-group form-inline ">
                 <label for="recipient" class="col-3 e_none_display_m">收件人姓名*</label>
-                <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['nickname']; ?>" />
+                <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['nickname']; ?>"/>
                 <input type="text" class="form-control col-4 js-autofill" name="nickname" placeholder="收件人姓名*">
 
                 <!-- alert -->
@@ -250,7 +257,8 @@ $_SESSION['products'] = $_POST['products'];
 
               <div class="form-group form-inline ">
                 <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
-                <input type="text" class="form-control col-4" name="phone" placeholder="手機*">
+                <input type="hidden" class="form-control col-4 js-auto" value="<?php echo $_SESSION['user']['mobile']; ?>"/>
+                <input type="text" class="form-control col-4 js-autofill" name="phone" placeholder="手機*">
 
                 <!-- alert -->
                 <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>
@@ -261,13 +269,14 @@ $_SESSION['products'] = $_POST['products'];
                 <label for="deliverAddress" class="form-group col-3 e_none_display_m">地址*</label>
                 <div class=" form-inline e_col_4_add e_area_select zipcode">
 
-                  <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號" name="postcode">
+                  <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b js-autofill" placeholder="郵遞區號"
+                         name="postcode">
 
-                    <select name="city" class="zipcode_select"></select>
+                  <select name="city" class="zipcode_select"></select>
 
-                    <select name="area" class="zipcode_select"></select>
+                  <select name="area" class="zipcode_select"></select>
 
-                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['address']; ?>" />
+                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['address']; ?>"/>
 
                   <input type="text" class="form-control col-7 js-autofill" name="address" placeholder="地址*">
 
@@ -278,7 +287,7 @@ $_SESSION['products'] = $_POST['products'];
 
                 </div>
               </div>
-          <!-- above content shows when in login status -->
+              <!-- above content shows when in login status -->
               <div class="mb-3 form-group e_time_select">
                 <label for="deliverTime" class="form-group e_col_3 mb-3">配送時段</label>
 
@@ -301,7 +310,7 @@ $_SESSION['products'] = $_POST['products'];
             </div>
           </div>
         </div>
-      </div>
+        </div>
 
       <?php endif; ?>
 
@@ -374,12 +383,13 @@ $_SESSION['products'] = $_POST['products'];
                   <label for="deliverAddress" class="form-group col-3 e_none_display_m">地址*</label>
                   <div class="form-inline e_col_4_add e_area_select zipcode">
 
-                    <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號" name="postcode">
+                    <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號"
+                           name="postcode">
 
 
                     <select name="city" class="zipcode_select"></select>
 
-                    <select name="area" class="zipcode_select" ></select>
+                    <select name="area" class="zipcode_select"></select>
 
 
                     <input type="text" name="address" class="form-control col-7" placeholder="地址*">
@@ -414,137 +424,137 @@ $_SESSION['products'] = $_POST['products'];
 
       <?php endif; ?>
 
-      <input type="hidden" name="user_id" class="js-user-id" value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['id'] : ''; ?>" />
+    <input type="hidden" name="user_id" class="js-user-id"
+           value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['id'] : ''; ?>"/>
 
-      <!--    發票資訊    -->
-      <div class="e_receipt_info container">
-        <p class="noto_light ">發票資訊</p>
-        <hr class="e_cart_hr">
+    <!--    發票資訊    -->
+    <div class="e_receipt_info container">
+      <p class="noto_light ">發票資訊</p>
+      <hr class="e_cart_hr">
 
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption1" value="option1"
-                 checked>
-          <label class="form-check-label noto_light" for="receiptOption1">電子發票</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption2" value="option2">
-          <label class="form-check-label noto_light" for="receiptOption2">紙本發票</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption3" value="option3">
-          <label class="form-check-label noto_light" for="receiptOption3">捐贈發票</label>
-        </div>
-
-        <div class="e_receipt_info_text noto_light">
-          <p>※發票統一捐贈單位為伊甸社會福利基金會</p>
-          <p>※依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票</p>
-          <p>核准文號：北區國稅北縣三字第1000002660號，電子發票說明</p>
-        </div>
-        <div class="form-check e_agree_terms">
-          <input class="form-check-input e_agree_terms_checkbox" type="checkbox" value="" id="agreeTerms">
-          <label class="form-check-label noto_light e_agree_terms_text d-flex" for="agreeTerms">
-            我同意接<a href="service_privacy.php">Pastania服務條款</a>和<a href="service_privacy.php">隱私權政策</a>
-          </label>
-
-        </div>
-
-        <!--      未勾選同意的alert         -->
-        <small class="noto_light e_agree_terms_alert">
-          請閱讀並勾選同意服務條款及隱私權政策
-        </small>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption1" value="option1"
+               checked>
+        <label class="form-check-label noto_light" for="receiptOption1">電子發票</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption2" value="option2">
+        <label class="form-check-label noto_light" for="receiptOption2">紙本發票</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption3" value="option3">
+        <label class="form-check-label noto_light" for="receiptOption3">捐贈發票</label>
       </div>
 
-      <!--  btn  -->
-      <div class="e_cart_btn container">
-        <a href="cart.php" class="e_btn_outline noto_light">上 一 步</a>
-        <button class="e_btn noto_light js-submit" type="submit">下 一 步</button>
+      <div class="e_receipt_info_text noto_light">
+        <p>※發票統一捐贈單位為伊甸社會福利基金會</p>
+        <p>※依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票</p>
+        <p>核准文號：北區國稅北縣三字第1000002660號，電子發票說明</p>
       </div>
-    </form>
-  </div>
+      <div class="form-check e_agree_terms">
+        <input class="form-check-input e_agree_terms_checkbox" type="checkbox" value="" id="agreeTerms">
+        <label class="form-check-label noto_light e_agree_terms_text d-flex" for="agreeTerms">
+          我同意接<a href="service_privacy.php">Pastania服務條款</a>和<a href="service_privacy.php">隱私權政策</a>
+        </label>
+
+      </div>
+
+      <!--      未勾選同意的alert         -->
+      <small class="noto_light e_agree_terms_alert">
+        請閱讀並勾選同意服務條款及隱私權政策
+      </small>
+    </div>
+
+    <!--  btn  -->
+    <div class="e_cart_btn container">
+      <a href="cart.php" class="e_btn_outline noto_light">上 一 步</a>
+      <button class="e_btn noto_light js-submit" type="submit">下 一 步</button>
+    </div>
+  </form>
+</div>
 
 
-  <script>
+<script>
 
 
-  $(document).ready(function() {
+    $(document).ready(function () {
 
-    $('.js-submit').prop('disabled', true);
-    $('.js-submit').css('opacity', 0.25);
-
-    $('.e_agree_terms_checkbox').on('change', function() {
-      if ($(this).prop('checked')) {
-        $('.js-submit').prop('disabled', false);
-        $('.js-submit').css('opacity', 1);
-      } else {
         $('.js-submit').prop('disabled', true);
         $('.js-submit').css('opacity', 0.25);
-      }
+
+        $('.e_agree_terms_checkbox').on('change', function () {
+            if ($(this).prop('checked')) {
+                $('.js-submit').prop('disabled', false);
+                $('.js-submit').css('opacity', 1);
+            } else {
+                $('.js-submit').prop('disabled', true);
+                $('.js-submit').css('opacity', 0.25);
+            }
+        });
+
+        $('.js-login').on('click', function (e) {
+            e.preventDefault();
+
+            $('.bd-example-modal-lg').modal('show');
+
+            return false;
+        });
+
+        $('.e_first_order_delivery_info').hide();
+
+        if ($('.js-user-id').val() == '') {
+            $('.e_receipt_info').hide();
+        }
+
+        $('.js-first-order').on('click', function (e) {
+            e.preventDefault();
+
+            $('.e_first_order_delivery_info').slideDown('fast');
+            $('.e_receipt_info').slideDown('fast');
+
+            return false;
+        });
+
+        $('.js-auto-checkbox').on('change', function () {
+            if ($(this).prop('checked')) {
+                $('.js-auto').each(function () {
+                    var value = $(this).val();
+                    // Get the next input
+                    $(this).next('.js-autofill').val(value);
+                });
+            } else {
+                $('.js-autofill').val('');
+            }
+        });
     });
 
-    $('.js-login').on('click', function(e) {
-      e.preventDefault();
 
-      $('.bd-example-modal-lg').modal('show');
-
-      return false;
-    });
-
-    $('.e_first_order_delivery_info').hide();
-
-    if ($('.js-user-id').val() == '') {
-      $('.e_receipt_info').hide();
+    function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+         except the current select box:*/
+        var x, y, i, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        for (i = 0; i < y.length; i++) {
+            if (elmnt == y[i]) {
+                arrNo.push(i)
+            } else {
+                y[i].classList.remove("select-arrow-active");
+            }
+        }
+        for (i = 0; i < x.length; i++) {
+            if (arrNo.indexOf(i)) {
+                x[i].classList.add("select-hide");
+            }
+        }
     }
 
-    $('.js-first-order').on('click', function(e) {
-      e.preventDefault();
-
-      $('.e_first_order_delivery_info').slideDown('fast');
-      $('.e_receipt_info').slideDown('fast');
-
-      return false;
-    });
-
-    $('.js-auto-checkbox').on('change', function() {
-      if ($(this).prop('checked')) {
-        $('.js-auto').each(function() {
-          var value = $(this).val();
-          // Get the next input
-          $(this).next('.js-autofill').val(value);
-        });
-      } else {
-        $('.js-autofill').val('');
-      }
-    });
-  });
+    /*if the user clicks anywhere outside the select box,
+     then close all select boxes:*/
+    // document.addEventListener("click", closeAllSelect);
+</script>
 
 
-
-      function closeAllSelect(elmnt) {
-          /*a function that will close all select boxes in the document,
-           except the current select box:*/
-          var x, y, i, arrNo = [];
-          x = document.getElementsByClassName("select-items");
-          y = document.getElementsByClassName("select-selected");
-          for (i = 0; i < y.length; i++) {
-              if (elmnt == y[i]) {
-                  arrNo.push(i)
-              } else {
-                  y[i].classList.remove("select-arrow-active");
-              }
-          }
-          for (i = 0; i < x.length; i++) {
-              if (arrNo.indexOf(i)) {
-                  x[i].classList.add("select-hide");
-              }
-          }
-      }
-
-      /*if the user clicks anywhere outside the select box,
-       then close all select boxes:*/
-      // document.addEventListener("click", closeAllSelect);
-  </script>
-
-
-  </body>
+</body>
 
 <?php include __DIR__ . '/__html_foot.php' ?>

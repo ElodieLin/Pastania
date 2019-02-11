@@ -43,23 +43,23 @@ if (!isset($_SESSION['user'])) {
             <h5 class="card-title text-center pb-3">編輯個人資料</h5>
             <div class="card-text">
 
-              <form name="form1" method="post" onsubmit="return formCheck()">
+              <form name="form3" method="post" onsubmit="return formCheck()">
                 <div class="form-group row mx-auto">
                   <label for="email" class="col-md-3 label_text">電子郵箱</label>
-                  <input type="text" class="form-control col-md-9" id="email" name="email" disabled
+                  <input type="text" class="form-control col-md-9" id="email3" name="email" disabled
                          value="<?= $_SESSION['user']['email'] ?>">
-                  <small id="emailHelp" class="form-text"></small>
+                  <small id="email3Help" class="form-text"></small>
                 </div>
                 <div class="form-group row mx-auto">
                   <label for="password" class="col-md-3 label_text">輸入密碼用以變更資料<span class="red">*</span></label>
-                  <input type="text" class="form-control col-md-9" id="password" name="password">
-                  <small id="passwordHelp" class="form-text"></small>
+                  <input type="text" class="form-control col-md-9" id="password4" name="password">
+                  <small id="password4Help" class="form-text"></small>
                 </div>
                 <div class="form-group row mx-auto">
                   <label for="nickname" class="col-md-3 label_text">暱稱<span class="red">*</span></label>
-                  <input type="text" class="form-control col-md-9" id="nickname" name="nickname"
+                  <input type="text" class="form-control col-md-9" id="nickname2" name="nickname"
                          value="<?= $_SESSION['user']['nickname'] ?>">
-                  <small id="nicknameHelp" class="form-text"></small>
+                  <small id="nickname2Help" class="form-text"></small>
                 </div>
 
                 <div class="form-group row mx-auto">
@@ -92,7 +92,7 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="form-group row mx-auto">
                   <div class="col-lg-3 "></div>
-                  <input type="text" class="form-control col-lg-9" id="address" name="address"
+                  <input type="text" class="form-control col-lg-9" id="address2" name="address"
                          value="<?= $_SESSION['user']['address'] ?>">
                 </div>
 
@@ -115,15 +115,13 @@ if (!isset($_SESSION['user'])) {
 
 
 
-      var fields = ['nickname', 'password'];
+      var fields = ['nickname2', 'password4'];
       var i, s;
       var info = $('#info');
 
 
 
       function formCheck() {
-
-
 
 
           info.hide();
@@ -135,21 +133,21 @@ if (!isset($_SESSION['user'])) {
           var isPass = true;
 
 
-          if (document.form1.nickname.value.length < 2) {
-              setAlert('nickname', '請輸入正確的暱稱');
+          if (document.form3.nickname.value.length < 2) {
+              setAlert('nickname2', '請輸入正確的暱稱');
               isPass = false;
           }
 
 
 
-          if (document.form1.password.value.length < 6) {
-              setAlert('password', '密碼請輸入六個字以上');
+          if (document.form3.password.value.length < 6) {
+              setAlert('password4', '密碼請輸入六個字以上');
               isPass = false;
           }
           if (isPass) {
 
 
-              $.post('edit_me_api.php', $(document.form1).serialize(), function (data) {
+              $.post('edit_me_api.php', $(document.form3).serialize(), function (data) {
                   var alertType = 'alert-danger';
 
                   info.removeClass('alert-danger');
