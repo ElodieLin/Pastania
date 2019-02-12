@@ -25,7 +25,7 @@ $r_sql = sprintf("")
         <h5 class="card-title text-center r_noto_regular_p pb-2"><?= $row['Recipe_name_Ch'] ?></h5>
         <h6 class="card-title text-justify r_noto_light_p pb-2"><?= $row['Description'] ?></h6>
 
-        <a href="recipe_detail.php?id=<?= $row['Recipe_no'] ?>&recipe=<?= $row['Recipe_no'] ?>">
+        <a class="col-md-12" href="recipe_detail.php?id=<?= $row['Recipe_no'] ?>&recipe=<?= $row['Recipe_no'] ?>">
         <button type="button" class="btn r_btn col-md-12 mx-auto r_noto_regular_p pt-3 pb-3 mt-0">
         前往食譜頁
         </button>

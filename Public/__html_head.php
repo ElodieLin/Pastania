@@ -64,6 +64,15 @@
   <meta name="theme-color" content="#ffffff">
 
 
+  <style>
+    @media screen  and (max-width: 700px){
+      .pre_wrap{
+        display: none;
+      }
+    }
+  </style>
+
+
 </head>
 <body>
 <div class="pre_wrap">

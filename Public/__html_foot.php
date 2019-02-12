@@ -217,7 +217,6 @@
 
     .footer_wrapper {
       flex-direction: column;
-      max-width: 90%;
     }
 
     .SNSicon_wrapper {
@@ -395,13 +394,13 @@
 
         <ul>
           <li class="section_title">
-            <a class="e_dropdown noto_regular" href="service_privacy.php">服務<i class="fas fa-angle-right e_arrow_icon transition"></i></a>
+            <a class="e_dropdown noto_regular">服務<i class="fas fa-angle-right e_arrow_icon transition"></i></a>
 
             <ul class="sub_footer">
-              <li class="noto_thin  none_display_w"><a href="">購買流程</a></li>
-              <li class="noto_thin  none_display_w"><a href="">配送流程</a></li>
-              <li class="noto_thin  none_display_w"><a href="">退換貨服務</a></li>
-              <li class="noto_thin  none_display_w"><a href="">Q&A</a></li>
+              <li class="noto_thin  none_display_w"><a href="service_privacy.php">購買流程</a></li>
+              <li class="noto_thin  none_display_w"><a href="service_privacy.php">配送流程</a></li>
+              <li class="noto_thin  none_display_w"><a href="service_privacy.php">退換貨服務</a></li>
+              <li class="noto_thin  none_display_w"><a href="service_privacy.php">Q&A</a></li>
             </ul>
 
           </li>
