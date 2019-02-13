@@ -136,19 +136,19 @@ if (!isset($_SESSION)) {
 
         <!--pastaMap_phone-->
         <div class="r_map_warp_p">
-          <a class="r_north area-modal" data-area="north">
+          <a class="r_north area-modal r_map_warp_loc" data-area="north">
             <img src="img/icon/map_marker_y.svg" alt="">
             <p class="r_en_font">NORTH</p>
           </a>
-          <a class="r_east area-modal" data-area="east">
+          <a class="r_east area-modal r_map_warp_loc" data-area="east">
             <img src="img/icon/map_marker_y.svg" alt="">
             <p class="r_en_font">EAST</p>
           </a>
-          <a class="r_west area-modal" data-area="west">
+          <a class="r_west area-modal r_map_warp_loc" data-area="west">
             <img src="img/icon/map_marker_y.svg" alt="">
             <p class="r_en_font">WEST</p>
           </a>
-          <a class="r_south area-modal" data-area="south">
+          <a class="r_south area-modal r_map_warp_loc" data-area="south">
             <img src="img/icon/map_marker_y.svg" alt="">
             <p class="r_en_font">SOUTH</p>
           </a>

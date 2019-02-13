@@ -128,11 +128,17 @@ if (!isset($_SESSION)) {
       /* -----------以上是模組------------- */
 
 
+      .r_text_j{
+        text-align: justify;
+      }
+
+
       /* ----------以下為cover大圖設定---------- */
       .e_cover {
+        margin-top: -3px;
         width: 100vw;
         height: 30vh;
-        background: url(img/pages/about/aboutus_cover.jpg) center 250px;
+        background: url(img/pages/about/aboutus_cover.jpg) center 450px;
         background-size: cover;
         background-attachment: fixed;
 
@@ -225,6 +231,8 @@ if (!isset($_SESSION)) {
         margin: 0 auto;
         /* background: #ccc; */
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
       }
 
       .e_consultant img {
@@ -452,7 +460,7 @@ if (!isset($_SESSION)) {
         }
 
         .e_seciton2_text h2 {
-          line-height: 35px;
+          line-height: 40px;
         }
 
         .e_seciton2_text {
@@ -597,13 +605,13 @@ if (!isset($_SESSION)) {
   <body>
 
   <header>
-    <div class=" e_cover"></div>
+    <div class="e_cover"></div>
   </header>
 
   <div class="container">
     <div class="e_title">
       <p class="noto_regular  e_title_line">關於我們</p>
-      <p class="en_font">About US</p>
+      <p class="en_font pt-3">About US</p>
     </div>
 
     <div class="e_aboutus_seciton1">
@@ -612,7 +620,7 @@ if (!isset($_SESSION)) {
       </div>
       <div class="e_section1_text">
         <h2 class="noto_regular">與麵共生，以食為趣</h2>
-        <p class="noto_light">一群熱愛義大利麵的我們在2018年創立了Pastnia，致力
+        <p class="noto_light r_text_j">一群熱愛義大利麵的我們在2018年創立了Pastnia，致力
           給熱愛生活、迷戀義國風情的你，提供多樣性麵種以及經
           典義式醬料，讓你在吃麵時，瞬間就跳脫日常，感受義式
           生活美學，這裡的美好不只在美食，更瀰漫在生活的每一
@@ -632,14 +640,13 @@ if (!isset($_SESSION)) {
           Pastania漫步於歷史<br>
           傳統與創意的纏綿交織
         </h2>
-        <p class="noto_light">
+        <p class="noto_light r_text_j">
           Pastania提供多元化的義大利麵種，來到這才發現各種形
           體的義大利麵，背後都有屬於自己的故事，才知道嚐的不
-          只是一道美味佳餚，更是探索一段段歷史。<br>
+          只是一道美味佳餚，更是探索一段段歷史。
           Pastania延續傳統家鄉風味，使用純義大利生產的100%
           杜蘭麵粉以及使用百年手工造麵技術，持續創作與挖掘義
-          大利麵菜餚，在傳統中找到新巧思，分秒感受極致講究的
-          細膩。
+          大利麵菜餚，在傳統中找到新巧思，分秒感受極致講究的細膩。
         </p>
       </div>
       <div class="e_aboutus_seciton2_img">
@@ -659,7 +666,7 @@ if (!isset($_SESSION)) {
 
       <div class="e_consultant_intro">
         <h2 class="noto_regular e_consultant_title">義國顧問</h2>
-        <h2 class="en_font e_consultant_title">Daniel Daffara</h2>
+        <h2 class="en_font e_consultant_title py-2">Daniel Daffara</h2>
         <p class="noto_light e_consultant_text">
           知名美食部落客兼 Pastina 特別顧問<br>
           Thanks for his participation.
@@ -684,9 +691,9 @@ if (!isset($_SESSION)) {
 
       <div class="e_member_left_intro">
         <h2 class="noto_regular e_consultant_title">專案經理</h2>
-        <h2 class="en_font">Elodie Lin</h2>
-        <p class="noto_light ">
-          如何打造出高品質使用者體驗的產品一直以來是團隊共同的目標，在理性的探討之下激發團隊間的腦力激盪，讓設計作品琢至完美境界。
+        <h2 class="en_font py-2">Elodie Lin</h2>
+        <p class="noto_light pb-2">
+          打造出高品質使用者體驗的產品一直以來是團隊共同的目標，在理性的探討之下激發團隊間的腦力激盪，讓設計作品琢至完美境界。
         </p>
       </div>
     </div>
@@ -694,9 +701,9 @@ if (!isset($_SESSION)) {
     <div class="e_member" data-aos="fade-right" data-aos-offset="200" data-aos-duration="400">
       <div class="e_member_right_intro">
         <h2 class="noto_regular e_consultant_title e_align_right">技術總監</h2>
-        <h2 class="en_font e_align_right">Reg Huang</h2>
-        <p class="noto_light e_align_right">
-          面向技術，往往不是只有深度，還需要有足夠的廣度，當面對看似艱澀難懂的複雜問題時，或許只要轉個彎， 就會豁然開朗得找到出口。
+        <h2 class="en_font e_align_right py-2">Reg Huang</h2>
+        <p class="noto_light e_align_right pb-2">
+          面向技術，不是只有深度，還需要有足夠的廣度，當面對看似艱澀難懂的複雜問題時，或許只要轉個彎， 就會豁然開朗得找到出口。
         </p>
       </div>
 
@@ -722,8 +729,8 @@ if (!isset($_SESSION)) {
 
       <div class="e_member_left_intro">
         <h2 class="noto_regular e_consultant_title">設計總監</h2>
-        <h2 class="en_font">Joanna Chen</h2>
-        <p class="noto_light ">
+        <h2 class="en_font py-2">Joanna Chen</h2>
+        <p class="noto_light pb-2">
           創意，源自於瞬間的感動，真心的投入就會非常有感覺，用心聆聽客戶的需求，從中捕捉最真實的”感動”。
         </p>
       </div>
@@ -732,8 +739,8 @@ if (!isset($_SESSION)) {
     <div class="e_member" data-aos="fade-right" data-aos-offset="200" data-aos-duration="400">
       <div class="e_member_right_intro">
         <h2 class="noto_regular e_consultant_title e_align_right">創意總監</h2>
-        <h2 class="en_font e_align_right">Enya Shih</h2>
-        <p class="noto_light e_align_right">
+        <h2 class="en_font e_align_right py-2">Enya Shih</h2>
+        <p class="noto_light e_align_right pb-2">
           運用多元符號，來塑造設計的獨特性，重新詮釋各類型的文化題材與元素得已突破單一手法的市場慣性設計。
         </p>
       </div>
@@ -762,9 +769,9 @@ if (!isset($_SESSION)) {
 
       <div class="e_member_left_intro">
         <h2 class="noto_regular e_consultant_title">行銷設計總監</h2>
-        <h2 class="en_font">Tim Chen</h2>
-        <p class="noto_light ">
-          設計提供的除了是美學之外還應該提供人性化功能，只要能夠多投入一點心靈上的巧思，設計便得以更深入人心， 才能值得稱為佳作。
+        <h2 class="en_font py-2">Tim Chen</h2>
+        <p class="noto_light pb-2">
+          設計提供的除了是美學之外還應該提供人性化功能，只要能夠多投入一點巧思，設計便得以更深入人心， 才能值得稱為佳作。
         </p>
       </div>
     </div>
@@ -783,11 +790,7 @@ if (!isset($_SESSION)) {
         <img src="img/pages/about/aboutus_img5.png" alt="">
       </div>
       <p class="noto_light e_pasta_journey_text">
-        不論是選擇新鮮香料搭配而成的鰹魚細麵沙拉，揭開義國美食的
-        序幕，抑或是大快朵頤享用經典拿波里紅醬麵，感受南方盛情之
-        味，在Pastania都能尋找到各式道地義大利麵菜餚與食譜，吸引
-        每一位熱愛生活、迷戀義國風情的你，為忙碌的生活添加樂趣與
-        活力。
+        不論是選擇以新鮮香料搭配而成的鰹魚細麵沙拉，來揭開義國美食的序幕，抑或是想大快朵頤地享用經典拿波里紅醬麵，感受南方盛情之味，在Pastania都能尋找到各式道地義大利麵菜餚與食譜，吸引每一位熱愛生活、迷戀義國風情的你，為忙碌的生活添加樂趣與活力。
       </p>
       <div class="e_pasta_journey_btn">
         <a href="pasta_map.php">

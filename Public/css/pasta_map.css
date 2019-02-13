@@ -1,12 +1,12 @@
- /* 以下是英文字型，是標題大小，其他如果要改字級大小(參考ＸＤ檔)再去要改的class設定 (只有食譜細節頁的標題會改粗體可以直接在html裡加粗體的標籤)*/
- .en_font {
+/* 以下是英文字型，是標題大小，其他如果要改字級大小(參考ＸＤ檔)再去要改的class設定 (只有食譜細節頁的標題會改粗體可以直接在html裡加粗體的標籤)*/
+.en_font {
     font-family: 'Lao MN', 'Arya';
     font-size: 2rem;
     color: #5C7880;
-  }
+}
 
-  /* 以下是中文字型＿light，內文用，其他如果要改字級大小(參考ＸＤ檔)再去要改的class設定 */
-  .noto_light {
+/* 以下是中文字型＿light，內文用，其他如果要改字級大小(參考ＸＤ檔)再去要改的class設定 */
+.noto_light {
     font-family: 'Noto Sans TC';
     font-weight: 300;
     /* 這是次細的(light) */
@@ -14,10 +14,10 @@
     font-size: 1.3rem;
     color: #5C7880;
 
-  }
+}
 
-  /* 以下是中文字型_thin，次要內文用，其他如果要改字級大小(參考ＸＤ檔)再去要改的class設定 */
-  .noto_thin {
+/* 以下是中文字型_thin，次要內文用，其他如果要改字級大小(參考ＸＤ檔)再去要改的class設定 */
+.noto_thin {
     font-family: 'Noto Sans TC';
     font-weight: 100;
     /* 這是最細的(thin) */
@@ -25,23 +25,23 @@
     /* font-size: 1.3rem; */
     /* color: #5C7880; */
 
-  }
+}
 
-  /* 以下是中文字型標題大小 regular，頁面大標題用，如果要改字級大小(參考ＸＤ檔)再去要改的class設定 */
-  .noto_regular {
+/* 以下是中文字型標題大小 regular，頁面大標題用，如果要改字級大小(參考ＸＤ檔)再去要改的class設定 */
+.noto_regular {
     font-family: 'Noto Sans TC';
     letter-spacing: 2px;
     font-size: 2rem;
     color: #5C7880;
-  }
+}
 
-  .cursor {
+.cursor {
     cursor: pointer;
-  }
+}
 
 
-  /* btn 模組 */
-  .e_btn {
+/* btn 模組 */
+.e_btn {
     width: 372px;
     height: 70px;
     border: 0;
@@ -51,19 +51,19 @@
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-  }
+}
 
-  .e_btn:hover {
+.e_btn:hover {
     background-color: #D3554A;
 
-  }
+}
 
-  .e_btn:focus {
+.e_btn:focus {
     outline: none;
-  }
+}
 
 
-  .e_btn_outline {
+.e_btn_outline {
     width: 372px;
     height: 70px;
     background-color: #fff;
@@ -74,383 +74,385 @@
     text-align: center;
     cursor: pointer;
 
-  }
+}
 
-  .e_btn_outline:hover {
+.e_btn_outline:hover {
     background-color: #E67348;
     color: #fff;
-  }
+}
 
-  .e_btn_outline:focus {
+.e_btn_outline:focus {
     outline: none;
-  }
+}
 
-  .e_cart_btn {
+.e_cart_btn {
     margin-top: 50px;
     margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
-  }
+}
 
 
-  @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
 
 
     .e_cart_btn {
-      flex-direction: column;
+        flex-direction: column;
     }
 
     .e_btn {
-      width: 100%;
+        width: 100%;
     }
 
     .e_btn_outline {
-      width: 100%;
-      margin-bottom: 20px;
+        width: 100%;
+        margin-bottom: 20px;
     }
-  }
+}
 
 
-  /* -----------以上是模組------------- */
+/* -----------以上是模組------------- */
 
 
-  /* ----------以下為cover大圖設定---------- */
-  .e_cover {
+/* ----------以下為cover大圖設定---------- */
+.e_cover {
     width: 100vw;
     height: 30vh;
     background: url(../img/pages/others/map_cover.jpg) center 400px;
     background-size: cover;
     background-attachment: fixed;
-    
-  }
 
-  .r_wrapper {
+}
+
+.r_wrapper {
     position: relative;
-  }
+}
 
-  .e_triangle_1 {
+.e_triangle_1 {
     width: 40vw;
     position: absolute;
     right: 0;
     top: 0;
-  }
+}
 
-  .e_triangle_2 {
+.e_triangle_2 {
     width: 40vw;
     position: absolute;
     left: 0;
     bottom: 0;
-  }
+}
 
-  .e_content {
+.e_content {
     position: relative;
-  }
+}
 
-  .e_map_title {
+.e_map_title {
     padding-left: 40px;
     margin-bottom: 20px;
     padding-top: 100px;
     font-size: 2.5rem;
-  }
+}
 
-  .e_box {
+.e_box {
     position: relative;
     width: 100%;
     padding: 30px 40px;
     border: 1px solid #E67348;
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  .e_map_intro {
+.e_map_intro {
     max-width: 50vw;
-  }
+}
 
-  .e_map_intro h2 {
+.e_map_intro h2 {
     margin-bottom: 20px;
     margin-top: 20px;
     font-size: 2.5rem;
 
-  }
+}
 
-  .e_red {
+.e_red {
     color: #D3554A;
-  }
+}
 
-  .e_map_flag {
+.e_map_flag {
     max-width: 300px;
     display: flex;
-  }
+}
 
-  .e_map_flag img {
+.e_map_flag img {
     width: 100%;
     align-content: center;
-  }
+}
 
-  .e_white_gb {
+.e_white_gb {
     max-width: 85px;
     background: #fff;
     position: absolute;
     top: 95%;
     left: 27%;
 
-  }
+}
 
-  .e_white_gb svg {
+.e_white_gb svg {
     width: 100%;
     height: 100%;
     padding: 25px;
     fill: #E67348;
-  }
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
 
     .e_white_gb {
-      top: 97%;
+        top: 97%;
     }
 
-  }
+}
 
-  @media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
 
     .e_cover {
-      height: 160px;
+        height: 160px;
 
     }
 
     .e_map_flag {
-      display: none;
+        display: none;
     }
 
     .e_map_title {
-      font-size: 1.5rem;
-      text-align: center;
-      padding-left: 0;
-      padding-top: 50px;
+        font-size: 1.5rem;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 50px;
 
     }
 
     .e_map_intro {
-      max-width: 100vw;
+        max-width: 100vw;
     }
 
     .e_map_intro h2 {
-      font-size: 1.5rem;
-      text-align: center;
+        font-size: 1.5rem;
+        text-align: center;
 
     }
 
     .e_map_intro p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
 
     .e_white_gb {
-      width: 50px;
-      top: 98%;
+        width: 50px;
+        top: 98%;
     }
 
     .e_white_gb svg {
-      padding: 20%;
+        padding: 20%;
     }
 
-  }
+}
 
-  /* ----------以下為pastamap設定---------- */
+/* ----------以下為pastamap設定---------- */
 
-  h4,h5,h6{
+h4, h5, h6 {
     color: #5C7880;
-  }
+}
 
-  .r_en_font {
+.r_en_font {
     font-family: 'Lao MN', 'Arya';
     font-size: 1.5rem;
     color: #5C7880;
-  }
+}
 
-  .r_en_font_p {
+.r_en_font_p {
     font-family: 'Lao MN', 'Arya';
     color: #5C7880;
-  }
-  .r_noto_regular{
+}
+
+.r_noto_regular {
     font-family: 'Noto Sans TC';
     letter-spacing: 2px;
     font-size: 2rem;
     color: #5C7880;
     font-weight: 300;
-  }
-  .r_noto_regular_p{
+}
+
+.r_noto_regular_p {
     font-family: 'Noto Sans TC';
     letter-spacing: 2px;
     color: #5C7880;
     font-weight: 300;
-  }
+}
 
 
-  .r_noto_light {
+.r_noto_light {
     font-family: 'Noto Sans TC';
     font-weight: 300;
     /* 這是次細的(light) */
     letter-spacing: 2px;
     font-size: 1.5rem;
     color: #5C7880;
-  }
+}
 
-  .r_noto_light_p{
+.r_noto_light_p {
     font-family: 'Noto Sans TC';
     color: #5C7880;
     font-weight: 300;
-  }
+}
 
 
-  .r_map_warp {
+.r_map_warp {
     text-align: center;
     padding-top: 15%;
     position: relative;
-  }
+}
 
-  .r_map_warp svg {
+.r_map_warp svg {
     width: 100%;
     height: 100%;
-  }
+}
 
-  .land {
+.land {
     fill: #ffffff;
     fill-opacity: 1;
     stroke: #5C7880;
     stroke-opacity: 1;
     stroke-width: 1;
-  }
+}
 
 
-  .r_map_warp_p {
+.r_map_warp_p {
     display: none;
-  }
+}
 
-  .land:hover {
+.land:hover {
     fill: #E67348;
-  }
+}
 
-  .modal-body img {
+.modal-body img {
     width: 100%;
-  }
+}
 
-  .r_model_content{
+.r_model_content {
     border: none;
-    background: rgba(246,209,105,.85);
-  }
+    background: rgba(246, 209, 105, .85);
+}
 
-  .r_btn{
+.r_btn {
     background-color: #E67348;
     color: #ffffff;
-  }
-  .r_btn:hover{
-    background-color: #D3554A !important;
-    color:#fff!important;
-  }
+}
 
-  @media screen and (max-width: 700px) {
+.r_btn:hover {
+    background-color: #D3554A !important;
+    color: #fff !important;
+}
+
+@media screen and (max-width: 700px) {
 
 
     .r_map_warp_p {
-      display: block;
+        display: block;
     }
 
-    .r_map_warp a {
-      position: absolute;
-      display: flex;
-      align-items: center;
+    .r_map_warp_loc {
+        position: absolute;
+        display: flex;
+        align-items: center;
     }
 
-
-    .r_map_warp a img {
-      width: 60px;
+    .r_map_warp_loc img {
+        width: 60px;
     }
 
     .r_north {
-      top: 8%;
-      left: 9%;
+        top: 8%;
+        left: 9%;
     }
 
     .r_east {
-      top: 28%;
-      left: 57%;
+        top: 28%;
+        left: 57%;
     }
 
     .r_west {
-      top: 43%;
-      left: 8%;
+        top: 43%;
+        left: 8%;
     }
 
     .r_south {
-      top: 65%;
-      left: 37%;
+        top: 65%;
+        left: 37%;
     }
 
     .r_map_warp_p a p {
-      color: #D3554A;
+        color: #D3554A;
 
     }
 
     .land:hover {
-      pointer-events: none
+        pointer-events: none
     }
 
 
-    .r_map_close{
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      z-index: 99;
+    .r_map_close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 99;
     }
 
-    .item{
-      padding: 1rem;
+    .item {
+        padding: 1rem;
     }
 
     .owl-theme .owl-nav [class*=owl-]:hover {
-      background: none;
+        background: none;
     }
 
-    .owl-prev{
-      position: absolute;
-      left: -10%;
-      top: 16%;
-      height: 32%;
-    }
-    .owl-next{
-      position: absolute;
-      right: -10%;
-      top: 16%;
-      height: 32%;
-    }
-    .owl-prev img, .owl-next img{
-      width: 50px;
+    .owl-prev {
+        position: absolute;
+        left: -10%;
+        top: 180px;
     }
 
-    .owl-prev:focus,.owl-next:focus{
-      outline: none;
+    .owl-next {
+        position: absolute;
+        right: -10%;
+        top: 180px;
     }
 
-  }
+    .owl-prev img, .owl-next img {
+        width: 50px;
+    }
+
+    .owl-prev:focus, .owl-next:focus {
+        outline: none;
+    }
+
+}
 
 
-  /* --- merge footer & navbar ----*/
+/* --- merge footer & navbar ----*/
 
-.container.e_content{
+.container.e_content {
     margin-bottom: -75px;
 }
 
-.modal-body img{
-  width: 100%;
-  object-fit: cover;
-  height: 30vh;
+.modal-body img {
+    width: 100%;
+    object-fit: cover;
+    height: 30vh;
 
 }
 
-.owl-carousel .owl-item img{
-  display: block;
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
 }

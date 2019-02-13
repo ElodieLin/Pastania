@@ -136,7 +136,7 @@
         /* ----------以下叉子標題、叉子、盤子、左右按鈕 slider設定---------- */
         .w_fork_slider_box {
             position: absolute;
-            top: 180px;
+            top: 300px;
             z-index: 4;
         }
 
@@ -523,7 +523,7 @@
 
             .w_fork_slider_box {
                 position: absolute;
-                top: 200px;
+                top: 150px;
                 z-index: 10;
                 
             }
@@ -726,13 +726,6 @@
                 margin-top: -45%;
                 margin-left: 10%;
             }
-
-            /*  */
-            .w_fork_slider_box.owl-carousel.owl-theme.owl-loaded{
-                margin-top: 84px;
-
-            }
-            /*  */
             /* ----------以上為品牌宣言區域設定---------- */
 
         }
