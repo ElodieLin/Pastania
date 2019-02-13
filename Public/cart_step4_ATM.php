@@ -91,9 +91,9 @@ session_start();
     <hr class="e_cart_hr">
 
     <div class="alert e_delivery_info_confirm" role="alert">
-      <p class="noto_light e_info_confirm">姓名： <span>王小小</span></p>
-      <p class="noto_light e_info_confirm">地址：<span>112 台北市北投區有錢路1號1樓錢路1號1樓錢路1號1樓</span></p>
-      <p class="noto_light e_info_confirm">手機：<span>0910－000111</span></p>
+      <p class="noto_light e_info_confirm">姓名：<span><?= $_SESSION['user']['nickname'] ?></span></p>
+      <p class="noto_light e_info_confirm">地址：<span><?= $_SESSION['user']['postcode'] ?><?= $_SESSION['user']['city'] ?><?= $_SESSION['user']['area'] ?><?= $_SESSION['user']['address'] ?></span></p>
+      <p class="noto_light e_info_confirm">手機：<span><?= $_SESSION['user']['mobile'] ?></span></p>
       <p class="noto_light e_info_confirm">配送時間：<span>不指定</span></p>
 
     </div>
