@@ -205,17 +205,7 @@ if (!isset($come_from)) {
           <a href="cart.php"><span class="badge badge_position badge_pill">0</span></a>
 
           <!--以下為購物車內容 navbar cart content-->
-          <ul class="w_nav_sub r_iocnbox r_cart_list">
-            <li class="w_nav_en_font_sub">
-              <div class="js-cart-data">
-                <!-- JSON Feed of cart items -->
-              </div>
-
-              <!-- checkout btn -->
-            <li class="w_nav_en_font_sub r_btn r_cart_y">
-              <a class="w_nav_en_font_sub r_cart_btn" href="cart.php">結帳</a>
-            </li>
-            </li>
+          <ul class="w_nav_sub r_iocnbox r_cart_list js-cart-data">
           </ul>
           <!--以上為購物車內容-->
         </li>

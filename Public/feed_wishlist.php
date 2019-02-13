@@ -55,5 +55,10 @@ $wishlist = isset($_SESSION['wishlist']) ? $_SESSION['wishlist'] : array();
     <?php endwhile; ?>
 
   <?php endforeach; ?>
+<?php else: ?>
+<ul class="r_flex wishlist-item">
+  <li>沒有</li>
+</ul>
+
 
 <?php endif; ?>
