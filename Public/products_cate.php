@@ -6,13 +6,11 @@ if (!isset($_SESSION)) {
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-    <head>
+
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/products_cate.css">
-    </head>
 
 
-    <body>
     <header>
         <div class="w_product_cover"></div>
     </header>
@@ -148,6 +146,6 @@ if (!isset($_SESSION)) {
     <script>
         new WOW().init();
     </script>
-    </body>
+ 
 
 <?php include __DIR__ . '/__html_foot.php' ?>

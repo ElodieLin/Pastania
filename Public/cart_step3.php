@@ -31,17 +31,9 @@ if ($_POST)
 
 ?>
 
-  <head>
-
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/cart_step3.css">
 
-  </head>
 
-  <body>
   <div class="container e_cart">
     <p class="noto_light">購 物 車</p>
   </div>
@@ -136,7 +128,7 @@ if ($_POST)
 
 
   </div>
-  </body>
+
 
 
 <?php include __DIR__ . '/__html_foot.php' ?>

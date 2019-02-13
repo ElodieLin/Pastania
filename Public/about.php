@@ -6,13 +6,10 @@ if (!isset($_SESSION)) {
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-  <head>
+ 
     <title>About Us</title>
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous"> -->
-    <!-- 以下是特效 -->
+
     <link rel="stylesheet" href="css/aos.css">
 
     <style>
@@ -601,9 +598,7 @@ if (!isset($_SESSION)) {
         }
       }
     </style>
-  </head>
-
-  <body>
+  
 
   <header>
     <div class="e_cover"></div>
@@ -815,6 +810,6 @@ if (!isset($_SESSION)) {
   </script>
 
 
-  </body>
+ 
 
 <?php include __DIR__ . '/__html_foot.php' ?>

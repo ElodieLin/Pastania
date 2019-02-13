@@ -5,11 +5,7 @@ if (!isset($_SESSION)) {
 ?>
 <?php include __DIR__. '/__html_head.php' ?>
 <?php include __DIR__. '/__navbar.php' ?>
-<head>
 
-    
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/aos.css">
     <link href="https://fonts.googleapis.com/css?family=Arya|Reem+Kufi" rel="stylesheet">
@@ -19,9 +15,9 @@ if (!isset($_SESSION)) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
     
-</head>
 
-<body>
+
+
     <section>
         <div class="w_index_wrapper_one">
 
@@ -303,6 +299,6 @@ if (!isset($_SESSION)) {
             });
         })
     </script>
-</body>
+
 
 <?php include __DIR__. '/__html_foot.php' ?>

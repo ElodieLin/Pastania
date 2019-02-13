@@ -39,15 +39,11 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-  <head>
+
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/product_giftset_detail.css">
-  </head>
 
 
-  </head>
-
-  <body>
   <div class="w_container">
     <div class="w_product_giftset_detail_wrapper_one">
       <div class="w_product_giftset_detail_bg">
@@ -521,6 +517,6 @@ while ($row_n = $n_stmt->fetch(PDO::FETCH_ASSOC)) {
         })
     </script>
 
-  </body>
+
 
 <?php include __DIR__ . '/__html_foot.php' ?>
