@@ -44,8 +44,12 @@ if(isset($_POST['nickname']) and isset($_POST['password']) and isset($_SESSION['
 
         $_SESSION['user']['mobile'] = $_POST['mobile'];
         $_SESSION['user']['address'] = $_POST['address'];
+        $_SESSION['user']['city'] = $_POST['city'];
+        $_SESSION['user']['area'] = $_POST['area'];
+        $_SESSION['user']['postcode'] = $_POST['postcode'];
         $_SESSION['user']['birthday'] = $_POST['birthday'];
         $_SESSION['user']['nickname'] = $_POST['nickname'];
+
     } else {
         $result['code'] = 410;
         $result['info'] = '資料沒有更新';
