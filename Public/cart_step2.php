@@ -263,9 +263,11 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b js-autofill" placeholder="郵遞區號"
                          name="postcode">
 
-                  <select name="city" class="zipcode_select"></select>
+                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['city']; ?>"/>
+                  <select name="city" class="zipcode_select js-autofill"></select>
 
-                  <select name="area" class="zipcode_select"></select>
+                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['area']; ?>"/>
+                  <select name="area" class="zipcode_select js-autofill"></select>
 
                   <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['address']; ?>"/>
 
@@ -507,9 +509,16 @@ $_SESSION['products'] = $_POST['products'];
         $('.js-auto-checkbox').on('change', function () {
             if ($(this).prop('checked')) {
                 $('.js-auto').each(function () {
-                    var value = $(this).val();
+                    var $this = $(this),
+                        value = $this.val();
                     // Get the next input
-                    $(this).next('.js-autofill').val(value);
+                    if($this.next('.js-autofill').attr('name') == 'area') {
+                        setTimeout(function () {
+                            $this.next('.js-autofill').val(value).change();
+                        }, 10);
+                    } else {
+                        $this.next('.js-autofill').val(value).change();
+                    }
                 });
             } else {
                 $('.js-autofill').val('');
