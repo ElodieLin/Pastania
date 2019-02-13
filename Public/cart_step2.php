@@ -15,7 +15,7 @@ if ($_POST) {
     $inputEmail = $_POST['email'];
     $inputPassword = $_POST['password'];
     $inputPasswordRe = $_POST['password_repeat'];
-    $inputPhone = $_POST['phone'];
+    $inputPhone = $_POST['mobile'];
     $inputAddress = $_POST['address'];
     $inputNickname = $_POST['nickname'];
     $inputCity = $_POST['city'];
@@ -67,7 +67,7 @@ if ($_POST) {
 
         // Login as the new user :)
 
-        $sql = "SELECT `id`, `email`, `mobile`, `address`, `birthday`, `nickname` FROM `members` WHERE `id`=?";
+        $sql = "SELECT `id`, `email`, `mobile`, `postcode`, `city`, `area`, `address`, `birthday`, `nickname` FROM `members` WHERE `id`=?";
 
         $stmt = $pdo->prepare($sql);
 
@@ -85,9 +85,12 @@ if ($_POST) {
     $_SESSION['order']['member_id'] = $userID;
     $_SESSION['order']['delivery_way'] = $inputDeliveryWay;
     $_SESSION['order']['delivery_time'] = $inputDeliveryTime;
-    $_SESSION['order']['name'] = $inputNickname;
+    $_SESSION['order']['nickname'] = $inputNickname;
+    $_SESSION['order']['city'] = $inputCity;
+    $_SESSION['order']['area'] = $inputArea;
+    $_SESSION['order']['postcode'] = $inputPostcode;
     $_SESSION['order']['address'] = $inputAddress;
-    $_SESSION['order']['phone'] = $inputPhone;
+    $_SESSION['order']['mobile'] = $inputPhone;
 
     header('Location: cart_step3.php');
     exit();
@@ -249,7 +252,7 @@ $_SESSION['products'] = $_POST['products'];
                 <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
                 <input type="hidden" class="form-control col-4 js-auto"
                        value="<?php echo $_SESSION['user']['mobile']; ?>"/>
-                <input type="text" class="form-control col-4 js-autofill" name="phone" placeholder="手機*">
+                <input type="text" class="form-control col-4 js-autofill" name="mobile" placeholder="手機*">
 
                 <!-- alert -->
                 <!--                <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
@@ -365,7 +368,7 @@ $_SESSION['products'] = $_POST['products'];
 
                 <div class="form-group form-inline ">
                   <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
-                  <input type="text" name="phone" class="form-control col-4" placeholder="手機*">
+                  <input type="text" name="mobile" class="form-control col-4" placeholder="手機*">
 
                   <!-- alert -->
                   <!--                  <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
