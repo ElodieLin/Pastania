@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-  <head>
+
     <title>與法比歐共饗白色情人節</title>
 
 
@@ -499,9 +499,9 @@ if (!isset($_SESSION)) {
       }
     </style>
 
-  </head>
+  
 
-  <body>
+ 
   <div class="e_fa_bg">
     <div class="e_ill_1">
       <img src="img/pages/event/fa/event_f_t1.png" alt="">
@@ -569,6 +569,6 @@ if (!isset($_SESSION)) {
       </div>
     </div>
   </div>
-  </body>
+
 
 <?php include __DIR__ . '/__html_foot.php' ?>

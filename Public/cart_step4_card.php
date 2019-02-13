@@ -7,15 +7,11 @@ session_start();
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-<head>
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous"> -->
 
     <link rel="stylesheet" href="css/cart_step4_card.css">
 
-</head>
+
 
 <body>
     <div class="container e_cart">
@@ -285,6 +281,5 @@ session_start();
     </script>
 
 
-</body>
 
 <?php include __DIR__ . '/__html_foot.php' ?>

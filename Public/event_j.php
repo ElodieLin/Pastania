@@ -6,7 +6,7 @@ if (!isset($_SESSION)) {
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-  <head>
+ 
     <title>Pastania - 親子同樂玩pasta</title>
     <!-- Required meta tags -->
 
@@ -500,9 +500,7 @@ if (!isset($_SESSION)) {
       }
     </style>
 
-  </head>
 
-  <body>
   <div class="e_ja_bg">
     <div class="e_ill_1">
       <img src="img/pages/event/ja/event_j_t01.png" alt="">
@@ -584,6 +582,6 @@ if (!isset($_SESSION)) {
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  </body>
+ 
 
 <?php include __DIR__ . '/__html_foot.php' ?>

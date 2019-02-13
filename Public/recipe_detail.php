@@ -32,15 +32,15 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
 
 
 ?>
-<head>
+
 
     <link rel="stylesheet" href="css/aos.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/recipe_detail.css">
-</head>
 
-<body>
+
+
 <div class="w_recipes_detail_breadcrumbs_word_big_box">
     <div class="w_recipes_detail_breadcrumbs_word">
         <!-- 以下為麵包屑區域 -->
@@ -190,6 +190,6 @@ while ($row_t = $t_stmt->fetch(PDO::FETCH_ASSOC)) {
         })
 </script>
 
-</body>
+
 
 <?php include __DIR__ . '/__html_foot.php' ?>

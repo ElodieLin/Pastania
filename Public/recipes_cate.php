@@ -6,18 +6,15 @@ if (!isset($_SESSION)) {
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-<head>
+
 
     <link rel="stylesheet" href="css/animate.css">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous"> -->
+
 
     <link rel="stylesheet" href="css/recipes_cate.css">
 
 
-</head>
 
-<body>
 <section>
     <!------------ 以下為title區域 ------------>
     <div class="container-fluid">
@@ -88,5 +85,5 @@ if (!isset($_SESSION)) {
 
 </section>
 </div>
-</body>
+
 <?php include __DIR__ . '/__html_foot.php' ?>

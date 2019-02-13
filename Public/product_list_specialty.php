@@ -56,11 +56,11 @@ $p_stmt = $pdo->query($p_sql);
 
 ?>
 
-    <head>
+ 
         <link rel="stylesheet" href="css/product_list_specialty.css">
-    </head>
+   
 
-    <body>
+ 
     <header>
         <div class="w_product_list_cover"></div>
     </header>
@@ -189,5 +189,5 @@ $p_stmt = $pdo->query($p_sql);
 
 
     </section>
-    </body>
+ 
 <?php include __DIR__ . '/__html_foot.php' ?>

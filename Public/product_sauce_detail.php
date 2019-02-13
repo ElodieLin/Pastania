@@ -19,10 +19,10 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-<head>
+
     <link rel="stylesheet" href="css/aos.css">  
     <link rel="stylesheet" href="css/product_sauce_detail.css">
-</head>
+
 <style>
                 .heart_p {
                 margin-top: -4.5%;
@@ -37,7 +37,7 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
 </style>
 
 
-<body>
+
 <div class="w_container">
     <div class="w_product_sauce_detail_wrapper_one">
         <div class="w_product_sauce_detail_bg">
@@ -520,5 +520,5 @@ while ($row = $p_stmt->fetch(PDO::FETCH_ASSOC)) {
             })
     </script>
 
-</body>
+
 <?php include __DIR__ . '/__html_foot.php' ?>

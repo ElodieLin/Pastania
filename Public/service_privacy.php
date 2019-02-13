@@ -5,11 +5,7 @@ if (!isset($_SESSION)) {
 ?>
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
-  <head>
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous"> -->
     <!-- 以下是英文字型 -->
     <title>服務 政策與規範</title>
     <style>
@@ -510,9 +506,7 @@ if (!isset($_SESSION)) {
       }
     </style>
 
-  </head>
 
-  <body>
   <div class="section e_container">
     <div class="service container">
       <div class="svic">
@@ -817,6 +811,5 @@ if (!isset($_SESSION)) {
     </script>
 
 
-  </body>
 
 <?php include __DIR__ . '/__html_foot.php' ?>

@@ -41,12 +41,12 @@ if (!empty($_SESSION['cart'])) {
 <?php include __DIR__ . '/__html_head.php' ?>
 <?php include __DIR__ . '/__navbar.php' ?>
 
-<head>
+
   <link rel="stylesheet" href="css/cart.css">
 
-</head>
 
-<body>
+
+
 <div class="container e_cart">
   <p class="noto_light">購 物 車</p>
 </div>
@@ -100,6 +100,7 @@ if (!empty($_SESSION['cart'])) {
       <li class="e_icon_w"></li>
     </ul>
   </div>
+
 
   <!-- 插入購物車是空的 empty cart start -->
 
@@ -520,6 +521,6 @@ if (!empty($_SESSION['cart'])) {
 
 </script>
 
-</body>
+
 
 <?php include __DIR__ . '/__html_foot.php' ?>
