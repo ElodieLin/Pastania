@@ -254,6 +254,8 @@
             /* ----------以下為cover大圖設定---------- */
             .w_product_list_cover {
                 height: 160px;
+                background: url(../img/pages/product_list/long_cover.jpg) center 130%;
+                -webkit-background-attachment: fixed;
             }
 
             /* ----------以上為cover大圖設定---------- */

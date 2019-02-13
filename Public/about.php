@@ -558,6 +558,7 @@ if (!isset($_SESSION)) {
 
         .e_cover {
           height: 160px;
+          background-size: auto;
 
         }
       }

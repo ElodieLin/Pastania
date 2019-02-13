@@ -404,10 +404,10 @@
             </ul>
 
           </li>
-          <li class="noto_thin none_display_m"><a href="">購買流程</a></li>
-          <li class="noto_thin none_display_m"><a href="">配送流程</a></li>
-          <li class="noto_thin none_display_m"><a href="">退換貨服務</a></li>
-          <li class="noto_thin none_display_m"><a href="">Q&A</a></li>
+          <li class="noto_thin none_display_m"><a href="service_privacy.php">購買流程</a></li>
+          <li class="noto_thin none_display_m"><a href="service_privacy.php">配送流程</a></li>
+          <li class="noto_thin none_display_m"><a href="service_privacy.php">退換貨服務</a></li>
+          <li class="noto_thin none_display_m"><a href="service_privacy.php">Q&A</a></li>
         </ul>
 
         <ul>

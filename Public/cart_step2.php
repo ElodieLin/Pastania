@@ -114,7 +114,6 @@ $_SESSION['products'] = $_POST['products'];
 
 </head>
 
-<body>
 <div class="container e_cart">
   <p class="noto_light">購 物 車</p>
 </div>
@@ -154,9 +153,8 @@ $_SESSION['products'] = $_POST['products'];
   </div>
 </div>
 
-<div class="container">
   <form method="post" action="cart_step2.php">
-    <div class="e_delivery_method">
+    <div class="e_delivery_method container">
       <p class="noto_light ">選擇取貨方式</p>
       <hr class="e_cart_hr">
 
@@ -182,8 +180,8 @@ $_SESSION['products'] = $_POST['products'];
 
 
         <!--      未選門市的alert         -->
-        <small class="noto_light e_select_branches_alert">
-          請選擇門市
+        <!--        <small class="noto_light e_select_branches_alert">-->
+        請選擇門市
         </small>
       </div>
     </div>
@@ -203,7 +201,7 @@ $_SESSION['products'] = $_POST['products'];
         <!-- Only show if user is not logged in -->
 
         <!--    會員配送資訊  delivery info (click checkbox and will bring member info automatically -->
-        <div class="e_member_delivery_info">
+        <div class="e_member_delivery_info container">
         <p class="noto_light ">配送資訊</p>
 
         <div class="row mx-auto py-5 pl-5 ">
@@ -244,7 +242,7 @@ $_SESSION['products'] = $_POST['products'];
                 <input type="text" class="form-control col-4 js-autofill" name="nickname" placeholder="收件人姓名*">
 
                 <!-- alert -->
-                <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>
+                <!--                <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>-->
               </div>
 
               <div class="form-inline">
@@ -257,11 +255,12 @@ $_SESSION['products'] = $_POST['products'];
 
               <div class="form-group form-inline ">
                 <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
-                <input type="hidden" class="form-control col-4 js-auto" value="<?php echo $_SESSION['user']['mobile']; ?>"/>
+                <input type="hidden" class="form-control col-4 js-auto"
+                       value="<?php echo $_SESSION['user']['mobile']; ?>"/>
                 <input type="text" class="form-control col-4 js-autofill" name="phone" placeholder="手機*">
 
                 <!-- alert -->
-                <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>
+                <!--                <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
               </div>
 
 
@@ -283,7 +282,7 @@ $_SESSION['products'] = $_POST['products'];
                   <button type="submit" class="btn e_save_add">加入常用地址</button>
 
                   <!-- alert -->
-                  <small class="form-text e_order_info_alert col-4">請輸入完整地址</small>
+                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入完整地址</small>-->
 
                 </div>
               </div>
@@ -329,7 +328,7 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="email" name="email" class="form-control col-4" placeholder="會員信箱*">
 
                   <!-- alert -->
-                  <small class="form-text e_order_info_alert col-4">請輸入完整信箱</small>
+                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入完整信箱</small>-->
                 </div>
                 <div class="form-inline">
                   <small class="col-3 e_none_display_m"></small>
@@ -343,7 +342,7 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="password" name="password" class="form-control col-4" placeholder="設定密碼*">
 
                   <!-- alert -->
-                  <small class="form-text e_order_info_alert col-4">請輸入密碼</small>
+                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入密碼</small>-->
                 </div>
 
                 <div class="form-group form-inline ">
@@ -351,7 +350,7 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="password" name="password_repeat" class="form-control col-4" placeholder="密碼確認*">
 
                   <!-- alert -->
-                  <small class="form-text e_order_info_alert col-4">請輸入正確密碼</small>
+                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入正確密碼</small>-->
                 </div>
 
                 <div class="form-group form-inline ">
@@ -359,7 +358,7 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="text" name="nickname" class="form-control col-4" placeholder="收件人姓名*">
 
                   <!-- alert -->
-                  <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>
+                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>-->
                 </div>
 
                 <div class="form-inline">
@@ -375,7 +374,7 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="text" name="phone" class="form-control col-4" placeholder="手機*">
 
                   <!-- alert -->
-                  <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>
+                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
                 </div>
 
 
@@ -395,7 +394,7 @@ $_SESSION['products'] = $_POST['products'];
                     <input type="text" name="address" class="form-control col-7" placeholder="地址*">
 
                     <!-- alert -->
-                    <small class="form-text e_order_info_alert col-4">請輸入地址</small>
+                    <!--                    <small class="form-text e_order_info_alert col-4">請輸入地址</small>-->
                   </div>
                 </div>
 
@@ -472,8 +471,6 @@ $_SESSION['products'] = $_POST['products'];
     </div>
   </form>
 </div>
-
-
 <script>
 
 
@@ -554,7 +551,6 @@ $_SESSION['products'] = $_POST['products'];
     // document.addEventListener("click", closeAllSelect);
 </script>
 
-
-</body>
-
 <?php include __DIR__ . '/__html_foot.php' ?>
+
+

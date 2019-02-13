@@ -1029,11 +1029,20 @@
             }
             .w_product_detail_number {
             /* border: #5C7880 1px solid; */
-                margin-left: 20px;
+                margin-left: 12px;
                 margin-bottom: 10px;
-                padding: 20px 45px;
+                padding: 20px;
             }        
             /* ----------以上為500g (7人份)、數量按鍵盒子設定---------- */
+
+            .input-box{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .w_input_change_style{
+                padding: 15px 20px;
+            }
 
 
 
@@ -1044,7 +1053,7 @@
             .w_product_detail_cart_btn a {
                 text-align: center;
                 width: 100%;
-                padding: 7% 32.5%;
+                padding: 7% 30.5%;
             }
 
             /*---------- 以上為加入購物車橘色大按鈕---------- */

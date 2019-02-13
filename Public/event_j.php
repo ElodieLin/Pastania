@@ -274,6 +274,40 @@ if (!isset($_SESSION)) {
 
       }
 
+      @media screen and (min-width: 1441px) {
+
+        .ja_title{
+          font-size: 2rem;
+        }
+
+        .e_ill_1 {
+          width: 49%;
+          left: 9.5%;
+        }
+
+        .e_title_wrap,
+        .event_text,
+        .event_img {
+          padding-left: 0;
+        }
+
+        .ja_caption {
+          bottom: -11px;
+          right: -23%;        }
+
+        .e_margin {
+          margin: 0 10px;
+        }
+
+        .singup {
+          width: 70%;
+        }
+      }
+
+
+
+
+
       @media screen and (max-width: 1200px) {
         .e_ill_1 {
           width: 59%;
@@ -333,8 +367,8 @@ if (!isset($_SESSION)) {
 
       @media screen and (max-width: 900px) {
         .e_ill_1 {
-          width: 65%;
-          left: -4.5%;
+          width: 100%;
+          left: -8.5%;
         }
       }
 
@@ -343,10 +377,6 @@ if (!isset($_SESSION)) {
           max-width: 540px;
         }
 
-        .e_ill_1 {
-          width: 90%;
-
-        }
 
         .e_ill_2 {
           display: none;
@@ -418,14 +448,9 @@ if (!isset($_SESSION)) {
       @media screen and (max-width: 576px) {
         /* adjust for navbar height */
         .e_ja_bg {
-          margin-top: 105px;
+          margin-top: 65px;
         }
 
-        .e_ill_1 {
-          width: 125%;
-          left: -14.5%;
-          overflow: hidden;
-        }
 
         .e_ill_4 {
           top: 53%;
