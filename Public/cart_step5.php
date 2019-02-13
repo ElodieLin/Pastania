@@ -19,11 +19,11 @@ if ($_POST)
       $stmt->execute([
     $_SESSION['user']['id'],
     $_SESSION['order']['total'],
-    $_SESSION['order']['phone'],
+    $_SESSION['order']['mobile'],
     $_SESSION['order']['delivery_way'],
     $_SESSION['order']['delivery_time'],
     $_SESSION['order']['payment_option'],
-    $_SESSION['order']['name'],
+    $_SESSION['order']['nickname'],
     $trackingNo
   ]);
     } catch (PDOException $e) {

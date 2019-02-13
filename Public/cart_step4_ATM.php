@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 ?>
 
 <?php include __DIR__ . '/__html_head.php' ?>
@@ -85,10 +84,10 @@ session_start();
     <hr class="e_cart_hr">
 
     <div class="alert e_delivery_info_confirm" role="alert">
-      <p class="noto_light e_info_confirm">姓名：<span><?= $_SESSION['user']['nickname'] ?></span></p>
-      <p class="noto_light e_info_confirm">地址：<span><?= $_SESSION['user']['postcode'] ?><?= $_SESSION['user']['city'] ?><?= $_SESSION['user']['area'] ?><?= $_SESSION['user']['address'] ?></span></p>
-      <p class="noto_light e_info_confirm">手機：<span><?= $_SESSION['user']['mobile'] ?></span></p>
-      <p class="noto_light e_info_confirm">配送時間：<span>不指定</span></p>
+      <p class="noto_light e_info_confirm">姓名：<span><?= $_SESSION['order']['nickname'] ?></span></p>
+      <p class="noto_light e_info_confirm">地址：<span><?= $_SESSION['order']['postcode'] ?><?= $_SESSION['order']['city'] ?><?= $_SESSION['order']['area'] ?><?= $_SESSION['order']['address'] ?></span></p>
+      <p class="noto_light e_info_confirm">手機：<span><?= $_SESSION['order']['mobile'] ?></span></p>
+      <p class="noto_light e_info_confirm">配送時間：<span><?= $_SESSION['order']['delivery_time'] ?></span></p>
 
     </div>
     <div class="">

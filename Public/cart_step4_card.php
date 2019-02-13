@@ -96,7 +96,7 @@ session_start();
                             <input type="text" class="form-control e_col_1 e_nm" maxlength="4">
                         </div>
                         <!-- alert -->
-                        <small id="" class="form-text e_order_info_alert col-4">請輸入有效卡號</small>
+<!--                        <small id="" class="form-text e_order_info_alert col-4">請輸入有效卡號</small>-->
                     </div>
 
 
@@ -105,7 +105,7 @@ session_start();
                         <input type="text" class="form-control col-4">
 
                         <!-- alert -->
-                        <small id="" class="form-text e_order_info_alert col-4">請輸入持卡人姓名</small>
+<!--                        <small id="" class="form-text e_order_info_alert col-4">請輸入持卡人姓名</small>-->
                     </div>
 
 
@@ -147,7 +147,7 @@ session_start();
                                 <span class="mx-2">月</span>
                             </div>
                             <!-- alert -->
-                            <small id="" class="form-text e_order_info_alert col-4">請輸入正確有效年月</small>
+<!--                            <small id="" class="form-text e_order_info_alert col-4">請輸入正確有效年月</small>-->
                         </div>
                     </div>
 
@@ -159,7 +159,7 @@ session_start();
                         </div>
 
                         <!-- alert -->
-                        <small id="" class="form-text e_order_info_alert col-4">請輸入正確末三碼</small>
+<!--                        <small id="" class="form-text e_order_info_alert col-4">請輸入正確末三碼</small>-->
                     </div>
                 </form>
 
@@ -185,13 +185,13 @@ session_start();
 
         <div class="alert e_delivery_info_confirm" role="alert">
             <!-- name -->
-            <p class="noto_light e_info_confirm">姓名： <span><?= $_SESSION['user']['nickname'] ?></span> </p>
+            <p class="noto_light e_info_confirm">姓名： <span><?= $_SESSION['order']['nickname'] ?></span> </p>
             <!-- address -->
-            <p class="noto_light e_info_confirm">地址：<span><?= $_SESSION['user']['postcode'] ?><?= $_SESSION['user']['city'] ?><?= $_SESSION['user']['area'] ?><?= $_SESSION['user']['address'] ?></span></p>
+            <p class="noto_light e_info_confirm">地址：<span><?= $_SESSION['order']['postcode'] ?><?= $_SESSION['order']['city'] ?><?= $_SESSION['order']['area'] ?><?= $_SESSION['order']['address'] ?></span></p>
             <!-- mobile -->
-            <p class="noto_light e_info_confirm">手機：<span><?= $_SESSION['user']['mobile'] ?></span></p>
+            <p class="noto_light e_info_confirm">手機：<span><?= $_SESSION['order']['mobile'] ?></span></p>
             <!-- delivery time -->
-            <p class="noto_light e_info_confirm">配送時間：<span>不指定</span></p>
+            <p class="noto_light e_info_confirm">配送時間：<span><?= $_SESSION['order']['delivery_time'] ?></span></p>
         </div>
 
 

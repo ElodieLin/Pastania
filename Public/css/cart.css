@@ -294,14 +294,6 @@
 
         }
 
-
-        /*  -------------以下是購物車是空的--------------- */
-        /* 空的時候是display: none; */
-        .e_no_items {
-            display: none;
-        }
-
-        /* 空的時候是display: none; */
         .e_empty_cart {
             text-align: center;
             font-size: 1.6rem;

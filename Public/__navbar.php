@@ -770,14 +770,12 @@ if (!isset($come_from)) {
                 cityOptions = '',
                 areaOptions = '';
 
-            console.log(city)
-            console.log(area)
-            console.log(postcode)
             cityOptions = Object.keys(zipcodes).map(function (obj) {
                 return '<option>' + obj + '</option>'
             }).join('');
 
             city.html('<option value="">選擇縣市</option>' + cityOptions);
+            area.html('<option value="">選擇地區</option>');
 
             city.on('change', function () {
                 var _cityVal = $(this).val();

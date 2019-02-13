@@ -15,7 +15,7 @@ if ($_POST) {
     $inputEmail = $_POST['email'];
     $inputPassword = $_POST['password'];
     $inputPasswordRe = $_POST['password_repeat'];
-    $inputPhone = $_POST['phone'];
+    $inputPhone = $_POST['mobile'];
     $inputAddress = $_POST['address'];
     $inputNickname = $_POST['nickname'];
     $inputCity = $_POST['city'];
@@ -67,7 +67,7 @@ if ($_POST) {
 
         // Login as the new user :)
 
-        $sql = "SELECT `id`, `email`, `mobile`, `address`, `birthday`, `nickname` FROM `members` WHERE `id`=?";
+        $sql = "SELECT `id`, `email`, `mobile`, `postcode`, `city`, `area`, `address`, `birthday`, `nickname` FROM `members` WHERE `id`=?";
 
         $stmt = $pdo->prepare($sql);
 
@@ -85,9 +85,12 @@ if ($_POST) {
     $_SESSION['order']['member_id'] = $userID;
     $_SESSION['order']['delivery_way'] = $inputDeliveryWay;
     $_SESSION['order']['delivery_time'] = $inputDeliveryTime;
-    $_SESSION['order']['name'] = $inputNickname;
+    $_SESSION['order']['nickname'] = $inputNickname;
+    $_SESSION['order']['city'] = $inputCity;
+    $_SESSION['order']['area'] = $inputArea;
+    $_SESSION['order']['postcode'] = $inputPostcode;
     $_SESSION['order']['address'] = $inputAddress;
-    $_SESSION['order']['phone'] = $inputPhone;
+    $_SESSION['order']['mobile'] = $inputPhone;
 
     header('Location: cart_step3.php');
     exit();
@@ -151,11 +154,11 @@ $_SESSION['products'] = $_POST['products'];
       <hr class="e_cart_hr">
 
       <div class="e_col_4 noto_light">
-        <select class="zipcode_select">
+        <select class="zipcode_select" name="delivery_way">
           <option selected value="0">選擇取貨方式</option>
-          <option value="1">7-11取貨付款 &nbsp; &nbsp; &nbsp;NT$ 60</option>
-          <option value="2">7-11純取貨&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 60</option>
-          <option value="3">宅配到府&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 100</option>
+          <option value="1" >7-11取貨付款 &nbsp; &nbsp; &nbsp;NT$ 60</option>
+          <option value="2" >7-11純取貨&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 60</option>
+          <option value="3" >宅配到府&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 100</option>
         </select>
       </div>
 
@@ -249,7 +252,7 @@ $_SESSION['products'] = $_POST['products'];
                 <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
                 <input type="hidden" class="form-control col-4 js-auto"
                        value="<?php echo $_SESSION['user']['mobile']; ?>"/>
-                <input type="text" class="form-control col-4 js-autofill" name="phone" placeholder="手機*">
+                <input type="text" class="form-control col-4 js-autofill" name="mobile" placeholder="手機*">
 
                 <!-- alert -->
                 <!--                <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
@@ -263,9 +266,11 @@ $_SESSION['products'] = $_POST['products'];
                   <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b js-autofill" placeholder="郵遞區號"
                          name="postcode">
 
-                  <select name="city" class="zipcode_select"></select>
+                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['city']; ?>"/>
+                  <select name="city" class="zipcode_select js-autofill"></select>
 
-                  <select name="area" class="zipcode_select"></select>
+                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['area']; ?>"/>
+                  <select name="area" class="zipcode_select js-autofill"></select>
 
                   <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['address']; ?>"/>
 
@@ -363,7 +368,7 @@ $_SESSION['products'] = $_POST['products'];
 
                 <div class="form-group form-inline ">
                   <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
-                  <input type="text" name="phone" class="form-control col-4" placeholder="手機*">
+                  <input type="text" name="mobile" class="form-control col-4" placeholder="手機*">
 
                   <!-- alert -->
                   <!--                  <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
@@ -507,9 +512,16 @@ $_SESSION['products'] = $_POST['products'];
         $('.js-auto-checkbox').on('change', function () {
             if ($(this).prop('checked')) {
                 $('.js-auto').each(function () {
-                    var value = $(this).val();
+                    var $this = $(this),
+                        value = $this.val();
                     // Get the next input
-                    $(this).next('.js-autofill').val(value);
+                    if($this.next('.js-autofill').attr('name') == 'area') {
+                        setTimeout(function () {
+                            $this.next('.js-autofill').val(value).change();
+                        }, 10);
+                    } else {
+                        $this.next('.js-autofill').val(value).change();
+                    }
                 });
             } else {
                 $('.js-autofill').val('');

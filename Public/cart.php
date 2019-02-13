@@ -101,7 +101,7 @@ if (!empty($_SESSION['cart'])) {
     </ul>
   </div>
 
-
+  <?php if(!isset($_SESSION['cart']) || (isset($_SESSION['cart']) && count($_SESSION['cart']) == 0)): ?>
   <!-- 插入購物車是空的 empty cart start -->
 
   <div class="e_no_items">
@@ -117,7 +117,7 @@ if (!empty($_SESSION['cart'])) {
   </div>
   <!-- 插入購物車是空的 empty cart end -->
 
-
+<?php else: ?>
   <!-- 購物車有商品 cart with items start -->
   <div class="e_cart_items_outerwrapper">
     <form action="cart_step2.php" method="post">
@@ -246,7 +246,7 @@ if (!empty($_SESSION['cart'])) {
       </div>
     </form>
   </div>
-
+<?php endif; ?>
   <!-- 購物車有商品 cart with items end -->
     <?php
     $likeID = $_GET['ran_product'];
