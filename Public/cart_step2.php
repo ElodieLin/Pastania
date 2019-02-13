@@ -154,11 +154,11 @@ $_SESSION['products'] = $_POST['products'];
       <hr class="e_cart_hr">
 
       <div class="e_col_4 noto_light">
-        <select class="zipcode_select">
+        <select class="zipcode_select" name="delivery_way">
           <option selected value="0">選擇取貨方式</option>
-          <option value="1">7-11取貨付款 &nbsp; &nbsp; &nbsp;NT$ 60</option>
-          <option value="2">7-11純取貨&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 60</option>
-          <option value="3">宅配到府&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 100</option>
+          <option value="1" >7-11取貨付款 &nbsp; &nbsp; &nbsp;NT$ 60</option>
+          <option value="2" >7-11純取貨&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 60</option>
+          <option value="3" >宅配到府&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 100</option>
         </select>
       </div>
 
