@@ -191,7 +191,7 @@ session_start();
             <!-- mobile -->
             <p class="noto_light e_info_confirm">手機：<span><?= $_SESSION['order']['mobile'] ?></span></p>
             <!-- delivery time -->
-            <p class="noto_light e_info_confirm">配送時間：<span>不指定</span></p>
+            <p class="noto_light e_info_confirm">配送時間：<span><?= $_SESSION['order']['delivery_time'] ?></span></p>
         </div>
 
 
