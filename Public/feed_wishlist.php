@@ -56,8 +56,8 @@ $wishlist = isset($_SESSION['wishlist']) ? $_SESSION['wishlist'] : array();
 
   <?php endforeach; ?>
 <?php else: ?>
-<ul class="r_flex wishlist-item">
-  <li>沒有</li>
+<ul class="r_flex wishlist-item" style="justify-content: center">
+  <li class="py-2 w_nav_noto_regular_sub">請將商品加入清單</li>
 </ul>
 
 
