@@ -29,7 +29,7 @@ $wishlist = isset($_SESSION['wishlist']) ? $_SESSION['wishlist'] : array();
             <img src="img/product/l/<?php echo $product['Image_large']; ?>.png" alt="" class="r_wish_p">
           </a>
         </li>
-        <li class="r_flex r_f_center">
+        <li class="r_flex r_f_center w_120">
           <ul>
             <li class="w_nav_en_font_sub"><p> <?php echo $product['Name_En']; ?></p></li>
             <li class="w_nav_en_font_sub"><p> <?php echo $product['Name_Ch']; ?></p></li>
@@ -40,14 +40,14 @@ $wishlist = isset($_SESSION['wishlist']) ? $_SESSION['wishlist'] : array();
         <!-- wishlist item move to cart icon -->
         <li class="r_flex r_f_center r_wish_ml">
           <a href="#" class="js-wishlist-buy" data-sid="<?php echo $product['sid']; ?>">
-            <img src="img/icon/shopping_bag.svg" alt="">
+            <img class="w_25" src="img/icon/shopping_bag.svg" alt="">
           </a>
         </li>
 
         <!-- wishlist item delete icon -->
         <li class="r_flex r_f_center">
           <a href="#" class="js-wishlist-remove r_wish_delet_p" data-sid="<?php echo $product['sid']; ?>">
-            <img src="img/icon/delete.svg" alt="">
+            <img class="w_25" src="img/icon/delete.svg" alt="">
           </a>
         </li>
       </ul>
@@ -55,5 +55,10 @@ $wishlist = isset($_SESSION['wishlist']) ? $_SESSION['wishlist'] : array();
     <?php endwhile; ?>
 
   <?php endforeach; ?>
+<?php else: ?>
+<ul class="r_flex wishlist-item" style="justify-content: center">
+  <li class="py-2 w_nav_noto_regular_sub">請將商品加入清單</li>
+</ul>
+
 
 <?php endif; ?>
