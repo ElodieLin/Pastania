@@ -282,7 +282,7 @@ if (!isset($come_from)) {
           <img src="img/icon/member.svg" alt="">
         </a>
       </li>
-      <li>
+      <li class="js-wishlist-p">
         <a href="" data-toggle="modal" data-target="#wishModalCenter">
           <img src="img/icon/like.svg" alt="">
         </a>
@@ -390,38 +390,11 @@ if (!isset($come_from)) {
         </div>
         <div class="modal-body">
           <h5 class="card-title text-center pt-4 pb-2">收藏清單</h5>
-          <ul class="r_flex r_just_a">
-            <li>
-              <a href="./">
-                <img src="img/product/l/F1_Agnolotti.png" alt="" class="r_wish_p">
-              </a>
-            </li>
-            <li class="r_flex r_f_center mr-2">
-              <ul>
-                <li class="w_nav_en_font_sub"><p>Farfalle nº 87</p></li>
-                <li class="w_nav_en_font_sub"><p>蝴蝶麵</p></li>
-                <li class="w_nav_en_font_sub"><p>NT＄ 109</p></li>
 
-                <!-- wishlist item move to cart icon -->
-                <li class="r_flex r_f_center r_wish_ml">
-                  <a href=""><img src="img/icon/shopping_bag.svg" alt=""></a>
-                </li>
 
-                <!-- wishlist item delete icon -->
-                <li class="r_flex r_f_center">
-                  <a href="" class="r_wish_delet_p">
-                    <img src="img/icon/delete.svg" alt="">
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="r_flex r_f_center">
-              <a href=""><img class="r_icon_w" src="img/icon/shopping_bag.svg" alt=""></a>
-            </li>
-            <li class="r_flex r_f_center">
-              <a href="" class="r_wish_delet_p">
-                <img class="r_icon_w" src="img/icon/delete.svg" alt="">
-              </a>
+          <ul class="r_flex r_just_a wish_list_p">
+            <li class="w_nav_en_font_sub js-wishlist-data">
+              <!-- JSON Feed of wishlist items -->
             </li>
           </ul>
         </div>
@@ -667,6 +640,26 @@ if (!isset($come_from)) {
             });
         });
 
+        $('.js-wishlist-p').click(function () {
+            $('.wish_list_p').find('.js-wishlist-data').load('feed_wishlist.php', function () {
+                $('.js-wishlist-remove').on('click', function () {
+                    var sid = $(this).data('sid');
+                    $(this).closest('.wishlist-item').remove();
+                    $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
+                    }, 'json');
+                });
+
+                $('.js-wishlist-buy').on('click', function () {
+                    var sid = $(this).data('sid');
+                    $(this).closest('.wishlist-item').remove();
+                    $.get('add_to_wishlist.php', {sid: sid, qty: 0}, function (data) {
+                    }, 'json');
+                    $.get('add_to_cart.php', {sid: sid, qty: 1}, function (data) {
+                    }, 'json');
+                });
+            });
+        });
+
         $('.js-cart').hover(function () {
             $(this).find('.js-cart-data').load('feed_cart.php', function () {
 
@@ -730,7 +723,7 @@ if (!isset($come_from)) {
     // bootstrap modal
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
-    })
+    });
 
     $('#goRegister').click(function () {
         $('#myModal').modal('hide');
@@ -805,7 +798,7 @@ if (!isset($come_from)) {
             info.removeClass('login_pop');
             info.removeClass('login_success');
 
-            var alertType = data.success ? "login_success" : "login_pop"
+            var alertType = data.success ? "login_success" : "login_pop";
 
             lo_info.addClass(alertType);
             if (data.info) {

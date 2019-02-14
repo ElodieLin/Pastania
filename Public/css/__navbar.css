@@ -718,6 +718,29 @@
   }
 
 
+  /*wish_list&cart slide*/
+
+  .w_120{
+    width: 120px !important;
+  }
+
+  /*wish_list_phone*/
+
+  .w_25{
+    width: 25px;
+  }
+
+
+  .wish_list_p li ul li{
+    margin: 0 5px;
+  }
+
+
+  .wish_list_p li ul li:nth-child(4){
+    margin-left: 15px;
+  }
+
+
 
 
 

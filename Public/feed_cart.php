@@ -28,7 +28,7 @@ $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
                 <img src="img/product/l/<?php echo $product['Image_large']; ?>.png" alt="" class="r_wish_p">
               </a>
             </li>
-            <li class="r_flex r_f_center">
+            <li class="r_flex r_f_center w_120">
               <ul>
                 <li class="w_nav_en_font_sub"><p> <?php echo $product['Name_En']; ?></p></li>
                 <li class="w_nav_en_font_sub"><p> <?php echo $product['Name_Ch']; ?></p></li>
