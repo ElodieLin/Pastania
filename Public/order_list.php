@@ -139,7 +139,7 @@ foreach($orders as $order){
       <td class="en_font en_font_content"><?= $order['order_date']?></td>
       <td class="en_font en_font_content">NT$ <?= $order['amount']?> </td>
       <td class="noto_thin">訂單確認中</td>
-      <td><a href="cart_step4_card.php"> <button class="btn btn-info e_btn">查看訂單 </button></a></td>
+      <td><a href="order_detail.php"> <button class="btn btn-info e_btn">查看訂單 </button></a></td>
     </tr>
 <?php }  ?>
 <script>
