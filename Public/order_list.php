@@ -106,7 +106,7 @@ foreach ($orders as $order) {
     }
 
     .container{
-      margin-bottom:300px;
+      margin-bottom:400px;
     }
 
 
