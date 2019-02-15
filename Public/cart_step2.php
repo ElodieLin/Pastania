@@ -106,7 +106,7 @@ $_SESSION['products'] = $_POST['products'];
 
 ?>
 
-  <link rel="stylesheet" href="css/cart_step2.css">
+<link rel="stylesheet" href="css/cart_step2.css">
 
 
 <div class="container e_cart">
@@ -148,96 +148,217 @@ $_SESSION['products'] = $_POST['products'];
   </div>
 </div>
 
-  <form method="post" action="cart_step2.php">
-    <div class="e_delivery_method container">
-      <p class="noto_light ">選擇取貨方式</p>
-      <hr class="e_cart_hr">
+<form method="post" action="cart_step2.php">
+  <div class="e_delivery_method container" style="padding: 0">
+    <p class="noto_light ">選擇取貨方式</p>
+    <hr class="e_cart_hr">
 
-      <div class="e_col_4 noto_light">
-        <select class="zipcode_select" name="delivery_way">
-          <option selected value="0">選擇取貨方式</option>
-          <option value="1" >7-11取貨付款 &nbsp; &nbsp; &nbsp;NT$ 60</option>
-          <option value="2" >7-11純取貨&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 60</option>
-          <option value="3" >宅配到府&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 100</option>
-        </select>
-      </div>
-
-      <p class="noto_light e_terms"><a href="">閱讀物流條款</a></p>
-    </div>
-
-    <!-- 選擇門市表單 (選擇7-11取貨才顯示) choose 7-11 and pop out below pick store -->
-    <div class="form-inline e_search_postcode_form">
-      <div class="form-group e_select_branches">
-
-        <label for="selectBranches" class="noto_light">選擇門市</label>
-
-        <input type="search" class="e_form_control mx-sm-3 noto_light" maxlength="5" placeholder="請輸入郵遞區號">
-
-
-        <!--      未選門市的alert         -->
-        <!--        <small class="noto_light e_select_branches_alert">-->
-        請選擇門市
-        </small>
-      </div>
-    </div>
-
-    <div class="e_custom_select e_col_4 noto_light e_branches_select">
-      <select>
-        <option value="0">對照郵遞區號顯示城市地區鄰里</option>
-        <option value="1">崇尚門市 （店號：991942）<br>40646 台中市北屯區崇德路二段450號1樓
-        </option>
-        <option value="2">鑫巴黎門市 （店號：136886）<br>40646 台中市北屯區崇德路二段119號1樓</option>
-
+    <div class="e_col_4 noto_light">
+      <select class="zipcode_select" name="delivery_way" style="margin-left: 0">
+        <option selected value="0">選擇取貨方式</option>
+        <option value="1">7-11取貨付款 &nbsp; &nbsp; &nbsp;NT$ 60</option>
+        <option value="2">7-11純取貨&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 60</option>
+        <option value="3">宅配到府&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;NT$ 100</option>
       </select>
     </div>
 
-      <?php if (!isset($_SESSION['user'])): ?>
+    <p class="noto_light e_terms"><a href="">閱讀物流條款</a></p>
+  </div>
 
-        <!-- Only show if user is not logged in -->
+  <!-- 選擇門市表單 (選擇7-11取貨才顯示) choose 7-11 and pop out below pick store -->
+  <div class="form-inline e_search_postcode_form">
+    <div class="form-group e_select_branches">
 
-        <!--    會員配送資訊  delivery info (click checkbox and will bring member info automatically -->
-        <div class="e_member_delivery_info container">
-        <p class="noto_light ">配送資訊</p>
+      <label for="selectBranches" class="noto_light">選擇門市</label>
 
-        <div class="row mx-auto py-5 pl-5 ">
-          <div class="pr-5">
-            <p class="new_btn">已是會員?</p>
-            <a href="#">
-              <button class="btn btn-info js-login">點我快速登入</button>
-            </a>
-          </div>
-          <div>
-            <p class="new_btn">還不是會員？首次購物即可自動註冊成會員</p>
-            <a href="#">
-              <button class="btn btn-info js-first-order">首次購物</button>
-            </a>
+      <input type="search" class="e_form_control mx-sm-3 noto_light" maxlength="5" placeholder="請輸入郵遞區號">
+
+
+      <!--      未選門市的alert         -->
+      <!--        <small class="noto_light e_select_branches_alert">-->
+      請選擇門市
+      </small>
+    </div>
+  </div>
+
+  <div class="e_custom_select e_col_4 noto_light e_branches_select">
+    <select>
+      <option value="0">對照郵遞區號顯示城市地區鄰里</option>
+      <option value="1">崇尚門市 （店號：991942）<br>40646 台中市北屯區崇德路二段450號1樓
+      </option>
+      <option value="2">鑫巴黎門市 （店號：136886）<br>40646 台中市北屯區崇德路二段119號1樓</option>
+
+    </select>
+  </div>
+
+    <?php if (!isset($_SESSION['user'])): ?>
+
+      <!-- Only show if user is not logged in -->
+
+      <!--    會員配送資訊  delivery info (click checkbox and will bring member info automatically -->
+      <div class="e_member_delivery_info container">
+      <p class="noto_light ">配送資訊</p>
+
+      <div class="row mx-auto py-5 pl-5 ">
+        <div class="pr-5">
+          <p class="new_btn">已是會員?</p>
+          <a href="#">
+            <button class="btn btn-info js-login">點我快速登入</button>
+          </a>
+        </div>
+        <div>
+          <p class="new_btn">還不是會員？首次購物即可自動註冊成會員</p>
+          <a href="#">
+            <button class="btn btn-info js-first-order">首次購物</button>
+          </a>
+        </div>
+      </div>
+
+    <?php else: ?>
+
+      <!-- Show checkbox if user is logged in -->
+
+      <!-- below content shows when in login status -->
+      <!-- same as member info checkbox-->
+      <div class="e_receipt_info container" style="padding: 0">
+        <p class="noto_light" style="font-size: 1.5rem">配送資訊</p>
+      </div>
+      <div class="form-check e_same_as_member_info noto_light mt-5 container pl-5 py-2">
+        <input class="form-check-input js-auto-checkbox" type="checkbox" value="1" id="sameAsMemberInfo">
+        <label class="form-check-label" for="sameAsMemberInfo">
+          同會員資料
+        </label>
+      </div>
+
+      <div class="card e_first_order_info container">
+        <div class="card-body e_first_order_info_body">
+
+          <div class="noto_light">
+            <div class="form-group form-inline ">
+              <label for="recipient" class="col-3 e_none_display_m">收件人姓名*</label>
+              <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['nickname']; ?>"/>
+              <input type="text" class="form-control col-4 js-autofill" name="nickname" placeholder="收件人姓名*">
+
+              <!-- alert -->
+              <!--                <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>-->
+            </div>
+
+            <div class="form-inline">
+              <small class="col-3 e_none_display_m"></small>
+              <small class="form-text col-9 ">
+                務必填寫完整收件人姓名，避免包裹無法順利簽收
+              </small>
+
+            </div>
+
+            <div class="form-group form-inline ">
+              <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
+              <input type="hidden" class="form-control col-4 js-auto"
+                     value="<?php echo $_SESSION['user']['mobile']; ?>"/>
+              <input type="text" class="form-control col-4 js-autofill" name="mobile" placeholder="手機*">
+
+              <!-- alert -->
+              <!--                <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
+            </div>
+
+
+            <div class="form-group form-inline">
+              <label for="deliverAddress" class="form-group col-3 e_none_display_m">地址*</label>
+              <div class=" form-inline e_col_4_add e_area_select zipcode">
+
+                <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b js-autofill" placeholder="郵遞區號"
+                       name="postcode">
+
+                <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['city']; ?>"/>
+                <select name="city" class="zipcode_select js-autofill"></select>
+
+                <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['area']; ?>"/>
+                <select name="area" class="zipcode_select js-autofill"></select>
+
+                <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['address']; ?>"/>
+
+                <input type="text" class="form-control col-7 js-autofill" name="address" placeholder="地址*">
+
+                <button type="submit" class="btn e_save_add">加入常用地址</button>
+
+                <!-- alert -->
+                <!--                  <small class="form-text e_order_info_alert col-4">請輸入完整地址</small>-->
+
+              </div>
+            </div>
+            <!-- above content shows when in login status -->
+            <div class="mb-3 form-group e_time_select">
+              <label for="deliverTime" class="form-group e_col_3 mb-3">配送時段</label>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="delivery_time" id="deliverInMorning"
+                       value="8:00-13:00">
+                <label class="form-check-label" for="deliverInMorning">8:00-13:00</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="delivery_time" id="deliverInAfternoon"
+                       value="14:00-18:00">
+                <label class="form-check-label" for="deliverInAfternoon">14:00-18:00</label>
+              </div>
+              <div class="form-check form-check-inline ">
+                <input class="form-check-input" type="radio" name="delivery_time" id="deliverNotSpecify"
+                       value="不指定" checked>
+                <label class="form-check-label" for="deliverNotSpecify">不指定</label>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      </div>
 
-      <?php else: ?>
+    <?php endif; ?>
 
-        <!-- Show checkbox if user is logged in -->
+    <?php if (!isset($_SESSION['user'])): ?>
 
-        <!-- below content shows when in login status -->
-        <!-- same as member info checkbox-->
-        <div class="form-check e_same_as_member_info noto_light mt-5">
-          <input class="form-check-input js-auto-checkbox" type="checkbox" value="1" id="sameAsMemberInfo">
-          <label class="form-check-label" for="sameAsMemberInfo">
-            同會員資料
-          </label>
-        </div>
-
+      <!--    訂購資料（首次購物才顯示） only display when first buy (not member yet)   -->
+      <!-- fill forms and equal register-->
+      <div class="e_first_order_delivery_info">
+        <p class="noto_light ">訂購資料及配送資訊</p>
         <div class="card e_first_order_info">
           <div class="card-body e_first_order_info_body">
 
             <div class="noto_light">
               <div class="form-group form-inline ">
-                <label for="recipient" class="col-3 e_none_display_m">收件人姓名*</label>
-                <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['nickname']; ?>"/>
-                <input type="text" class="form-control col-4 js-autofill" name="nickname" placeholder="收件人姓名*">
+                <label for="memberEmail" class="col-3 e_none_display_m ">會員信箱*</label>
+                <input type="email" name="email" class="form-control col-4" placeholder="會員信箱*">
 
                 <!-- alert -->
-                <!--                <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>-->
+                <!--                  <small class="form-text e_order_info_alert col-4">請輸入完整信箱</small>-->
+              </div>
+              <div class="form-inline">
+                <small class="col-3 e_none_display_m"></small>
+                <small class="form-text col-9 ">
+                  待訂單成立後E-mail將會成為您的會員帳號，請務必確認是否填寫正確
+                </small>
+              </div>
+
+              <div class="form-group form-inline ">
+                <label for="setPassword" class="col-3 e_none_display_m">設定密碼*</label>
+                <input type="password" name="password" class="form-control col-4" placeholder="設定密碼*">
+
+                <!-- alert -->
+                <!--                  <small class="form-text e_order_info_alert col-4">請輸入密碼</small>-->
+              </div>
+
+              <div class="form-group form-inline ">
+                <label for="setPassword" class="col-3 e_none_display_m">密碼確認*</label>
+                <input type="password" name="password_repeat" class="form-control col-4" placeholder="密碼確認*">
+
+                <!-- alert -->
+                <!--                  <small class="form-text e_order_info_alert col-4">請輸入正確密碼</small>-->
+              </div>
+
+              <div class="form-group form-inline ">
+                <label for="recipient" class="col-3 e_none_display_m">收件人姓名*</label>
+                <input type="text" name="nickname" class="form-control col-4" placeholder="收件人姓名*">
+
+                <!-- alert -->
+                <!--                  <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>-->
               </div>
 
               <div class="form-inline">
@@ -250,223 +371,106 @@ $_SESSION['products'] = $_POST['products'];
 
               <div class="form-group form-inline ">
                 <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
-                <input type="hidden" class="form-control col-4 js-auto"
-                       value="<?php echo $_SESSION['user']['mobile']; ?>"/>
-                <input type="text" class="form-control col-4 js-autofill" name="mobile" placeholder="手機*">
+                <input type="text" name="mobile" class="form-control col-4" placeholder="手機*">
 
                 <!-- alert -->
-                <!--                <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
+                <!--                  <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
               </div>
 
 
-              <div class="form-group form-inline">
+              <div class=" form-group form-inline">
                 <label for="deliverAddress" class="form-group col-3 e_none_display_m">地址*</label>
-                <div class=" form-inline e_col_4_add e_area_select zipcode">
+                <div class="form-inline e_col_4_add e_area_select zipcode">
 
-                  <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b js-autofill" placeholder="郵遞區號"
+                  <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號"
                          name="postcode">
 
-                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['city']; ?>"/>
-                  <select name="city" class="zipcode_select js-autofill"></select>
 
-                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['area']; ?>"/>
-                  <select name="area" class="zipcode_select js-autofill"></select>
+                  <select name="city" class="zipcode_select"></select>
 
-                  <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['address']; ?>"/>
+                  <select name="area" class="zipcode_select"></select>
 
-                  <input type="text" class="form-control col-7 js-autofill" name="address" placeholder="地址*">
 
-                  <button type="submit" class="btn e_save_add">加入常用地址</button>
+                  <input type="text" name="address" class="form-control col-7" placeholder="地址*">
 
                   <!-- alert -->
-                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入完整地址</small>-->
-
+                  <!--                    <small class="form-text e_order_info_alert col-4">請輸入地址</small>-->
                 </div>
               </div>
-              <!-- above content shows when in login status -->
+
               <div class="mb-3 form-group e_time_select">
                 <label for="deliverTime" class="form-group e_col_3 mb-3">配送時段</label>
-
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverInMorning"
+                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverInMorning1"
                          value="8:00-13:00">
-                  <label class="form-check-label" for="deliverInMorning">8:00-13:00</label>
+                  <label class="form-check-label" for="deliverInMorning1">8:00-13:00 </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverInAfternoon"
+                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverInAfternoon1"
                          value="14:00-18:00">
-                  <label class="form-check-label" for="deliverInAfternoon">14:00-18:00</label>
+                  <label class="form-check-label" for="deliverInAfternoon1">14:00-18:00</label>
                 </div>
                 <div class="form-check form-check-inline ">
-                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverNotSpecify"
-                         value="not specified" checked>
-                  <label class="form-check-label" for="deliverNotSpecify">不指定</label>
+                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverNotSpecify1"
+                         value="不指定" checked>
+                  <label class="form-check-label" for="deliverNotSpecify1">不指定</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
-
-      <?php endif; ?>
-
-      <?php if (!isset($_SESSION['user'])): ?>
-
-        <!--    訂購資料（首次購物才顯示） only display when first buy (not member yet)   -->
-        <!-- fill forms and equal register-->
-        <div class="e_first_order_delivery_info">
-          <p class="noto_light ">訂購資料及配送資訊</p>
-          <div class="card e_first_order_info">
-            <div class="card-body e_first_order_info_body">
-
-              <div class="noto_light">
-                <div class="form-group form-inline ">
-                  <label for="memberEmail" class="col-3 e_none_display_m ">會員信箱*</label>
-                  <input type="email" name="email" class="form-control col-4" placeholder="會員信箱*">
-
-                  <!-- alert -->
-                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入完整信箱</small>-->
-                </div>
-                <div class="form-inline">
-                  <small class="col-3 e_none_display_m"></small>
-                  <small class="form-text col-9 ">
-                    待訂單成立後E-mail將會成為您的會員帳號，請務必確認是否填寫正確
-                  </small>
-                </div>
-
-                <div class="form-group form-inline ">
-                  <label for="setPassword" class="col-3 e_none_display_m">設定密碼*</label>
-                  <input type="password" name="password" class="form-control col-4" placeholder="設定密碼*">
-
-                  <!-- alert -->
-                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入密碼</small>-->
-                </div>
-
-                <div class="form-group form-inline ">
-                  <label for="setPassword" class="col-3 e_none_display_m">密碼確認*</label>
-                  <input type="password" name="password_repeat" class="form-control col-4" placeholder="密碼確認*">
-
-                  <!-- alert -->
-                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入正確密碼</small>-->
-                </div>
-
-                <div class="form-group form-inline ">
-                  <label for="recipient" class="col-3 e_none_display_m">收件人姓名*</label>
-                  <input type="text" name="nickname" class="form-control col-4" placeholder="收件人姓名*">
-
-                  <!-- alert -->
-                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入收件人姓名</small>-->
-                </div>
-
-                <div class="form-inline">
-                  <small class="col-3 e_none_display_m"></small>
-                  <small class="form-text col-9 ">
-                    務必填寫完整收件人姓名，避免包裹無法順利簽收
-                  </small>
-
-                </div>
-
-                <div class="form-group form-inline ">
-                  <label for="phoneNumber" class="col-3 e_none_display_m">手機*</label>
-                  <input type="text" name="mobile" class="form-control col-4" placeholder="手機*">
-
-                  <!-- alert -->
-                  <!--                  <small class="form-text e_order_info_alert col-4">請輸入手機號碼</small>-->
-                </div>
-
-
-                <div class=" form-group form-inline">
-                  <label for="deliverAddress" class="form-group col-3 e_none_display_m">地址*</label>
-                  <div class="form-inline e_col_4_add e_area_select zipcode">
-
-                    <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號"
-                           name="postcode">
-
-
-                    <select name="city" class="zipcode_select"></select>
-
-                    <select name="area" class="zipcode_select"></select>
-
-
-                    <input type="text" name="address" class="form-control col-7" placeholder="地址*">
-
-                    <!-- alert -->
-                    <!--                    <small class="form-text e_order_info_alert col-4">請輸入地址</small>-->
-                  </div>
-                </div>
-
-                <div class="mb-3 form-group e_time_select">
-                  <label for="deliverTime" class="form-group e_col_3 mb-3">配送時段</label>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="timeSelect" id="deliverInMorning1"
-                           value="option1">
-                    <label class="form-check-label" for="deliverInMorning1">8:00-13:00 </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="timeSelect" id="deliverInAfternoon1"
-                           value="option2">
-                    <label class="form-check-label" for="deliverInAfternoon1">14:00-18:00</label>
-                  </div>
-                  <div class="form-check form-check-inline ">
-                    <input class="form-check-input" type="radio" name="timeSelect" id="deliverNotSpecify1"
-                           value="option3" checked>
-                    <label class="form-check-label" for="deliverNotSpecify1">不指定</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <?php endif; ?>
-
-    <input type="hidden" name="user_id" class="js-user-id"
-           value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['id'] : ''; ?>"/>
-
-    <!--    發票資訊    -->
-    <div class="e_receipt_info container">
-      <p class="noto_light ">發票資訊</p>
-      <hr class="e_cart_hr">
-
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption1" value="option1"
-               checked>
-        <label class="form-check-label noto_light" for="receiptOption1">電子發票</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption2" value="option2">
-        <label class="form-check-label noto_light" for="receiptOption2">紙本發票</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption3" value="option3">
-        <label class="form-check-label noto_light" for="receiptOption3">捐贈發票</label>
       </div>
 
-      <div class="e_receipt_info_text noto_light">
-        <p>※發票統一捐贈單位為伊甸社會福利基金會</p>
-        <p>※依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票</p>
-        <p>核准文號：北區國稅北縣三字第1000002660號，電子發票說明</p>
-      </div>
-      <div class="form-check e_agree_terms">
-        <input class="form-check-input e_agree_terms_checkbox" type="checkbox" value="" id="agreeTerms">
-        <label class="form-check-label noto_light e_agree_terms_text d-flex" for="agreeTerms">
-          我同意接<a href="service_privacy.php">Pastania服務條款</a>和<a href="service_privacy.php">隱私權政策</a>
-        </label>
+    <?php endif; ?>
 
-      </div>
+  <input type="hidden" name="user_id" class="js-user-id"
+         value="<?php echo isset($_SESSION['user']) ? $_SESSION['user']['id'] : ''; ?>"/>
 
-      <!--      未勾選同意的alert         -->
-      <small class="noto_light e_agree_terms_alert">
-        請閱讀並勾選同意服務條款及隱私權政策
-      </small>
+  <!--    發票資訊    -->
+  <div class="e_receipt_info container" style="padding: 0">
+    <p class="noto_light ">發票資訊</p>
+    <hr class="e_cart_hr">
+  </div>
+  <div class="e_receipt_info container">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption1" value="option1"
+             checked>
+      <label class="form-check-label noto_light" for="receiptOption1">電子發票</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption2" value="option2">
+      <label class="form-check-label noto_light" for="receiptOption2">紙本發票</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption3" value="option3">
+      <label class="form-check-label noto_light" for="receiptOption3">捐贈發票</label>
     </div>
 
-    <!--  btn  -->
-    <div class="e_cart_btn container">
-      <a href="cart.php" class="e_btn_outline noto_light">上 一 步</a>
-      <button class="e_btn noto_light js-submit" type="submit">下 一 步</button>
+    <div class="e_receipt_info_text noto_light">
+      <p>※發票統一捐贈單位為伊甸社會福利基金會</p>
+      <p>※依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票</p>
+      <p>核准文號：北區國稅北縣三字第1000002660號，電子發票說明</p>
     </div>
-  </form>
+    <div class="form-check e_agree_terms">
+      <input class="form-check-input e_agree_terms_checkbox" type="checkbox" value="" id="agreeTerms">
+      <label class="form-check-label noto_light e_agree_terms_text d-flex" for="agreeTerms">
+        我同意接<a href="service_privacy.php">Pastania服務條款</a>和<a href="service_privacy.php">隱私權政策</a>
+      </label>
+
+    </div>
+
+    <!--      未勾選同意的alert         -->
+    <small class="noto_light e_agree_terms_alert">
+      請閱讀並勾選同意服務條款及隱私權政策
+    </small>
+  </div>
+
+  <!--  btn  -->
+  <div class="e_cart_btn container">
+    <a href="cart.php" class="e_btn_outline noto_light">上 一 步</a>
+    <button class="e_btn noto_light js-submit" type="submit">下 一 步</button>
+  </div>
+</form>
 </div>
 <script>
 
@@ -515,7 +519,7 @@ $_SESSION['products'] = $_POST['products'];
                     var $this = $(this),
                         value = $this.val();
                     // Get the next input
-                    if($this.next('.js-autofill').attr('name') == 'area') {
+                    if ($this.next('.js-autofill').attr('name') == 'area') {
                         setTimeout(function () {
                             $this.next('.js-autofill').val(value).change();
                         }, 10);
