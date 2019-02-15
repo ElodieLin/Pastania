@@ -394,7 +394,7 @@
 
             <a class="border_top e_dropdown noto_regular">
               關於我們
-              <i class="fas fa-angle-right e_arrow_icon transition"></i></a>
+              <i class="fas fa-angle-right e_arrow_icon transition" style="color: #D3554A"></i></a>
 
             <ul class="sub_footer">
               <li class="noto_thin  none_display_w"><a href="about.php">品牌介紹</a></li>
@@ -408,7 +408,7 @@
 
         <ul>
           <li class="section_title">
-            <a class="e_dropdown noto_regular">服務<i class="fas fa-angle-right e_arrow_icon transition"></i></a>
+            <a class="e_dropdown noto_regular">服務<i class="fas fa-angle-right e_arrow_icon transition" style="color: #D3554A"></i></a>
 
             <ul class="sub_footer">
               <li class="noto_thin  none_display_w"><a href="service_privacy.php">購買流程</a></li>
@@ -427,7 +427,7 @@
         <ul>
           <li class="section_title">
             <a class="e_dropdown noto_regular">政策與規範<i
-                      class="fas fa-angle-right e_arrow_icon transition"></i></a>
+                      class="fas fa-angle-right e_arrow_icon transition" style="color: #D3554A"></i></a>
             <ul class="sub_footer ">
               <li class="noto_thin  none_display_w"><a href="service_privacy.php">企業責任</a></li>
               <li class="noto_thin  none_display_w"><a href="service_privacy.php">隱私權保護</a></li>
