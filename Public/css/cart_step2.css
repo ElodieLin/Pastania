@@ -368,7 +368,7 @@
 
 /* -------------------- 訂購資料及配送資訊 --------------------- */
 .e_first_order_info {
-    margin: 20px 0 100px;
+    margin-bottom: 20px;
     border: 1px solid #5C7880;
 
 }

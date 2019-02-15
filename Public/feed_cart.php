@@ -50,7 +50,7 @@ $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
   </li>
 
 <?php else: ?>
-<li class="w_nav_noto_regular_sub py-2 text-center" style="border-radius: 5px 5px 0 0;">
+<li class="w_nav_noto_regular_sub py-2 text-center" style="border-radius: 5px;">
   請將商品加入購物車
 </li>
 <?php endif; ?>
