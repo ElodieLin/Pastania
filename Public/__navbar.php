@@ -26,22 +26,22 @@ if (!isset($come_from)) {
 
   /* login alert style */
   .login_pop {
-    color: red;
+    color: #D3554A;
   }
 
   /* login success style */
   .login_success {
-    color: blue;
+    color: #0062cc;
   }
 
   /* sign up alert style */
   .signup_alert {
-    color: red;
+    color: #D3554A;
   }
 
   /* sign up success style */
   .signup_success {
-    color: blue;
+    color: #0062cc;
   }
 </style>
 <nav>
@@ -430,7 +430,7 @@ if (!isset($come_from)) {
             <div class="card-text"> -->
           </div>
           <h5 class="card-title text-center pt-4">SIGN IN</h5>
-          <h6 class="card-title text-center pb-4">已是會員？登入快速結帳！</h6>
+          <h6 class="card-title text-center pb-3">已是會員？登入快速結帳！</h6>
           <div id="lo_info" class="login_alert text-center pb-4" style="display: none"></div>
           <form name="form1" method="post" onsubmit="return formCheck()" class="row">
 
@@ -504,7 +504,7 @@ if (!isset($come_from)) {
           </div>
           <h5 class="card-title text-center pt-4">SIGN UP</h5>
           <h6 class="card-title text-center pb-4">加入會員</h6>
-          <div id="re_info" class="login_alert text-center pb-4" style="display: none"></div>
+          <div id="re_info" class="login_alert text-center pb-4" style="display: none">123</div>
           <form name="form2" method="post" onsubmit="return formCheck_2()" class="row">
 
 
@@ -526,7 +526,7 @@ if (!isset($come_from)) {
             </div>
             <div class="form-group col-md-10 row mx-auto">
               <label for="password" class="col-md-3 label_text">設定密碼<span class="red">*</span></label>
-              <input type="text" class="form-control col-md-9" id="password2" name="password"
+              <input type="password" class="form-control col-md-9" id="password2" name="password"
                      placeholder="請輸入6個字元以上密碼">
               <div class="col-md-3"></div>
               <small id="password2Help" class="form-text col-md-9 pl-0"></small>
@@ -534,7 +534,7 @@ if (!isset($come_from)) {
             <!-- 新加的 password confirmation start -->
             <div class="form-group col-md-10 row mx-auto">
               <label for="password" class="col-md-3 label_text">密碼確認<span class="red">*</span></label>
-              <input type="text" class="form-control col-md-9" id="password3" name="password"
+              <input type="password" class="form-control col-md-9" id="password3" name="password"
                      placeholder="請重新輸入預設密碼">
               <div class="col-md-3"></div>
               <small id="password3Help" class="form-text col-md-9 pl-0"></small>
