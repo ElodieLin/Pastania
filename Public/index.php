@@ -193,7 +193,7 @@ if (!isset($_SESSION)) {
                 </div>
 
                 <div class="w_index_declaration_word_box_in_two">
-                    <div class="w_index_declaration_blue_bg"></div>
+                    <div class="w_index_declaration_blue_bg1"></div>
                 </div>
 
                 <div class="w_index_declaration_word_box_in_three">
@@ -265,7 +265,7 @@ if (!isset($_SESSION)) {
                     items: 1
                 }
             }
-        })
+        });
 
 
         $('.w_index_event_slider_box').owlCarousel({
@@ -287,7 +287,7 @@ if (!isset($_SESSION)) {
                     items: 1
                 }
             }
-        })
+        });
 
 
 
