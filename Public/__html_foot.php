@@ -205,6 +205,20 @@
     padding-bottom: 5px;
   }
 
+  .subscribe_thanks{
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    width: 105%;
+    height: 160%;
+    border-radius: 50px;
+    background: #E67348;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   @media (max-width: 575.98px) {
     footer {
@@ -367,8 +381,8 @@
                                 c1.2,1.3,2.8,2,4.5,2c1.4,0,2.8-0.5,4-1.5l59.5-53.1c1-0.9,1.6-2.1,1.9-3.3C348.3,213.2,348.4,212.6,348.4,212z"/>
                             </svg>
           </div>
-          
-        <!-- input email to subscribe -->
+          <div class="subscribe_thanks">感謝訂閱</div>
+          <!-- input email to subscribe -->
           <input class="subscribe_effect" type="text" placeholder=" 輸入電子信箱訂閱">
           <span class="e_focus_border"></span>
         </div>
@@ -455,6 +469,18 @@
     $(".section_title").click(function () {
         $(this).find('i').toggleClass("ar_turn");
     });
+
+    $(function () {
+        $(".subscribe_thanks").hide();
+        $(".send_btn").click(function () {
+            $(".subscribe_effect").val("");
+            $(".subscribe_thanks").fadeIn(1000);
+            setTimeout(function () {
+                $(".subscribe_thanks").fadeOut(1000);
+            },2000);
+        })
+    })
+
 </script>
 </body>
 </html>
