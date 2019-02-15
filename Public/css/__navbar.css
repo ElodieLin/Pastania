@@ -743,5 +743,19 @@
 
 
 
+  /*btn-primary*/
+
+
+  .btn-primary:hover{
+    background-color: #D3554A;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #D3554A;
+    border-color: #D3554A;
+  }
+
+
 
 
