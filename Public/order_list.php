@@ -146,7 +146,7 @@ foreach ($orders as $order) {
           <td class="en_font en_font_content">NT$ <?= $order['amount'] ?> </td>
           <td class="noto_thin">訂單確認中</td>
           <td><a href="order_detail.php">
-              <button class="btn btn-info e_btn">查看訂單</button>
+              <button class="btn btn-primary">查看訂單</button>
             </a></td>
         </tr>
       <?php } ?>

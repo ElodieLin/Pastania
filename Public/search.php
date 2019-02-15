@@ -37,14 +37,16 @@ $rows = $m_stmt->fetchAll(PDO::FETCH_ASSOC);
     <!------------ 以下為title區域 ------------>
     <div class="container">
       <div class="r_product_search_title">
-        <p class="w_noto_light">找到 <?php echo count($rows); ?> 筆關於 '<?php echo $_GET['q']; ?>' 的資料</p>
+        <p class="w_noto_light r_search_title_w">找到 <?php echo count($rows); ?> 筆關於 '<?php echo $_GET['q']; ?>' 的資料</p>
+        <p class="w_noto_light r_search_title_p">找到 <?php echo count($rows); ?> 筆</p>
+        <p class="w_noto_light r_search_title_p">關於 '<?php echo $_GET['q']; ?>' 的資料</p>
       </div>
     </div>
     <!------------ 以上為title區域 ------------>
 
   <div class="container d-flex">
     <div class="row">
-      <div class="input-group m-4">
+      <div class="input-group m-4 r_flex r_flex_j_c r_search_bar">
         <div class="input-group-prepend">
               <span class="input-group-text" id="basic-serach"><img src="img/icon/search.svg" alt=""
                                                                     style="width: 20px"></span>

@@ -236,6 +236,7 @@
             max-height: 2000px;
             margin: auto;
             display: none;
+            transform: scale(1.2);
         }
 
         .w_product_detail_img_box:hover .w_product_detail_small_pasta_img {
@@ -945,10 +946,12 @@
                 width: 100vw;
                 margin: auto;
                 display: none;
+                transform: scale(1);
             }
 
             .w_product_detail_img_box:hover .w_product_detail_small_pasta_img {
                 display: block;
+                padding-top: 30px;
             }
 
             /* ----------以上為商品照片---------- */

@@ -494,6 +494,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    form{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .col-9 {
         flex: 100%;
         max-width: 100%;

@@ -293,6 +293,10 @@
     display: flex;
   }
 
+  .r_flex_j_c{
+    justify-content: center;
+  }
+
   .r_f_center {
     align-items: center;
   }
@@ -741,6 +745,20 @@
   }
 
 
+
+
+  /*btn-primary*/
+
+
+  .btn-primary:hover{
+    background-color: #D3554A;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #D3554A;
+    border-color: #D3554A;
+  }
 
 
 
