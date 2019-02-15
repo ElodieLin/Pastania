@@ -293,6 +293,10 @@
     display: flex;
   }
 
+  .r_flex_j_c{
+    justify-content: center;
+  }
+
   .r_f_center {
     align-items: center;
   }

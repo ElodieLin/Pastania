@@ -80,9 +80,12 @@ section{
  .r_product_search_title {
      margin: auto;
      text-align: center;
-     width: 25%;
      padding: 40px 0px 20px;
 
+ }
+
+ .r_search_title_p{
+     display: none;
  }
 
 
@@ -90,6 +93,7 @@ section{
 
  .input_s{
      height: 50px;
+     width: 50vw;
  }
 
 
@@ -251,6 +255,22 @@ section{
          font-size: 1rem;
      }
 
+     .r_search_bar{
+         display: none;
+     }
+
+     .r_product_search_title{
+        padding-bottom: 40px;
+     }
+
+     .r_search_title_w{
+         display: none;
+     }
+
+     .r_search_title_p{
+         display: block;
+     }
+
      /* ----------以上為文字字體設定---------- */
 
 
@@ -303,3 +323,5 @@ section{
  }
 
  /* ----------以上為商品圖、文字設定---------- */
+
+
