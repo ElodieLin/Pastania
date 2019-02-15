@@ -302,7 +302,7 @@ $_SESSION['products'] = $_POST['products'];
               </div>
               <div class="form-check form-check-inline ">
                 <input class="form-check-input" type="radio" name="delivery_time" id="deliverNotSpecify"
-                       value="not specified" checked>
+                       value="不指定" checked>
                 <label class="form-check-label" for="deliverNotSpecify">不指定</label>
               </div>
             </div>
@@ -401,18 +401,18 @@ $_SESSION['products'] = $_POST['products'];
               <div class="mb-3 form-group e_time_select">
                 <label for="deliverTime" class="form-group e_col_3 mb-3">配送時段</label>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="timeSelect" id="deliverInMorning1"
-                         value="option1">
-                  <label class="form-check-label" for="deliverInMorning1">8:00-13:00 </label>
+                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverInMorning1"
+                         value="8:00-13:00">
+                  <label class="form-check-label" for="deliverInMorning1">8:00-13:00</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="timeSelect" id="deliverInAfternoon1"
-                         value="option2">
+                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverInAfternoon1"
+                         value="14:00-18:00">
                   <label class="form-check-label" for="deliverInAfternoon1">14:00-18:00</label>
                 </div>
                 <div class="form-check form-check-inline ">
-                  <input class="form-check-input" type="radio" name="timeSelect" id="deliverNotSpecify1"
-                         value="option3" checked>
+                  <input class="form-check-input" type="radio" name="delivery_time" id="deliverNotSpecify1"
+                         value="不指定" checked>
                   <label class="form-check-label" for="deliverNotSpecify1">不指定</label>
                 </div>
               </div>
