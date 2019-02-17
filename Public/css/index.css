@@ -378,13 +378,23 @@
             height: 0;
             border-bottom: 294px solid rgba(200, 219, 216, 0.562);
             border-left: 300px solid transparent;
+            margin-top: 80px;
         }
+
+        .w_index_declaration_blue_bg1{
+            height: 0;
+            border-bottom: 294px solid rgba(200, 219, 216, 0.562);
+            border-left: 300px solid transparent;
+            margin-top: 100px;
+        }
+
 
         .w_index_declaration_yellow_bg {
             /* 黃色背景 */
             height: 0;
             border-bottom: 294px solid rgba(246, 208, 105, 0.555);
             border-right: 300px solid transparent;
+            margin-top: 80px;
         }
 
         .w_index_declaration_red_bg {
@@ -392,6 +402,7 @@
             height: 0;
             border-bottom: 294px solid #FBEAE4;
             border-right: 300px solid transparent;
+            margin-top: 100px;
         }
 
         .w_index_declaration_word_box_in_three {
@@ -431,7 +442,7 @@
             width: 28%;
             position: absolute;
             z-index: 8;
-            margin-top: 22%;
+            margin-top: 20%;
             margin-left: 80%;
         }
 
@@ -440,7 +451,7 @@
             width: 25%;
             position: absolute;
             z-index: 8;
-            margin-top: 25%;
+            margin-top: 20%;
             margin-left: 70%;
 
         }
@@ -645,11 +656,19 @@
                 /* background-color: rgb(213, 255, 241); */
             }
 
-            .w_index_declaration_blue_bg {
+            .w_index_declaration_blue_bg{
                 /* 藍色背景 */
                 height: 0;
                 border-bottom: 184px solid rgba(200, 219, 216, 0.562);
                 border-left: 120px solid transparent;
+                margin-top: 0;
+            }
+
+            .w_index_declaration_blue_bg1{
+                height: 0;
+                border-bottom: 184px solid rgba(200, 219, 216, 0.562);
+                border-left: 120px solid transparent;
+                margin-top: 0;
             }
 
             .w_index_declaration_yellow_bg {
@@ -657,6 +676,7 @@
                 height: 0;
                 border-bottom: 184px solid rgba(246, 208, 105, 0.555);
                 border-right: 120px solid transparent;
+                margin-top: 0;
             }
 
             .w_index_declaration_red_bg {
@@ -664,6 +684,7 @@
                 height: 0;
                 border-bottom: 184px solid #FBEAE4;
                 border-right: 120px solid transparent;
+                margin-top: 0;
             }
 
             .w_index_declaration_word_box_in_three {
@@ -704,7 +725,7 @@
                 width: 40%;
                 position: absolute;
                 z-index: 8;
-                margin-top: 35%;
+                margin-top: 39%;
                 margin-left: 70%;
             }
 
@@ -713,7 +734,7 @@
                 width: 25%;
                 position: absolute;
                 z-index: 8;
-                margin-top: 40%;
+                margin-top: 35%;
                 margin-left: 70%;
 
             }
