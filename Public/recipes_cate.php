@@ -77,7 +77,7 @@ if (!isset($_SESSION)) {
             <a href="recipe_list.php?category=5">
                 <img src="img/pages/others/recipes_typical.png" alt="">
                 <p class="w_recipes_en_font_small_b">Typical</p>
-                <p class="w_recipes_noto_regular_small_b">異國風情</p>
+                <p class="w_recipes_noto_regular_small_b">義國風情</p>
             </a>
         </div>
     </div>

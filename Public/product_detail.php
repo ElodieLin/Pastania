@@ -305,9 +305,9 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
 
     <div class="w_bottom_review_word_one">
       <div class="w_bottom_review_ciecle_box">
-        <div class="w_bottom_review_ciecle   product_detail_big_en_font_r ">L</div>
+        <div class="w_bottom_review_ciecle   product_detail_big_en_font_r ">Ｗ</div>
       </div>
-      <p class="product_detail_big_en_font_r ">Miss Lee</p>
+      <p class="product_detail_big_en_font_r ">Mr Wang</p>
     </div>
 
 
@@ -325,15 +325,13 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
       <!-- 以上這邊沿用最上面使用過的星星 -->
       <br>
       <div class="w_product_detail_star_box_wordin">
-        <p class="noto_thin">無意間發現的義大利麵品牌，又有食譜教學
-          對沒有習慣自炊小資族簡單輕鬆好上手！
-          口感吃起來沒話說！推！</p>
+        <p class="noto_thin">真是太棒了，讚！</p>
       </div>
     </div>
 
 
     <div class="w_bottom_review_word_three">
-      <p class="product_detail_big_en_font_r ">12/03/2018</p>
+      <p class="product_detail_big_en_font_r ">12/24/2018</p>
     </div>
 
   </div>
@@ -383,7 +381,7 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
 
   <div class="w_btn_box">
     <div class="w_btn">
-      <a href="javascript:;">
+      <a href="javascript:">
         <button class="w_btn  product_detail_noto_light_big   w_product_detail_transition board">送出</button>
       </a>
     </div>
@@ -450,9 +448,9 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
             "\n" +
             "    <div class=\"w_bottom_review_word_one\">\n" +
             "      <div class=\"w_bottom_review_ciecle_box\">\n" +
-            "        <div class=\"w_bottom_review_ciecle   product_detail_big_en_font_r \">L</div>\n" +
+            "        <div class=\"w_bottom_review_ciecle   product_detail_big_en_font_r \">H</div>\n" +
             "      </div>\n" +
-            "      <p class=\"product_detail_big_en_font_r \">Miss Lee</p>\n" +
+            "      <p class=\"product_detail_big_en_font_r \">Miss Hey</p>\n" +
             "    </div>\n" +
             "\n" +
             "\n" +
@@ -470,9 +468,7 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
             "      <!-- 以上這邊沿用最上面使用過的星星 -->\n" +
             "      <br>\n" +
             "      <div class=\"w_product_detail_star_box_wordin\">\n" +
-            "        <p class=\"noto_thin\">無意間發現的義大利麵品牌，又有食譜教學\n" +
-            "          對沒有習慣自炊小資族簡單輕鬆好上手！\n" +
-            "          口感吃起來沒話說！推！</p>\n" +
+            "        <p class=\"noto_thin\">great!</p>\n" +
             "      </div>\n" +
             "    </div>\n" +
             "\n" +
@@ -482,7 +478,7 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
             "    </div>\n" +
             "\n" +
             "  </div>\n");
-        $(".re_number").replaceWith("<p class=\"product_detail_small_two_en_font_b re_number\">4 | 3 Reviews</p>\n")
+        $(".re_number").replaceWith("<p class=\"product_detail_small_two_en_font_b re_number\">4.5 | 3 Reviews</p>\n")
 
 
     });
@@ -530,7 +526,7 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
                 .blur(function () {
                     var regex = /[^\d]*/g;
                     var numVal = $(this).text().replace(regex, "");
-                    console.log(numVal)
+                    console.log(numVal);
                     numVal = isNaN(parseInt(numVal)) ? 1 : parseInt(numVal);
                     numVal = numVal < min ?
                         min : numVal > max ?
@@ -539,7 +535,7 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
                 })
                 .keydown(function (e) {
                     var _key = e.keyCode;
-                    console.log(_key)
+                    console.log(_key);
                     // 左邊數字鍵 0-9 的 keycode 分別是 48-57
                     // 右邊數字鍵 0-9 的 keycode 分別是 96-105
                     // enter: 13 & 108, backspace: 8, delete: 46, esc:27
@@ -571,7 +567,7 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
 
                     // 裡面含有非法文字才做取代的動作
                     if ($(this).text().search(regex) == 0) {
-                        console.log('要取代')
+                        console.log('要取代');
                         numVal = numVal.replace(regex, "");
                         numVal = isNaN(parseInt(numVal)) ? '' : parseInt(numVal);
                         if (numVal > max) {
@@ -613,12 +609,12 @@ while ($row_ran = $l_stmt->fetch(PDO::FETCH_ASSOC)) {
 
     //add to cart
     $('.add_to_cart_btn').click(function () {
-        console.log("hi")
+        console.log("hi");
         var card = $(this).closest('.product-item');
         var sid = <?= $product['sid']?>;
         var qty = $('.input-box').text();
-        console.log(qty)
-        console.log(sid)
+        console.log(qty);
+        console.log(sid);
 
 
         // ajax
