@@ -29,6 +29,41 @@ if ($_POST)
     } catch (PDOException $e) {
         var_dump($e);
     }
+    // 前一筆插入的 id
+    $order_id = $pdo -> lastInsertId();
+
+    $keys = array_keys($cart);
+    $sql = sprintf("SELECT * FROM `product_info` WHERE `sid` IN ('%s')",
+        implode("','", $keys)
+    ); //加入','在字串間
+
+    $stmt = $pdo->query($sql);
+
+    $cart_data = []; // 存放商品資料和數量
+    while ($r = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+        // 把商品的數量, 設定給該項目的 qty 屬性(array)
+        $r['qty'] = $cart[$r['sid']];
+
+        $cart_data[$r['sid']] = $r;
+    }
+
+    $params = array();
+
+    foreach ($keys as $k) {
+        $params[] = array($order_id, $cart_data[$k]['sid'], $cart_data[$k]['Price'], $cart[$k]);
+    }
+
+    try {
+        $sql = "INSERT INTO `order_details` (`order_sid`, `product_sid`, `price`, `quantity`) VALUES (?, ?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+
+        foreach ($params as $line) {
+            $stmt->execute($line);
+        }
+    } catch (PDOException $e) {
+        var_dump($e);
+    }
 }
 unset($_SESSION['cart']);
 ?>
