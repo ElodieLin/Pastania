@@ -64,8 +64,8 @@ if ($_POST)
     } catch (PDOException $e) {
         var_dump($e);
     }
+    unset($_SESSION['cart']);
 }
-unset($_SESSION['cart']);
 ?>
 
 <?php include __DIR__ . '/__html_head.php' ?>
