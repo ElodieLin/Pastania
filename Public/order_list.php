@@ -8,6 +8,13 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
+if ($_POST) {
+    if (isset($_POST['order_sid'])) {
+        $_SESSION['order_sid'] = $_POST['order_sid'];
+        die(json_encode(array('status' => true, 'data' => '')));
+    }
+}
+
 // 查訂單
 
 $o_sql = "SELECT `sid`, `member_sid`, `amount`, `order_date`, `tracking_num` 
@@ -21,13 +28,6 @@ $o_stmt->execute([
 ]);
 
 $orders = $o_stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$order_sids = [];
-foreach ($orders as $order) {
-    $order_sids[] = $order['sid'];
-}
-
-
 ?>
 
 <?php include __DIR__ . '/__html_head.php' ?>
@@ -105,11 +105,18 @@ foreach ($orders as $order) {
       font-weight: 400 !important;
     }
 
-    .container{
-      margin-bottom:400px;
+    .container {
+      margin-bottom: 400px;
     }
 
+    table {
+      counter-reset: order;
+    }
 
+    .rowCount:after {
+      counter-increment: order;
+      content: counter(order);
+    }
 
 
   </style>
@@ -130,14 +137,9 @@ foreach ($orders as $order) {
       </tr>
       </thead>
       <tbody>
-      <?php
-      $order_sids = [];
-      foreach ($orders as $order) {
-
-          // $order_sids[] = $order['sid'];
-          // $orders = $o_stmt->fetchAll(PDO::FETCH_ASSOC);
-
-
+      <?php foreach ($orders as $i => $order):
+          // $i 會是每一筆資料的 key
+          // $order 才是每一筆資料的內容
           ?>
         <tr class="rows">
           <th scope="row" class="en_font en_font_content rowCount"></th>
@@ -145,19 +147,31 @@ foreach ($orders as $order) {
           <td class="en_font en_font_content"><?= $order['order_date'] ?></td>
           <td class="en_font en_font_content">NT$ <?= $order['amount'] ?> </td>
           <td class="noto_thin">訂單確認中</td>
-          <td><a href="order_detail.php">
+          <td><a onclick="viewOrder(<?= $order['sid'] ?>)" href="javascript:">
               <button class="btn btn-primary">查看訂單</button>
             </a></td>
         </tr>
-      <?php } ?>
+      <?php endforeach; ?>
       <script>
-          var i = 1;
-          $(".rowCount").each(
-              function () {
-                  $(this).text(i);
-                  i++;
-              }
-          )
+          function viewOrder(order_sid) {
+              $.ajax({
+                  url: '/order_list.php',
+                  type: 'POST',
+                  dataType: 'json',
+                  data: {
+                      order_sid: order_sid
+                  },
+                  error: function(xhr) {
+                      console.error(xhr);
+                      alert('Ajax request 發生錯誤');
+                  },
+                  success: function(response) {
+                      if (response.status === true) {
+                          location.href = '/order_detail.php';
+                      }
+                  }
+              });
+          }
 
       </script>
       <!-- <tr>
