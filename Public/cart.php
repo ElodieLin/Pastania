@@ -143,8 +143,8 @@ if (!empty($_SESSION['cart'])) {
                   <div class="e_item_w">
                     <ul class="d_colum ">
                       <li class="e_cart_item_name en_font ">
-                        <a href=""><?php echo $i['Name_En'] ?><?php echo $i['product_no'] ?></a></li>
-                      <li class="e_cart_item_name_zh noto_light"><a href=""><?php echo $i['Name_Ch'] ?></a></li>
+                        <a href="product_detail.php?product=<?= $i['sid'] ?>&type=<?= $i['productlist_sid'] ?>"><?php echo $i['Name_En'] ?><?php echo $i['product_no'] ?></a></li>
+                      <li class="e_cart_item_name_zh noto_light"><a href="product_detail.php?product=<?= $i['sid'] ?>&type=<?= $i['productlist_sid'] ?>"><?php echo $i['Name_Ch'] ?></a></li>
                       <li class="e_cart_item_weight noto_light e_mt20">500g (<?php echo $i['Serve'] ?>人份)</li>
 
                       <!-- 手機版顯示的 mobile display-->
@@ -271,8 +271,8 @@ if (!empty($_SESSION['cart'])) {
             </div>
             <div class="e_recommend_item_text">
               <span class="e_recommend_item_name en_font "><a
-                        href=""><?= $row_ran['Name_En'] ?> <?= $row_ran['product_no'] ?></a></span>
-              <span class="e_recommend_item_name_zh noto_light "><a href=""><?= $row_ran['Name_Ch'] ?></a></span>
+                        href="product_detail.php?product=<?= $row_ran['sid'] ?>"><?= $row_ran['Name_En'] ?> <?= $row_ran['product_no'] ?></a></span>
+              <span class="e_recommend_item_name_zh noto_light "><a href="product_detail.php?product=<?= $row_ran['sid'] ?>"><?= $row_ran['Name_Ch'] ?></a></span>
               <span class="e_item_price en_font ">NT＄ <?= $row_ran['Price'] ?></span>
             </div>
           </div>
@@ -342,7 +342,7 @@ if (!empty($_SESSION['cart'])) {
                 .blur(function () {
                     var regex = /[^\d]*/g;
                     var numVal = $(this).text().replace(regex, "");
-                    console.log(numVal)
+                    console.log(numVal);
                     numVal = isNaN(parseInt(numVal)) ? 1 : parseInt(numVal);
                     numVal = numVal < min ?
                         min : numVal > max ?
@@ -351,7 +351,7 @@ if (!empty($_SESSION['cart'])) {
                 })
                 .keydown(function (e) {
                     var _key = e.keyCode;
-                    console.log(_key)
+                    console.log(_key);
                     // 左邊數字鍵 0-9 的 keycode 分別是 48-57
                     // 右邊數字鍵 0-9 的 keycode 分別是 96-105
                     // enter: 13 & 108, backspace: 8, delete: 46, esc:27
@@ -383,7 +383,7 @@ if (!empty($_SESSION['cart'])) {
 
                     // 裡面含有非法文字才做取代的動作
                     if ($(this).text().search(regex) == 0) {
-                        console.log('要取代')
+                        console.log('要取代');
                         numVal = numVal.replace(regex, "");
                         numVal = isNaN(parseInt(numVal)) ? '' : parseInt(numVal);
                         if (numVal > max) {
@@ -431,7 +431,7 @@ if (!empty($_SESSION['cart'])) {
 
 
         }, 'json');
-    }
+    };
 
     var item_decrease = function(sid, quantity) {
       $.get('add_to_cart.php', {sid: sid, qty: quantity}, function (data) {
@@ -444,7 +444,7 @@ if (!empty($_SESSION['cart'])) {
 
 
         }, 'json');
-    }
+    };
 
     // 單項商品金額小計 product sub total
     var updateAllPrice = function () {

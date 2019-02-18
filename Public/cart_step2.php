@@ -162,7 +162,7 @@ $_SESSION['products'] = $_POST['products'];
       </select>
     </div>
 
-    <p class="noto_light e_terms"><a href="">閱讀物流條款</a></p>
+    <p class="noto_light e_terms"><a href="/service_privacy.php">閱讀物流條款</a></p>
   </div>
 
   <!-- 選擇門市表單 (選擇7-11取貨才顯示) choose 7-11 and pop out below pick store -->

@@ -473,11 +473,12 @@
     $(function () {
         $(".subscribe_thanks").hide();
         $(".send_btn").click(function () {
-            $(".subscribe_effect").val("");
-            $(".subscribe_thanks").fadeIn(1000);
-            setTimeout(function () {
-                $(".subscribe_thanks").fadeOut(1000);
-            },2000);
+            $(".subscribe_thanks").fadeIn(600, function () {
+                $(".subscribe_effect").val("");
+                setTimeout(function () {
+                    $(".subscribe_thanks").fadeOut(800);
+                }, 1000);
+            });
         })
     })
 
