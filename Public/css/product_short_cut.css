@@ -252,6 +252,7 @@
             /* ----------以下為cover大圖設定---------- */
             .w_product_list_cover {
                 height: 160px;
+                background-attachment:scroll;
             }
 
             /* ----------以上為cover大圖設定---------- */

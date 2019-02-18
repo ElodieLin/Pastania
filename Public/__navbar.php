@@ -553,7 +553,7 @@ if (!isset($come_from)) {
 
               <!-- postcode select start  -->
               <input type="text" class="form-control col-sm-2 mr-4 my-1" id="exampleFormControlInput1"
-                     placeholder="郵遞區號" name="postcode">
+                     placeholder="郵遞區號" name="postcode" readonly>
               <!-- with selected city & district -->
 
               <!-- select city -->

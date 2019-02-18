@@ -220,7 +220,7 @@ if (!isset($_SESSION)) {
                 <div class="w_index_declaration_word_box_in_three_left">
                     <p class="w_index_noto_regular_title_red">健康飲食</p>
                     <div class="w_index_declaration_word_line"></div>
-                    <p class="w_index_noto_regular_small">義大利麵屬於低GI食物，能減緩升糖數度，
+                    <p class="w_index_noto_regular_small">義大利麵屬於低GI食物，能減緩升醣數度，
                         對人體健康無負擔。</p>
                     <img class="w_index_health_food" src="img/pages/index/declaration_health_food.svg" alt="">
                 </div>

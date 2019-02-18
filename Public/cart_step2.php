@@ -267,7 +267,7 @@ $_SESSION['products'] = $_POST['products'];
               <div class=" form-inline e_col_4_add e_area_select zipcode">
 
                 <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b js-autofill" placeholder="郵遞區號"
-                       name="postcode">
+                       name="postcode" readonly>
 
                 <input type="hidden" class="js-auto" value="<?php echo $_SESSION['user']['city']; ?>"/>
                 <select name="city" class="zipcode_select js-autofill"></select>
@@ -383,7 +383,7 @@ $_SESSION['products'] = $_POST['products'];
                 <div class="form-inline e_col_4_add e_area_select zipcode">
 
                   <input type="text" class="form-control e_col_zip col-sm-3 e_margin_b" placeholder="郵遞區號"
-                         name="postcode">
+                         name="postcode" readonly>
 
 
                   <select name="city" class="zipcode_select"></select>
@@ -431,7 +431,7 @@ $_SESSION['products'] = $_POST['products'];
     <p class="noto_light ">發票資訊</p>
     <hr class="e_cart_hr">
   </div>
-  <div class="e_receipt_info container">
+  <div class="e_receipt_info container" style="padding: 0">
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="radio" name="receiptSelect" id="receiptOption1" value="option1"
              checked>
